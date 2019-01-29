@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>centos on Palfans&#39;s BLOG</title>
+    <link>https://www.palfans.net/tags/centos/</link>
+    <description>Recent content in centos on Palfans&#39;s BLOG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 02 Jun 2014 18:30:56 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.palfans.net/tags/centos/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>为VirtualBox中的CentOS扩展Swap空间</title>
+      <link>https://www.palfans.net/extend_swap_space_in_virtualbox/</link>
+      <pubDate>Mon, 02 Jun 2014 18:30:56 +0000</pubDate>
+      
+      <guid>https://www.palfans.net/extend_swap_space_in_virtualbox/</guid>
+      <description>&lt;p&gt;在VirtualBox中安装好CentOS后，会发现默认的Swap空间大小是根据初次配置的可用内存来生成的，正常使用足够。但是，如果需要安装Oracle，它要求最少2GB的交换空间，这时就需要扩展交换空间。&lt;/p&gt;
+
+&lt;p&gt;首先运行swapon命令查看交换空间大小，如果得到的大小少于&lt;strong&gt;2097152&lt;/strong&gt;，就需要增加交换空间。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;swapon -s&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.palfans.net/img/extend_swap_space_in_virtualbox/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;1. 首先，在VirtualBox中新增一块硬盘&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.palfans.net/img/extend_swap_space_in_virtualbox/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
