@@ -1,0 +1,1 @@
+mklink /D content\post\img static\img
