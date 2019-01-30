@@ -6,10 +6,43 @@
     <description>Recent content in 技术栈 on Palfans&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 25 Jan 2019 21:46:00 -0600</lastBuildDate>
+    <lastBuildDate>Wed, 30 Jan 2019 16:55:29 -0600</lastBuildDate>
     
 	<atom:link href="https://www.palfans.net/categories/%E6%8A%80%E6%9C%AF%E6%A0%88/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>RHEL 7 上安装 Docker CE</title>
+      <link>https://www.palfans.net/install-docker-ce-on-rhel7/</link>
+      <pubDate>Wed, 30 Jan 2019 16:55:29 -0600</pubDate>
+      
+      <guid>https://www.palfans.net/install-docker-ce-on-rhel7/</guid>
+      <description>&lt;p&gt;最近注册了 RedHat 的 Developer 账号，可以免费订阅一个账号用于开发测试。但是，RHEL 7 默认只能安装 Docker EE，是需要花钱的。如何才能安装社区版本的 Docker 呢？&lt;/p&gt;
+
+&lt;p&gt;首先提一下， 开发者计划提供的订阅账号，本身也&lt;strong&gt;不带技术支持&lt;/strong&gt;，万事靠自己，所以就不用顾忌安装第三方源会失去技术支持的问题。&lt;/p&gt;
+
+&lt;p&gt;按照以前的经验，RHEL 可以安装 CentOS 的对应源。但是，参照 &lt;a href=&#34;https://docs.docker.com/install/linux/docker-ce/centos/&#34;&gt;Get Docker CE for CentOS&lt;/a&gt;，这次会出现一个错误&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;Requires: container-selinux &amp;gt;= 2.9&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;多次尝试后，终于把 Docker CE 装上了。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;</description>
+    </item>
     
     <item>
       <title>从 WordPress 迁到 Hugo</title>

@@ -45,7 +45,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.palfans.net/" />
 
-<meta property="og:updated_time" content="2019-01-25T21:46:00-06:00"/>
+<meta property="og:updated_time" content="2019-01-30T16:55:29-06:00"/>
 
 <meta itemprop="name" content="Palfans&#39;s BLOG">
 <meta itemprop="description" content="~~~">
@@ -122,6 +122,51 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/install-docker-ce-on-rhel7/">RHEL 7 上安装 Docker CE</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2019-01-30 </span>
+      <div class="post-category">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E6%A0%88/"> 技术栈 </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>最近注册了 RedHat 的 Developer 账号，可以免费订阅一个账号用于开发测试。但是，RHEL 7 默认只能安装 Docker EE，是需要花钱的。如何才能安装社区版本的 Docker 呢？</p>
+
+<p>首先提一下， 开发者计划提供的订阅账号，本身也<strong>不带技术支持</strong>，万事靠自己，所以就不用顾忌安装第三方源会失去技术支持的问题。</p>
+
+<p>按照以前的经验，RHEL 可以安装 CentOS 的对应源。但是，参照 <a href="https://docs.docker.com/install/linux/docker-ce/centos/">Get Docker CE for CentOS</a>，这次会出现一个错误</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">Requires: container-selinux &gt;= 2.9</pre></td></tr></table>
+</div>
+</div>
+<p>多次尝试后，终于把 Docker CE 装上了。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></pre></td>
+<td class="lntd">
+    </div>
+    <div class="read-more">
+      <a href="/install-docker-ce-on-rhel7/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/moving_wordpress_hugo/">从 WordPress 迁到 Hugo</a></h1>
@@ -244,29 +289,6 @@ Input/output error.</pre></td></tr></table>
     </div>
     <div class="read-more">
       <a href="/disable_screen_dynamic_title_feature/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/kodi_cannot_access_win10_via_smb/">Kodi 通过 SMB 连接远程 Win 10 失败</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2018-03-15 </span>
-      <div class="post-category">
-          <a href="/categories/%E6%8A%80%E6%9C%AF%E6%A0%88/"> 技术栈 </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <p>我同时在 Win 10 和 Android 平板安装了 Kodi，通过 SMB 连接到家里的 Win10 NAS 视频媒体库。之前工作正常，这两天突然发现 Android 平板连不上，每次设置好用户名密码就报连接超时（Connection Timed Out），但 Win 10 平板依然正常。</p>
-
-<p>上网搜索一圈，在 Kodi 的<a href="https://kodi.wiki/view/SMB/Windows">官方维基</a>找到了答案。貌似 Win10 在某次自动升级以后，默认关闭了 SMB 1.0/CIFS File Sharing Support 的功能，需要重新手动打开。</p>
-    </div>
-    <div class="read-more">
-      <a href="/kodi_cannot_access_win10_via_smb/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>

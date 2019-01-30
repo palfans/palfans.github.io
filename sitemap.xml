@@ -3,6 +3,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.palfans.net/install-docker-ce-on-rhel7/</loc>
+    <lastmod>2019-01-30T16:55:29-06:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.palfans.net/moving_wordpress_hugo/</loc>
     <lastmod>2019-01-25T21:46:00-06:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1402,6 +1409,13 @@
   </url>
   
   <url>
+    <loc>https://www.palfans.net/tags/docker/</loc>
+    <lastmod>2019-01-30T16:55:29-06:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.palfans.net/tags/gv/</loc>
     <lastmod>2014-07-18T18:38:03+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1487,14 +1501,14 @@
   
   <url>
     <loc>https://www.palfans.net/</loc>
-    <lastmod>2019-01-25T21:46:00-06:00</lastmod>
+    <lastmod>2019-01-30T16:55:29-06:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/post/</loc>
-    <lastmod>2019-01-25T21:46:00-06:00</lastmod>
+    <lastmod>2019-01-30T16:55:29-06:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -1502,6 +1516,13 @@
   <url>
     <loc>https://www.palfans.net/tags/qq/</loc>
     <lastmod>2008-11-12T10:04:47+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.palfans.net/tags/rhel7/</loc>
+    <lastmod>2019-01-30T16:55:29-06:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -2845,7 +2866,7 @@
   
   <url>
     <loc>https://www.palfans.net/categories/%E6%8A%80%E6%9C%AF%E6%A0%88/</loc>
-    <lastmod>2019-01-25T21:46:00-06:00</lastmod>
+    <lastmod>2019-01-30T16:55:29-06:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

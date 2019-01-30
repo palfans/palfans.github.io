@@ -6,10 +6,43 @@
     <description>Recent content in Posts on Palfans&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 25 Jan 2019 21:46:00 -0600</lastBuildDate>
+    <lastBuildDate>Wed, 30 Jan 2019 16:55:29 -0600</lastBuildDate>
     
 	<atom:link href="https://www.palfans.net/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>RHEL 7 上安装 Docker CE</title>
+      <link>https://www.palfans.net/install-docker-ce-on-rhel7/</link>
+      <pubDate>Wed, 30 Jan 2019 16:55:29 -0600</pubDate>
+      
+      <guid>https://www.palfans.net/install-docker-ce-on-rhel7/</guid>
+      <description>&lt;p&gt;最近注册了 RedHat 的 Developer 账号，可以免费订阅一个账号用于开发测试。但是，RHEL 7 默认只能安装 Docker EE，是需要花钱的。如何才能安装社区版本的 Docker 呢？&lt;/p&gt;
+
+&lt;p&gt;首先提一下， 开发者计划提供的订阅账号，本身也&lt;strong&gt;不带技术支持&lt;/strong&gt;，万事靠自己，所以就不用顾忌安装第三方源会失去技术支持的问题。&lt;/p&gt;
+
+&lt;p&gt;按照以前的经验，RHEL 可以安装 CentOS 的对应源。但是，参照 &lt;a href=&#34;https://docs.docker.com/install/linux/docker-ce/centos/&#34;&gt;Get Docker CE for CentOS&lt;/a&gt;，这次会出现一个错误&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;Requires: container-selinux &amp;gt;= 2.9&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;多次尝试后，终于把 Docker CE 装上了。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;</description>
+    </item>
     
     <item>
       <title>从 WordPress 迁到 Hugo</title>
@@ -323,33 +356,6 @@ Input/output error.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;p&gt;这就像你让他们挂一幅画，但他们从来没有干过这样的活。你明白你要做什么——只要让他们这么做就行了。事实上，你认为有些东西不用解释，因为你觉得它们太简单了。所以，你让一些新手来为你工作时，你说，“把这幅画挂在那里，做完了告诉我”，很好理解，对不对？但他知道应该怎样钉钉子吗？实际上，有很多细节他不清楚，他需要学习才能把画挂好。另外，还有很多东西你容易忽略。&lt;/p&gt;
 
 &lt;p&gt;首先，是怎么做。他需要什么工具？你知道工具箱里有锤子和钉子。但他不知道，他认为他有合适的工具完成任务。于是他在办公桌上找到了一个订书机和胶带。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>走饭的诗</title>
-      <link>https://www.palfans.net/poem-from-a-girl/</link>
-      <pubDate>Sat, 29 Sep 2012 08:16:39 +0000</pubDate>
-      
-      <guid>https://www.palfans.net/poem-from-a-girl/</guid>
-      <description>&lt;p&gt;走饭是一名90后的女大学生，12年3月因抑郁症自杀。她在&lt;a href=&#34;http://www.weibo.com/xiaofan116&#34;&gt;微博&lt;/a&gt;上留下很多文字，充满灵性，敏感而又洒脱。&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;《香瓜》
-受不鸟啦
-买了两个香瓜
-竟然要十块钱
-我再也不相信香瓜啦&lt;/p&gt;
-
-&lt;p&gt;《镜子》
-真特么想
-吐你一脸口水
-我对镜子说&lt;/p&gt;
-
-&lt;p&gt;《跳楼》
-跳楼死的人比跳崖死的人多
-是因为爬到山顶真他妈没劲跳了啊
-就想坐着&lt;/p&gt;
-&lt;/blockquote&gt;</description>
     </item>
     
   </channel>
