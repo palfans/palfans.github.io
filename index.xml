@@ -31,6 +31,7 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;多次尝试后，终于把 Docker CE 装上了。&lt;/p&gt;
+
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre class=&#34;chroma&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -38,11 +39,13 @@
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-e&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;pre class=&#34;chroma&#34;&gt;sudo yum install -y yum-utils
+sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+sudo yum makecache fast
+sudo yum install -y http://mirror.centos.org/centos/7/extras/x86_64/Packages/container-selinux-2.74-1.el7.noarch.rpm
+sudo yum install -y docker-ce&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;比官方流程多了一步，单独安装&lt;code&gt;container-selinux&lt;/code&gt;。这个安装包更新挺频繁的，如果链接失效，需要前往&lt;a href=&#34;http://mirror.centos.org/centos/7/extras/x86_64/Packages/&#34;&gt;http://mirror.centos.org/centos/7/extras/x86_64/Packages/&lt;/a&gt;查找最近打包的安装包。&lt;/p&gt;

@@ -20,7 +20,7 @@
 首先提一下， 开发者计划提供的订阅账号，本身也不带技术支持，万事靠自己，所以就不用顾忌安装第三方源会失去技术支持的问题。
 按照以前的经验，RHEL 可以安装 CentOS 的对应源。但是，参照 Get Docker CE for CentOS，这次会出现一个错误
 1  Requires: container-selinux &amp;gt;= 2.9   多次尝试后，终于把 Docker CE 装上了。
-1 2 3 4 5 6 7  " /><meta name="keywords" content="Palfans, blog" />
+" /><meta name="keywords" content="Palfans, blog" />
 
 
 
@@ -56,18 +56,7 @@
 Requires: container-selinux &gt;= 2.9
 
 
-多次尝试后，终于把 Docker CE 装上了。
-
-
-1
-2
-3
-4
-5
-6
-7
-
-" />
+多次尝试后，终于把 Docker CE 装上了。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.palfans.net/install-docker-ce-on-rhel7/" />
 <meta property="article:published_time" content="2019-01-30T16:55:29-06:00"/>
@@ -87,23 +76,12 @@ Requires: container-selinux &gt;= 2.9
 Requires: container-selinux &gt;= 2.9
 
 
-多次尝试后，终于把 Docker CE 装上了。
-
-
-1
-2
-3
-4
-5
-6
-7
-
-">
+多次尝试后，终于把 Docker CE 装上了。">
 
 
 <meta itemprop="datePublished" content="2019-01-30T16:55:29-06:00" />
 <meta itemprop="dateModified" content="2019-01-30T16:55:29-06:00" />
-<meta itemprop="wordCount" content="410">
+<meta itemprop="wordCount" content="430">
 
 
 
@@ -123,18 +101,7 @@ Requires: container-selinux &gt;= 2.9
 Requires: container-selinux &gt;= 2.9
 
 
-多次尝试后，终于把 Docker CE 装上了。
-
-
-1
-2
-3
-4
-5
-6
-7
-
-"/>
+多次尝试后，终于把 Docker CE 装上了。"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -238,6 +205,7 @@ Requires: container-selinux &gt;= 2.9
 </div>
 </div>
 <p>多次尝试后，终于把 Docker CE 装上了。</p>
+
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><span class="lnt">1
@@ -245,11 +213,13 @@ Requires: container-selinux &gt;= 2.9
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
 </span></pre></td>
 <td class="lntd">
-e></td></tr></table>
+<pre class="chroma">sudo yum install -y yum-utils
+sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+sudo yum makecache fast
+sudo yum install -y http://mirror.centos.org/centos/7/extras/x86_64/Packages/container-selinux-2.74-1.el7.noarch.rpm
+sudo yum install -y docker-ce</pre></td></tr></table>
 </div>
 </div>
 <p>比官方流程多了一步，单独安装<code>container-selinux</code>。这个安装包更新挺频繁的，如果链接失效，需要前往<a href="http://mirror.centos.org/centos/7/extras/x86_64/Packages/">http://mirror.centos.org/centos/7/extras/x86_64/Packages/</a>查找最近打包的安装包。</p>
