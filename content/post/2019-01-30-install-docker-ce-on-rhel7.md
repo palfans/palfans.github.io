@@ -21,8 +21,8 @@ tags:
 Requires: container-selinux >= 2.9
 ```
 多次尝试后，终于把 Docker CE 装上了。
-```
 <!--more-->
+```
 sudo yum install -y yum-utils
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 sudo yum makecache fast
