@@ -1,1 +1,1 @@
-mklink /D content\post\img static\img
+mklink /D %~dp0\content\post\img %~dp0\static\img
