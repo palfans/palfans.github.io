@@ -67,11 +67,11 @@ Input/output error.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;pre class=&#34;chroma&#34;&gt;swapon -s&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.palfans.net/img/extend_swap_space_in_virtualbox/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://res.palfans.net/img/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;1. 首先，在VirtualBox中新增一块硬盘&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.palfans.net/img/extend_swap_space_in_virtualbox/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://res.palfans.net/img/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;</description>
     </item>
     
     <item>

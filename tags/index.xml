@@ -6,91 +6,10 @@
     <description>Recent content in Tags on Palfans&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 10 Nov 2008 05:27:18 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Jan 2019 16:55:29 -0600</lastBuildDate>
     
 	<atom:link href="https://www.palfans.net/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>APMServ</title>
-      <link>https://www.palfans.net/tags/apmserv/</link>
-      <pubDate>Mon, 10 Nov 2008 05:27:18 +0000</pubDate>
-      
-      <guid>https://www.palfans.net/tags/apmserv/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ATM</title>
-      <link>https://www.palfans.net/tags/atm/</link>
-      <pubDate>Thu, 06 Mar 2008 15:17:32 +0000</pubDate>
-      
-      <guid>https://www.palfans.net/tags/atm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Animal Farm</title>
-      <link>https://www.palfans.net/tags/animal-farm/</link>
-      <pubDate>Sun, 20 Apr 2008 16:42:35 +0000</pubDate>
-      
-      <guid>https://www.palfans.net/tags/animal-farm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>BSP</title>
-      <link>https://www.palfans.net/tags/bsp/</link>
-      <pubDate>Tue, 28 Sep 2010 15:34:55 +0000</pubDate>
-      
-      <guid>https://www.palfans.net/tags/bsp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Boom De Ah Dah</title>
-      <link>https://www.palfans.net/tags/boom-de-ah-dah/</link>
-      <pubDate>Mon, 20 Oct 2008 04:20:11 +0000</pubDate>
-      
-      <guid>https://www.palfans.net/tags/boom-de-ah-dah/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>CDN</title>
-      <link>https://www.palfans.net/tags/cdn/</link>
-      <pubDate>Fri, 29 Nov 2013 07:50:03 +0000</pubDate>
-      
-      <guid>https://www.palfans.net/tags/cdn/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Canon</title>
-      <link>https://www.palfans.net/tags/canon/</link>
-      <pubDate>Sun, 09 Sep 2012 06:17:50 +0000</pubDate>
-      
-      <guid>https://www.palfans.net/tags/canon/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Die Hard</title>
-      <link>https://www.palfans.net/tags/die-hard/</link>
-      <pubDate>Wed, 29 Aug 2007 23:35:28 +0000</pubDate>
-      
-      <guid>https://www.palfans.net/tags/die-hard/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Discovery Channel</title>
-      <link>https://www.palfans.net/tags/discovery-channel/</link>
-      <pubDate>Mon, 20 Oct 2008 04:20:11 +0000</pubDate>
-      
-      <guid>https://www.palfans.net/tags/discovery-channel/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Docker</title>
@@ -102,92 +21,173 @@
     </item>
     
     <item>
-      <title>GV</title>
-      <link>https://www.palfans.net/tags/gv/</link>
-      <pubDate>Fri, 18 Jul 2014 18:38:03 +0000</pubDate>
+      <title>RHEL7</title>
+      <link>https://www.palfans.net/tags/rhel7/</link>
+      <pubDate>Wed, 30 Jan 2019 16:55:29 -0600</pubDate>
       
-      <guid>https://www.palfans.net/tags/gv/</guid>
+      <guid>https://www.palfans.net/tags/rhel7/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Google</title>
-      <link>https://www.palfans.net/tags/google/</link>
-      <pubDate>Sun, 09 Sep 2012 06:17:50 +0000</pubDate>
+      <title>github</title>
+      <link>https://www.palfans.net/tags/github/</link>
+      <pubDate>Fri, 25 Jan 2019 21:46:00 -0600</pubDate>
       
-      <guid>https://www.palfans.net/tags/google/</guid>
+      <guid>https://www.palfans.net/tags/github/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Gracenote</title>
-      <link>https://www.palfans.net/tags/gracenote/</link>
-      <pubDate>Tue, 21 Aug 2012 13:37:06 +0000</pubDate>
+      <title>hugo</title>
+      <link>https://www.palfans.net/tags/hugo/</link>
+      <pubDate>Fri, 25 Jan 2019 21:46:00 -0600</pubDate>
       
-      <guid>https://www.palfans.net/tags/gracenote/</guid>
+      <guid>https://www.palfans.net/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>H1N1</title>
-      <link>https://www.palfans.net/tags/h1n1/</link>
-      <pubDate>Mon, 02 Nov 2009 17:48:39 +0000</pubDate>
+      <title>wordpress</title>
+      <link>https://www.palfans.net/tags/wordpress/</link>
+      <pubDate>Fri, 25 Jan 2019 21:46:00 -0600</pubDate>
       
-      <guid>https://www.palfans.net/tags/h1n1/</guid>
+      <guid>https://www.palfans.net/tags/wordpress/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Hamilton</title>
-      <link>https://www.palfans.net/tags/hamilton/</link>
-      <pubDate>Mon, 03 Nov 2008 10:27:38 +0000</pubDate>
+      <title>linux</title>
+      <link>https://www.palfans.net/tags/linux/</link>
+      <pubDate>Fri, 10 Aug 2018 22:48:09 +0000</pubDate>
       
-      <guid>https://www.palfans.net/tags/hamilton/</guid>
+      <guid>https://www.palfans.net/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Helicopter</title>
-      <link>https://www.palfans.net/tags/helicopter/</link>
-      <pubDate>Sun, 09 Sep 2012 06:17:50 +0000</pubDate>
+      <title>xfce</title>
+      <link>https://www.palfans.net/tags/xfce/</link>
+      <pubDate>Fri, 10 Aug 2018 22:48:09 +0000</pubDate>
       
-      <guid>https://www.palfans.net/tags/helicopter/</guid>
+      <guid>https://www.palfans.net/tags/xfce/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>IP</title>
-      <link>https://www.palfans.net/tags/ip/</link>
-      <pubDate>Tue, 06 May 2008 19:10:55 +0000</pubDate>
+      <title>javascript</title>
+      <link>https://www.palfans.net/tags/javascript/</link>
+      <pubDate>Sun, 29 Apr 2018 03:05:45 +0000</pubDate>
       
-      <guid>https://www.palfans.net/tags/ip/</guid>
+      <guid>https://www.palfans.net/tags/javascript/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>MIB</title>
-      <link>https://www.palfans.net/tags/mib/</link>
-      <pubDate>Sun, 26 Aug 2007 13:56:49 +0000</pubDate>
+      <title>screen</title>
+      <link>https://www.palfans.net/tags/screen/</link>
+      <pubDate>Thu, 22 Mar 2018 21:10:38 +0000</pubDate>
       
-      <guid>https://www.palfans.net/tags/mib/</guid>
+      <guid>https://www.palfans.net/tags/screen/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>MSN</title>
-      <link>https://www.palfans.net/tags/msn/</link>
-      <pubDate>Sat, 25 Mar 2006 00:28:41 +0000</pubDate>
+      <title>kodi</title>
+      <link>https://www.palfans.net/tags/kodi/</link>
+      <pubDate>Thu, 15 Mar 2018 21:03:12 +0000</pubDate>
       
-      <guid>https://www.palfans.net/tags/msn/</guid>
+      <guid>https://www.palfans.net/tags/kodi/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Nexus</title>
-      <link>https://www.palfans.net/tags/nexus/</link>
-      <pubDate>Sun, 09 Sep 2012 06:17:50 +0000</pubDate>
+      <title>windows</title>
+      <link>https://www.palfans.net/tags/windows/</link>
+      <pubDate>Thu, 15 Mar 2018 21:03:12 +0000</pubDate>
       
-      <guid>https://www.palfans.net/tags/nexus/</guid>
+      <guid>https://www.palfans.net/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>中国</title>
+      <link>https://www.palfans.net/tags/%E4%B8%AD%E5%9B%BD/</link>
+      <pubDate>Fri, 28 Jul 2017 15:45:01 +0000</pubDate>
+      
+      <guid>https://www.palfans.net/tags/%E4%B8%AD%E5%9B%BD/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>网络</title>
+      <link>https://www.palfans.net/tags/%E7%BD%91%E7%BB%9C/</link>
+      <pubDate>Fri, 28 Jul 2017 15:45:01 +0000</pubDate>
+      
+      <guid>https://www.palfans.net/tags/%E7%BD%91%E7%BB%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>驾照</title>
+      <link>https://www.palfans.net/tags/%E9%A9%BE%E7%85%A7/</link>
+      <pubDate>Fri, 30 Jun 2017 19:24:04 +0000</pubDate>
+      
+      <guid>https://www.palfans.net/tags/%E9%A9%BE%E7%85%A7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>银行</title>
+      <link>https://www.palfans.net/tags/%E9%93%B6%E8%A1%8C/</link>
+      <pubDate>Thu, 22 Jun 2017 16:57:37 +0000</pubDate>
+      
+      <guid>https://www.palfans.net/tags/%E9%93%B6%E8%A1%8C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>妊娠糖尿病</title>
+      <link>https://www.palfans.net/tags/%E5%A6%8A%E5%A8%A0%E7%B3%96%E5%B0%BF%E7%97%85/</link>
+      <pubDate>Tue, 06 Jun 2017 04:19:43 +0000</pubDate>
+      
+      <guid>https://www.palfans.net/tags/%E5%A6%8A%E5%A8%A0%E7%B3%96%E5%B0%BF%E7%97%85/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lets encrypt</title>
+      <link>https://www.palfans.net/tags/lets-encrypt/</link>
+      <pubDate>Mon, 05 Jun 2017 20:49:13 +0000</pubDate>
+      
+      <guid>https://www.palfans.net/tags/lets-encrypt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ssl</title>
+      <link>https://www.palfans.net/tags/ssl/</link>
+      <pubDate>Mon, 05 Jun 2017 20:49:13 +0000</pubDate>
+      
+      <guid>https://www.palfans.net/tags/ssl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>oneplus</title>
+      <link>https://www.palfans.net/tags/oneplus/</link>
+      <pubDate>Sat, 14 Nov 2015 06:24:00 +0000</pubDate>
+      
+      <guid>https://www.palfans.net/tags/oneplus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>一加</title>
+      <link>https://www.palfans.net/tags/%E4%B8%80%E5%8A%A0/</link>
+      <pubDate>Sat, 14 Nov 2015 06:24:00 +0000</pubDate>
+      
+      <guid>https://www.palfans.net/tags/%E4%B8%80%E5%8A%A0/</guid>
       <description></description>
     </item>
     

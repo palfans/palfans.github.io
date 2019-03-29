@@ -26,7 +26,7 @@
 <meta name="google-site-verification" content="7MLs3wY58s_Jjnto4NZgvoEHnnJc07ojBCBlgI1gTco" />
 
 
-<meta name="generator" content="Hugo 0.54-DEV with even 4.0.0" />
+<meta name="generator" content="Hugo 0.55.0-DEV with even 4.0.0" />
 
 
 <link rel="canonical" href="https://www.palfans.net/extend_swap_space_in_virtualbox/" />
@@ -207,17 +207,17 @@ swapon -s
 <pre class="chroma">swapon -s</pre></td></tr></table>
 </div>
 </div>
-<p><img src="/img/extend_swap_space_in_virtualbox/1.png" alt="" /></p>
+<p><img src="https://res.palfans.net/img/1.png" alt="" /></p>
 
 <p>1. 首先，在VirtualBox中新增一块硬盘</p>
 
-<p><img src="/img/extend_swap_space_in_virtualbox/2.png" alt="" /></p>
+<p><img src="https://res.palfans.net/img/2.png" alt="" /></p>
 
-<p><img src="/img/extend_swap_space_in_virtualbox/3.png" alt="" /></p>
+<p><img src="https://res.palfans.net/img/3.png" alt="" /></p>
 
-<p><img src="/img/extend_swap_space_in_virtualbox/4.png" alt="" /></p>
+<p><img src="https://res.palfans.net/img/4.png" alt="" /></p>
 
-<p><img src="/img/extend_swap_space_in_virtualbox/5.png" alt="" /></p>
+<p><img src="https://res.palfans.net/img/5.png" alt="" /></p>
 
 <p>2. 格式化新增的硬盘</p>
 <div class="highlight"><div class="chroma">
@@ -240,11 +240,11 @@ swapon -s
 fdisk /dev/sdb</pre></td></tr></table>
 </div>
 </div>
-<p><img src="/img/extend_swap_space_in_virtualbox/6.png" alt="" /></p>
+<p><img src="https://res.palfans.net/img/6.png" alt="" /></p>
 
-<p><img src="/img/extend_swap_space_in_virtualbox/7.png" alt="" /></p>
+<p><img src="https://res.palfans.net/img/7.png" alt="" /></p>
 
-<p><img src="/img/extend_swap_space_in_virtualbox/8.png" alt="" /></p>
+<p><img src="https://res.palfans.net/img/8.png" alt="" /></p>
 
 <p>3. 转换为Swap space</p>
 <div class="highlight"><div class="chroma">
@@ -279,7 +279,7 @@ swapon /dev/sdb1
 swapon -s</pre></td></tr></table>
 </div>
 </div>
-<p><img src="/img/extend_swap_space_in_virtualbox/9.png" alt="" /></p>
+<p><img src="https://res.palfans.net/img/9.png" alt="" /></p>
 
 <p>4. 让CentOS开机自动加载新增的交换空间</p>
 <div class="highlight"><div class="chroma">
@@ -290,7 +290,7 @@ swapon -s</pre></td></tr></table>
 <pre class="chroma">vi /etc/fstab</pre></td></tr></table>
 </div>
 </div>
-<p><img src="/img/extend_swap_space_in_virtualbox/10.png" alt="" /></p>
+<p><img src="https://res.palfans.net/img/10.png" alt="" /></p>
     </div>
 
     <div class="post-copyright">

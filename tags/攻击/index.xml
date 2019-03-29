@@ -17,7 +17,7 @@
       <pubDate>Fri, 29 Nov 2013 07:50:03 +0000</pubDate>
       
       <guid>https://www.palfans.net/fu_kspam/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://www.palfans.net/img/fu_kspam/stopspam.jpg&#34; alt=&#34;stopspam&#34; /&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&#34;https://res.palfans.net/img/stopspam.jpg&#34; alt=&#34;stopspam&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;最近发现网站所在的主机资源占用很严重，长期超过80%，经常触发资源达到限制的508错误。一开始没注意，结果月底主机带宽用光。这么多年，这个主机的带宽从未用完过一半，这个月居然用完了！于是开始仔细看访问日志，发现一大堆来自福建莆田的IP，频繁刷新各种页面，目的不明。主机商协助增加了3次，每次1G的流量，都很快被搞完。&lt;/p&gt;
 

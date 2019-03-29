@@ -6,6 +6,7 @@
     <description>Recent content in Categories on Palfans&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
+    <lastBuildDate>Wed, 30 Jan 2019 16:55:29 -0600</lastBuildDate>
     
 	<atom:link href="https://www.palfans.net/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -20,11 +21,11 @@
     </item>
     
     <item>
-      <title>推荐</title>
-      <link>https://www.palfans.net/categories/%E6%8E%A8%E8%8D%90/</link>
-      <pubDate>Fri, 27 Mar 2009 11:00:17 +0000</pubDate>
+      <title>闲聊</title>
+      <link>https://www.palfans.net/categories/%E9%97%B2%E8%81%8A/</link>
+      <pubDate>Fri, 28 Jul 2017 15:45:01 +0000</pubDate>
       
-      <guid>https://www.palfans.net/categories/%E6%8E%A8%E8%8D%90/</guid>
+      <guid>https://www.palfans.net/categories/%E9%97%B2%E8%81%8A/</guid>
       <description></description>
     </item>
     
@@ -47,11 +48,11 @@
     </item>
     
     <item>
-      <title>闲聊</title>
-      <link>https://www.palfans.net/categories/%E9%97%B2%E8%81%8A/</link>
-      <pubDate>Fri, 28 Jul 2017 15:45:01 +0000</pubDate>
+      <title>推荐</title>
+      <link>https://www.palfans.net/categories/%E6%8E%A8%E8%8D%90/</link>
+      <pubDate>Fri, 27 Mar 2009 11:00:17 +0000</pubDate>
       
-      <guid>https://www.palfans.net/categories/%E9%97%B2%E8%81%8A/</guid>
+      <guid>https://www.palfans.net/categories/%E6%8E%A8%E8%8D%90/</guid>
       <description></description>
     </item>
     
