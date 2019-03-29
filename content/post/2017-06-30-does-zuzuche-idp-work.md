@@ -11,7 +11,7 @@ tags:
 - 驾照
 ---
 
-![zuzuche_idl](/img/does-zuzuche-idp-work/zuzuche_idl.jpg)
+![](https://res.palfans.net/img/zuzuche_idl.jpg)
 
 这两天看到微信朋友圈里在宣传租租车可以免费办理国际驾照认证件（[链接](http://w.zuzuche.com/tidl/)），号称香港公证行和NAATI联合翻译认证，9国语言，权威认证，畅行全球200个国家，包括美国、加拿大、澳大利亚、以及英德意等欧洲国家。脑中升起一个问号，真是这样的吗？
 
@@ -28,7 +28,8 @@ tags:
 > 
 >
 
-![Countries_that_Recognize_International_Driving_Permit](/img/does-zuzuche-idp-work/Countries_that_Recognize_International_Driving_Permit.png)  
+![Countries_that_Recognize_International_Driving_Permit](https://res.palfans.net/img/Countries_that_Recognize_International_Driving_Permit.png)
+  
 深蓝：国际道路交通公约签约国和地区 浅蓝：非签约国但承认国际驾驶执照  
 图片来源：[维基百科-国际驾照词条](https://zh.wikipedia.org/wiki/%E5%9C%8B%E9%9A%9B%E9%A7%95%E9%A7%9B%E5%9F%B7%E7%85%A7)
 
@@ -42,7 +43,7 @@ tags:
 
 所以凭租租车这本国际驾照，只可能在那些承认翻译公证后的中国驾照有效的国家和地区使用，但这不一定适合所有《道路交通公约》的签约国，需要对每一个国家的专门法律条文进行研究。
 
-![image](/img/does-zuzuche-idp-work/image.png)  
+![](https://res.palfans.net/img/image.png)  
 图片来源：穷游问答 [链接](http://ask.qyer.com/question/962637.html)
 
 从租租车的回答来看，这是相当不负责任的。他们只和车行供应商多次确认，而不是自己去研究相关的法律条文或者咨询专业律师，如果真的出了什么意外，车行供应商是不会帮你向执法部门做任何解释的。

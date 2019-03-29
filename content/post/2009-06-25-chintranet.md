@@ -24,7 +24,7 @@ tags:
 
 
 
-![低俗Google](/img/chintranet/internet_frame_up_google.jpg)  
+![低俗Google](https://res.palfans.net/img/internet_frame_up_google.jpg)
 
 
 

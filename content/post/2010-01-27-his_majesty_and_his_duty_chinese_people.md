@@ -20,7 +20,8 @@ tags:
 
 <!--more-->说到财政收入。先看一张图片，Google搜索“财政收入”的结果。
 
-![中国人民，万税万税万万税](/img/his_majesty_and_his_duty_chinese_people/news_china_revenue.jpg)
+![中国人民，万税万税万万税](https://res.palfans.net/img/news_china_revenue.jpg)
+
 
 2009年全年财政收入，芝麻开花，节节高，各大媒体也打了鸡血似的，拼命宣传，我们的祖国越来越有钱了，难怪首长们当年就讲过，全国的捞钱形势一片大好，不是小好，整个形势比以往任何时候都好。有数据为证，以下是从[国家统计局](http://www.stats.gov.cn/)整理的部分统计数据，2008年以后的数据没查不到：
 <table cellpadding="0" cellspacing="0" border="0" width="542" >

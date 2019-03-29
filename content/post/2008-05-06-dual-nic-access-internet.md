@@ -45,17 +45,17 @@ tags:
 
 1） 将 IP 地址和子网掩码换算为二进制，子网掩码连续全1的是网络地址，后面的是主机地址。 虚线前为网络地址，虚线后为主机地址
 
-![](/img/dual-nic-access-internet/tech_ipaddress_1.jpg)
+![](https://res.palfans.net/img/tech_ipaddress_1.jpg)
 
 
 2） IP 地址和子网掩码进行与运算，结果是网络地址 
 
-![](/img/dual-nic-access-internet/tech_ipaddress_2.jpg)
+![](https://res.palfans.net/img/tech_ipaddress_2.jpg)
 
 
 3） 将上面的网络地址中的网络地址部分不变，主机地址变为全1，结果就是广播地址。 
 
-![](/img/dual-nic-access-internet/tech_ipaddress_3.jpg)
+![](https://res.palfans.net/img/tech_ipaddress_3.jpg)
 
 
 4） 地址范围就是含在本网段内的所有主机
@@ -78,7 +78,7 @@ tags:
 
 我们把上边的例子合起来计算一下过程如下： 
 
-![](/img/dual-nic-access-internet/tech_ipaddress_4.jpg)
+![](https://res.palfans.net/img/tech_ipaddress_4.jpg)
 
  
 
@@ -86,17 +86,17 @@ tags:
 
 1） 将 IP 地址和子网掩码换算为二进制，子网掩码连续全1的是网络地址，后面的是主机地址， 虚线前为网络地址，虚线后为主机地址 
 
-![](/img/dual-nic-access-internet/tech_ipaddress_5.jpg)
+![](https://res.palfans.net/img/tech_ipaddress_5.jpg)
 
 
 2） IP 地址和子网掩码进行与运算，结果是网络地址 
 
-![](/img/dual-nic-access-internet/tech_ipaddress_6.jpg)
+![](https://res.palfans.net/img/tech_ipaddress_6.jpg)
 
 
 3）将运算结果中的网络地址不变，主机地址变为1，结果就是广播地址。 
 
-![](/img/dual-nic-access-internet/tech_ipaddress_7.jpg)
+![](https://res.palfans.net/img/tech_ipaddress_7.jpg)
 
 
 4） 地址范围就是含在本网段内的所有主机

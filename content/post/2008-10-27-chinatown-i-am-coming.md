@@ -30,15 +30,15 @@ tags:
 
 对了，我只能用叉子吃面条了，因为我不远万里带过来的白玉筷子，被服务员当作一次性筷子给扔了……
 
-![chinatown](/img/chinatown-i-am-coming/view_canada_chinatown_1.jpg)
-![chinatown](/img/chinatown-i-am-coming/view_canada_chinatown_2.jpg)
-![chinatown](/img/chinatown-i-am-coming/view_canada_chinatown_3.jpg)
-![chinatown](/img/chinatown-i-am-coming/view_canada_chinatown_4.jpg)
-![chinatown](/img/chinatown-i-am-coming/view_canada_chinatown_5.jpg)
-![chinatown](/img/chinatown-i-am-coming/view_canada_chinatown_6.jpg)
-![chinatown](/img/chinatown-i-am-coming/view_canada_chinatown_7.jpg)
-![chinatown](/img/chinatown-i-am-coming/view_canada_chinatown_8.jpg)
-![chinatown](/img/chinatown-i-am-coming/view_canada_chinatown_9.jpg)
-![chinatown](/img/chinatown-i-am-coming/view_canada_chinatown_10.jpg)
-![chinatown](/img/chinatown-i-am-coming/view_canada_chinatown_11.jpg)
+![](https://res.palfans.net/img/view_canada_chinatown_1.jpg)
+![](https://res.palfans.net/img/view_canada_chinatown_2.jpg)
+![](https://res.palfans.net/img/view_canada_chinatown_3.jpg)
+![](https://res.palfans.net/img/view_canada_chinatown_4.jpg)
+![](https://res.palfans.net/img/view_canada_chinatown_5.jpg)
+![](https://res.palfans.net/img/view_canada_chinatown_6.jpg)
+![](https://res.palfans.net/img/view_canada_chinatown_7.jpg)
+![](https://res.palfans.net/img/view_canada_chinatown_8.jpg)
+![](https://res.palfans.net/img/view_canada_chinatown_9.jpg)
+![](https://res.palfans.net/img/view_canada_chinatown_10.jpg)
+![](https://res.palfans.net/img/view_canada_chinatown_11.jpg)
 

@@ -27,7 +27,7 @@ Google Voice（简称GV）是Google公司的又一个伟大产品，它其实是
 
 
 
-![](/img/pstn-gv-callback/tech_pstn_callback.png)
+![](https://res.palfans.net/img/tech_pstn_callback.png)
 
 
 

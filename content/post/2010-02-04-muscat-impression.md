@@ -49,10 +49,10 @@ tags:
 
 虽然阿曼绝大多数人信仰伊斯兰教，但是并不像塔利班一样极端。这里什么都有，必胜客、肯德基、麦当劳，流行音乐，电视电影，还能买到酒，只是需要许可证。上次和华为的兄弟们吃饭，他们居然还能弄到猪肉。由于教义和法律的严厉，这里治安挺好的，听说偷东西要断手，大家都对别人的东西没什么想法。我经常看到路边的车没关窗玻璃，这在国内简直就是不可想象的事情。
 
-![Muscat](/img/muscat-impression/view_oman_muscat_1.jpg)
-![Muscat](/img/muscat-impression/view_oman_muscat_2.jpg)
-![Muscat](/img/muscat-impression/view_oman_muscat_3.jpg)
-![Muscat](/img/muscat-impression/view_oman_muscat_4.jpg)
-![Muscat](/img/muscat-impression/view_oman_muscat_5.jpg)
-![Muscat](/img/muscat-impression/view_oman_muscat_6.jpg)
-![Muscat](/img/muscat-impression/view_oman_muscat_7.jpg)
+![Muscat](https://res.palfans.net/img/view_oman_muscat_1.jpg)
+![Muscat](https://res.palfans.net/img/view_oman_muscat_2.jpg)
+![Muscat](https://res.palfans.net/img/view_oman_muscat_3.jpg)
+![Muscat](https://res.palfans.net/img/view_oman_muscat_4.jpg)
+![Muscat](https://res.palfans.net/img/view_oman_muscat_5.jpg)
+![Muscat](https://res.palfans.net/img/view_oman_muscat_6.jpg)
+![Muscat](https://res.palfans.net/img/view_oman_muscat_7.jpg)

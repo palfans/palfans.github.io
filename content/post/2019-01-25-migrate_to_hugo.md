@@ -11,7 +11,7 @@ tags:
 - wordpress
 ---
 
-![](/img/migrate_to_hugo/migration.png)
+![](https://res.palfans.net/img/migration.png)
 
 ## 起因 ##
 

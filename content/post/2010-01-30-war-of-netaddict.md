@@ -31,4 +31,4 @@ tags:
 
 这是发自内心渴望的表达，是的，我们习惯了沉默，但是，请举起我们的手，力量的光芒正在我们手中变亮变大。
 
-![网瘾战争](/img/war-of-netaddict/games_warofnetaddict.jpg)
+![网瘾战争](https://res.palfans.net/img/games_warofnetaddict.jpg)

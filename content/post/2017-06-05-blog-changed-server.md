@@ -14,7 +14,7 @@ tags:
 
 算起来，从2005年开始写这个Blog，累计换了好几次服务器。从Windows主机到Linux主机，从朋友托管机器到专业空间服务商，从相当业余的myrice到老牌空间hostgator，在不断折腾中慢慢熟悉了域名，DNS，虚拟空间等各种概念和网站知识。2010年搬到[老薛主机](http://www.laoxuehost.com/)，因为不想折腾了。一晃七年，不能说没有遇到问题，比如网站经常会在中国的半夜出现MySQL服务器挂死的问题，为此我提交了好多问题单。不过一旦提交问题单，解决都非常快。马上新一年的账单又要来了，不过鉴于现在打理网站的时间少之又少，Blog基本处于停止更新的状态，一年估计能写一篇，所以即使年费才几十块钱，也不想再续费了。考虑到家里常年开着一台惠普的小服务器，反正闲着也是浪费电，索性在周末把全站从虚拟空间转移到自家的机器上。再见了，老薛。
 
-![](/img/blog-changed-server/server.jpg)
+![](https://res.palfans.net/img/blog_change_server.jpg)
 
 picture from [vpnranks](https://www.vpnranks.com)
 <!--more-->

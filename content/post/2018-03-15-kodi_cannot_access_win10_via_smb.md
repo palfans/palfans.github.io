@@ -19,12 +19,12 @@ tags:
 
 打开控制面板中的“添加删除程序功能”模块，或者在 Windows 开始旁边的搜索框中输入“Turn Windows feature on or off”并找到控制面板的最佳匹配项。
 
-![](/img/kodi_cannot_access_win10_via_smb/300px-2017-11-14_08-23-47.png)
+![](https://res.palfans.net/img/300px-2017-11-14_08-23-47.png)
 
 
 在 Windows 功能中找到 SMB 1.0/CIFS File Sharing Support 并激活，Windows 会安装相应的文件。重启 Win10 之后，就能重新支持 Kodi 采用的旧版 SMB 协议。
 
-![](/img/kodi_cannot_access_win10_via_smb/OptionalFeatures_2017-11-14_08-24-53.png)
+![](https://res.palfans.net/img/OptionalFeatures_2017-11-14_08-24-53.png)
 
 
 再次打开 Android 平板的 Kodi，通过 SMB 连接就能打开远端的媒体库了。这个问题并没有出现在 Win10 平板的 Kodi 中，估计因为 Android 版本还没有支持 SMB 2.0。

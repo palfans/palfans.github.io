@@ -13,7 +13,7 @@ tags:
 
 最近知乎上线了一个新功能，打开任何问答页面，都会弹出一个隐私政策对话框，你有同意或者不同意两个选择，但是，如果你想继续阅读内容，不同意是不行的。
 
-![](/img/zhihu_privacypolicy/zhihu_privacypolicy.gif)
+![](https://res.palfans.net/img/zhihu_privacypolicy.gif)
 
 
 

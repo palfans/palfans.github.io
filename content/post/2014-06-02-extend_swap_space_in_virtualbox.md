@@ -23,21 +23,21 @@ tags:
     
 
 
-![](/img/extend_swap_space_in_virtualbox/1.png)
+![](https://res.palfans.net/img/1.png)
 
 1\. 首先，在VirtualBox中新增一块硬盘
 
-![](/img/extend_swap_space_in_virtualbox/2.png)
+![](https://res.palfans.net/img/2.png)
 
 
 
 <!--more-->
 
-![](/img/extend_swap_space_in_virtualbox/3.png)
+![](https://res.palfans.net/img/3.png)
 
-![](/img/extend_swap_space_in_virtualbox/4.png)
+![](https://res.palfans.net/img/4.png)
 
-![](/img/extend_swap_space_in_virtualbox/5.png)
+![](https://res.palfans.net/img/5.png)
 
 2\. 格式化新增的硬盘
 
@@ -51,11 +51,11 @@ tags:
     fdisk /dev/sdb
 
 
-![](/img/extend_swap_space_in_virtualbox/6.png)
+![](https://res.palfans.net/img/6.png)
 
-![](/img/extend_swap_space_in_virtualbox/7.png)
+![](https://res.palfans.net/img/7.png)
 
-![](/img/extend_swap_space_in_virtualbox/8.png)
+![](https://res.palfans.net/img/8.png)
 
 3\. 转换为Swap space
 
@@ -75,7 +75,7 @@ tags:
     swapon -s
 
 
-![](/img/extend_swap_space_in_virtualbox/9.png)
+![](https://res.palfans.net/img/9.png)
 
 4\. 让CentOS开机自动加载新增的交换空间
 
@@ -83,4 +83,4 @@ tags:
     vi /etc/fstab
 
 
-![](/img/extend_swap_space_in_virtualbox/10.png)
+![](https://res.palfans.net/img/10.png)

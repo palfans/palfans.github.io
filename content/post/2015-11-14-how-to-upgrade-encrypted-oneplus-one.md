@@ -19,7 +19,7 @@ tags:
 
 但是问题来了，CM系统更新非常频繁，经常收到OTA升级通知，每次点击更新会在下载完升级包之后重启到Recovery的机器人界面，然后升级失败，怎么回事？
 
-![](/img/how-to-upgrade-encrypted-oneplus-one/OnePlusOneAndroid5.1.1LollipopCyanogen.jpg)
+![](https://res.palfans.net/img/OnePlusOneAndroid5.1.1LollipopCyanogen.jpg)
 
 <!--more-->
 
@@ -29,7 +29,7 @@ tags:
 
 1. adb sideload update  
 把升级包下载到电脑上，把手机和电脑用数据线连接起来，adb sideload就能从电脑读取升级文件后直接写入手机的/system分区，完全不访问/data，就不再有加密分区的限制。Bacon Root Toolkit提供了一键adb sideload的功能，点击下图按钮后，按照软件提示进行操作即可写入数据。  
-![](/img/how-to-upgrade-encrypted-oneplus-one/sideload.jpg)
+![](https://res.palfans.net/img/sideload.jpg)
 
 2. usb otg update  
 将升级包复制到优盘中，通过otg线连接到手机，重启进入Recovery后，加载usb-otg分区。因为usb-otg也是未加密状态，可以直接访问，所以可能正常升级。

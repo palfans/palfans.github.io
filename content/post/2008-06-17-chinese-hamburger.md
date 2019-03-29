@@ -23,7 +23,7 @@ tags:
 
 这个biang字实在是打不出来，不知道是不是陕西人自己造的，只好去找了一张图片。
 
-![biang](/img/chinese-hamburger/fun_biang.jpg)
+![](https://res.palfans.net/img/fun_biang.jpg)
 
 另外有一个段子，可以帮助记忆这个字的写法：一点飞上天，黄河两道湾；八字大张口，言字往里走，左一扭，右一扭；西一长，东一长；当中夹个马大王；心字底，月字旁，留个勾勾挂麻糖，推个车车走咸阳。
 

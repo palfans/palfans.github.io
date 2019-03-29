@@ -24,8 +24,8 @@ tags:
 
 果然不愧为北美五大湖之一，宽的看不到边。安大略湖是夹在美国和加拿大中间的，我和同事一直在想，像我们俩这样，没有美国签证，自己整条小船，慢慢划，也能划到美国去了。出来这么久了，还是这么没出息。
 
-![Ontario](/img/visit-ontario/view_ontario1.jpg)
-![Ontario](/img/visit-ontario/view_ontario2.jpg)
-![Ontario](/img/visit-ontario/view_ontario3.jpg)
-![Ontario](/img/visit-ontario/view_ontario4.jpg)
+![Ontario](https://res.palfans.net/img/view_ontario1.jpg)
+![Ontario](https://res.palfans.net/img/view_ontario2.jpg)
+![Ontario](https://res.palfans.net/img/view_ontario3.jpg)
+![Ontario](https://res.palfans.net/img/view_ontario4.jpg)
 
