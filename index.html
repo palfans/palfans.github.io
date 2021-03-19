@@ -23,7 +23,7 @@
 <meta name="google-site-verification" content="7MLs3wY58s_Jjnto4NZgvoEHnnJc07ojBCBlgI1gTco" />
 
 
-<meta name="generator" content="Hugo 0.81.0 with even 4.0.0" />
+<meta name="generator" content="Hugo 0.81.0 with theme even" />
 
 
 <link rel="canonical" href="https://www.palfans.net/" />
@@ -36,7 +36,8 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.da936970.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -58,15 +59,6 @@
   <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
 <![endif]-->
-
-
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({
-          google_ad_client: "ca-pub-7616210698629060",
-          enable_page_level_ads: true
-     });
-</script>
 
 </head>
 <body>
@@ -92,12 +84,21 @@
         <li class="mobile-menu-item">Categories</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Palfans&#39;s BLOG</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -112,6 +113,7 @@
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -120,19 +122,162 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/">Posts</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/work_from_home_via_vpn/">通过 VPN 远程办公</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2021-03-19 </span>
-      
+      <div class="post-category">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E6%A0%88/"> 技术栈 </a>
+          </div>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      
+      <h2 id="需求">需求</h2>
+<p>作为一名实施人员，通常情况下需要通过各种 VPN 连接到公司和客户的工作环境来完成任务。尤其是疫情的影响，完全在家工作，对 VPN 的利用就更重了。</p>
+<p>但是，VPN 装多了，各种虚拟网卡驱动相互之间不一定能好好兼容，即使是 Windows 10 也很容易蓝屏，要是不幸发生在工作过程中，尤其是更新生产系统，那就有得事情做了。</p>
+<h2 id="解决方案">解决方案</h2>
+<p>我能想到的解决方案，还是虚拟机。把所有的 VPN 都装在虚拟机里边，即使不幸虚拟机挂了，也可以在几分钟内恢复一份快照，而且这个异常完全不会影响到宿主机的系统。</p>
+<p>在 Windows 上，常用的虚拟机解决方案有</p>
+<ul>
+<li>商用的 VMWare</li>
+<li>免费的 Virtualbox</li>
+<li>Windows 10 自带的 Hyper-V</li>
+</ul>
+<p>在 Windows 10 ver20H2 之前，Hyper-V 和其他两个解决方案是互斥的，如果启用了 Hyper-V，那么 VMWare 和 Virtualbox 都不能正常启动。更新到 20H2 之后，它们就可以共存了。</p>
     </div>
     <div class="read-more">
-      <a href="/post/" class="read-more-link">阅读更多</a>
+      <a href="/work_from_home_via_vpn/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/install-docker-ce-on-rhel7/">RHEL 7 上安装 Docker CE</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2019-01-30 </span>
+      <div class="post-category">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E6%A0%88/"> 技术栈 </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>最近注册了 RedHat 的 Developer 账号，可以免费订阅一个账号用于开发测试。但是，RHEL 7 默认只能安装 Docker EE，是需要花钱的。如何才能安装社区版本的 Docker 呢？</p>
+<p>首先提一下， 开发者计划提供的订阅账号，本身也<strong>不带技术支持</strong>，万事靠自己，所以就不用顾忌安装第三方源会失去技术支持的问题。</p>
+<p>按照以前的经验，RHEL 可以安装 CentOS 的对应源。但是，参照 <a href="https://docs.docker.com/install/linux/docker-ce/centos/">Get Docker CE for CentOS</a>，这次会出现一个错误</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Requires: container-selinux &gt;= 2.9
+</code></pre></td></tr></table>
+</div>
+</div><p>多次尝试后，终于把 Docker CE 装上了。</p>
+    </div>
+    <div class="read-more">
+      <a href="/install-docker-ce-on-rhel7/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/moving_wordpress_hugo/">从 WordPress 迁到 Hugo</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2019-01-25 </span>
+      <div class="post-category">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E6%A0%88/"> 技术栈 </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p><img src="https://res.palfans.net/img/migration.png" alt=""></p>
+<h2 id="起因">起因</h2>
+<p>说起来，都不记得这是第几次折腾 Blog 的服务器了。当初为了提高从国内访问的速度，我把搭梯子的 VPS 放在了香港的数据中心，顺便把 Blog 也放在同一台服务器以求节约成本。转眼自己肉翻这么多年，再也没有机会用那把梯子。但从美国家里访问 Blog 就慢得不能忍受，而且因为 VPS 性能不好，时不时就会出现 503 错误。思考再三，决定把站点搬回美国，反正流量可以忽略，至少要满足自己的。</p>
+<h2 id="选型">选型</h2>
+<h3 id="wordpress-的问题">WordPress 的问题</h3>
+<p>继续使用 WordPress 吗？我有点犹豫了。</p>
+<ol>
+<li>WordPress 体量越来越大，新版本我都不太会用了。</li>
+<li>网站运行速度慢。更新版本以后，常常需要等好几分钟才能打开后台。</li>
+<li>离线编辑器不好用。Windows Live Writer 以及后续的 <a href="http://openlivewriter.org/">Open Live Writer</a> 都不再更新了。</li>
+<li>太流行，也就意味着目标大。总是要担心各种来自 PHP，WordPress 以及 MySQL 的安全漏洞。</li>
+<li>动态网站遭遇 DDoS 的时候，开销也大大高于静态网站。</li>
+<li>备份也不省心，定期备还占地方。</li>
+</ol>
+    </div>
+    <div class="read-more">
+      <a href="/moving_wordpress_hugo/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/xfce4_failed_to_execute_default_terminal_emulator/">Xfce4 failed to execute default Terminal Emulator</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2018-08-10 </span>
+      <div class="post-category">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E6%A0%88/"> 技术栈 </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>Xfce 是一款针对 Linux 系统的现代化轻型开源桌面环境，基于 GTK+2.x 开发完成。相对于传统的 GNOME 桌面来说，xfce 足够轻量化，资源占用很低，但使用体验并不差。尤其对于公司的服务器来说，偶尔需要桌面环境，但又不想安装臃肿的 GNOME，Xfce 就是个不错的选择。</p>
+<p>最近在公司新装了几台机器，装完发现 Xfce4 自带的终端模拟器一打开就报错。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Failed to execute default Terminal Emulator.
+Input/output error.
+</code></pre></td></tr></table>
+</div>
+</div><p>从字面上看，I/O 有问题。查看了系统设置，终端设置都是正确的。Google 搜了一圈，有一个说法是终端的编码不是 UTF-8 也会导致这个问题，但我这里已经默认为 UTF-8。看日志发现如下错误：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">/usr/bin/xfce4-terminal: symbol lookup error: /usr/bin/xfce4-terminal: undefined symbol: vte_regex_new_for_match
+</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+    <div class="read-more">
+      <a href="/xfce4_failed_to_execute_default_terminal_emulator/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/zhihu_privacypolicy/">不能不同意的知乎隐私政策</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2018-04-29 </span>
+      <div class="post-category">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E6%A0%88/"> 技术栈 </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>最近知乎上线了一个新功能，打开任何问答页面，都会弹出一个隐私政策对话框，你有同意或者不同意两个选择，但是，如果你想继续阅读内容，不同意是不行的。</p>
+<p><img src="https://res.palfans.net/img/zhihu_privacypolicy.gif" alt=""></p>
+    </div>
+    <div class="read-more">
+      <a href="/zhihu_privacypolicy/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>
@@ -141,7 +286,10 @@
   
   <nav class="pagination">
     
-    
+    <a class="next" href="/page/2/">
+        <span class="next-text">下一页</span>
+        <i class="iconfont icon-right"></i>
+      </a>
   </nav>
         </div>
         
@@ -170,13 +318,10 @@
   <span class="copyright-year">
     &copy; 
     2005 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">Palfans</span>
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>Palfans</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -187,7 +332,10 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
 
 
 <script type="application/javascript">
