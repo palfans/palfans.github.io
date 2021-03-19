@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>事故 on Palfans&#39;s BLOG</title>
@@ -6,11 +6,7 @@
     <description>Recent content in 事故 on Palfans&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 27 Jun 2007 21:21:47 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.palfans.net/tags/%E4%BA%8B%E6%95%85/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 27 Jun 2007 21:21:47 +0000</lastBuildDate><atom:link href="https://www.palfans.net/tags/%E4%BA%8B%E6%95%85/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>开车是个高风险的事情</title>
       <link>https://www.palfans.net/driving-is-high-risk/</link>

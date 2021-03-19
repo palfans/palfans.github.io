@@ -19,14 +19,14 @@
 <meta name="author" content="Palfans" /><meta name="description" content="Xfce 是一款针对 Linux 系统的现代化轻型开源桌面环境，基于 GTK&#43;2.x 开发完成。相对于传统的 GNOME 桌面来说，xfce 足够轻量化，资源占用很低，但使用体验并不差。尤其对于公司的服务器来说，偶尔需要桌面环境，但又不想安装臃肿的 GNOME，Xfce 就是个不错的选择。
 最近在公司新装了几台机器，装完发现 Xfce4 自带的终端模拟器一打开就报错。
 1 2  Failed to execute default Terminal Emulator. Input/output error.   从字面上看，I/O 有问题。查看了系统设置，终端设置都是正确的。Google 搜了一圈，有一个说法是终端的编码不是 UTF-8 也会导致这个问题，但我这里已经默认为 UTF-8。看日志发现如下错误：
-1  /usr/bin/xfce4-terminal: symbol lookup error: /usr/bin/xfce4-terminal: undefined symbol: vte_regex_new_for_match  " /><meta name="keywords" content="Palfans, blog" />
+1  /usr/bin/xfce4-terminal: symbol lookup error: /usr/bin/xfce4-terminal: undefined symbol: vte_regex_new_for_match   " /><meta name="keywords" content="Palfans, blog" />
 
 
 
 <meta name="google-site-verification" content="7MLs3wY58s_Jjnto4NZgvoEHnnJc07ojBCBlgI1gTco" />
 
 
-<meta name="generator" content="Hugo 0.55.0-DEV with even 4.0.0" />
+<meta name="generator" content="Hugo 0.81.0 with even 4.0.0" />
 
 
 <link rel="canonical" href="https://www.palfans.net/xfce4_failed_to_execute_default_terminal_emulator/" />
@@ -43,7 +43,6 @@
 
 <meta property="og:title" content="Xfce4 failed to execute default Terminal Emulator" />
 <meta property="og:description" content="Xfce 是一款针对 Linux 系统的现代化轻型开源桌面环境，基于 GTK&#43;2.x 开发完成。相对于传统的 GNOME 桌面来说，xfce 足够轻量化，资源占用很低，但使用体验并不差。尤其对于公司的服务器来说，偶尔需要桌面环境，但又不想安装臃肿的 GNOME，Xfce 就是个不错的选择。
-
 最近在公司新装了几台机器，装完发现 Xfce4 自带的终端模拟器一打开就报错。
 
 
@@ -62,16 +61,16 @@ Input/output error.
 
 
 /usr/bin/xfce4-terminal: symbol lookup error: /usr/bin/xfce4-terminal: undefined symbol: vte_regex_new_for_match
+
 
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.palfans.net/xfce4_failed_to_execute_default_terminal_emulator/" />
-<meta property="article:published_time" content="2018-08-10T22:48:09&#43;00:00"/>
-<meta property="article:modified_time" content="2018-08-10T22:48:09&#43;00:00"/>
+<meta property="og:url" content="https://www.palfans.net/xfce4_failed_to_execute_default_terminal_emulator/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2018-08-10T22:48:09&#43;00:00" />
+<meta property="article:modified_time" content="2018-08-10T22:48:09&#43;00:00" />
 
 <meta itemprop="name" content="Xfce4 failed to execute default Terminal Emulator">
 <meta itemprop="description" content="Xfce 是一款针对 Linux 系统的现代化轻型开源桌面环境，基于 GTK&#43;2.x 开发完成。相对于传统的 GNOME 桌面来说，xfce 足够轻量化，资源占用很低，但使用体验并不差。尤其对于公司的服务器来说，偶尔需要桌面环境，但又不想安装臃肿的 GNOME，Xfce 就是个不错的选择。
-
 最近在公司新装了几台机器，装完发现 Xfce4 自带的终端模拟器一打开就报错。
 
 
@@ -91,20 +90,13 @@ Input/output error.
 
 /usr/bin/xfce4-terminal: symbol lookup error: /usr/bin/xfce4-terminal: undefined symbol: vte_regex_new_for_match
 
-">
 
-
-<meta itemprop="datePublished" content="2018-08-10T22:48:09&#43;00:00" />
+"><meta itemprop="datePublished" content="2018-08-10T22:48:09&#43;00:00" />
 <meta itemprop="dateModified" content="2018-08-10T22:48:09&#43;00:00" />
 <meta itemprop="wordCount" content="801">
-
-
-
-<meta itemprop="keywords" content="linux,xfce," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="linux,xfce," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Xfce4 failed to execute default Terminal Emulator"/>
 <meta name="twitter:description" content="Xfce 是一款针对 Linux 系统的现代化轻型开源桌面环境，基于 GTK&#43;2.x 开发完成。相对于传统的 GNOME 桌面来说，xfce 足够轻量化，资源占用很低，但使用体验并不差。尤其对于公司的服务器来说，偶尔需要桌面环境，但又不想安装臃肿的 GNOME，Xfce 就是个不错的选择。
-
 最近在公司新装了几台机器，装完发现 Xfce4 自带的终端模拟器一打开就报错。
 
 
@@ -123,6 +115,7 @@ Input/output error.
 
 
 /usr/bin/xfce4-terminal: symbol lookup error: /usr/bin/xfce4-terminal: undefined symbol: vte_regex_new_for_match
+
 
 "/>
 
@@ -210,53 +203,52 @@ Input/output error.
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
       <p>Xfce 是一款针对 Linux 系统的现代化轻型开源桌面环境，基于 GTK+2.x 开发完成。相对于传统的 GNOME 桌面来说，xfce 足够轻量化，资源占用很低，但使用体验并不差。尤其对于公司的服务器来说，偶尔需要桌面环境，但又不想安装臃肿的 GNOME，Xfce 就是个不错的选择。</p>
-
 <p>最近在公司新装了几台机器，装完发现 Xfce4 自带的终端模拟器一打开就报错。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">Failed to execute default Terminal Emulator.
-Input/output error.</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Failed to execute default Terminal Emulator.
+Input/output error.
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>从字面上看，I/O 有问题。查看了系统设置，终端设置都是正确的。Google 搜了一圈，有一个说法是终端的编码不是 UTF-8 也会导致这个问题，但我这里已经默认为 UTF-8。看日志发现如下错误：</p>
+</div><p>从字面上看，I/O 有问题。查看了系统设置，终端设置都是正确的。Google 搜了一圈，有一个说法是终端的编码不是 UTF-8 也会导致这个问题，但我这里已经默认为 UTF-8。看日志发现如下错误：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">/usr/bin/xfce4-terminal: symbol lookup error: /usr/bin/xfce4-terminal: undefined symbol: vte_regex_new_for_match</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">/usr/bin/xfce4-terminal: symbol lookup error: /usr/bin/xfce4-terminal: undefined symbol: vte_regex_new_for_match
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>symbol 找不到？前几个月安装其他机器的时候，没有这个问题。因为每次都是用 yum 在线安装，应该是版本升级造成的。看下当前用的什么版本的 vte。</p>
+</div><p>symbol 找不到？前几个月安装其他机器的时候，没有这个问题。因为每次都是用 yum 在线安装，应该是版本升级造成的。看下当前用的什么版本的 vte。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ ldd /usr/bin/xfce4-terminal | grep vte
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ ldd /usr/bin/xfce4-terminal | grep vte
 libvte-2.91.so.0 =&gt; /lib64/libvte-2.91.so.0 (0x00007fdcd8cdd000)
 
 $ rpm -qa|grep vte291
-vte291-0.38.4-2.el7.x86_64</pre></td></tr></table>
+vte291-0.38.4-2.el7.x86_64
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>安装的 Linux 是 RHEL 7.3，vte291 版本是 0.38，有可能新版本的 vte 包含了缺失的 symbol。</p>
+</div><p>安装的 Linux 是 RHEL 7.3，vte291 版本是 0.38，有可能新版本的 vte 包含了缺失的 symbol。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -266,9 +258,9 @@ vte291-0.38.4-2.el7.x86_64</pre></td></tr></table>
 </span><span class="lnt"> 8
 </span><span class="lnt"> 9
 </span><span class="lnt">10
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ sudo yum install vte291
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo yum install vte291
 Loaded plugins: product-id, search-disabled-repos, subscription-manager
 Resolving Dependencies
 --&gt; Running transaction check
@@ -277,22 +269,22 @@ Resolving Dependencies
 --&gt; Processing Dependency: libpcre2-8.so.0()(64bit) for package: vte291-0.46.2-1.el7.x86_64
 --&gt; Running transaction check
 ---&gt; Package pcre2.x86_64 0:10.23-2.el7 will be installed
---&gt; Finished Dependency Resolution</pre></td></tr></table>
+--&gt; Finished Dependency Resolution
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>新版本的 vte291 连带安装了 pcre2，再次尝试打开终端，还是报同样的错，但日志不同了。</p>
+</div><p>新版本的 vte291 连带安装了 pcre2，再次尝试打开终端，还是报同样的错，但日志不同了。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">/usr/bin/xfce4-terminal: symbol lookup error: /lib64/libvte-2.91.so.0: undefined symbol: gtk_widget_class_set_css_name</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">/usr/bin/xfce4-terminal: symbol lookup error: /lib64/libvte-2.91.so.0: undefined symbol: gtk_widget_class_set_css_name
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>又有 GTK 的 symbol 找不到，升级 GTK。</p>
+</div><p>又有 GTK 的 symbol 找不到，升级 GTK。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -326,9 +318,9 @@ Resolving Dependencies
 </span><span class="lnt">32
 </span><span class="lnt">33
 </span><span class="lnt">34
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ sudo yum install gtk3
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo yum install gtk3
 Loaded plugins: product-id, search-disabled-repos, subscription-manager
 Resolving Dependencies
 --&gt; Running transaction check
@@ -361,10 +353,10 @@ Resolving Dependencies
 --&gt; Running transaction check
 ---&gt; Package gtk2.x86_64 0:2.24.28-8.el7 will be updated
 ---&gt; Package gtk2.x86_64 0:2.24.31-1.el7 will be an update
---&gt; Finished Dependency Resolution</pre></td></tr></table>
+--&gt; Finished Dependency Resolution
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>终于又看到黑色的终端。</p>
+</div><p>终于又看到黑色的终端。</p>
     </div>
 
     <div class="post-copyright">
@@ -445,7 +437,7 @@ Resolving Dependencies
   <span class="copyright-year">
     &copy; 
     2005 - 
-    2019
+    2021
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

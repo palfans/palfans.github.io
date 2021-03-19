@@ -25,7 +25,7 @@
 <meta name="google-site-verification" content="7MLs3wY58s_Jjnto4NZgvoEHnnJc07ojBCBlgI1gTco" />
 
 
-<meta name="generator" content="Hugo 0.55.0-DEV with even 4.0.0" />
+<meta name="generator" content="Hugo 0.81.0 with even 4.0.0" />
 
 
 <link rel="canonical" href="https://www.palfans.net/iis-asp-can-not-run-issue/" />
@@ -42,30 +42,20 @@
 
 <meta property="og:title" content="IIS不能运行ASP问题的解决" />
 <meta property="og:description" content="重装系统后，一直没有安装IIS，安装后发现不能正常运行ASP代码，报“http 500内部服务器错误”，而HTML文件能正常运行，卸载IIS并重装也不能解决问题。
-
 在系统服务中，发现DTC服务不能正常启动，报错，运行msdtc -resetlog，再次检查，DTC能正常启动。重启机器，IIS依旧不正常。执行rundll32 wamreg.dll, CreateIISPackage；regsvr32 asptxn.dll，IIS终于能执行ASP代码。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.palfans.net/iis-asp-can-not-run-issue/" />
-<meta property="article:published_time" content="2008-05-22T23:31:15&#43;00:00"/>
-<meta property="article:modified_time" content="2008-05-22T23:31:15&#43;00:00"/>
+<meta property="og:url" content="https://www.palfans.net/iis-asp-can-not-run-issue/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2008-05-22T23:31:15&#43;00:00" />
+<meta property="article:modified_time" content="2008-05-22T23:31:15&#43;00:00" />
 
 <meta itemprop="name" content="IIS不能运行ASP问题的解决">
 <meta itemprop="description" content="重装系统后，一直没有安装IIS，安装后发现不能正常运行ASP代码，报“http 500内部服务器错误”，而HTML文件能正常运行，卸载IIS并重装也不能解决问题。
-
-在系统服务中，发现DTC服务不能正常启动，报错，运行msdtc -resetlog，再次检查，DTC能正常启动。重启机器，IIS依旧不正常。执行rundll32 wamreg.dll, CreateIISPackage；regsvr32 asptxn.dll，IIS终于能执行ASP代码。">
-
-
-<meta itemprop="datePublished" content="2008-05-22T23:31:15&#43;00:00" />
+在系统服务中，发现DTC服务不能正常启动，报错，运行msdtc -resetlog，再次检查，DTC能正常启动。重启机器，IIS依旧不正常。执行rundll32 wamreg.dll, CreateIISPackage；regsvr32 asptxn.dll，IIS终于能执行ASP代码。"><meta itemprop="datePublished" content="2008-05-22T23:31:15&#43;00:00" />
 <meta itemprop="dateModified" content="2008-05-22T23:31:15&#43;00:00" />
 <meta itemprop="wordCount" content="511">
-
-
-
-<meta itemprop="keywords" content="asp,http,iis,网络," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="asp,http,iis,网络," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="IIS不能运行ASP问题的解决"/>
 <meta name="twitter:description" content="重装系统后，一直没有安装IIS，安装后发现不能正常运行ASP代码，报“http 500内部服务器错误”，而HTML文件能正常运行，卸载IIS并重装也不能解决问题。
-
 在系统服务中，发现DTC服务不能正常启动，报错，运行msdtc -resetlog，再次检查，DTC能正常启动。重启机器，IIS依旧不正常。执行rundll32 wamreg.dll, CreateIISPackage；regsvr32 asptxn.dll，IIS终于能执行ASP代码。"/>
 
 <!--[if lte IE 9]>
@@ -152,36 +142,35 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
       <p>重装系统后，一直没有安装IIS，安装后发现不能正常运行ASP代码，报“http 500内部服务器错误”，而HTML文件能正常运行，卸载IIS并重装也不能解决问题。</p>
-
 <p>在系统服务中，发现DTC服务不能正常启动，报错，运行msdtc -resetlog，再次检查，DTC能正常启动。重启机器，IIS依旧不正常。执行rundll32 wamreg.dll, CreateIISPackage；regsvr32 asptxn.dll，IIS终于能执行ASP代码。</p>
-
 <p>总结操作步骤：</p>
-
 <ol>
-<li><p>右击“我的电脑”，选择管理，服务和应用程序，服务，手工启动DTC服务（全名为Distributed Transaction Coordinator）</p></li>
-
-<li><p>如果正常启动，跳过此步骤。如果启动失败，弹出对话框，则在开始菜单的运行中，输入 msdtc -resetlog，用来创建日志文件。</p></li>
-
-<li><p>重启机器，检查IIS能否正常执行ASP，如果不行，见下步</p></li>
-
-<li><p>在命令提示符状态下（开始菜单，运行，cmd）执行</p></li>
+<li>
+<p>右击“我的电脑”，选择管理，服务和应用程序，服务，手工启动DTC服务（全名为Distributed Transaction Coordinator）</p>
+</li>
+<li>
+<p>如果正常启动，跳过此步骤。如果启动失败，弹出对话框，则在开始菜单的运行中，输入 msdtc -resetlog，用来创建日志文件。</p>
+</li>
+<li>
+<p>重启机器，检查IIS能否正常执行ASP，如果不行，见下步</p>
+</li>
+<li>
+<p>在命令提示符状态下（开始菜单，运行，cmd）执行</p>
+</li>
 </ol>
-
 <blockquote>
 <p>cd %windir%system32inetsrv
 rundll32 wamreg.dll, CreateIISPackage
 regsvr32 asptxn.dll</p>
 </blockquote>
-
-<ol>
+<ol start="5">
 <li>检查IIS，应该已经恢复正常</li>
 </ol>
-
 <p>其实上面第四步，可以通过卸载IIS并重装来达到同样的目的，不过这样比较简便。参阅了网上很多文章，都需要比较复杂的处理过程，不如这个方法来的快。如果IIS遇到问题，可以优先尝试上面的办法，不行再做他想。</p>
     </div>
 
@@ -265,7 +254,7 @@ regsvr32 asptxn.dll</p>
   <span class="copyright-year">
     &copy; 
     2005 - 
-    2019
+    2021
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

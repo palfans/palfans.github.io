@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Discovery Channel on Palfans&#39;s BLOG</title>
@@ -6,11 +6,7 @@
     <description>Recent content in Discovery Channel on Palfans&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 20 Oct 2008 04:20:11 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.palfans.net/tags/discovery-channel/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 20 Oct 2008 04:20:11 +0000</lastBuildDate><atom:link href="https://www.palfans.net/tags/discovery-channel/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>I Love The World</title>
       <link>https://www.palfans.net/i-love-the-world/</link>

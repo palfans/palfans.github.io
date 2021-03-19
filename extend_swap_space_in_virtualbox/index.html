@@ -18,7 +18,7 @@
 
 <meta name="author" content="Palfans" /><meta name="description" content="在VirtualBox中安装好CentOS后，会发现默认的Swap空间大小是根据初次配置的可用内存来生成的，正常使用足够。但是，如果需要安装Oracle，它要求最少2GB的交换空间，这时就需要扩展交换空间。
 首先运行swapon命令查看交换空间大小，如果得到的大小少于2097152，就需要增加交换空间。
-1  swapon -s   1. 首先，在VirtualBox中新增一块硬盘
+swapon -s  1. 首先，在VirtualBox中新增一块硬盘
 " /><meta name="keywords" content="Palfans, blog" />
 
 
@@ -26,7 +26,7 @@
 <meta name="google-site-verification" content="7MLs3wY58s_Jjnto4NZgvoEHnnJc07ojBCBlgI1gTco" />
 
 
-<meta name="generator" content="Hugo 0.55.0-DEV with even 4.0.0" />
+<meta name="generator" content="Hugo 0.81.0 with even 4.0.0" />
 
 
 <link rel="canonical" href="https://www.palfans.net/extend_swap_space_in_virtualbox/" />
@@ -43,69 +43,35 @@
 
 <meta property="og:title" content="为VirtualBox中的CentOS扩展Swap空间" />
 <meta property="og:description" content="在VirtualBox中安装好CentOS后，会发现默认的Swap空间大小是根据初次配置的可用内存来生成的，正常使用足够。但是，如果需要安装Oracle，它要求最少2GB的交换空间，这时就需要扩展交换空间。
-
 首先运行swapon命令查看交换空间大小，如果得到的大小少于2097152，就需要增加交换空间。
-
-
-1
-
-
 swapon -s
 
 
-
-
 1. 首先，在VirtualBox中新增一块硬盘
-
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.palfans.net/extend_swap_space_in_virtualbox/" />
-<meta property="article:published_time" content="2014-06-02T18:30:56&#43;00:00"/>
-<meta property="article:modified_time" content="2014-06-02T18:30:56&#43;00:00"/>
+<meta property="og:url" content="https://www.palfans.net/extend_swap_space_in_virtualbox/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2014-06-02T18:30:56&#43;00:00" />
+<meta property="article:modified_time" content="2014-06-02T18:30:56&#43;00:00" />
 
 <meta itemprop="name" content="为VirtualBox中的CentOS扩展Swap空间">
 <meta itemprop="description" content="在VirtualBox中安装好CentOS后，会发现默认的Swap空间大小是根据初次配置的可用内存来生成的，正常使用足够。但是，如果需要安装Oracle，它要求最少2GB的交换空间，这时就需要扩展交换空间。
-
 首先运行swapon命令查看交换空间大小，如果得到的大小少于2097152，就需要增加交换空间。
-
-
-1
-
-
 swapon -s
 
 
-
-
 1. 首先，在VirtualBox中新增一块硬盘
-
-">
-
-
-<meta itemprop="datePublished" content="2014-06-02T18:30:56&#43;00:00" />
+"><meta itemprop="datePublished" content="2014-06-02T18:30:56&#43;00:00" />
 <meta itemprop="dateModified" content="2014-06-02T18:30:56&#43;00:00" />
-<meta itemprop="wordCount" content="248">
-
-
-
-<meta itemprop="keywords" content="centos,linux,swap,virtualbox," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="wordCount" content="226">
+<meta itemprop="keywords" content="centos,linux,swap,virtualbox," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="为VirtualBox中的CentOS扩展Swap空间"/>
 <meta name="twitter:description" content="在VirtualBox中安装好CentOS后，会发现默认的Swap空间大小是根据初次配置的可用内存来生成的，正常使用足够。但是，如果需要安装Oracle，它要求最少2GB的交换空间，这时就需要扩展交换空间。
-
 首先运行swapon命令查看交换空间大小，如果得到的大小少于2097152，就需要增加交换空间。
-
-
-1
-
-
 swapon -s
 
 
-
-
 1. 首先，在VirtualBox中新增一块硬盘
-
 "/>
 
 <!--[if lte IE 9]>
@@ -192,79 +158,34 @@ swapon -s
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
       <p>在VirtualBox中安装好CentOS后，会发现默认的Swap空间大小是根据初次配置的可用内存来生成的，正常使用足够。但是，如果需要安装Oracle，它要求最少2GB的交换空间，这时就需要扩展交换空间。</p>
-
 <p>首先运行swapon命令查看交换空间大小，如果得到的大小少于<strong>2097152</strong>，就需要增加交换空间。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">swapon -s</pre></td></tr></table>
-</div>
-</div>
-<p><img src="https://res.palfans.net/img/1.png" alt="" /></p>
-
+<pre><code>swapon -s
+</code></pre>
+<p><img src="https://res.palfans.net/img/1.png" alt=""></p>
 <p>1. 首先，在VirtualBox中新增一块硬盘</p>
-
-<p><img src="https://res.palfans.net/img/2.png" alt="" /></p>
-
-<p><img src="https://res.palfans.net/img/3.png" alt="" /></p>
-
-<p><img src="https://res.palfans.net/img/4.png" alt="" /></p>
-
-<p><img src="https://res.palfans.net/img/5.png" alt="" /></p>
-
+<p><img src="https://res.palfans.net/img/2.png" alt=""></p>
+<p><img src="https://res.palfans.net/img/3.png" alt=""></p>
+<p><img src="https://res.palfans.net/img/4.png" alt=""></p>
+<p><img src="https://res.palfans.net/img/5.png" alt=""></p>
 <p>2. 格式化新增的硬盘</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">fdisk -l
+<pre><code>fdisk -l
 
 
 
 
 
-fdisk /dev/sdb</pre></td></tr></table>
-</div>
-</div>
-<p><img src="https://res.palfans.net/img/6.png" alt="" /></p>
-
-<p><img src="https://res.palfans.net/img/7.png" alt="" /></p>
-
-<p><img src="https://res.palfans.net/img/8.png" alt="" /></p>
-
+fdisk /dev/sdb
+</code></pre>
+<p><img src="https://res.palfans.net/img/6.png" alt=""></p>
+<p><img src="https://res.palfans.net/img/7.png" alt=""></p>
+<p><img src="https://res.palfans.net/img/8.png" alt=""></p>
 <p>3. 转换为Swap space</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">mkswap /dev/sdb1
+<pre><code>mkswap /dev/sdb1
 
 
 
@@ -276,21 +197,13 @@ swapon /dev/sdb1
 
 
 
-swapon -s</pre></td></tr></table>
-</div>
-</div>
-<p><img src="https://res.palfans.net/img/9.png" alt="" /></p>
-
+swapon -s
+</code></pre>
+<p><img src="https://res.palfans.net/img/9.png" alt=""></p>
 <p>4. 让CentOS开机自动加载新增的交换空间</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">vi /etc/fstab</pre></td></tr></table>
-</div>
-</div>
-<p><img src="https://res.palfans.net/img/10.png" alt="" /></p>
+<pre><code>vi /etc/fstab
+</code></pre>
+<p><img src="https://res.palfans.net/img/10.png" alt=""></p>
     </div>
 
     <div class="post-copyright">
@@ -373,7 +286,7 @@ swapon -s</pre></td></tr></table>
   <span class="copyright-year">
     &copy; 
     2005 - 
-    2019
+    2021
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

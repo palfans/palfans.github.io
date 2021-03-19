@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>bios on Palfans&#39;s BLOG</title>
@@ -6,11 +6,7 @@
     <description>Recent content in bios on Palfans&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 04 Jan 2007 22:16:54 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.palfans.net/tags/bios/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 04 Jan 2007 22:16:54 +0000</lastBuildDate><atom:link href="https://www.palfans.net/tags/bios/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>开启硬盘的ata100模式</title>
       <link>https://www.palfans.net/open-the-hard-drive-ata100-mode/</link>
@@ -27,7 +23,6 @@
       
       <guid>https://www.palfans.net/system-blue-screen-0x000000a5/</guid>
       <description>&lt;p&gt;新购电脑，使用4天时间，期间一直未关机。突然在使用中蓝屏，提示建议重新启动。重启后在winxp进度条时再次蓝屏，提示BIOS有问题。&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;*** STOP: 0x000000A5 (0x00010003 , 0x85E37CD0 , 0X0000000B , 0x85E885E4)The ACPI BIOS in this system is not fully compliant with the ACPI specification.please read the README.TXT for possible workarounds you can also contact your system&amp;rsquo;s mamufacturer for an update BIOS,or visit &lt;a href=&#34;http://www.hardware-update.com&#34;&gt;http://www.hardware-update.com&lt;/a&gt; to see if a new BIOS is aviailable.The BIOS in this system is not fully ACPI compliant.please comtact your system vendor or visit &lt;a href=&#34;http://www.hardware-update.com&#34;&gt;http://www.hardware-update.com&lt;/a&gt; for an updated BIOS if you are unable to obtain an updated BIOS or the latest BIOS supplied by your vendor is not ACPI compliant,you can turn off ACPI mode durring text mode setup.to do this,simple press the F7 key when you are prompted to install storage drivers.the system will not notify you that the F7 key was pressed.it will silently disable ACPI and allow you to continue your installation.&lt;/p&gt;
 &lt;/blockquote&gt;</description>

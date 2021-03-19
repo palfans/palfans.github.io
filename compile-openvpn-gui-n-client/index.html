@@ -17,7 +17,7 @@
 
 
 <meta name="author" content="Palfans" /><meta name="description" content="OpenVPN客户端一般由两部分组成，OpenVPN和OpenVPN GUI。官方提供的OpenVPN客户端 for Windows为了提高用户账号的安全性，默认不能保存密码。安全性确实提高了，但是遇到网络不好，VPN意外中断时，每次都要手工输入密码，也很烦心。所以我们需要重新编译客户端代码，让其能够保存密码。而OpenVPN GUI的问题在于状态窗口输入的日志字体小得惊人，像我这种戴眼镜后矫正视力才0.6的人，想看清连接状态几乎是不可能的，所以也得改。
- 
+** **
 **
 " /><meta name="keywords" content="Palfans, blog" />
 
@@ -26,7 +26,7 @@
 <meta name="google-site-verification" content="7MLs3wY58s_Jjnto4NZgvoEHnnJc07ojBCBlgI1gTco" />
 
 
-<meta name="generator" content="Hugo 0.55.0-DEV with even 4.0.0" />
+<meta name="generator" content="Hugo 0.81.0 with even 4.0.0" />
 
 
 <link rel="canonical" href="https://www.palfans.net/compile-openvpn-gui-n-client/" />
@@ -43,36 +43,23 @@
 
 <meta property="og:title" content="Windows编译OpenVPN客户端（保存密码，修改日志字体）" />
 <meta property="og:description" content="OpenVPN客户端一般由两部分组成，OpenVPN和OpenVPN GUI。官方提供的OpenVPN客户端 for Windows为了提高用户账号的安全性，默认不能保存密码。安全性确实提高了，但是遇到网络不好，VPN意外中断时，每次都要手工输入密码，也很烦心。所以我们需要重新编译客户端代码，让其能够保存密码。而OpenVPN GUI的问题在于状态窗口输入的日志字体小得惊人，像我这种戴眼镜后矫正视力才0.6的人，想看清连接状态几乎是不可能的，所以也得改。
-
- 
-
+** **
 **" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.palfans.net/compile-openvpn-gui-n-client/" />
-<meta property="article:published_time" content="2011-01-29T09:19:49&#43;00:00"/>
-<meta property="article:modified_time" content="2011-01-29T09:19:49&#43;00:00"/>
+<meta property="og:url" content="https://www.palfans.net/compile-openvpn-gui-n-client/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2011-01-29T09:19:49&#43;00:00" />
+<meta property="article:modified_time" content="2011-01-29T09:19:49&#43;00:00" />
 
 <meta itemprop="name" content="Windows编译OpenVPN客户端（保存密码，修改日志字体）">
 <meta itemprop="description" content="OpenVPN客户端一般由两部分组成，OpenVPN和OpenVPN GUI。官方提供的OpenVPN客户端 for Windows为了提高用户账号的安全性，默认不能保存密码。安全性确实提高了，但是遇到网络不好，VPN意外中断时，每次都要手工输入密码，也很烦心。所以我们需要重新编译客户端代码，让其能够保存密码。而OpenVPN GUI的问题在于状态窗口输入的日志字体小得惊人，像我这种戴眼镜后矫正视力才0.6的人，想看清连接状态几乎是不可能的，所以也得改。
-
- 
-
-**">
-
-
-<meta itemprop="datePublished" content="2011-01-29T09:19:49&#43;00:00" />
+** **
+**"><meta itemprop="datePublished" content="2011-01-29T09:19:49&#43;00:00" />
 <meta itemprop="dateModified" content="2011-01-29T09:19:49&#43;00:00" />
-<meta itemprop="wordCount" content="2023">
-
-
-
-<meta itemprop="keywords" content="openssl,OpenVPN,VPN,字体,密码," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="wordCount" content="2027">
+<meta itemprop="keywords" content="openssl,OpenVPN,VPN,字体,密码," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Windows编译OpenVPN客户端（保存密码，修改日志字体）"/>
 <meta name="twitter:description" content="OpenVPN客户端一般由两部分组成，OpenVPN和OpenVPN GUI。官方提供的OpenVPN客户端 for Windows为了提高用户账号的安全性，默认不能保存密码。安全性确实提高了，但是遇到网络不好，VPN意外中断时，每次都要手工输入密码，也很烦心。所以我们需要重新编译客户端代码，让其能够保存密码。而OpenVPN GUI的问题在于状态窗口输入的日志字体小得惊人，像我这种戴眼镜后矫正视力才0.6的人，想看清连接状态几乎是不可能的，所以也得改。
-
- 
-
+** **
 **"/>
 
 <!--[if lte IE 9]>
@@ -159,94 +146,67 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
       <p>OpenVPN客户端一般由两部分组成，OpenVPN和OpenVPN GUI。官方提供的OpenVPN客户端 for Windows为了提高用户账号的安全性，默认不能保存密码。安全性确实提高了，但是遇到网络不好，VPN意外中断时，每次都要手工输入密码，也很烦心。所以我们需要重新编译客户端代码，让其能够保存密码。而OpenVPN GUI的问题在于状态窗口输入的日志字体小得惊人，像我这种戴眼镜后矫正视力才0.6的人，想看清连接状态几乎是不可能的，所以也得改。</p>
-
-<p><strong> </strong></p>
-
+<p>** **</p>
 <p>**</p>
-
 <p>搭建编译环境**</p>
-
 <p>我很久没有碰过C语言了，所以除了官方推荐的环境，我不确定其他环境是否能顺利编译。</p>
-
 <p>NSIS <a href="http://sourceforge.net/projects/nsis/files/NSIS%202/2.46/nsis-2.46-setup.exe/download">下载链接</a>，建议完全安装。</p>
-
 <p>MinGW <a href="http://sourceforge.net/projects/mingw/files/Automated%20MinGW%20Installer/">下载链接</a>，现在MinGW只提供在线安装程序，安装时再下载相关文件，耗时较长。也可以Google一下，有<a href="http://data.99pan.com/download/7621_43_7840485476281515222.html">完整版</a>可下，假设安装路径为 C:\MinGW</p>
-
 <p>MSYS <a href="http://downloads.sourceforge.net/mingw/MSYS-1.0.11.exe">下载链接</a>，假设安装路径为 C:\msys\1.0</p>
-
 <p>msysDTK <a href="http://downloads.sourceforge.net/mingw/msysDTK-1.0.1.exe">下载链接</a>，安装路径和MSYS相同，C:\msys\1.0</p>
-
 <p>配置环境变量，如果变量PATH中已有其他路径，则新增“;C:\MinGW\bin;C:\msys\1.0\bin”，如果变量PATH不存在，则新建一个变量，命名为PATH，内容为“C:\MinGW\bin;C:\msys\1.0\bin”。注意，变量内容都不包含引号，新增变量时，变量内容最前面没有分号。</p>
-
 <p>配置完成后，打开命令提示符，输入bash，如果界面显示“bash-3.1$”，则编译环境搭建完成。</p>
-
-<p><strong> </strong></p>
-
+<p>** **</p>
 <p><strong>获取预编译文件</strong></p>
-
 <p>OpenVPN编译过程中需要openssl，tap驱动，lzo压缩等文件，我们可以下载已经编译好的文件 <a href="http://openvpn.net/prebuilt/2.1_rc22-prebuilt.tbz">下载链接</a>，这里的预编译文件版本不是2.1.1，但不影响实际编译效果。</p>
-
 <p>新建一个工作目录 C:\work，将预编译文件解压后置于工作目录下，应包含以下四个目录：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">gen-prebuilt
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">gen-prebuilt
 lzo-2.02
 openssl-0.9.8l
-pkcs11-helper</pre></td></tr></table>
+pkcs11-helper
+</code></pre></td></tr></table>
 </div>
-</div>
-<p><strong>编译OpenVPN GUI</strong></p>
-
+</div><p><strong>编译OpenVPN GUI</strong></p>
 <p>获取OpenVPN GUI的源代码 <a href="http://openvpn.se/files/source/openvpn-gui-1.0.3.zip">下载链接</a>，解压缩到C:\work\openvpn-gui目录下。</p>
-
 <p>首先修改openvpn.c，找到函数StatusDialogFunc，修改</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">charformat.yHeight = 100;
-strcpy(charformat.szFaceName, &#34;MS Sans Serif&#34;);</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">charformat.yHeight = 100;
+strcpy(charformat.szFaceName, &#34;MS Sans Serif&#34;);
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>其中100是字体大小，MS Sans Serif是字体名称。</p>
-
+</div><p>其中100是字体大小，MS Sans Serif是字体名称。</p>
 <p>接下来需要修改Makefile，</p>
-
 <p>OPENSSL = /c/OpenSSL 改为预编译文件中的openssl下include头文件的位置，这里为</p>
-
 <p><code>OPENSSL = ../openssl-0.9.8l/include/openssl</code></p>
-
 <p>LIB_DIRS = -L${OPENSSL}/lib/MinGW 改为预编译文件中openssl的相关lib目录，这里为</p>
-
 <p><code>LIB_DIRS = –L../gen-prebuilt/lib</code></p>
-
 <p>运行C:\msys\1.0下的msys.bat，进入类unix环境，切换到C:\work\openvpn-gui目录，执行make，OpenVPN GUI即可编译完成。</p>
-
 <p><strong>编译OpenVPN客户端</strong></p>
-
 <p>获取OpenVPN客户端的源代码 <a href="http://openvpn.net/release/openvpn-2.1.1.tar.gz">下载链接</a>，解压缩到C:\work\openvpn-2.1.1目录下。</p>
-
 <p>修改misc.c文件，在#ifundef ENABLE_PASSWORD_SAVE一行前面加上</p>
-
 <p>#define ENABLE_PASSWORD_SAVE</p>
-
 <p>到install-win32目录，修改openvpn.nsi文件，找到以下代码：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -277,9 +237,9 @@ strcpy(charformat.szFaceName, &#34;MS Sans Serif&#34;);</pre></td></tr></table>
 </span><span class="lnt">29
 </span><span class="lnt">30
 </span><span class="lnt">31
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">; tap-64bit:
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">; tap-64bit:
 
 DetailPrint “We are running on a 64-bit system.”
 
@@ -309,56 +269,50 @@ File “${GEN}\driver\i386\${TAPDRV}”
 
 tapend:
 
-SectionEnd</pre></td></tr></table>
+SectionEnd
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>在这段代码最前面插入：</p>
+</div><p>在这段代码最前面插入：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">!undef GEN
-!define GEN “C:\work\gen-prebuilt\”</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">!undef GEN
+!define GEN “C:\work\gen-prebuilt\”
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>在这段代码最后面插入：</p>
+</div><p>在这段代码最后面插入：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">undef
-!define GEN “..”</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">undef
+!define GEN “..”
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>打开命令提示符，执行如下命令：</p>
+</div><p>打开命令提示符，执行如下命令：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">cd C:\work\openvpn-2.1.1
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">cd C:\work\openvpn-2.1.1
 
-bash domake-win</pre></td></tr></table>
+bash domake-win
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>编译结束后，安装文件会生成在C:\work\openvpn-2.1.1\gen目录下。</p>
-
+</div><p>编译结束后，安装文件会生成在C:\work\openvpn-2.1.1\gen目录下。</p>
 <p><strong>修改OpenVPN配置文件</strong></p>
-
 <p>修改当前使用的ovpn配置文件，将auth-user-pass改为auth-user-pass pass.txt，同时在相同路径下新增一个名为pass.txt的文本文件，内容为两行，第一行为vpn用户名，第二行为密码。</p>
-
 <p>重新运行OpenVPN，即可不输密码登录vpn，而且此时status窗口的日志输出，也终于能看得清了。</p>
-
 <p>顺便提一句，如果有需要vpn的同学，可以和我联系，目前有合租计划，人均每月6元，联系方式如下：</p>
-
 <p>Twitter: @palfans</p>
-
 <p>OpenVPN客户端编译部分，参考yegle<a href="https://yegle.net/2010/05/19/compile-openvpn-2-1-1-in-windows/">相关文章</a>，致谢。</p>
     </div>
 
@@ -443,7 +397,7 @@ bash domake-win</pre></td></tr></table>
   <span class="copyright-year">
     &copy; 
     2005 - 
-    2019
+    2021
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

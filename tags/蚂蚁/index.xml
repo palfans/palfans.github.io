@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>蚂蚁 on Palfans&#39;s BLOG</title>
@@ -6,11 +6,7 @@
     <description>Recent content in 蚂蚁 on Palfans&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 08 Sep 2006 00:38:34 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.palfans.net/tags/%E8%9A%82%E8%9A%81/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 08 Sep 2006 00:38:34 +0000</lastBuildDate><atom:link href="https://www.palfans.net/tags/%E8%9A%82%E8%9A%81/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>天凉好个秋</title>
       <link>https://www.palfans.net/autumn-is-coming/</link>

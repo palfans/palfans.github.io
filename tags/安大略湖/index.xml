@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>安大略湖 on Palfans&#39;s BLOG</title>
@@ -6,11 +6,7 @@
     <description>Recent content in 安大略湖 on Palfans&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 10 Nov 2008 07:44:48 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.palfans.net/tags/%E5%AE%89%E5%A4%A7%E7%95%A5%E6%B9%96/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 10 Nov 2008 07:44:48 +0000</lastBuildDate><atom:link href="https://www.palfans.net/tags/%E5%AE%89%E5%A4%A7%E7%95%A5%E6%B9%96/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>安大略湖</title>
       <link>https://www.palfans.net/visit-ontario/</link>

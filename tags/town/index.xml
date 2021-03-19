@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>town on Palfans&#39;s BLOG</title>
@@ -6,11 +6,7 @@
     <description>Recent content in town on Palfans&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 27 Oct 2008 09:26:39 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.palfans.net/tags/town/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 27 Oct 2008 09:26:39 +0000</lastBuildDate><atom:link href="https://www.palfans.net/tags/town/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>China Town，我来了</title>
       <link>https://www.palfans.net/chinatown-i-am-coming/</link>

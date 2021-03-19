@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>china on Palfans&#39;s BLOG</title>
@@ -6,11 +6,7 @@
     <description>Recent content in china on Palfans&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 27 Oct 2008 09:26:39 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.palfans.net/tags/china/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 27 Oct 2008 09:26:39 +0000</lastBuildDate><atom:link href="https://www.palfans.net/tags/china/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>China Town，我来了</title>
       <link>https://www.palfans.net/chinatown-i-am-coming/</link>
@@ -28,7 +24,6 @@
       <guid>https://www.palfans.net/faq-of-china/</guid>
       <description>&lt;p&gt;Q: Do Chinese eat dogs?
 A: Yes. And cats. Especially on our &amp;ldquo;Thanks receiving&amp;rdquo; day. Besides, turkeys are our favorite pets. In China only the most uneducated eat turkeys.&lt;/p&gt;
-
 &lt;p&gt;Q: China is becoming strong. Does your government want to take over the world?
 A: Yes, absolutely. As soon as we become powerful, we will invade Iraq and Afghanistan.&lt;/p&gt;</description>
     </item>

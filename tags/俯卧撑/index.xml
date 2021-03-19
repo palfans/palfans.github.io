@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>俯卧撑 on Palfans&#39;s BLOG</title>
@@ -6,11 +6,7 @@
     <description>Recent content in 俯卧撑 on Palfans&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 02 Jul 2008 20:00:17 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.palfans.net/tags/%E4%BF%AF%E5%8D%A7%E6%92%91/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 02 Jul 2008 20:00:17 +0000</lastBuildDate><atom:link href="https://www.palfans.net/tags/%E4%BF%AF%E5%8D%A7%E6%92%91/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>我们都爱俯卧撑</title>
       <link>https://www.palfans.net/we-love-push-up/</link>

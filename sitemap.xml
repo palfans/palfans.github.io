@@ -3,26 +3,65 @@
   
   <url>
     <loc>https://www.palfans.net/categories/</loc>
-    <lastmod>2019-01-30T16:55:29-06:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2021-03-19T10:42:24-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.palfans.net/</loc>
+    <lastmod>2021-03-19T10:42:24-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.palfans.net/post/</loc>
+    <lastmod>2021-03-19T10:42:24-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.palfans.net/tags/</loc>
+    <lastmod>2021-03-19T10:42:24-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.palfans.net/tags/vpn/</loc>
+    <lastmod>2021-03-19T10:42:24-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.palfans.net/categories/%E6%8A%80%E6%9C%AF%E6%A0%88/</loc>
+    <lastmod>2021-03-19T10:42:24-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.palfans.net/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/</loc>
+    <lastmod>2021-03-19T10:42:24-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.palfans.net/work_from_home_via_vpn/</loc>
+    <lastmod>2021-03-19T10:42:24-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/docker/</loc>
     <lastmod>2019-01-30T16:55:29-06:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.palfans.net/</loc>
-    <lastmod>2019-01-30T16:55:29-06:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.palfans.net/post/</loc>
-    <lastmod>2019-01-30T16:55:29-06:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -35,42 +74,48 @@
   <url>
     <loc>https://www.palfans.net/tags/rhel7/</loc>
     <lastmod>2019-01-30T16:55:29-06:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.palfans.net/tags/</loc>
-    <lastmod>2019-01-30T16:55:29-06:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.palfans.net/categories/%E6%8A%80%E6%9C%AF%E6%A0%88/</loc>
-    <lastmod>2019-01-30T16:55:29-06:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/github/</loc>
     <lastmod>2019-01-25T21:46:00-06:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/hugo/</loc>
     <lastmod>2019-01-25T21:46:00-06:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/wordpress/</loc>
     <lastmod>2019-01-25T21:46:00-06:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/moving_wordpress_hugo/</loc>
     <lastmod>2019-01-25T21:46:00-06:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.palfans.net/tags/linux/</loc>
+    <lastmod>2018-08-10T22:48:09+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.palfans.net/tags/xfce/</loc>
+    <lastmod>2018-08-10T22:48:09+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -83,21 +128,10 @@
   </url>
   
   <url>
-    <loc>https://www.palfans.net/tags/linux/</loc>
-    <lastmod>2018-08-10T22:48:09+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.palfans.net/tags/xfce/</loc>
-    <lastmod>2018-08-10T22:48:09+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.palfans.net/tags/javascript/</loc>
     <lastmod>2018-04-29T03:05:45+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -110,12 +144,20 @@
   <url>
     <loc>https://www.palfans.net/tags/screen/</loc>
     <lastmod>2018-03-22T21:10:38+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/disable_screen_dynamic_title_feature/</loc>
     <lastmod>2018-03-22T21:10:38+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.palfans.net/tags/kodi/</loc>
+    <lastmod>2018-03-15T21:03:12+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -128,21 +170,17 @@
   </url>
   
   <url>
-    <loc>https://www.palfans.net/tags/kodi/</loc>
-    <lastmod>2018-03-15T21:03:12+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.palfans.net/tags/windows/</loc>
     <lastmod>2018-03-15T21:03:12+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E4%B8%AD%E5%9B%BD/</loc>
     <lastmod>2017-07-28T15:45:01+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -155,13 +193,15 @@
   <url>
     <loc>https://www.palfans.net/tags/%E7%BD%91%E7%BB%9C/</loc>
     <lastmod>2017-07-28T15:45:01+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/categories/%E9%97%B2%E8%81%8A/</loc>
     <lastmod>2017-07-28T15:45:01+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -174,13 +214,15 @@
   <url>
     <loc>https://www.palfans.net/tags/%E9%A9%BE%E7%85%A7/</loc>
     <lastmod>2017-06-30T19:24:04+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E9%93%B6%E8%A1%8C/</loc>
     <lastmod>2017-06-22T16:57:37+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -193,7 +235,8 @@
   <url>
     <loc>https://www.palfans.net/tags/%E5%A6%8A%E5%A8%A0%E7%B3%96%E5%B0%BF%E7%97%85/</loc>
     <lastmod>2017-06-06T04:19:43+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -213,18 +256,27 @@
   <url>
     <loc>https://www.palfans.net/tags/lets-encrypt/</loc>
     <lastmod>2017-06-05T20:49:13+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/ssl/</loc>
     <lastmod>2017-06-05T20:49:13+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/why-stay-in-us/</loc>
     <lastmod>2016-05-22T05:33:36+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.palfans.net/tags/oneplus/</loc>
+    <lastmod>2015-11-14T06:24:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -237,27 +289,24 @@
   </url>
   
   <url>
-    <loc>https://www.palfans.net/tags/oneplus/</loc>
-    <lastmod>2015-11-14T06:24:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.palfans.net/tags/%E4%B8%80%E5%8A%A0/</loc>
     <lastmod>2015-11-14T06:24:00+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%89%8B%E6%9C%BA/</loc>
     <lastmod>2015-11-14T06:24:00+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%86%9B%E9%98%9F/</loc>
     <lastmod>2015-09-03T19:52:10+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -277,7 +326,8 @@
   <url>
     <loc>https://www.palfans.net/tags/blog/</loc>
     <lastmod>2015-08-14T06:01:35+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -290,19 +340,22 @@
   <url>
     <loc>https://www.palfans.net/tags/gv/</loc>
     <lastmod>2014-07-18T18:38:03+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/localphone/</loc>
     <lastmod>2014-07-18T18:38:03+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/categories/%E6%B8%B8%E8%AE%B0/</loc>
     <lastmod>2014-07-18T18:38:03+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -315,31 +368,36 @@
   <url>
     <loc>https://www.palfans.net/tags/%E7%94%B5%E4%BF%A1/</loc>
     <lastmod>2014-07-18T18:38:03+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E7%A7%BB%E5%8A%A8/</loc>
     <lastmod>2014-07-18T18:38:03+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/centos/</loc>
     <lastmod>2014-06-02T18:30:56+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/swap/</loc>
     <lastmod>2014-06-02T18:30:56+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/virtualbox/</loc>
     <lastmod>2014-06-02T18:30:56+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -352,7 +410,8 @@
   <url>
     <loc>https://www.palfans.net/tags/cdn/</loc>
     <lastmod>2013-11-29T07:50:03+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -365,7 +424,8 @@
   <url>
     <loc>https://www.palfans.net/tags/%E6%94%BB%E5%87%BB/</loc>
     <lastmod>2013-11-29T07:50:03+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -378,13 +438,15 @@
   <url>
     <loc>https://www.palfans.net/tags/%E7%A8%8B%E5%BA%8F%E5%91%98/</loc>
     <lastmod>2013-04-12T09:44:46+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E8%AF%97%E6%AD%8C/</loc>
     <lastmod>2012-09-29T08:16:39+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -397,7 +459,8 @@
   <url>
     <loc>https://www.palfans.net/tags/wlw/</loc>
     <lastmod>2012-09-09T07:03:45+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -410,25 +473,36 @@
   <url>
     <loc>https://www.palfans.net/tags/xmlrpc/</loc>
     <lastmod>2012-09-09T07:03:45+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/canon/</loc>
     <lastmod>2012-09-09T06:17:50+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/google/</loc>
     <lastmod>2012-09-09T06:17:50+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/helicopter/</loc>
     <lastmod>2012-09-09T06:17:50+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.palfans.net/tags/hp/</loc>
+    <lastmod>2012-09-09T06:17:50+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -441,37 +515,43 @@
   <url>
     <loc>https://www.palfans.net/tags/nexus/</loc>
     <lastmod>2012-09-09T06:17:50+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.palfans.net/tags/hp/</loc>
-    <lastmod>2012-09-09T06:17:50+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
     <lastmod>2012-09-09T06:17:50+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/categories/%E8%B4%AD%E7%89%A9/</loc>
     <lastmod>2012-09-09T06:17:50+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E9%81%A5%E6%8E%A7/</loc>
     <lastmod>2012-09-09T06:17:50+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/gracenote/</loc>
     <lastmod>2012-08-21T13:37:06+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.palfans.net/tags/mp3/</loc>
+    <lastmod>2012-08-21T13:37:06+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -482,39 +562,38 @@
   </url>
   
   <url>
-    <loc>https://www.palfans.net/tags/mp3/</loc>
-    <lastmod>2012-08-21T13:37:06+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.palfans.net/tags/qmp/</loc>
     <lastmod>2012-08-21T13:37:06+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/tag/</loc>
     <lastmod>2012-08-21T13:37:06+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E7%AE%80%E4%BD%93/</loc>
     <lastmod>2012-08-21T13:37:06+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E7%B9%81%E4%BD%93/</loc>
     <lastmod>2012-08-21T13:37:06+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%85%BB%E8%80%81%E9%87%91/</loc>
     <lastmod>2012-06-28T01:37:32+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -527,25 +606,29 @@
   <url>
     <loc>https://www.palfans.net/tags/%E9%80%80%E4%BC%91/</loc>
     <lastmod>2012-06-28T01:37:32+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%85%B3%E9%94%AE%E5%AD%97/</loc>
     <lastmod>2012-06-01T02:49:39+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/</loc>
     <lastmod>2012-06-01T02:49:39+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%95%8F%E6%84%9F%E8%AF%8D/</loc>
     <lastmod>2012-06-01T02:49:39+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -565,31 +648,36 @@
   <url>
     <loc>https://www.palfans.net/tags/%E8%80%83%E8%AF%95/</loc>
     <lastmod>2011-11-21T05:56:22+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E8%AF%95%E9%A2%98/</loc>
     <lastmod>2011-11-21T05:56:22+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E9%AB%98%E4%B8%AD/</loc>
     <lastmod>2011-11-21T05:56:22+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/fuckfbx/</loc>
     <lastmod>2011-05-19T14:32:02+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/gfw/</loc>
     <lastmod>2011-05-19T14:32:02+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -602,19 +690,22 @@
   <url>
     <loc>https://www.palfans.net/tags/%E6%96%B9%E6%BB%A8%E5%85%B4/</loc>
     <lastmod>2011-05-19T14:32:02+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.palfans.net/tags/openssl/</loc>
+    <lastmod>2011-01-29T09:19:49+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/openvpn/</loc>
     <lastmod>2011-01-29T09:19:49+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.palfans.net/tags/vpn/</loc>
-    <lastmod>2011-01-29T09:19:49+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -625,21 +716,17 @@
   </url>
   
   <url>
-    <loc>https://www.palfans.net/tags/openssl/</loc>
-    <lastmod>2011-01-29T09:19:49+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.palfans.net/tags/%E5%AD%97%E4%BD%93/</loc>
     <lastmod>2011-01-29T09:19:49+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%AF%86%E7%A0%81/</loc>
     <lastmod>2011-01-29T09:19:49+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -652,19 +739,22 @@
   <url>
     <loc>https://www.palfans.net/tags/%E5%8D%B0%E5%BA%A6/</loc>
     <lastmod>2010-10-30T08:24:18+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%96%9C%E5%89%A7/</loc>
     <lastmod>2010-10-30T08:24:18+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E7%94%B5%E5%BD%B1/</loc>
     <lastmod>2010-10-30T08:24:18+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -677,7 +767,8 @@
   <url>
     <loc>https://www.palfans.net/tags/%E4%BA%92%E8%81%94%E7%BD%91/</loc>
     <lastmod>2010-10-22T20:10:22+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -690,25 +781,29 @@
   <url>
     <loc>https://www.palfans.net/tags/%E8%AF%BA%E8%B4%9D%E5%B0%94/</loc>
     <lastmod>2010-10-08T14:30:00+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%85%AC%E5%BC%80%E8%AF%BE/</loc>
     <lastmod>2010-10-01T17:59:19+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%93%B2%E5%AD%A6/</loc>
     <lastmod>2010-10-01T17:59:19+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%A4%A7%E5%AD%A6/</loc>
     <lastmod>2010-10-01T17:59:19+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -721,13 +816,15 @@
   <url>
     <loc>https://www.palfans.net/tags/%E8%8B%B1%E6%96%87/</loc>
     <lastmod>2010-10-01T17:59:19+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/bsp/</loc>
     <lastmod>2010-09-28T15:34:55+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -740,19 +837,22 @@
   <url>
     <loc>https://www.palfans.net/tags/%E5%BE%AE%E8%BD%AF/</loc>
     <lastmod>2010-09-28T15:34:55+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/voice/</loc>
     <lastmod>2010-09-17T20:30:06+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/voip/</loc>
     <lastmod>2010-09-17T20:30:06+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -765,13 +865,15 @@
   <url>
     <loc>https://www.palfans.net/tags/%E5%9B%9E%E6%8B%A8/</loc>
     <lastmod>2010-09-17T20:30:06+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E7%94%B5%E8%AF%9D/</loc>
     <lastmod>2010-09-17T20:30:06+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -784,7 +886,8 @@
   <url>
     <loc>https://www.palfans.net/tags/%E4%B8%96%E5%8D%9A%E4%BC%9A/</loc>
     <lastmod>2010-09-08T11:36:22+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -804,19 +907,22 @@
   <url>
     <loc>https://www.palfans.net/tags/%E7%AD%BE%E8%AF%81/</loc>
     <lastmod>2010-08-24T17:12:38+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E9%98%BF%E6%9B%BC/</loc>
     <lastmod>2010-08-24T17:12:38+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%94%BF%E5%BA%9C/</loc>
     <lastmod>2010-08-23T10:42:59+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -829,7 +935,8 @@
   <url>
     <loc>https://www.palfans.net/tags/%E7%BB%8F%E6%B5%8E/</loc>
     <lastmod>2010-08-22T18:08:01+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -849,13 +956,15 @@
   <url>
     <loc>https://www.palfans.net/tags/%E6%8B%89%E8%90%A8/</loc>
     <lastmod>2010-08-19T06:38:28+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E8%A5%BF%E8%97%8F/</loc>
     <lastmod>2010-08-19T06:38:28+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -882,7 +991,8 @@
   <url>
     <loc>https://www.palfans.net/tags/%E5%9F%8E%E7%AE%A1/</loc>
     <lastmod>2010-05-10T15:56:50+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -895,13 +1005,15 @@
   <url>
     <loc>https://www.palfans.net/tags/%E8%BD%A6%E5%BA%93/</loc>
     <lastmod>2010-05-10T15:56:50+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E9%BE%99%E6%B9%96/</loc>
     <lastmod>2010-05-10T15:56:50+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -914,25 +1026,29 @@
   <url>
     <loc>https://www.palfans.net/tags/%E5%9C%B0%E9%9C%87/</loc>
     <lastmod>2010-04-28T06:55:12+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%AD%A6%E7%94%9F/</loc>
     <lastmod>2010-04-28T06:55:12+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E8%89%BE%E6%9C%AA%E6%9C%AA/</loc>
     <lastmod>2010-04-28T06:55:12+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%A5%A5%E8%BF%90%E4%BC%9A/</loc>
     <lastmod>2010-04-15T04:17:21+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -952,7 +1068,8 @@
   <url>
     <loc>https://www.palfans.net/tags/%E8%B7%AF%E7%94%B1%E8%A1%A8/</loc>
     <lastmod>2010-04-10T04:17:45+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -965,25 +1082,29 @@
   <url>
     <loc>https://www.palfans.net/tags/%E5%8F%A3%E8%85%94/</loc>
     <lastmod>2010-03-15T07:36:41+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E7%81%AF%E6%B3%A1/</loc>
     <lastmod>2010-03-15T07:36:41+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E7%A7%91%E5%AD%A6/</loc>
     <lastmod>2010-03-15T07:36:41+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E8%AF%95%E9%AA%8C/</loc>
     <lastmod>2010-03-15T07:36:41+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -996,25 +1117,29 @@
   <url>
     <loc>https://www.palfans.net/tags/%E6%9D%91%E4%B8%8A%E6%98%A5%E6%A0%91/</loc>
     <lastmod>2010-02-07T20:33:51+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E9%B8%A1%E8%9B%8B/</loc>
     <lastmod>2010-02-07T20:33:51+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E9%A3%8E%E5%85%89/</loc>
     <lastmod>2010-02-04T21:03:51+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E9%A9%AC%E6%96%AF%E5%96%80%E7%89%B9/</loc>
     <lastmod>2010-02-04T21:03:51+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1027,13 +1152,15 @@
   <url>
     <loc>https://www.palfans.net/tags/wow/</loc>
     <lastmod>2010-01-30T21:48:34+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E7%BD%91%E7%98%BE%E6%88%98%E4%BA%89/</loc>
     <lastmod>2010-01-30T21:48:34+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1046,7 +1173,8 @@
   <url>
     <loc>https://www.palfans.net/tags/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C/</loc>
     <lastmod>2010-01-30T21:48:34+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1059,49 +1187,57 @@
   <url>
     <loc>https://www.palfans.net/tags/%E7%87%83%E6%B2%B9%E7%A8%8E/</loc>
     <lastmod>2010-01-27T16:04:00+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E7%8E%AF%E5%A2%83%E7%A8%8E/</loc>
     <lastmod>2010-01-27T16:04:00+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E7%A8%8E%E6%94%B6/</loc>
     <lastmod>2010-01-27T16:04:00+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E8%B4%A2%E6%94%BF%E6%94%B6%E5%85%A5/</loc>
     <lastmod>2010-01-27T16:04:00+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/twitter/</loc>
     <lastmod>2010-01-25T12:16:48+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E4%BF%A1%E8%AA%89/</loc>
     <lastmod>2010-01-25T12:16:48+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%8D%93%E8%B6%8A/</loc>
     <lastmod>2010-01-25T12:16:48+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%A4%B1%E8%AF%AF/</loc>
     <lastmod>2010-01-25T12:16:48+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1114,7 +1250,8 @@
   <url>
     <loc>https://www.palfans.net/tags/%E8%AE%A2%E5%8D%95/</loc>
     <lastmod>2010-01-25T12:16:48+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1127,25 +1264,29 @@
   <url>
     <loc>https://www.palfans.net/tags/%E5%B0%8F%E8%AF%B4/</loc>
     <lastmod>2009-11-26T16:14:48+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%A5%BC%E5%B8%82/</loc>
     <lastmod>2009-11-26T16:14:48+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E8%89%B2%E6%83%85/</loc>
     <lastmod>2009-11-26T16:14:48+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E8%9C%97%E5%B1%85/</loc>
     <lastmod>2009-11-26T16:14:48+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1158,7 +1299,8 @@
   <url>
     <loc>https://www.palfans.net/tags/h1n1/</loc>
     <lastmod>2009-11-02T17:48:39+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1171,19 +1313,22 @@
   <url>
     <loc>https://www.palfans.net/tags/%E5%8C%BB%E7%94%9F/</loc>
     <lastmod>2009-11-02T17:48:39+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E7%97%85%E6%AF%92/</loc>
     <lastmod>2009-11-02T17:48:39+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E9%A2%84%E9%98%B2/</loc>
     <lastmod>2009-11-02T17:48:39+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1196,7 +1341,8 @@
   <url>
     <loc>https://www.palfans.net/tags/%E4%B8%AD%E6%96%87/</loc>
     <lastmod>2009-09-17T12:28:08+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1216,25 +1362,29 @@
   <url>
     <loc>https://www.palfans.net/tags/%E8%A8%80%E8%AE%BA%E8%87%AA%E7%94%B1/</loc>
     <lastmod>2009-07-26T22:44:12+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E4%B8%AD%E7%9F%B3%E5%8C%96/</loc>
     <lastmod>2009-06-30T09:22:09+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E4%B8%AD%E7%9F%B3%E6%B2%B9/</loc>
     <lastmod>2009-06-30T09:22:09+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%8F%91%E6%94%B9%E5%A7%94/</loc>
     <lastmod>2009-06-30T09:22:09+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1247,19 +1397,22 @@
   <url>
     <loc>https://www.palfans.net/tags/%E6%B2%B9%E4%BB%B7/</loc>
     <lastmod>2009-06-30T09:22:09+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E7%9F%B3%E6%B2%B9/</loc>
     <lastmod>2009-06-30T09:22:09+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%89%AB%E9%BB%84/</loc>
     <lastmod>2009-06-25T08:35:31+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1272,7 +1425,8 @@
   <url>
     <loc>https://www.palfans.net/tags/%E6%84%9F%E6%83%B3/</loc>
     <lastmod>2009-06-24T12:35:02+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1285,13 +1439,15 @@
   <url>
     <loc>https://www.palfans.net/tags/%E6%B7%B7%E6%B2%8C/</loc>
     <lastmod>2009-05-06T08:48:05+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E8%9D%B4%E8%9D%B6%E6%95%88%E5%BA%94/</loc>
     <lastmod>2009-05-06T08:48:05+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1311,19 +1467,29 @@
   <url>
     <loc>https://www.palfans.net/tags/%E6%88%BF%E4%BB%B7/</loc>
     <lastmod>2009-04-13T03:49:58+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E7%A7%9F%E5%94%AE%E6%AF%94/</loc>
     <lastmod>2009-04-13T03:49:58+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E8%82%A1%E5%B8%82/</loc>
     <lastmod>2009-04-13T03:49:58+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.palfans.net/tags/psiphon2/</loc>
+    <lastmod>2009-04-09T22:16:22+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1334,39 +1500,38 @@
   </url>
   
   <url>
-    <loc>https://www.palfans.net/tags/psiphon2/</loc>
-    <lastmod>2009-04-09T22:16:22+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.palfans.net/tags/%E5%AE%A1%E6%9F%A5/</loc>
     <lastmod>2009-04-09T22:16:22+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%B1%8F%E8%94%BD/</loc>
     <lastmod>2009-04-09T22:16:22+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%BC%80%E5%BF%83%E7%BD%91/</loc>
     <lastmod>2009-04-09T22:16:22+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/gmail/</loc>
     <lastmod>2009-04-01T07:40:00+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%84%9A%E4%BA%BA%E8%8A%82/</loc>
     <lastmod>2009-04-01T07:40:00+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1379,25 +1544,29 @@
   <url>
     <loc>https://www.palfans.net/tags/dropbox/</loc>
     <lastmod>2009-03-27T11:00:17+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%90%8C%E6%AD%A5/</loc>
     <lastmod>2009-03-27T11:00:17+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%AD%98%E5%82%A8/</loc>
     <lastmod>2009-03-27T11:00:17+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/categories/%E6%8E%A8%E8%8D%90/</loc>
     <lastmod>2009-03-27T11:00:17+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1410,7 +1579,8 @@
   <url>
     <loc>https://www.palfans.net/tags/writer/</loc>
     <lastmod>2009-03-23T01:02:00+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1423,7 +1593,8 @@
   <url>
     <loc>https://www.palfans.net/tags/youtube/</loc>
     <lastmod>2009-03-05T10:06:00+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1436,13 +1607,15 @@
   <url>
     <loc>https://www.palfans.net/tags/%E5%8F%BD%E6%AD%AA/</loc>
     <lastmod>2009-03-02T16:18:00+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%BE%AE%E5%8D%9A/</loc>
     <lastmod>2009-03-02T16:18:00+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1455,13 +1628,15 @@
   <url>
     <loc>https://www.palfans.net/tags/%E7%BD%91%E9%80%9A/</loc>
     <lastmod>2009-03-02T16:18:00+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E9%A5%AD%E5%90%A6/</loc>
     <lastmod>2009-03-02T16:18:00+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1474,19 +1649,22 @@
   <url>
     <loc>https://www.palfans.net/tags/%E7%BB%8F%E6%B5%8E%E5%8D%B1%E6%9C%BA/</loc>
     <lastmod>2009-02-27T20:18:00+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/godaddy/</loc>
     <lastmod>2009-02-13T01:10:57+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%9F%9F%E5%90%8D/</loc>
     <lastmod>2009-02-13T01:10:57+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1499,13 +1677,15 @@
   <url>
     <loc>https://www.palfans.net/tags/%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2009-02-13T01:10:57+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2009-02-13T01:10:57+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1518,19 +1698,22 @@
   <url>
     <loc>https://www.palfans.net/tags/%E7%9B%AE%E6%A0%87/</loc>
     <lastmod>2009-01-10T23:49:00+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%A8%8A%E5%BC%93/</loc>
     <lastmod>2008-12-20T15:42:09+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E9%80%9A%E5%BE%80%E5%A5%B4%E5%BD%B9%E4%B9%8B%E8%B7%AF/</loc>
     <lastmod>2008-12-20T15:42:09+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1543,7 +1726,8 @@
   <url>
     <loc>https://www.palfans.net/tags/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89/</loc>
     <lastmod>2008-12-20T15:42:09+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1556,25 +1740,29 @@
   <url>
     <loc>https://www.palfans.net/tags/%E4%BF%A1%E4%BB%B0/</loc>
     <lastmod>2008-12-15T13:11:12+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%8A%A0%E6%8B%BF%E5%A4%A7/</loc>
     <lastmod>2008-12-15T13:11:12+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%94%BF%E6%B2%BB/</loc>
     <lastmod>2008-12-15T13:11:12+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E7%A6%8F%E5%88%A9/</loc>
     <lastmod>2008-12-15T13:11:12+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1587,43 +1775,50 @@
   <url>
     <loc>https://www.palfans.net/tags/%E5%8D%8E%E4%B8%BA/</loc>
     <lastmod>2008-12-03T11:55:04+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%9C%A3%E6%96%97%E5%A3%AB/</loc>
     <lastmod>2008-12-03T11:55:04+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%B0%B1%E4%B8%9A/</loc>
     <lastmod>2008-12-03T11:55:04+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%89%A9%E6%8B%9B/</loc>
     <lastmod>2008-12-03T11:55:04+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%95%99%E8%82%B2/</loc>
     <lastmod>2008-12-03T11:55:04+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/</loc>
     <lastmod>2008-12-03T11:55:04+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%86%AC%E5%A4%A9/</loc>
     <lastmod>2008-11-21T09:58:18+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1636,25 +1831,29 @@
   <url>
     <loc>https://www.palfans.net/tags/%E5%A4%A7%E9%9B%AA/</loc>
     <lastmod>2008-11-21T09:58:18+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%B2%91%E5%8F%82/</loc>
     <lastmod>2008-11-21T09:58:18+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%81%87%E6%9C%9F/</loc>
     <lastmod>2008-11-17T09:30:37+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%8A%A4%E7%85%A7/</loc>
     <lastmod>2008-11-17T09:30:37+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1667,7 +1866,8 @@
   <url>
     <loc>https://www.palfans.net/tags/qq/</loc>
     <lastmod>2008-11-12T10:04:47+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1680,19 +1880,22 @@
   <url>
     <loc>https://www.palfans.net/tags/%E8%85%BE%E8%AE%AF/</loc>
     <lastmod>2008-11-12T10:04:47+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E4%BA%94%E5%A4%A7%E6%B9%96/</loc>
     <lastmod>2008-11-10T07:44:48+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%AE%89%E5%A4%A7%E7%95%A5%E6%B9%96/</loc>
     <lastmod>2008-11-10T07:44:48+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1705,19 +1908,22 @@
   <url>
     <loc>https://www.palfans.net/tags/photofunia/</loc>
     <lastmod>2008-11-10T06:01:59+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/vogue/</loc>
     <lastmod>2008-11-10T06:01:59+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%B0%81%E9%9D%A2/</loc>
     <lastmod>2008-11-10T06:01:59+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1730,19 +1936,29 @@
   <url>
     <loc>https://www.palfans.net/tags/%E6%97%B6%E5%B0%9A/</loc>
     <lastmod>2008-11-10T06:01:59+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%9D%82%E5%BF%97/</loc>
     <lastmod>2008-11-10T06:01:59+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.palfans.net/tags/apache/</loc>
+    <lastmod>2008-11-10T05:27:18+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/apmserv/</loc>
     <lastmod>2008-11-10T05:27:18+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1753,45 +1969,45 @@
   </url>
   
   <url>
-    <loc>https://www.palfans.net/tags/apache/</loc>
-    <lastmod>2008-11-10T05:27:18+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.palfans.net/tags/mysql/</loc>
     <lastmod>2008-11-10T05:27:18+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/nginx/</loc>
     <lastmod>2008-11-10T05:27:18+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/php/</loc>
     <lastmod>2008-11-10T05:27:18+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/</loc>
     <lastmod>2008-11-10T05:27:18+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E9%94%99%E8%AF%AF/</loc>
     <lastmod>2008-11-10T05:27:18+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/obama/</loc>
     <lastmod>2008-11-05T22:05:02+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1804,43 +2020,50 @@
   <url>
     <loc>https://www.palfans.net/tags/yes-we-can/</loc>
     <lastmod>2008-11-05T22:05:02+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%80%BB%E7%BB%9F/</loc>
     <lastmod>2008-11-05T22:05:02+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%BC%94%E8%AE%B2/</loc>
     <lastmod>2008-11-05T22:05:02+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E7%BE%8E%E5%9B%BD/</loc>
     <lastmod>2008-11-05T22:05:02+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E9%80%89%E4%B8%BE/</loc>
     <lastmod>2008-11-05T22:05:02+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/hamilton/</loc>
     <lastmod>2008-11-03T10:27:38+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%A4%8F%E4%BB%A4%E6%97%B6/</loc>
     <lastmod>2008-11-03T10:27:38+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1860,13 +2083,22 @@
   <url>
     <loc>https://www.palfans.net/tags/%E4%B8%87%E5%9C%A3%E8%8A%82/</loc>
     <lastmod>2008-11-01T09:53:56+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E8%8A%82%E6%97%A5/</loc>
     <lastmod>2008-11-01T09:53:56+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.palfans.net/tags/china/</loc>
+    <lastmod>2008-10-27T09:26:39+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1877,15 +2109,10 @@
   </url>
   
   <url>
-    <loc>https://www.palfans.net/tags/china/</loc>
-    <lastmod>2008-10-27T09:26:39+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.palfans.net/tags/town/</loc>
     <lastmod>2008-10-27T09:26:39+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1898,13 +2125,15 @@
   <url>
     <loc>https://www.palfans.net/tags/boom-de-ah-dah/</loc>
     <lastmod>2008-10-20T04:20:11+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/discovery-channel/</loc>
     <lastmod>2008-10-20T04:20:11+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1917,19 +2146,22 @@
   <url>
     <loc>https://www.palfans.net/tags/%E5%90%8D%E7%89%8C/</loc>
     <lastmod>2008-10-14T05:29:35+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%88%90%E9%95%BF/</loc>
     <lastmod>2008-10-14T05:29:35+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%A0%A1%E5%9B%AD/</loc>
     <lastmod>2008-10-14T05:29:35+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1942,13 +2174,15 @@
   <url>
     <loc>https://www.palfans.net/tags/%E9%92%9E%E7%A5%A8/</loc>
     <lastmod>2008-10-14T05:29:35+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E9%83%8A%E5%8C%BA/</loc>
     <lastmod>2008-10-12T04:31:15+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1961,7 +2195,8 @@
   <url>
     <loc>https://www.palfans.net/tags/%E5%87%BA%E5%B7%AE/</loc>
     <lastmod>2008-10-09T22:05:00+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1974,13 +2209,15 @@
   <url>
     <loc>https://www.palfans.net/tags/%E4%B8%89%E8%81%9A%E6%B0%B0%E8%83%BA/</loc>
     <lastmod>2008-09-13T22:32:36+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E4%B8%89%E9%B9%BF/</loc>
     <lastmod>2008-09-13T22:32:36+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -1993,13 +2230,15 @@
   <url>
     <loc>https://www.palfans.net/tags/%E5%A5%B6%E7%B2%89/</loc>
     <lastmod>2008-09-13T22:32:36+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E9%B2%9C%E5%A5%B6/</loc>
     <lastmod>2008-09-13T22:32:36+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2012,19 +2251,22 @@
   <url>
     <loc>https://www.palfans.net/tags/%E5%88%98%E7%BF%94/</loc>
     <lastmod>2008-08-19T10:21:08+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E9%80%80%E8%B5%9B/</loc>
     <lastmod>2008-08-19T10:21:08+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E9%87%91%E7%89%8C/</loc>
     <lastmod>2008-08-19T10:21:08+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2037,13 +2279,15 @@
   <url>
     <loc>https://www.palfans.net/tags/%E8%B6%B3%E7%90%83/</loc>
     <lastmod>2008-08-13T10:31:57+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%87%92%E6%83%B0/</loc>
     <lastmod>2008-08-07T22:53:57+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2056,7 +2300,8 @@
   <url>
     <loc>https://www.palfans.net/tags/%E4%BF%AF%E5%8D%A7%E6%92%91/</loc>
     <lastmod>2008-07-02T20:00:17+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2069,37 +2314,43 @@
   <url>
     <loc>https://www.palfans.net/tags/%E7%99%BE%E5%BA%A6/</loc>
     <lastmod>2008-07-02T20:00:17+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E7%99%BE%E7%A7%91/</loc>
     <lastmod>2008-07-02T20:00:17+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E9%94%BB%E7%82%BC/</loc>
     <lastmod>2008-07-02T20:00:17+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/kungfu/</loc>
     <lastmod>2008-07-01T10:35:48+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/panda/</loc>
     <lastmod>2008-07-01T10:35:48+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%8A%9F%E5%A4%AB%E7%86%8A%E7%8C%AB/</loc>
     <lastmod>2008-07-01T10:35:48+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2112,19 +2363,22 @@
   <url>
     <loc>https://www.palfans.net/tags/%E4%BA%B2%E6%83%85/</loc>
     <lastmod>2008-06-26T15:38:24+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%A4%AB%E5%A6%BB/</loc>
     <lastmod>2008-06-26T15:38:24+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E7%AC%91%E8%AF%9D/</loc>
     <lastmod>2008-06-26T15:38:24+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2137,7 +2391,8 @@
   <url>
     <loc>https://www.palfans.net/tags/firefox/</loc>
     <lastmod>2008-06-18T22:55:11+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2150,7 +2405,8 @@
   <url>
     <loc>https://www.palfans.net/tags/%E5%B0%8F%E5%90%83/</loc>
     <lastmod>2008-06-17T22:14:31+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2163,13 +2419,15 @@
   <url>
     <loc>https://www.palfans.net/tags/%E8%82%89%E5%A4%B9%E9%A6%8D/</loc>
     <lastmod>2008-06-17T22:14:31+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E8%A5%BF%E5%AE%89/</loc>
     <lastmod>2008-06-17T22:14:31+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2182,7 +2440,8 @@
   <url>
     <loc>https://www.palfans.net/tags/%E7%90%83%E8%BF%B7/</loc>
     <lastmod>2008-06-11T22:09:17+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2195,12 +2454,6 @@
   <url>
     <loc>https://www.palfans.net/tags/%E5%84%BF%E7%AB%A5%E8%8A%82/</loc>
     <lastmod>2008-06-01T23:51:16+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.palfans.net/iis-asp-can-not-run-issue/</loc>
-    <lastmod>2008-05-22T23:31:15+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -2208,19 +2461,29 @@
   <url>
     <loc>https://www.palfans.net/tags/asp/</loc>
     <lastmod>2008-05-22T23:31:15+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/http/</loc>
     <lastmod>2008-05-22T23:31:15+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/iis/</loc>
     <lastmod>2008-05-22T23:31:15+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.palfans.net/iis-asp-can-not-run-issue/</loc>
+    <lastmod>2008-05-22T23:31:15+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2233,13 +2496,15 @@
   <url>
     <loc>https://www.palfans.net/tags/%E6%B1%B6%E5%B7%9D/</loc>
     <lastmod>2008-05-14T01:53:47+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/ip/</loc>
     <lastmod>2008-05-06T19:10:55+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2252,31 +2517,36 @@
   <url>
     <loc>https://www.palfans.net/tags/%E7%94%B5%E8%84%91/</loc>
     <lastmod>2008-05-06T19:10:55+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E7%BD%91%E5%8D%A1/</loc>
     <lastmod>2008-05-06T19:10:55+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%88%86%E5%8C%BA/</loc>
     <lastmod>2008-05-02T17:49:26+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%8A%B3%E5%8A%A8%E8%8A%82/</loc>
     <lastmod>2008-05-02T17:49:26+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%81%A2%E5%A4%8D%E7%9B%98/</loc>
     <lastmod>2008-05-02T17:49:26+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2289,7 +2559,8 @@
   <url>
     <loc>https://www.palfans.net/tags/%E5%8D%B0%E8%8A%B1%E7%A8%8E/</loc>
     <lastmod>2008-04-27T15:20:45+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2302,19 +2573,22 @@
   <url>
     <loc>https://www.palfans.net/tags/%E5%AE%B6%E4%B9%90%E7%A6%8F/</loc>
     <lastmod>2008-04-23T14:57:01+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%97%A5%E6%9C%AC/</loc>
     <lastmod>2008-04-23T14:57:01+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%9D%8E%E7%99%BD/</loc>
     <lastmod>2008-04-23T14:57:01+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2327,31 +2601,36 @@
   <url>
     <loc>https://www.palfans.net/tags/%E6%B3%95%E5%9B%BD/</loc>
     <lastmod>2008-04-23T14:57:01+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%90%88%E8%82%A5/</loc>
     <lastmod>2008-04-21T00:15:48+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%A4%A7%E5%AD%A6%E7%94%9F/</loc>
     <lastmod>2008-04-21T00:15:48+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%8A%B5%E5%88%B6/</loc>
     <lastmod>2008-04-21T00:15:48+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E7%88%B1%E5%9B%BD%E4%B8%BB%E4%B9%89/</loc>
     <lastmod>2008-04-21T00:15:48+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2364,7 +2643,8 @@
   <url>
     <loc>https://www.palfans.net/tags/animal-farm/</loc>
     <lastmod>2008-04-20T16:42:35+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2377,19 +2657,22 @@
   <url>
     <loc>https://www.palfans.net/tags/%E5%8A%A8%E7%89%A9%E5%BA%84%E5%9B%AD/</loc>
     <lastmod>2008-04-20T16:42:35+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%AF%93%E8%A8%80/</loc>
     <lastmod>2008-04-20T16:42:35+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%8C%97%E4%BA%AC/</loc>
     <lastmod>2008-03-27T22:36:52+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2402,7 +2685,8 @@
   <url>
     <loc>https://www.palfans.net/tags/%E8%81%9A%E9%A4%90/</loc>
     <lastmod>2008-03-27T22:36:52+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2415,31 +2699,36 @@
   <url>
     <loc>https://www.palfans.net/tags/%E6%B1%87%E7%8E%87/</loc>
     <lastmod>2008-03-27T09:05:06+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E9%80%9A%E8%B4%A7%E8%86%A8%E8%83%80/</loc>
     <lastmod>2008-03-27T09:05:06+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E4%BD%99%E7%A7%8B%E9%9B%A8/</loc>
     <lastmod>2008-03-26T09:30:01+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%96%87%E5%8C%96/</loc>
     <lastmod>2008-03-26T09:30:01+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E7%AB%A5%E5%B9%B4/</loc>
     <lastmod>2008-03-26T09:30:01+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2452,7 +2741,8 @@
   <url>
     <loc>https://www.palfans.net/tags/%E8%AE%B0%E5%BF%86/</loc>
     <lastmod>2008-03-26T09:30:01+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2465,25 +2755,29 @@
   <url>
     <loc>https://www.palfans.net/tags/%E5%9B%9E%E5%BF%86/</loc>
     <lastmod>2008-03-25T09:05:08+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%B0%8F%E5%AD%A6/</loc>
     <lastmod>2008-03-25T09:05:08+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E7%89%A9%E4%BB%B7/</loc>
     <lastmod>2008-03-25T09:05:08+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E9%9F%A9%E4%B9%94%E7%94%9F/</loc>
     <lastmod>2008-03-25T09:05:08+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2496,13 +2790,15 @@
   <url>
     <loc>https://www.palfans.net/tags/%E6%B0%94%E5%80%99/</loc>
     <lastmod>2008-03-11T11:04:42+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/atm/</loc>
     <lastmod>2008-03-06T15:17:32+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2515,13 +2811,15 @@
   <url>
     <loc>https://www.palfans.net/tags/%E5%81%87%E9%92%9E/</loc>
     <lastmod>2008-03-06T15:17:32+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E4%B8%BB%E6%9C%BA/</loc>
     <lastmod>2008-03-06T13:22:50+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2534,7 +2832,8 @@
   <url>
     <loc>https://www.palfans.net/tags/%E8%A3%85%E4%BF%AE/</loc>
     <lastmod>2008-03-06T13:22:50+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2547,13 +2846,15 @@
   <url>
     <loc>https://www.palfans.net/tags/%E8%87%AA%E6%9D%80/</loc>
     <lastmod>2008-02-27T09:41:51+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%9C%B0%E5%9B%BE/</loc>
     <lastmod>2008-02-26T23:45:07+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2566,19 +2867,22 @@
   <url>
     <loc>https://www.palfans.net/tags/%E6%98%A5%E8%BF%90/</loc>
     <lastmod>2008-02-26T23:45:07+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%9A%B4%E9%A3%8E%E9%9B%AA/</loc>
     <lastmod>2008-02-26T23:45:07+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E7%81%AB%E8%BD%A6/</loc>
     <lastmod>2008-02-26T23:45:07+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2591,19 +2895,22 @@
   <url>
     <loc>https://www.palfans.net/tags/%E5%BA%8A%E7%85%A7/</loc>
     <lastmod>2008-02-03T16:56:39+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E9%99%88%E5%86%A0%E5%B8%8C/</loc>
     <lastmod>2008-02-03T16:56:39+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E4%B8%89%E5%B3%A1/</loc>
     <lastmod>2008-01-30T15:19:21+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2616,25 +2923,29 @@
   <url>
     <loc>https://www.palfans.net/tags/%E6%9A%B4%E9%9B%AA/</loc>
     <lastmod>2008-01-30T15:19:21+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E9%87%8D%E5%BA%86/</loc>
     <lastmod>2008-01-30T15:19:21+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E9%AB%98%E6%B8%A9/</loc>
     <lastmod>2008-01-30T15:19:21+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%85%AC%E4%BC%97%E9%97%AE%E7%AD%94/</loc>
     <lastmod>2008-01-22T23:30:29+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2647,13 +2958,15 @@
   <url>
     <loc>https://www.palfans.net/tags/%E7%A7%91%E6%8A%80%E9%83%A8/</loc>
     <lastmod>2008-01-22T23:30:29+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%85%8D%E8%B4%B9/</loc>
     <lastmod>2008-01-21T21:45:03+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2666,25 +2979,29 @@
   <url>
     <loc>https://www.palfans.net/tags/%E7%9F%AD%E4%BF%A1/</loc>
     <lastmod>2008-01-21T21:45:03+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E8%B5%84%E8%B4%B9/</loc>
     <lastmod>2008-01-21T21:45:03+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E9%A3%9E%E4%BF%A1/</loc>
     <lastmod>2008-01-21T21:45:03+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%BC%AB%E6%B8%B8/</loc>
     <lastmod>2008-01-18T16:50:28+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2697,13 +3014,15 @@
   <url>
     <loc>https://www.palfans.net/tags/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2008-01-18T16:50:28+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/win&#43;e/</loc>
     <lastmod>2008-01-18T15:01:38+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2716,31 +3035,36 @@
   <url>
     <loc>https://www.palfans.net/tags/%E4%BB%BB%E5%8A%A1%E6%A0%8F/</loc>
     <lastmod>2008-01-18T15:01:38+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
     <lastmod>2008-01-18T15:01:38+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8/</loc>
     <lastmod>2008-01-18T15:01:38+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%9B%BD%E6%83%85/</loc>
     <lastmod>2008-01-18T01:18:03+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E7%B4%A0%E8%B4%A8/</loc>
     <lastmod>2008-01-18T01:18:03+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2753,19 +3077,22 @@
   <url>
     <loc>https://www.palfans.net/tags/%E6%88%98%E4%BA%89/</loc>
     <lastmod>2007-12-25T22:14:26+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E7%82%AE%E7%81%B0/</loc>
     <lastmod>2007-12-25T22:14:26+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E9%9B%86%E7%BB%93%E5%8F%B7/</loc>
     <lastmod>2007-12-25T22:14:26+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2792,31 +3119,36 @@
   <url>
     <loc>https://www.palfans.net/tags/%E6%88%90%E8%AF%AD/</loc>
     <lastmod>2007-11-22T00:45:37+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E8%AF%AD%E8%A8%80/</loc>
     <lastmod>2007-11-22T00:45:37+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E8%AF%AF%E8%A7%A3/</loc>
     <lastmod>2007-11-22T00:45:37+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E8%AF%AF%E8%AF%BB/</loc>
     <lastmod>2007-11-22T00:45:37+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%B7%A5%E4%BD%9C/</loc>
     <lastmod>2007-10-16T22:51:15+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2829,7 +3161,8 @@
   <url>
     <loc>https://www.palfans.net/tags/%E6%81%A2%E5%A4%8D/</loc>
     <lastmod>2007-09-26T23:32:48+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2842,13 +3175,15 @@
   <url>
     <loc>https://www.palfans.net/tags/%E6%8A%80%E6%9C%AF%E6%A0%88/</loc>
     <lastmod>2007-09-26T23:32:48+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%95%B0%E6%8D%AE/</loc>
     <lastmod>2007-09-26T23:32:48+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2861,7 +3196,8 @@
   <url>
     <loc>https://www.palfans.net/tags/%E8%BE%9E%E8%81%8C/</loc>
     <lastmod>2007-09-17T22:08:07+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2895,13 +3231,15 @@
   <url>
     <loc>https://www.palfans.net/tags/unix/</loc>
     <lastmod>2007-09-09T22:48:40+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%97%B6%E5%85%89%E4%B8%8D%E8%83%BD%E5%80%92%E6%B5%81/</loc>
     <lastmod>2007-09-09T22:48:40+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2921,13 +3259,15 @@
   <url>
     <loc>https://www.palfans.net/tags/%E6%AF%95%E4%B8%9A/</loc>
     <lastmod>2007-09-01T23:38:02+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/die-hard/</loc>
     <lastmod>2007-08-29T23:35:28+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2940,13 +3280,15 @@
   <url>
     <loc>https://www.palfans.net/tags/%E8%99%8E%E8%83%86%E9%BE%99%E5%A8%81/</loc>
     <lastmod>2007-08-29T23:35:28+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%8A%A0%E7%8F%AD/</loc>
     <lastmod>2007-08-29T18:15:19+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2966,13 +3308,15 @@
   <url>
     <loc>https://www.palfans.net/tags/mib/</loc>
     <lastmod>2007-08-26T13:56:49+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E9%BB%91%E8%B6%85%E7%89%B9%E8%AD%A6%E7%BB%84/</loc>
     <lastmod>2007-08-26T13:56:49+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -2992,19 +3336,22 @@
   <url>
     <loc>https://www.palfans.net/tags/%E7%9B%97%E7%89%88/</loc>
     <lastmod>2007-06-27T22:56:19+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E4%BA%8B%E6%95%85/</loc>
     <lastmod>2007-06-27T21:21:47+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E4%BF%9D%E6%97%B6%E6%8D%B7/</loc>
     <lastmod>2007-06-27T21:21:47+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -3017,13 +3364,15 @@
   <url>
     <loc>https://www.palfans.net/tags/%E6%B1%BD%E8%BD%A6/</loc>
     <lastmod>2007-06-27T21:21:47+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%87%8F%E8%82%A5/</loc>
     <lastmod>2007-05-30T21:41:12+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -3057,7 +3406,8 @@
   <url>
     <loc>https://www.palfans.net/tags/%E9%A9%BE%E6%A0%A1/</loc>
     <lastmod>2007-03-11T22:03:39+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -3070,13 +3420,15 @@
   <url>
     <loc>https://www.palfans.net/tags/%E5%A8%B1%E4%B9%90/</loc>
     <lastmod>2007-03-04T11:30:21+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E7%A9%BF%E6%99%AE%E6%8B%89%E8%BE%BE%E7%9A%84%E5%A5%B3%E7%8E%8B/</loc>
     <lastmod>2007-03-04T11:30:21+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -3103,13 +3455,15 @@
   <url>
     <loc>https://www.palfans.net/tags/ata100/</loc>
     <lastmod>2007-01-04T22:16:54+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/bios/</loc>
     <lastmod>2007-01-04T22:16:54+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -3122,19 +3476,22 @@
   <url>
     <loc>https://www.palfans.net/tags/%E7%A1%AC%E7%9B%98/</loc>
     <lastmod>2007-01-04T22:16:54+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/acpi/</loc>
     <lastmod>2007-01-03T23:59:01+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%86%85%E5%AD%98/</loc>
     <lastmod>2007-01-03T23:59:01+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -3147,7 +3504,8 @@
   <url>
     <loc>https://www.palfans.net/tags/%E8%93%9D%E5%B1%8F/</loc>
     <lastmod>2007-01-03T23:59:01+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -3167,13 +3525,15 @@
   <url>
     <loc>https://www.palfans.net/tags/winxp/</loc>
     <lastmod>2006-12-31T15:06:07+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E8%AE%A1%E7%AE%97%E5%99%A8/</loc>
     <lastmod>2006-12-31T15:06:07+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -3186,7 +3546,8 @@
   <url>
     <loc>https://www.palfans.net/tags/%E9%82%AE%E7%AE%B1/</loc>
     <lastmod>2006-12-31T14:59:12+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -3199,13 +3560,15 @@
   <url>
     <loc>https://www.palfans.net/tags/rm/</loc>
     <lastmod>2006-12-28T10:30:27+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%88%A0%E9%99%A4/</loc>
     <lastmod>2006-12-28T10:30:27+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -3218,19 +3581,22 @@
   <url>
     <loc>https://www.palfans.net/tags/%E5%8F%A3%E6%8A%80/</loc>
     <lastmod>2006-12-11T16:25:40+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%95%99%E7%A7%91%E4%B9%A6/</loc>
     <lastmod>2006-12-11T16:25:40+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E7%BD%91%E9%A1%B5/</loc>
     <lastmod>2006-11-23T14:22:22+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -3243,7 +3609,8 @@
   <url>
     <loc>https://www.palfans.net/tags/%E6%8D%95%E9%BC%A0/</loc>
     <lastmod>2006-11-22T23:32:37+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -3256,12 +3623,6 @@
   <url>
     <loc>https://www.palfans.net/tags/%E8%80%81%E9%BC%A0/</loc>
     <lastmod>2006-11-22T23:32:37+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.palfans.net/faq-of-china/</loc>
-    <lastmod>2006-11-21T18:17:11+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -3269,7 +3630,15 @@
   <url>
     <loc>https://www.palfans.net/tags/faq/</loc>
     <lastmod>2006-11-21T18:17:11+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.palfans.net/faq-of-china/</loc>
+    <lastmod>2006-11-21T18:17:11+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -3282,25 +3651,29 @@
   <url>
     <loc>https://www.palfans.net/tags/%E5%88%98%E8%BE%BE%E4%B8%B4/</loc>
     <lastmod>2006-11-08T17:03:30+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%8F%A4%E4%BB%A3/</loc>
     <lastmod>2006-11-08T17:03:30+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%B1%95%E8%A7%88/</loc>
     <lastmod>2006-11-08T17:03:30+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%80%A7/</loc>
     <lastmod>2006-11-08T17:03:30+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -3313,7 +3686,8 @@
   <url>
     <loc>https://www.palfans.net/tags/%E5%8D%95%E8%AF%8D/</loc>
     <lastmod>2006-11-07T03:35:42+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -3326,7 +3700,8 @@
   <url>
     <loc>https://www.palfans.net/tags/%E8%8B%B1%E8%AF%AD/</loc>
     <lastmod>2006-11-07T03:35:42+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -3339,13 +3714,15 @@
   <url>
     <loc>https://www.palfans.net/tags/%E4%BD%93%E6%A3%80/</loc>
     <lastmod>2006-11-04T09:12:43+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E7%94%9F%E7%97%85/</loc>
     <lastmod>2006-11-04T09:12:43+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -3358,19 +3735,22 @@
   <url>
     <loc>https://www.palfans.net/tags/%E5%BD%A9%E7%A5%A8/</loc>
     <lastmod>2006-10-25T22:32:48+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%96%B9%E8%A8%80/</loc>
     <lastmod>2006-10-09T08:53:35+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E8%A8%80%E5%AD%90%E5%84%BF/</loc>
     <lastmod>2006-10-09T08:53:35+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -3383,7 +3763,8 @@
   <url>
     <loc>https://www.palfans.net/tags/%E7%AB%A5%E8%B0%A3/</loc>
     <lastmod>2006-10-08T10:26:30+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -3410,13 +3791,15 @@
   <url>
     <loc>https://www.palfans.net/tags/%E6%B0%94%E6%B8%A9/</loc>
     <lastmod>2006-09-08T00:38:34+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E8%9A%82%E8%9A%81/</loc>
     <lastmod>2006-09-08T00:38:34+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -3429,13 +3812,15 @@
   <url>
     <loc>https://www.palfans.net/tags/%E6%97%85%E8%A1%8C/</loc>
     <lastmod>2006-08-16T23:21:22+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%B1%9F%E5%8D%97/</loc>
     <lastmod>2006-08-16T23:21:22+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -3455,13 +3840,15 @@
   <url>
     <loc>https://www.palfans.net/tags/%E6%B8%A9%E6%B3%89/</loc>
     <lastmod>2006-08-13T23:27:42+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%B8%B8%E6%B3%B3/</loc>
     <lastmod>2006-08-13T23:27:42+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -3481,7 +3868,8 @@
   <url>
     <loc>https://www.palfans.net/tags/%E6%AC%BA%E8%AF%88/</loc>
     <lastmod>2006-07-28T01:22:08+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -3494,7 +3882,8 @@
   <url>
     <loc>https://www.palfans.net/tags/%E5%AE%BD%E5%B8%A6/</loc>
     <lastmod>2006-04-29T23:07:38+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -3507,19 +3896,22 @@
   <url>
     <loc>https://www.palfans.net/tags/%E5%A4%8D%E8%AF%95/</loc>
     <lastmod>2006-04-16T21:37:31+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E8%80%83%E7%A0%94/</loc>
     <lastmod>2006-04-16T21:37:31+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E8%A5%BF%E5%8D%97%E6%94%BF%E6%B3%95%E5%A4%A7%E5%AD%A6/</loc>
     <lastmod>2006-04-16T21:37:31+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -3539,19 +3931,22 @@
   <url>
     <loc>https://www.palfans.net/tags/%E8%BD%A6%E7%A5%B8/</loc>
     <lastmod>2006-04-06T23:40:43+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/msn/</loc>
     <lastmod>2006-03-25T00:28:41+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%BC%80%E5%BF%83/</loc>
     <lastmod>2006-03-25T00:28:41+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -3578,19 +3973,22 @@
   <url>
     <loc>https://www.palfans.net/tags/unicode/</loc>
     <lastmod>2005-12-30T13:41:32+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%8A%A0%E5%AF%86/</loc>
     <lastmod>2005-12-30T13:41:32+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E8%A7%A3%E5%AF%86/</loc>
     <lastmod>2005-12-30T13:41:32+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -3603,12 +4001,27 @@
   <url>
     <loc>https://www.palfans.net/tags/%E6%80%AA%E7%99%96/</loc>
     <lastmod>2005-09-28T13:59:21+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/five-oddities/</loc>
     <lastmod>2005-09-28T13:59:21+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.palfans.net/tags/win2000/</loc>
+    <lastmod>2005-09-25T21:05:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.palfans.net/tags/win2003/</loc>
+    <lastmod>2005-09-25T21:05:03+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -3621,27 +4034,17 @@
   </url>
   
   <url>
-    <loc>https://www.palfans.net/tags/win2000/</loc>
-    <lastmod>2005-09-25T21:05:03+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.palfans.net/tags/win2003/</loc>
-    <lastmod>2005-09-25T21:05:03+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.palfans.net/tags/%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95/</loc>
     <lastmod>2005-09-25T21:05:03+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/ping/</loc>
     <lastmod>2005-08-22T16:23:01+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -3654,7 +4057,8 @@
   <url>
     <loc>https://www.palfans.net/tags/numlock/</loc>
     <lastmod>2005-08-22T10:14:26+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -3667,25 +4071,29 @@
   <url>
     <loc>https://www.palfans.net/tags/%E8%87%AA%E5%8A%A8/</loc>
     <lastmod>2005-08-22T10:14:26+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E5%BC%A0%E9%9D%93%E9%A2%96/</loc>
     <lastmod>2005-08-20T01:21:18+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E6%9D%8E%E5%AE%87%E6%98%A5/</loc>
     <lastmod>2005-08-20T01:21:18+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.palfans.net/tags/%E8%B6%85%E7%BA%A7%E5%A5%B3%E5%A3%B0/</loc>
     <lastmod>2005-08-20T01:21:18+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
