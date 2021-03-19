@@ -4,12 +4,13 @@
 
 language: go
 
-python:
-    - master
+go:
+    - 1.16.2
 
 # before_install
 # install - install any dependencies required
 install:
+    - go mod init xxx
     - go get github.com/gohugoio/hugo
 
 before_script:
