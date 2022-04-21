@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>xfce on Palfans's BLOG</title><link>http://localhost:1313/tags/xfce/</link><description>Recent content in xfce on Palfans's BLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 10 Aug 2018 22:48:09 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/xfce/index.xml" rel="self" type="application/rss+xml"/><item><title>Xfce4 failed to execute default Terminal Emulator</title><link>http://localhost:1313/xfce4_failed_to_execute_default_terminal_emulator/</link><pubDate>Fri, 10 Aug 2018 22:48:09 +0000</pubDate><guid>http://localhost:1313/xfce4_failed_to_execute_default_terminal_emulator/</guid><description>&lt;p>Xfce 是一款针对 Linux 系统的现代化轻型开源桌面环境，基于 GTK+2.x 开发完成。相对于传统的 GNOME 桌面来说，xfce 足够轻量化，资源占用很低，但使用体验并不差。尤其对于公司的服务器来说，偶尔需要桌面环境，但又不想安装臃肿的 GNOME，Xfce 就是个不错的选择。&lt;/p>
+&lt;p>最近在公司新装了几台机器，装完发现 Xfce4 自带的终端模拟器一打开就报错。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Failed to execute default Terminal Emulator.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Input/output error.
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>从字面上看，I/O 有问题。查看了系统设置，终端设置都是正确的。Google 搜了一圈，有一个说法是终端的编码不是 UTF-8 也会导致这个问题，但我这里已经默认为 UTF-8。看日志发现如下错误：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">/usr/bin/xfce4-terminal: symbol lookup error: /usr/bin/xfce4-terminal: undefined symbol: vte_regex_new_for_match
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item></channel></rss>

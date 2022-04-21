@@ -1,0 +1,136 @@
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><title>通过javascript加密和解密 - Palfans's BLOG</title><meta name=renderer content="webkit"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta http-equiv=cache-control content="no-transform"><meta http-equiv=cache-control content="no-siteapp"><meta name=theme-color content="#f8f5ec"><meta name=msapplication-navbutton-color content="#f8f5ec"><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="#f8f5ec"><meta name=author content="Palfans"><meta name=description content="单位和家里都是用的移动的宽带，我常常去那里的动感影院看电影，不过有时候觉得有点卡，就想通过下载软件全部下下来再看，一开始可以通过real的实际路径去下载，后来real也不行了，只好去看它的网页代码，如下：
+1 2 3 4 5 6 7 8 9 10 11  &amp;lt;script language=Javascript&amp;gt; &amp;lt;!--var Words =&amp;#34;%3Cframeset%20border%3D%220%22%20frameborder%3D%220%22%20framespacing%3D%220%22%20rows%3D%22*%22%3E%0D%0A%20%20%3Cnoframes%3E%0D%0A%20%20%3C/noframes%3E%0D%0A%20%20%3Cframe%20frameborder%3D%22NO%22%20marginwidth%3D%220%22%20name%3D%22upperframe%22%20noresize%20src%3D%222233d86.asp%3Ffilm1%3D7113%26film2%3D2848%26film3%3D%22%20scrolling%3D%22auto%22%3E%0D%0A%3C/frameset%3E&amp;#34; function SetNewWords() { var NewWords; NewWords = unescape(Words); document.write(NewWords); } SetNewWords(); // --&amp;gt; &amp;lt;/script&amp;gt;   "><meta name=keywords content="Palfans,blog"><meta name=google-site-verification content="7MLs3wY58s_Jjnto4NZgvoEHnnJc07ojBCBlgI1gTco"><meta name=generator content="Hugo 0.97.3 with theme even"><link rel=canonical href=http://localhost:1313/javascript-encrypt-decrypt/><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/manifest.json><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link href=/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css rel=stylesheet><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin=anonymous><meta property="og:title" content="通过javascript加密和解密"><meta property="og:description" content="单位和家里都是用的移动的宽带，我常常去那里的动感影院看电影，不过有时候觉得有点卡，就想通过下载软件全部下下来再看，一开始可以通过real的实际路径去下载，后来real也不行了，只好去看它的网页代码，如下：
+
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+
+
+<script language=Javascript>
+<!--var Words =&#34;%3Cframeset%20border%3D%220%22%20frameborder%3D%220%22%20framespacing%3D%220%22%20rows%3D%22*%22%3E%0D%0A%20%20%3Cnoframes%3E%0D%0A%20%20%3C/noframes%3E%0D%0A%20%20%3Cframe%20frameborder%3D%22NO%22%20marginwidth%3D%220%22%20name%3D%22upperframe%22%20noresize%20src%3D%222233d86.asp%3Ffilm1%3D7113%26film2%3D2848%26film3%3D%22%20scrolling%3D%22auto%22%3E%0D%0A%3C/frameset%3E&#34;
+function SetNewWords()
+{
+    var NewWords;
+    NewWords = unescape(Words);
+    document.write(NewWords);
+}
+SetNewWords();
+// -->
+</script>
+
+
+"><meta property="og:type" content="article"><meta property="og:url" content="http://localhost:1313/javascript-encrypt-decrypt/"><meta property="article:section" content="post"><meta property="article:published_time" content="2005-12-30T13:41:32+00:00"><meta property="article:modified_time" content="2005-12-30T13:41:32+00:00"><meta itemprop=name content="通过javascript加密和解密"><meta itemprop=description content="单位和家里都是用的移动的宽带，我常常去那里的动感影院看电影，不过有时候觉得有点卡，就想通过下载软件全部下下来再看，一开始可以通过real的实际路径去下载，后来real也不行了，只好去看它的网页代码，如下：
+
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+
+
+<script language=Javascript>
+<!--var Words =&#34;%3Cframeset%20border%3D%220%22%20frameborder%3D%220%22%20framespacing%3D%220%22%20rows%3D%22*%22%3E%0D%0A%20%20%3Cnoframes%3E%0D%0A%20%20%3C/noframes%3E%0D%0A%20%20%3Cframe%20frameborder%3D%22NO%22%20marginwidth%3D%220%22%20name%3D%22upperframe%22%20noresize%20src%3D%222233d86.asp%3Ffilm1%3D7113%26film2%3D2848%26film3%3D%22%20scrolling%3D%22auto%22%3E%0D%0A%3C/frameset%3E&#34;
+function SetNewWords()
+{
+    var NewWords;
+    NewWords = unescape(Words);
+    document.write(NewWords);
+}
+SetNewWords();
+// -->
+</script>
+
+
+"><meta itemprop=datePublished content="2005-12-30T13:41:32+00:00"><meta itemprop=dateModified content="2005-12-30T13:41:32+00:00"><meta itemprop=wordCount content="262"><meta itemprop=keywords content="javascript,Unicode,加密,解密,"><meta name=twitter:card content="summary"><meta name=twitter:title content="通过javascript加密和解密"><meta name=twitter:description content="单位和家里都是用的移动的宽带，我常常去那里的动感影院看电影，不过有时候觉得有点卡，就想通过下载软件全部下下来再看，一开始可以通过real的实际路径去下载，后来real也不行了，只好去看它的网页代码，如下：
+
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+
+
+<script language=Javascript>
+<!--var Words =&#34;%3Cframeset%20border%3D%220%22%20frameborder%3D%220%22%20framespacing%3D%220%22%20rows%3D%22*%22%3E%0D%0A%20%20%3Cnoframes%3E%0D%0A%20%20%3C/noframes%3E%0D%0A%20%20%3Cframe%20frameborder%3D%22NO%22%20marginwidth%3D%220%22%20name%3D%22upperframe%22%20noresize%20src%3D%222233d86.asp%3Ffilm1%3D7113%26film2%3D2848%26film3%3D%22%20scrolling%3D%22auto%22%3E%0D%0A%3C/frameset%3E&#34;
+function SetNewWords()
+{
+    var NewWords;
+    NewWords = unescape(Words);
+    document.write(NewWords);
+}
+SetNewWords();
+// -->
+</script>
+
+
+"><!--[if lte IE 9]><script src=https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js></script><![endif]--><!--[if lt IE 9]><script src=https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js></script><![endif]--></head><body><div id=mobile-navbar class=mobile-navbar><div class=mobile-header-logo><a href=/ class=logo>Palfans's BLOG</a></div><div class=mobile-navbar-icon><span></span>
+<span></span>
+<span></span></div></div><nav id=mobile-menu class="mobile-menu slideout-menu"><ul class=mobile-menu-list><a href=/><li class=mobile-menu-item>Home</li></a><a href=/post/><li class=mobile-menu-item>Archives</li></a><a href=/tags/><li class=mobile-menu-item>Tags</li></a><a href=/categories/><li class=mobile-menu-item>Categories</li></a></ul></nav><div class=container id=mobile-panel><header id=header class=header><div class=logo-wrapper><a href=/ class=logo>Palfans's BLOG</a></div><nav class=site-navbar><ul id=menu class=menu><li class=menu-item><a class=menu-item-link href=/>Home</a></li><li class=menu-item><a class=menu-item-link href=/post/>Archives</a></li><li class=menu-item><a class=menu-item-link href=/tags/>Tags</a></li><li class=menu-item><a class=menu-item-link href=/categories/>Categories</a></li></ul></nav></header><main id=main class=main><div class=content-wrapper><div id=content class=content><article class=post><header class=post-header><h1 class=post-title>通过javascript加密和解密</h1><div class=post-meta><span class=post-time>2005-12-30</span><div class=post-category><a href=/categories/%E9%97%B2%E8%81%8A/>闲聊</a></div></div></header><div class=post-toc id=post-toc><h2 class=post-toc-title>文章目录</h2><div class="post-toc-content always-active"><nav id=TableOfContents></nav></div></div><div class=post-content><p>单位和家里都是用的移动的宽带，我常常去那里的动感影院看电影，不过有时候觉得有点卡，就想通过下载软件全部下下来再看，一开始可以通过real的实际路径去下载，后来real也不行了，只好去看它的网页代码，如下：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-Javascript data-lang=Javascript><span class=line><span class=cl><span class=o>&lt;</span><span class=nx>script</span> <span class=nx>language</span><span class=o>=</span><span class=nx>Javascript</span><span class=o>&gt;</span>
+</span></span><span class=line><span class=cl><span class=c>&lt;!--</span><span class=kd>var</span> <span class=nx>Words</span> <span class=o>=</span><span class=s2>&#34;%3Cframeset%20border%3D%220%22%20frameborder%3D%220%22%20framespacing%3D%220%22%20rows%3D%22*%22%3E%0D%0A%20%20%3Cnoframes%3E%0D%0A%20%20%3C/noframes%3E%0D%0A%20%20%3Cframe%20frameborder%3D%22NO%22%20marginwidth%3D%220%22%20name%3D%22upperframe%22%20noresize%20src%3D%222233d86.asp%3Ffilm1%3D7113%26film2%3D2848%26film3%3D%22%20scrolling%3D%22auto%22%3E%0D%0A%3C/frameset%3E&#34;</span>
+</span></span><span class=line><span class=cl><span class=kd>function</span> <span class=nx>SetNewWords</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kd>var</span> <span class=nx>NewWords</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>NewWords</span> <span class=o>=</span> <span class=nx>unescape</span><span class=p>(</span><span class=nx>Words</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=nb>document</span><span class=p>.</span><span class=nx>write</span><span class=p>(</span><span class=nx>NewWords</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=nx>SetNewWords</span><span class=p>();</span>
+</span></span><span class=line><span class=cl><span class=c1>// --&gt;
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=o>&lt;</span><span class=err>/script&gt;</span>
+</span></span></code></pre></td></tr></table></div></div><p>网页通过escape和unescape来实现加密和解密，仔细观察，可以发现，其实加密后的内容就是符号的unicode编码，所以很容易就能得到未加密的内容。专门弄了一段代码来简单实现</p><p>将目标内容复制到下面的文本框中，点击加密/解密按钮，即可得到加密/解密后的结果。</p></div><div class=post-copyright><p class=copyright-item><span class=item-title>文章作者</span>
+<span class=item-content>Palfans</span></p><p class=copyright-item><span class=item-title>上次更新</span>
+<span class=item-content>2005-12-30</span></p></div><footer class=post-footer><div class=post-tags><a href=/tags/javascript/>javascript</a>
+<a href=/tags/unicode/>Unicode</a>
+<a href=/tags/%E5%8A%A0%E5%AF%86/>加密</a>
+<a href=/tags/%E8%A7%A3%E5%AF%86/>解密</a></div><nav class=post-nav><a class=prev href=/my-2005/><i class="iconfont icon-left"></i>
+<span class="prev-text nav-default">我的2005</span>
+<span class="prev-text nav-mobile">上一篇</span></a>
+<a class=next href=/five-oddities/><span class="next-text nav-default">我的5个怪癖</span>
+<span class="next-text nav-mobile">下一篇</span>
+<i class="iconfont icon-right"></i></a></nav></footer></article></div><script src=https://utteranc.es/client.js repo=palfans/blog-comments issue-term=pathname theme=github-light crossorigin=anonymous async></script><noscript>Please enable JavaScript to view the <a href=https://github.com/utterance>comments powered by utterances.</a></noscript></div></main><footer id=footer class=footer><div class=social-links><a href=mailto:admin@palfans.net class="iconfont icon-email" title=email></a>
+<a href=https://twitter.com/palfans class="iconfont icon-twitter" title=twitter></a>
+<a href=http://localhost:1313/index.xml type=application/rss+xml class="iconfont icon-rss" title=rss></a></div><div class=copyright><span class=power-by>由 <a class=hexo-link href=https://gohugo.io>Hugo</a> 强力驱动</span>
+<span class=division>|</span>
+<span class=theme-info>主题 -
+<a class=theme-link href=https://github.com/olOwOlo/hugo-theme-even>Even</a></span>
+<span class=copyright-year>&copy;
+2005 -
+2022<span class=heart><i class="iconfont icon-heart"></i></span><span>Palfans</span></span></div></footer><div class=back-to-top id=back-to-top><i class="iconfont icon-up"></i></div></div><script src=https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin=anonymous></script>
+<script type=text/javascript src=/js/main.min.64437849d125a2d603b3e71d6de5225d641a32d17168a58106e0b61852079683.js></script>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-287929-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"))</script><script async src=https://www.google-analytics.com/analytics.js></script></body></html>

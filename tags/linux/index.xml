@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>linux on Palfans's BLOG</title><link>http://localhost:1313/tags/linux/</link><description>Recent content in linux on Palfans's BLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 10 Aug 2018 22:48:09 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Xfce4 failed to execute default Terminal Emulator</title><link>http://localhost:1313/xfce4_failed_to_execute_default_terminal_emulator/</link><pubDate>Fri, 10 Aug 2018 22:48:09 +0000</pubDate><guid>http://localhost:1313/xfce4_failed_to_execute_default_terminal_emulator/</guid><description>&lt;p>Xfce 是一款针对 Linux 系统的现代化轻型开源桌面环境，基于 GTK+2.x 开发完成。相对于传统的 GNOME 桌面来说，xfce 足够轻量化，资源占用很低，但使用体验并不差。尤其对于公司的服务器来说，偶尔需要桌面环境，但又不想安装臃肿的 GNOME，Xfce 就是个不错的选择。&lt;/p>
+&lt;p>最近在公司新装了几台机器，装完发现 Xfce4 自带的终端模拟器一打开就报错。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Failed to execute default Terminal Emulator.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Input/output error.
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>从字面上看，I/O 有问题。查看了系统设置，终端设置都是正确的。Google 搜了一圈，有一个说法是终端的编码不是 UTF-8 也会导致这个问题，但我这里已经默认为 UTF-8。看日志发现如下错误：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">/usr/bin/xfce4-terminal: symbol lookup error: /usr/bin/xfce4-terminal: undefined symbol: vte_regex_new_for_match
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>禁用 screen 的动态标题功能</title><link>http://localhost:1313/disable_screen_dynamic_title_feature/</link><pubDate>Thu, 22 Mar 2018 21:10:38 +0000</pubDate><guid>http://localhost:1313/disable_screen_dynamic_title_feature/</guid><description>&lt;p>GNU screen 是 Linux 上面一个非常有用的程序。它默认启用了窗口动态标题的功能，每次切换目录时，会自动用当前目录的全路径作为窗口的标题。一般情况下，这个功能很贴心，但有时候路径很长，窗口名的 tab 会显示不全而陷入混乱，我们只需要一个简明扼要的自定义标题来区分不同的窗口。&lt;/p></description></item><item><title>为VirtualBox中的CentOS扩展Swap空间</title><link>http://localhost:1313/extend_swap_space_in_virtualbox/</link><pubDate>Mon, 02 Jun 2014 18:30:56 +0000</pubDate><guid>http://localhost:1313/extend_swap_space_in_virtualbox/</guid><description>&lt;p>在VirtualBox中安装好CentOS后，会发现默认的Swap空间大小是根据初次配置的可用内存来生成的，正常使用足够。但是，如果需要安装Oracle，它要求最少2GB的交换空间，这时就需要扩展交换空间。&lt;/p>
+&lt;p>首先运行swapon命令查看交换空间大小，如果得到的大小少于&lt;strong>2097152&lt;/strong>，就需要增加交换空间。&lt;/p>
+&lt;pre>&lt;code>swapon -s
+&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="https://res.palfans.net/img/1.png" alt="">&lt;/p>
+&lt;p>1. 首先，在VirtualBox中新增一块硬盘&lt;/p>
+&lt;p>&lt;img src="https://res.palfans.net/img/2.png" alt="">&lt;/p></description></item><item><title>用nohup命令让程序在后台执行（Unix/Linux）</title><link>http://localhost:1313/unix-linux-nohup/</link><pubDate>Thu, 08 Mar 2007 10:54:23 +0000</pubDate><guid>http://localhost:1313/unix-linux-nohup/</guid><description>&lt;p>　　在主机上跑程序，挂后台以后发现有时程序会退出，有时又不会。很奇怪，查了一下资料，整理如下。&lt;/p>
+&lt;p>　　&amp;amp; 只是放在后台运行，但是没有脱离控制终端，当终端断开的时候，进程将收到SIGHUP信号，这个信号默认动作是结束进程。用nohup将使进程脱离控制终端，进程无法进行终端操作，所有输出到终端的会被重定向。而 &amp;amp; 可以进行终端操作，如果发生读写终端，进程被挂起，用fg命令可以使进程获得终端控制权并继续运行。&lt;/p>
+&lt;p>　　Unix/Linux下一般想让某个程序在后台运行，很多都是使用 &amp;amp; 在程序结尾来让程序自动运行。比如我们要运行mysql在后台： /usr/local/mysql/bin/mysqld_safe &amp;ndash;user=mysql &amp;amp;&lt;/p></description></item><item><title>Linux/Unix下如何删除具有特殊字符的文件</title><link>http://localhost:1313/linux-unix-how-to-delete-files-with-special-characters/</link><pubDate>Thu, 28 Dec 2006 10:30:27 +0000</pubDate><guid>http://localhost:1313/linux-unix-how-to-delete-files-with-special-characters/</guid><description>&lt;p>假设Linux/Unix系统中有一个文件名叫“-target”，如果我们想对它进行操作，例如要删除它按照一般的删除方法在命令行中输入rm -target命令，界面会提示我们是“无效选项”(invalid option)，原来由于文件名的第一个字符为“-”，Linux/Unix把文件名当作选项了。&lt;/p>
+&lt;p>我们可以使用“&amp;ndash;”符号来解决这个问题，通过man rm可以知道&lt;/p></description></item></channel></rss>

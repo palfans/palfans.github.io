@@ -1,0 +1,196 @@
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><title>Xfce4 failed to execute default Terminal Emulator - Palfans's BLOG</title><meta name=renderer content="webkit"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta http-equiv=cache-control content="no-transform"><meta http-equiv=cache-control content="no-siteapp"><meta name=theme-color content="#f8f5ec"><meta name=msapplication-navbutton-color content="#f8f5ec"><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="#f8f5ec"><meta name=author content="Palfans"><meta name=description content="Xfce 是一款针对 Linux 系统的现代化轻型开源桌面环境，基于 GTK+2.x 开发完成。相对于传统的 GNOME 桌面来说，xfce 足够轻量化，资源占用很低，但使用体验并不差。尤其对于公司的服务器来说，偶尔需要桌面环境，但又不想安装臃肿的 GNOME，Xfce 就是个不错的选择。
+最近在公司新装了几台机器，装完发现 Xfce4 自带的终端模拟器一打开就报错。
+1 2  Failed to execute default Terminal Emulator. Input/output error.   从字面上看，I/O 有问题。查看了系统设置，终端设置都是正确的。Google 搜了一圈，有一个说法是终端的编码不是 UTF-8 也会导致这个问题，但我这里已经默认为 UTF-8。看日志发现如下错误：
+1  /usr/bin/xfce4-terminal: symbol lookup error: /usr/bin/xfce4-terminal: undefined symbol: vte_regex_new_for_match   "><meta name=keywords content="Palfans,blog"><meta name=google-site-verification content="7MLs3wY58s_Jjnto4NZgvoEHnnJc07ojBCBlgI1gTco"><meta name=generator content="Hugo 0.97.3 with theme even"><link rel=canonical href=http://localhost:1313/xfce4_failed_to_execute_default_terminal_emulator/><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/manifest.json><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link href=/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css rel=stylesheet><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin=anonymous><meta property="og:title" content="Xfce4 failed to execute default Terminal Emulator"><meta property="og:description" content="Xfce 是一款针对 Linux 系统的现代化轻型开源桌面环境，基于 GTK+2.x 开发完成。相对于传统的 GNOME 桌面来说，xfce 足够轻量化，资源占用很低，但使用体验并不差。尤其对于公司的服务器来说，偶尔需要桌面环境，但又不想安装臃肿的 GNOME，Xfce 就是个不错的选择。
+最近在公司新装了几台机器，装完发现 Xfce4 自带的终端模拟器一打开就报错。
+
+
+1
+2
+
+
+Failed to execute default Terminal Emulator.
+Input/output error.
+
+
+从字面上看，I/O 有问题。查看了系统设置，终端设置都是正确的。Google 搜了一圈，有一个说法是终端的编码不是 UTF-8 也会导致这个问题，但我这里已经默认为 UTF-8。看日志发现如下错误：
+
+
+1
+
+
+/usr/bin/xfce4-terminal: symbol lookup error: /usr/bin/xfce4-terminal: undefined symbol: vte_regex_new_for_match
+
+
+"><meta property="og:type" content="article"><meta property="og:url" content="http://localhost:1313/xfce4_failed_to_execute_default_terminal_emulator/"><meta property="article:section" content="post"><meta property="article:published_time" content="2018-08-10T22:48:09+00:00"><meta property="article:modified_time" content="2018-08-10T22:48:09+00:00"><meta itemprop=name content="Xfce4 failed to execute default Terminal Emulator"><meta itemprop=description content="Xfce 是一款针对 Linux 系统的现代化轻型开源桌面环境，基于 GTK+2.x 开发完成。相对于传统的 GNOME 桌面来说，xfce 足够轻量化，资源占用很低，但使用体验并不差。尤其对于公司的服务器来说，偶尔需要桌面环境，但又不想安装臃肿的 GNOME，Xfce 就是个不错的选择。
+最近在公司新装了几台机器，装完发现 Xfce4 自带的终端模拟器一打开就报错。
+
+
+1
+2
+
+
+Failed to execute default Terminal Emulator.
+Input/output error.
+
+
+从字面上看，I/O 有问题。查看了系统设置，终端设置都是正确的。Google 搜了一圈，有一个说法是终端的编码不是 UTF-8 也会导致这个问题，但我这里已经默认为 UTF-8。看日志发现如下错误：
+
+
+1
+
+
+/usr/bin/xfce4-terminal: symbol lookup error: /usr/bin/xfce4-terminal: undefined symbol: vte_regex_new_for_match
+
+
+"><meta itemprop=datePublished content="2018-08-10T22:48:09+00:00"><meta itemprop=dateModified content="2018-08-10T22:48:09+00:00"><meta itemprop=wordCount content="801"><meta itemprop=keywords content="linux,xfce,"><meta name=twitter:card content="summary"><meta name=twitter:title content="Xfce4 failed to execute default Terminal Emulator"><meta name=twitter:description content="Xfce 是一款针对 Linux 系统的现代化轻型开源桌面环境，基于 GTK+2.x 开发完成。相对于传统的 GNOME 桌面来说，xfce 足够轻量化，资源占用很低，但使用体验并不差。尤其对于公司的服务器来说，偶尔需要桌面环境，但又不想安装臃肿的 GNOME，Xfce 就是个不错的选择。
+最近在公司新装了几台机器，装完发现 Xfce4 自带的终端模拟器一打开就报错。
+
+
+1
+2
+
+
+Failed to execute default Terminal Emulator.
+Input/output error.
+
+
+从字面上看，I/O 有问题。查看了系统设置，终端设置都是正确的。Google 搜了一圈，有一个说法是终端的编码不是 UTF-8 也会导致这个问题，但我这里已经默认为 UTF-8。看日志发现如下错误：
+
+
+1
+
+
+/usr/bin/xfce4-terminal: symbol lookup error: /usr/bin/xfce4-terminal: undefined symbol: vte_regex_new_for_match
+
+
+"><!--[if lte IE 9]><script src=https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js></script><![endif]--><!--[if lt IE 9]><script src=https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js></script><![endif]--></head><body><div id=mobile-navbar class=mobile-navbar><div class=mobile-header-logo><a href=/ class=logo>Palfans's BLOG</a></div><div class=mobile-navbar-icon><span></span>
+<span></span>
+<span></span></div></div><nav id=mobile-menu class="mobile-menu slideout-menu"><ul class=mobile-menu-list><a href=/><li class=mobile-menu-item>Home</li></a><a href=/post/><li class=mobile-menu-item>Archives</li></a><a href=/tags/><li class=mobile-menu-item>Tags</li></a><a href=/categories/><li class=mobile-menu-item>Categories</li></a></ul></nav><div class=container id=mobile-panel><header id=header class=header><div class=logo-wrapper><a href=/ class=logo>Palfans's BLOG</a></div><nav class=site-navbar><ul id=menu class=menu><li class=menu-item><a class=menu-item-link href=/>Home</a></li><li class=menu-item><a class=menu-item-link href=/post/>Archives</a></li><li class=menu-item><a class=menu-item-link href=/tags/>Tags</a></li><li class=menu-item><a class=menu-item-link href=/categories/>Categories</a></li></ul></nav></header><main id=main class=main><div class=content-wrapper><div id=content class=content><article class=post><header class=post-header><h1 class=post-title>Xfce4 failed to execute default Terminal Emulator</h1><div class=post-meta><span class=post-time>2018-08-10</span><div class=post-category><a href=/categories/%E6%8A%80%E6%9C%AF%E6%A0%88/>技术栈</a></div></div></header><div class=post-toc id=post-toc><h2 class=post-toc-title>文章目录</h2><div class="post-toc-content always-active"><nav id=TableOfContents></nav></div></div><div class=post-content><p>Xfce 是一款针对 Linux 系统的现代化轻型开源桌面环境，基于 GTK+2.x 开发完成。相对于传统的 GNOME 桌面来说，xfce 足够轻量化，资源占用很低，但使用体验并不差。尤其对于公司的服务器来说，偶尔需要桌面环境，但又不想安装臃肿的 GNOME，Xfce 就是个不错的选择。</p><p>最近在公司新装了几台机器，装完发现 Xfce4 自带的终端模拟器一打开就报错。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>Failed to execute default Terminal Emulator.
+</span></span><span class=line><span class=cl>Input/output error.
+</span></span></code></pre></td></tr></table></div></div><p>从字面上看，I/O 有问题。查看了系统设置，终端设置都是正确的。Google 搜了一圈，有一个说法是终端的编码不是 UTF-8 也会导致这个问题，但我这里已经默认为 UTF-8。看日志发现如下错误：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>/usr/bin/xfce4-terminal: symbol lookup error: /usr/bin/xfce4-terminal: undefined symbol: vte_regex_new_for_match
+</span></span></code></pre></td></tr></table></div></div><p>symbol 找不到？前几个月安装其他机器的时候，没有这个问题。因为每次都是用 yum 在线安装，应该是版本升级造成的。看下当前用的什么版本的 vte。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>$ ldd /usr/bin/xfce4-terminal | grep vte
+</span></span><span class=line><span class=cl>libvte-2.91.so.0 =&gt; /lib64/libvte-2.91.so.0 (0x00007fdcd8cdd000)
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>$ rpm -qa|grep vte291
+</span></span><span class=line><span class=cl>vte291-0.38.4-2.el7.x86_64
+</span></span></code></pre></td></tr></table></div></div><p>安装的 Linux 是 RHEL 7.3，vte291 版本是 0.38，有可能新版本的 vte 包含了缺失的 symbol。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>$ sudo yum install vte291
+</span></span><span class=line><span class=cl>Loaded plugins: product-id, search-disabled-repos, subscription-manager
+</span></span><span class=line><span class=cl>Resolving Dependencies
+</span></span><span class=line><span class=cl>--&gt; Running transaction check
+</span></span><span class=line><span class=cl>---&gt; Package vte291.x86_64 0:0.38.4-2.el7 will be updated
+</span></span><span class=line><span class=cl>---&gt; Package vte291.x86_64 0:0.46.2-1.el7 will be an update
+</span></span><span class=line><span class=cl>--&gt; Processing Dependency: libpcre2-8.so.0()(64bit) for package: vte291-0.46.2-1.el7.x86_64
+</span></span><span class=line><span class=cl>--&gt; Running transaction check
+</span></span><span class=line><span class=cl>---&gt; Package pcre2.x86_64 0:10.23-2.el7 will be installed
+</span></span><span class=line><span class=cl>--&gt; Finished Dependency Resolution
+</span></span></code></pre></td></tr></table></div></div><p>新版本的 vte291 连带安装了 pcre2，再次尝试打开终端，还是报同样的错，但日志不同了。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>/usr/bin/xfce4-terminal: symbol lookup error: /lib64/libvte-2.91.so.0: undefined symbol: gtk_widget_class_set_css_name
+</span></span></code></pre></td></tr></table></div></div><p>又有 GTK 的 symbol 找不到，升级 GTK。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>$ sudo yum install gtk3
+</span></span><span class=line><span class=cl>Loaded plugins: product-id, search-disabled-repos, subscription-manager
+</span></span><span class=line><span class=cl>Resolving Dependencies
+</span></span><span class=line><span class=cl>--&gt; Running transaction check
+</span></span><span class=line><span class=cl>---&gt; Package gtk3.x86_64 0:3.14.13-20.el7 will be updated
+</span></span><span class=line><span class=cl>---&gt; Package gtk3.x86_64 0:3.22.10-4.el7 will be an update
+</span></span><span class=line><span class=cl>--&gt; Processing Dependency: pango(x86-64) &gt;= 1.37.3 for package: gtk3-3.22.10-4.el7.x86_64
+</span></span><span class=line><span class=cl>--&gt; Processing Dependency: libXrandr(x86-64) &gt;= 1.5.0 for package: gtk3-3.22.10-4.el7.x86_64
+</span></span><span class=line><span class=cl>--&gt; Processing Dependency: glib2(x86-64) &gt;= 2.49.4 for package: gtk3-3.22.10-4.el7.x86_64
+</span></span><span class=line><span class=cl>--&gt; Processing Dependency: atk(x86-64) &gt;= 2.15.1 for package: gtk3-3.22.10-4.el7.x86_64
+</span></span><span class=line><span class=cl>--&gt; Processing Dependency: gtk-update-icon-cache for package: gtk3-3.22.10-4.el7.x86_64
+</span></span><span class=line><span class=cl>--&gt; Running transaction check
+</span></span><span class=line><span class=cl>---&gt; Package atk.x86_64 0:2.14.0-1.el7 will be updated
+</span></span><span class=line><span class=cl>---&gt; Package atk.x86_64 0:2.22.0-3.el7 will be an update
+</span></span><span class=line><span class=cl>---&gt; Package glib2.x86_64 0:2.46.2-4.el7 will be updated
+</span></span><span class=line><span class=cl>---&gt; Package glib2.x86_64 0:2.50.3-3.el7 will be an update
+</span></span><span class=line><span class=cl>---&gt; Package gtk-update-icon-cache.x86_64 0:3.22.10-4.el7 will be installed
+</span></span><span class=line><span class=cl>---&gt; Package libXrandr.x86_64 0:1.4.2-2.el7 will be updated
+</span></span><span class=line><span class=cl>---&gt; Package libXrandr.x86_64 0:1.5.1-2.el7 will be an update
+</span></span><span class=line><span class=cl>---&gt; Package pango.x86_64 0:1.36.8-2.el7 will be updated
+</span></span><span class=line><span class=cl>---&gt; Package pango.x86_64 0:1.40.4-1.el7 will be an update
+</span></span><span class=line><span class=cl>--&gt; Processing Dependency: harfbuzz(x86-64) &gt;= 1.0.3 for package: pango-1.40.4-1.el7.x86_64
+</span></span><span class=line><span class=cl>--&gt; Running transaction check
+</span></span><span class=line><span class=cl>---&gt; Package harfbuzz.x86_64 0:0.9.36-1.el7 will be updated
+</span></span><span class=line><span class=cl>--&gt; Processing Dependency: harfbuzz(x86-64) = 0.9.36-1.el7 for package: harfbuzz-icu-0.9.36-1.el7.x86_64
+</span></span><span class=line><span class=cl>---&gt; Package harfbuzz.x86_64 0:1.3.2-1.el7 will be an update
+</span></span><span class=line><span class=cl>--&gt; Running transaction check
+</span></span><span class=line><span class=cl>---&gt; Package harfbuzz-icu.x86_64 0:0.9.36-1.el7 will be updated
+</span></span><span class=line><span class=cl>---&gt; Package harfbuzz-icu.x86_64 0:1.3.2-1.el7 will be an update
+</span></span><span class=line><span class=cl>--&gt; Processing Conflict: gtk-update-icon-cache-3.22.10-4.el7.x86_64 conflicts gtk2 &lt; 2.24.29 --&gt; Restarting Dependency Resolution with new changes.
+</span></span><span class=line><span class=cl>--&gt; Running transaction check
+</span></span><span class=line><span class=cl>---&gt; Package gtk2.x86_64 0:2.24.28-8.el7 will be updated
+</span></span><span class=line><span class=cl>---&gt; Package gtk2.x86_64 0:2.24.31-1.el7 will be an update
+</span></span><span class=line><span class=cl>--&gt; Finished Dependency Resolution
+</span></span></code></pre></td></tr></table></div></div><p>终于又看到黑色的终端。</p></div><div class=post-copyright><p class=copyright-item><span class=item-title>文章作者</span>
+<span class=item-content>Palfans</span></p><p class=copyright-item><span class=item-title>上次更新</span>
+<span class=item-content>2018-08-10</span></p></div><footer class=post-footer><div class=post-tags><a href=/tags/linux/>linux</a>
+<a href=/tags/xfce/>xfce</a></div><nav class=post-nav><a class=prev href=/moving_wordpress_hugo/><i class="iconfont icon-left"></i>
+<span class="prev-text nav-default">从 WordPress 迁到 Hugo</span>
+<span class="prev-text nav-mobile">上一篇</span></a>
+<a class=next href=/zhihu_privacypolicy/><span class="next-text nav-default">不能不同意的知乎隐私政策</span>
+<span class="next-text nav-mobile">下一篇</span>
+<i class="iconfont icon-right"></i></a></nav></footer></article></div><script src=https://utteranc.es/client.js repo=palfans/blog-comments issue-term=pathname theme=github-light crossorigin=anonymous async></script><noscript>Please enable JavaScript to view the <a href=https://github.com/utterance>comments powered by utterances.</a></noscript></div></main><footer id=footer class=footer><div class=social-links><a href=mailto:admin@palfans.net class="iconfont icon-email" title=email></a>
+<a href=https://twitter.com/palfans class="iconfont icon-twitter" title=twitter></a>
+<a href=http://localhost:1313/index.xml type=application/rss+xml class="iconfont icon-rss" title=rss></a></div><div class=copyright><span class=power-by>由 <a class=hexo-link href=https://gohugo.io>Hugo</a> 强力驱动</span>
+<span class=division>|</span>
+<span class=theme-info>主题 -
+<a class=theme-link href=https://github.com/olOwOlo/hugo-theme-even>Even</a></span>
+<span class=copyright-year>&copy;
+2005 -
+2022<span class=heart><i class="iconfont icon-heart"></i></span><span>Palfans</span></span></div></footer><div class=back-to-top id=back-to-top><i class="iconfont icon-up"></i></div></div><script src=https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin=anonymous></script>
+<script type=text/javascript src=/js/main.min.64437849d125a2d603b3e71d6de5225d641a32d17168a58106e0b61852079683.js></script>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-287929-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"))</script><script async src=https://www.google-analytics.com/analytics.js></script></body></html>

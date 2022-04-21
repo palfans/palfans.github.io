@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>闲聊 on Palfans's BLOG</title><link>http://localhost:1313/categories/%E9%97%B2%E8%81%8A/</link><description>Recent content in 闲聊 on Palfans's BLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 20 Apr 2022 11:48:24 -0500</lastBuildDate><atom:link href="http://localhost:1313/categories/%E9%97%B2%E8%81%8A/index.xml" rel="self" type="application/rss+xml"/><item><title>第三年了</title><link>http://localhost:1313/the_third_year/</link><pubDate>Wed, 20 Apr 2022 11:48:24 -0500</pubDate><guid>http://localhost:1313/the_third_year/</guid><description>已经第三个年头了，什么时候是个头？！</description></item><item><title>学什么都救不了中国人</title><link>http://localhost:1313/nothing-can-rescue-chinese/</link><pubDate>Fri, 28 Jul 2017 15:45:01 +0000</pubDate><guid>http://localhost:1313/nothing-can-rescue-chinese/</guid><description>&lt;p>Github的科学上网界出了件恶心的事情，有人号称“为了正义”，泄漏作者信息，最后该作者认怂，删除所有代码。我从头到尾围观了整件事情，一股深深的无力感挥之不去。鲁迅当年说，学医救不了中国人。其实，学什么都救不了中国人。
+想起当年看过的一篇由PSP破解引申开的文章，本质挺契合的。我感觉，可能中国心态最好的一群人，都聚集在草榴社区了。&lt;/p>
+&lt;p>由psp破解谈到中国伸手党式网民的心理
+出处：不详&lt;/p>
+&lt;p>如果仔细说起PSP为什么会在中国流行，大概可以列出不下一千种理由。可千言万语说到归齐，没有破解的PSP肯定无法成为影音游戏通吃的装X利器，也不会在街头巷尾地铁公交里成为装机量第一的掌上设备。稍微对PSP熟悉一点的人可能都知道，PSP在2000型之前的时代有着各种美好，所有的自制软件和破解都畅通无阻。后来SONY的CEO来了一趟中国，看到比日本专卖店规模还大的水货电玩批发之后就回去痛下决心，彻底整改PSP的主板构架，愣是把这机器的破解漏洞给堵上了。导致PSP3000型苦等半年多才等到一个软件漏洞破解。随后就是硬件厂商和破解黑客们之间的战斗，你升级固件，我升级自制软件，你来我往不亦乐乎。&lt;/p></description></item><item><title>租租车的国际驾照认证件能用吗？</title><link>http://localhost:1313/does-zuzuche-idp-work/</link><pubDate>Fri, 30 Jun 2017 19:24:04 +0000</pubDate><guid>http://localhost:1313/does-zuzuche-idp-work/</guid><description>&lt;p>&lt;img src="https://res.palfans.net/img/zuzuche_idl.jpg" alt="">&lt;/p>
+&lt;p>这两天看到微信朋友圈里在宣传租租车可以免费办理国际驾照认证件（&lt;a href="http://w.zuzuche.com/tidl/">链接&lt;/a>），号称香港公证行和NAATI联合翻译认证，9国语言，权威认证，畅行全球200个国家，包括美国、加拿大、澳大利亚、以及英德意等欧洲国家。脑中升起一个问号，真是这样的吗？&lt;/p>
+&lt;p>上网搜了一下，这本认证件全名叫Translation of International Driver License，由租租车和International Driving Club联合推出。它自己的说明页明确指出，该认证件根据《联合国道路交通公约》，严格按照国际标准将中国驾照翻译成9国语言，支持超过200个国家和地区租车、取车。&lt;/p>
+&lt;p>看起来好像很正规。但是，这里我发现一个问题。它声称自己的法律依据是《联合国道路交通公约》，那就看看这个公约到底是什么。&lt;/p></description></item><item><title>银行账户被盗</title><link>http://localhost:1313/bank_account_compromised/</link><pubDate>Thu, 22 Jun 2017 16:57:37 +0000</pubDate><guid>http://localhost:1313/bank_account_compromised/</guid><description>&lt;p>过去的一整天，我都在忙于更改各种账户的银行资料。因为它们关联的银行账户被盗，产生了好几笔支付交易。在银行的要求下，我只能关掉这个问题账户，重新开一个新账户，并手动更新到所有关联账户。&lt;/p>
+&lt;p>&lt;img src="https://res.palfans.net/img/0929072242721.jpg" alt="">&lt;/p>
+&lt;p>8年来，每个月我会抽一小时的时间对所有账户交易流水进行核对。这个月，我看到有两笔来自Paypal的扣款很陌生，因为我小儿子刚好在那天出生，我一整天都待在医院，根本没有时间接触电脑和手机进行任何消费活动。我立刻打开Paypal，发现在那天确实没有产生任何交易记录。我第一反应就是账户被黑了。&lt;/p>
+&lt;p>Paypal这边完全无信息可查，我又返回银行的交易记录查询明细，看到这两笔交易都来自同一个人：PAYPAL DES:TRANSFER ID:xxxxxxxxx INDN:TRINA VONHAGEN CO ID:PAYPALSD22 WEB，姓名是TRINA VONHAGEN，Paypal账号是PAYPALSD22。这个时候我突然反应过来，刚才登录网上银行时，提示“账户密码错误次数过多，账户被锁”，说明对方也在尝试直接登录我的银行账户。不幸中的万幸是，我一直使用LastPass来为所有网络服务随机生成含特殊字符、数字、大小写字母的18位密码，每个账号密码都不同，完全杜绝撞库。在LastPass主密码安全的前提下，通过暴力破解的方式几乎是不可能的。&lt;/p></description></item><item><title>遭遇妊娠糖尿病</title><link>http://localhost:1313/encounter-gestational-diabetes/</link><pubDate>Tue, 06 Jun 2017 04:19:43 +0000</pubDate><guid>http://localhost:1313/encounter-gestational-diabetes/</guid><description>&lt;p>家里领导怀二宝，结果很不幸运被诊断为妊娠糖尿病。于是领导花了一些时间研究下到底什么是妊娠糖尿病。马上due date就要到了，我把这段生活摘录下来，以作纪念。&lt;/p>
+&lt;p>自从我被诊断妊娠糖尿病后，发现很多朋友都不清楚这个病的具体含义，以为就是普通的孕妇血糖偏高，所以说说我自身的体验，没机会得的该庆幸，还有机会得的我只能说祝好运。&lt;/p>
+&lt;p>首先，从我目前查到的各种资料显示，妊娠糖尿病不能完全被预防，跟你孕前及孕中的饮食结构没有绝对的关系，虽然体重、饮食、运动都有可能影响（家族史就不说了，那没法抱怨），但具体到我，显然都不是，就算是运气不好吧。&lt;/p></description></item><item><title>我为什么选择留在美国</title><link>http://localhost:1313/why-stay-in-us/</link><pubDate>Sun, 22 May 2016 05:33:36 +0000</pubDate><guid>http://localhost:1313/why-stay-in-us/</guid><description>&lt;p>在没来美国之前，我从没设想过，如果有一天，自己也生活在地球的另外一边，会是什么样子？以致于最终决定携全家动身之时，我仍没有做好相应的心理准备。&lt;/p>
+&lt;p>首先，要感谢我的公司，给我提供了不错的条件和机会。入职十年，出过两次为期半年的长差。一次是入职没多久，就被安排独自一人去加拿大的客户现场做实施。真正的人生地不熟，英文也不好，可以说，生活都不能自理。这次出差锻炼的回报，第一是见了世面，处事不惊；第二是被逼快速上手公司产品；第三是学会用很烂的英文与人沟通。另外一次是去阿曼客户现场做支持，充分领略了阿拉伯风土人情，以及结识了公司来自欧洲、印度和中国的同事们。现在这个团队，一大半的成员定居在美国和澳大利亚，也算是我来美国的一个契机。&lt;/p></description></item><item><title>走正步</title><link>http://localhost:1313/goose_step/</link><pubDate>Thu, 03 Sep 2015 19:52:10 +0000</pubDate><guid>http://localhost:1313/goose_step/</guid><description>&lt;p>昨天微信朋友圈被五星红旗和齐刷刷的正步GIF图片刷屏。因为要等儿子睡着了才能打开电视，我只看到了最后飞机过场的部分，没有看到前面正步分列式。从大家分享的动图看，确实很有气势。我当年高考语文成绩全区第一，现如今却仍然只能喊道：『我靠，好齐！我靠，牛逼！』后来找了重放视频，心里却远不如别人激动，估计这是我政治不正确的又一体现。我心里就一直有个问题：『走正步有意义吗？』&lt;/p></description></item><item><title>记抗战中的一名国军少校</title><link>http://localhost:1313/there_was_a_major/</link><pubDate>Sat, 22 Aug 2015 08:24:06 +0000</pubDate><guid>http://localhost:1313/there_was_a_major/</guid><description>&lt;p>今天家里领导突然收到长辈的一条长微信，阅读后感慨不少，全文摘录如下：&lt;/p>
+&lt;blockquote>
+&lt;p>记抗战中的一名国军少校&lt;/p>
+&lt;p>过几天就是抗战胜利纪念日，好像要放假一天，也邀请了国外政要，举办盛大仪式。届时，自然会有整齐的方队。也就有有关领导的慷慨激昂。说实在，我对这些没有什么兴趣。&lt;/p>
+&lt;p>关于抗战，心中总萦怀一个人，多少年来，如鲠在喉。&lt;/p>
+&lt;p>六十多年前，有一个重庆青年，跟随做布匹生意的父亲到了上海。他的父亲粗通文墨，有了点散碎银子，就想孩子受到较好的教育，有点诗书传家的味道。加之，这个青年是家中长子，他的父亲就不吝钱财，送他到教会中学去读书。教会学校自然重视西方文化，除国文、中国历史之外，其余均是国外教材，讲课的教师也大都是英国人。因此，他受到了很好的英语教育。之后，他顺利的考入复旦大学外国语文学系。我曾经看过他发表的文章，是关于对莎士比亚的哈姆雷特的研讨。生活就这样平平静静在这个青年面前徐徐展开。他无论如何都没有想到，他受到的教育已经种下了祸根，一口流利的英语会酿成一杯苦酒。&lt;/p>
+&lt;p>“813，日本在上海打了战。”他父亲的布匹生意受到重大影响，他平静的生活也被打乱。随后，复旦大学迁往重庆北碚夏坝。为追随学校，他决定上海前去重庆。当时水路交通已经阻断，回重庆只能绕道步行。走了一个多月，其间颠簸流离，自不待言。我想，他对日寇入侵，自然是仇恨的。&lt;/p>
+&lt;p>回到重庆，继续读书。抗战仍旧在进行。突然，国军到复旦大学招人，说是美军为国军训练士兵，急需翻译。他愿意投笔从戎为抗战出力，于是前去报名。因为他口语极好，立即就被录取。在之后，跟随部队坐着嘎斯汽车，前往云南腾冲。他在部队的工作，我看过一些老照片，印象深的就是美军在训练国军士兵学习使用喷火器，他在旁边翻译。给国军教学的都是美军军官，对这些无军衔的翻译有些瞧不起。众翻译于是向上反映，战争之中，一切均可打破常规，每个翻译竟然均被任命为了“少校”。&lt;/p>
+&lt;p>到部队仅三月，日本投降了。美军教官要撤走，翻译当然就无事可干。这时有两条路可走，留在部队或退役。他牵挂自己的毕业证，于是返渝回到学校继续读书至毕业。然后在求精中学教英语。49年后，他转到西南贸易部工作，他的工作与军队再无任何交集。&lt;/p>
+&lt;p>三个月的时间很短，但他必须在每次填写履历时表明此事。于是，尽管他工作非常尽心，入党、提拔与他没有任何关联。文革前，他就是一个文化商店的经理，据说还是破格处理的。&lt;/p>
+&lt;p>文革开始了，他的厄运继续放大。他的形象不知怎么就与“小兵张嘎”、地道战“中的日军翻译重叠了。于是，他的经理被撤。有很长时间，白天在建筑工地上抬砖，晚上被关押在单位。他写了厚厚的交待，时间远超过了三个月。他当时必定陷入了巨大逻辑困惑：说到国军是为抗战，明明“蒋介石躲在峨眉山，只是下山摘桃子”。伟人定论，谁敢说三道四！说为与人民为敌，助纣为虐，又心有不甘。于是，他百口莫辩。当然，灾难也会传递，他的孩子，也因为这个少校翻译官受到迫害。所有的悲愤，他用了一个奇特的方式来表达。做了一个小铁炉，将家中的书用来烧火做饭。他教导他的孩子，不要读书，应当去学木匠、当砖工。那时，他的言行与诗书传家的上辈期望相差何止千里！&lt;/p>
+&lt;p>纵观我国历史，在民族危亡之际，有挺身而出的壮士，如岳飞、如文天祥，如张自忠，他们的英雄事迹彪炳千古，值得后人缅怀。但“一将成名万骨枯”，民族战争的胜利，更有普通民众或大或小的奉献，他们至少应当受到公平对待。&lt;/p>
+&lt;p>最近，我国政府屡屡提到要求日本政府对那场战争道歉。我想，责人需己正，攘外需安内，有关机构、有关人士是不是应当为自己的不实说法、为自己的不当言行，真诚道歉，还历史本来面目，才是对抗战真正的纪念。&lt;/p>
+&lt;p>这位少校翻译官，就是我的父亲。他带着有历史问题的帽子，郁郁最终。&lt;/p>
+&lt;p>呜呼哀哉，尚飨！&lt;/p>
+&lt;/blockquote></description></item><item><title>十周年庆</title><link>http://localhost:1313/decennial/</link><pubDate>Fri, 14 Aug 2015 06:01:35 +0000</pubDate><guid>http://localhost:1313/decennial/</guid><description>&lt;p>下个星期就是这个BLOG的十周年纪念，突然间，白马过隙，忽然而已。&lt;/p>
+&lt;p>现在BLOG没落了，大家都喜欢短平快的社交平台，这里荒得长了草。直到Google告诉我，网站被人黑了，挂了木马。哑然失笑，曾经花费多少时间改模板，加功能的一亩三分地，竟然已经很久没有更新过，以至于成为害人工具，不过料想应该也害不了多少人，访问量极低。这『黑客』估计是跑了个脚本，在我的网站目录里生成了不下500个静态网页文件，个个带毒。一个一个手工清理不现实，只好全部铲掉重装。好在数据库一直有脚本在后台默默的备份，重建倒不费事，主题直接用默认模板，挺符合现在的审美。同时为了迎接新一个十年的开始，终于申请了证书，强制SSL。&lt;/p>
+&lt;p>谢谢有BLOG相陪的十年。。。&lt;/p></description></item><item><title>别把自己当个超人——给初级程序员的一点小小建议</title><link>http://localhost:1313/picture-hanging/</link><pubDate>Fri, 12 Apr 2013 09:44:46 +0000</pubDate><guid>http://localhost:1313/picture-hanging/</guid><description>&lt;p>我在Twitter上看到了&lt;a href="http://www.bluegraybox.com/blog/2004/12/02/picture-hanging/">一篇有趣的博文&lt;/a>——你可以先看看。如果你懒得上Twitter看，看我转载这篇的就行了。&lt;/p>
+&lt;hr>
+&lt;p>有一天我和我的朋友Simone一起喝咖啡，期间我们聊起一些工作上的事情。我们俩都管理着一些员工，为了说明给初级职员分派任务时出现的问题，她打了一个绝妙的比方。&lt;/p>
+&lt;p>这就像你让他们挂一幅画，但他们从来没有干过这样的活。你明白你要做什么——只要让他们这么做就行了。事实上，你认为有些东西不用解释，因为你觉得它们太简单了。所以，你让一些新手来为你工作时，你说，“把这幅画挂在那里，做完了告诉我”，很好理解，对不对？但他知道应该怎样钉钉子吗？实际上，有很多细节他不清楚，他需要学习才能把画挂好。另外，还有很多东西你容易忽略。&lt;/p>
+&lt;p>首先，是怎么做。他需要什么工具？你知道工具箱里有锤子和钉子。但他不知道，他认为他有合适的工具完成任务。于是他在办公桌上找到了一个订书机和胶带。&lt;/p></description></item><item><title>走饭的诗</title><link>http://localhost:1313/poem-from-a-girl/</link><pubDate>Sat, 29 Sep 2012 08:16:39 +0000</pubDate><guid>http://localhost:1313/poem-from-a-girl/</guid><description>&lt;p>走饭是一名90后的女大学生，12年3月因抑郁症自杀。她在&lt;a href="http://www.weibo.com/xiaofan116">微博&lt;/a>上留下很多文字，充满灵性，敏感而又洒脱。&lt;/p>
+&lt;blockquote>
+&lt;p>《香瓜》
+受不鸟啦
+买了两个香瓜
+竟然要十块钱
+我再也不相信香瓜啦&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>《镜子》
+真特么想
+吐你一脸口水
+我对镜子说&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>《跳楼》
+跳楼死的人比跳崖死的人多
+是因为爬到山顶真他妈没劲跳了啊
+就想坐着&lt;/p>
+&lt;/blockquote></description></item><item><title>十万个为什么</title><link>http://localhost:1313/why-why-why/</link><pubDate>Thu, 28 Jun 2012 01:37:32 +0000</pubDate><guid>http://localhost:1313/why-why-why/</guid><description>&lt;p>为什么《宪法》规定了企事业机关人员平等的养老权利，现行的退休双轨制却以部门划线，造成同等条件人员养老待遇因所在部门不同相差数倍？&lt;/p>
+&lt;p>为什么作为主人的劳动者必须自己掏钱为自己养老，而作为仆人的机关人员却分文不掏？&lt;/p>
+&lt;p>为什么机关人员长期不尽缴费义务而享受高额待遇?&lt;/p>
+&lt;p>为什么企业缴费了养老金却只有千把元，分文不掏的却能净得五六千元？&lt;/p>
+&lt;p>为什么养老待遇会出现“三个企退老高工赶不上一个机关勤杂工”的世纪怪相？&lt;/p>
+&lt;p>为什么企业连涨六次的增加额竟没有机关一次的增加额多？&lt;/p>
+&lt;p>为什么千把元的惊天动地，五六千的鸦雀无声？&lt;/p></description></item><item><title>谷歌的逆袭</title><link>http://localhost:1313/counteroffensive_from_google-2/</link><pubDate>Fri, 01 Jun 2012 02:49:39 +0000</pubDate><guid>http://localhost:1313/counteroffensive_from_google-2/</guid><description>&lt;p>顽固的社黑专业户谷歌最近对我党网路监管事业发起了新一轮的逆袭。&lt;/p>
+&lt;p>以前，使用谷歌搜索时，经常会出现莫名其妙的网页重置错误，并且该不稳定状态还会持续一小段时间。现在通过谷歌香港（&lt;a href="http://www.google.com.hk">传送门&lt;/a>）进行搜索时，会进行关键字预判。如果发现有违禁关键字，谷歌会提前出一个提示。&lt;/p>
+&lt;p>&lt;img src="https://commondatastorage.googleapis.com/support-kms-prod/SNP_2576543_zh-Hans_v3" alt="">&lt;/p>
+&lt;p>谷歌解释称，该举措是为了改善用户的搜索体验。（&lt;a href="https://support.google.com/websearch/bin/answer.py?hl=zh-Hans&amp;amp;hlrm=en&amp;amp;source=g&amp;amp;answer=2477913">传送门&lt;/a>）&lt;/p></description></item><item><title>凶残的高中试题</title><link>http://localhost:1313/cruel-test-of-high-school/</link><pubDate>Mon, 21 Nov 2011 05:56:22 +0000</pubDate><guid>http://localhost:1313/cruel-test-of-high-school/</guid><description>&lt;p>毕业十余年，偶见这套高中试题，凶残得无以复加，果真是神开头，神结尾！！！&lt;/p>
+&lt;p>1.高三毕业了，他考上了国内的一所大学，而她则选择了出国。不得不面对的离别。在北京机场，两人深情相拥，依依不舍。他默默注视着载她的飞机越飞越高、越飞越远…忽然，他发现飞机航行方向由西向东，且地磁场磁感线方向由南向北，问：飞机左翼势能高还是右翼势能高？&lt;/p>
+&lt;p>2.他紧紧的抓住她的手，任由海风肆虐着,海浪咆哮着；无助的他乞求时间停留在这一刻，她看着如此痴情的他哭泣着：“放手吧，让我活在你的记忆里……” 说罢挣脱了他的手，渐渐的消失在这茫然的大海中…假设质量为50Kg的她从5m的甲板上掉落,以v=9.8m/s的速度入水,取g=10m/s^2，求甲板对她做的功是多少？&lt;/p></description></item><item><title>方校长日志之去一趟武大居然被鸡蛋砸了</title><link>http://localhost:1313/fckfbx/</link><pubDate>Thu, 19 May 2011 14:32:02 +0000</pubDate><guid>http://localhost:1313/fckfbx/</guid><description>&lt;p>今天发生了一件事，为党国忍辱负重久矣的方校长，今天更是得到和温总理在英国剑桥相同的待遇，被人扔了鸡蛋又扔鞋。我想他以后作报告时会更加自豪地宣布，自己做的一切，都是为了党国的千秋伟业。现在被武大学生扔鞋，是为了将来更好地被剑桥学生扔鞋，九大长老的位子离自己越来越近了。&lt;/p>
+&lt;p>推特上欢腾一片，各种悬赏层出不穷。早知如此，我下午就逃班，自费坐飞机去武汉，亲自砸他老人家去了。以下为不完全统计：&lt;/p>
+&lt;p>RT @virushuo 好吧，发大招了。如果有武大勇士真的 #fuсkfbx 了，无论是否砸中，本人奖励日本带回来的正版仓丵井空dvd一张。
+RT @bigman510: 我靠～ 太狠了～ 看来我得加码了！之前在成都请吃三顿饭，现在改成九顿，对应九丵常委～
+RT @eddiewuym: 下午随手拍方校长活动，我也来凑个热闹,谁砸中,可以在淘宝上购物2000元以下订单，可以使用&amp;quot;找人代付&amp;quot;功能转给我来付款..
+RT @twang0129:   还有我的，来杭州终身请客吃饭&lt;/p></description></item><item><title>Aal Izz Well</title><link>http://localhost:1313/aal-izz-well/</link><pubDate>Sat, 30 Oct 2010 08:24:18 +0000</pubDate><guid>http://localhost:1313/aal-izz-well/</guid><description>&lt;p>昨天心情不是很好，被阿三朋友不经意发现，于是强烈推荐我去看一部印度电影《Three Idiots》，国内翻作《三个白痴》或《三傻大闹宝莱坞》。说实话，连名字都翻得这么土的电影，我确实提不起什么兴趣，加上印度电影太长了，动辄2、3小时，里边通常会出现很多歌舞MTV。不过朋友连着说了两次，我还是去PPTV上看了下，有HD版本的，于是坐下来看。幸好，我没有错过。&lt;/p>
+&lt;p>这是一部励志喜剧，讲的是三个年轻人试图冲破世俗，在严厉单调的大学生活中活出自我的精彩。印度的学生很苦，这个和阿三朋友聊天时我就已经了解，甚至比中国学生还苦，而电影反映了学习压力、就业压力、恶性竞争、自杀、贫富差距悬殊等一系列社会矛盾。相似的教育体制，相似的学习环境，相似的外界影响，确实很能触动中国观影者的心。也许是我的泪点比较低，虽然是一部喜剧，却让我哭了好几回，常常是哭过又笑，笑完又哭。&lt;/p></description></item><item><title>今天</title><link>http://localhost:1313/happy-day/</link><pubDate>Fri, 08 Oct 2010 14:30:00 +0000</pubDate><guid>http://localhost:1313/happy-day/</guid><description>今，今天，是，是个，好，好日子，心想，想的事，事情，都，都能成。 不顾高血尿酸，喝了一罐Heineken。</description></item><item><title>大家一起读原版</title><link>http://localhost:1313/study-english-together/</link><pubDate>Fri, 01 Oct 2010 17:59:19 +0000</pubDate><guid>http://localhost:1313/study-english-together/</guid><description>&lt;p>首先，讲个故事。假设你是一名轨道电车的司机，有一天你突然发现前方不远的轨道上有五名工人，这时刹车又失灵了，直冲过去那五个人必死无疑。危险关头，你发现右前方有一条岔道，拐过去就能避免撞上那五个人，但悲剧的是，岔道上也有一名工人在劳动。你怎么办，拐还是不拐？又假设你不是司机了，你是一名站在桥上闲逛的路人，轨道电车将从桥下通过。同样你发现电车刹车失灵了，前方有五名工人，你又发现你旁边站了一个大胖子，正倚靠在桥栏杆上。只要你轻轻一推，大胖子就会倒掉桥下的轨道上，被电车撞死，不过前方的那五个人就会得救。你又怎么办，推还是不推？这两个关于救一人还是救五人的例子很有意思，通常情况下我们的选择原则会前后矛盾。&lt;/p></description></item><item><title>Live Spaces 关张了</title><link>http://localhost:1313/live-spaces-shut-off/</link><pubDate>Tue, 28 Sep 2010 15:34:55 +0000</pubDate><guid>http://localhost:1313/live-spaces-shut-off/</guid><description>&lt;p>过了中秋，离肃杀的冬天就不远了，互联网也是。今天听到两个消息，微软决定放弃Live spaces，把用户都转到wordpress.com去（由于wordpress.com在中国被屏蔽，所以针对中国用户的迁移方式，微软还在想），xmarks也要终止服务，真是让人唏嘘不已。&lt;/p>
+&lt;p>xmarks我用得很少，但是对于Live spaces，从2005年它还叫msn spaces的时候我就开始使用，没事就琢磨怎么加背景音乐，怎么加个性计数器等等。后来建了独立blog，也一直在同步更新它。平心而论，msn spaces是我见过的比较难用的BSP，虽然它当年很火，号称用户量第一。域名太长，变来变去都不好记；发文章登录界面不人性；编辑器太烂；自定义功能太少等等，缺点太多了。进入互联网时代，微软就没做出什么好的产品，不知道它到底认识到自己的问题没有。&lt;/p></description></item><item><title>世博亲历记：中国人的低素质让世博蒙羞？</title><link>http://localhost:1313/wonders-of-the-shanghai-world-expo-2/</link><pubDate>Wed, 08 Sep 2010 11:36:22 +0000</pubDate><guid>http://localhost:1313/wonders-of-the-shanghai-world-expo-2/</guid><description>&lt;p>之前贴了一篇文章，讲述的是世博会，丢尽中国人的脸。但杨恒均老师亲自去转了一圈回来，说道：“在进来之前，我认为租一个轮椅和老人走绿色通道是不道德的，是中国人素质低下的表现，是给世博蒙羞，但现在，我认为是世博会让这些进来推轮椅的中国人蒙羞！世界上还有几个地方的人被忽悠进来后，需要等待如此之久才能看上一个空空如也的场馆？而且他们是以国家的名义来忽悠个人！”&lt;/p>
+&lt;p>我想，不管是中国人让世博蒙羞还是世博让中国人蒙羞，归结一句话，世博，只是少部分人折腾的产物，幸好我没去。以下为杨老师&lt;a href="http://yanghengjunbk.blog.163.com/blog/static/45964193201085111034112/">正文&lt;/a>（已被屏蔽）&lt;/p></description></item></channel></rss>

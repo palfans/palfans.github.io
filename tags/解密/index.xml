@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>解密 on Palfans's BLOG</title><link>http://localhost:1313/tags/%E8%A7%A3%E5%AF%86/</link><description>Recent content in 解密 on Palfans's BLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 30 Dec 2005 13:41:32 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/%E8%A7%A3%E5%AF%86/index.xml" rel="self" type="application/rss+xml"/><item><title>通过javascript加密和解密</title><link>http://localhost:1313/javascript-encrypt-decrypt/</link><pubDate>Fri, 30 Dec 2005 13:41:32 +0000</pubDate><guid>http://localhost:1313/javascript-encrypt-decrypt/</guid><description>&lt;p>单位和家里都是用的移动的宽带，我常常去那里的动感影院看电影，不过有时候觉得有点卡，就想通过下载软件全部下下来再看，一开始可以通过real的实际路径去下载，后来real也不行了，只好去看它的网页代码，如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-Javascript" data-lang="Javascript">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">script&lt;/span> &lt;span class="nx">language&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nx">Javascript&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!--&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">Words&lt;/span> &lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;%3Cframeset%20border%3D%220%22%20frameborder%3D%220%22%20framespacing%3D%220%22%20rows%3D%22*%22%3E%0D%0A%20%20%3Cnoframes%3E%0D%0A%20%20%3C/noframes%3E%0D%0A%20%20%3Cframe%20frameborder%3D%22NO%22%20marginwidth%3D%220%22%20name%3D%22upperframe%22%20noresize%20src%3D%222233d86.asp%3Ffilm1%3D7113%26film2%3D2848%26film3%3D%22%20scrolling%3D%22auto%22%3E%0D%0A%3C/frameset%3E&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">function&lt;/span> &lt;span class="nx">SetNewWords&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">var&lt;/span> &lt;span class="nx">NewWords&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">NewWords&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">unescape&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">Words&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">write&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">NewWords&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">SetNewWords&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// --&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">/script&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item></channel></rss>

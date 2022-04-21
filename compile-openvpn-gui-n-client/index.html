@@ -1,0 +1,124 @@
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><title>Windows编译OpenVPN客户端（保存密码，修改日志字体） - Palfans's BLOG</title><meta name=renderer content="webkit"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta http-equiv=cache-control content="no-transform"><meta http-equiv=cache-control content="no-siteapp"><meta name=theme-color content="#f8f5ec"><meta name=msapplication-navbutton-color content="#f8f5ec"><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="#f8f5ec"><meta name=author content="Palfans"><meta name=description content="OpenVPN客户端一般由两部分组成，OpenVPN和OpenVPN GUI。官方提供的OpenVPN客户端 for Windows为了提高用户账号的安全性，默认不能保存密码。安全性确实提高了，但是遇到网络不好，VPN意外中断时，每次都要手工输入密码，也很烦心。所以我们需要重新编译客户端代码，让其能够保存密码。而OpenVPN GUI的问题在于状态窗口输入的日志字体小得惊人，像我这种戴眼镜后矫正视力才0.6的人，想看清连接状态几乎是不可能的，所以也得改。
+** **
+**
+"><meta name=keywords content="Palfans,blog"><meta name=google-site-verification content="7MLs3wY58s_Jjnto4NZgvoEHnnJc07ojBCBlgI1gTco"><meta name=generator content="Hugo 0.97.3 with theme even"><link rel=canonical href=http://localhost:1313/compile-openvpn-gui-n-client/><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/manifest.json><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link href=/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css rel=stylesheet><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin=anonymous><meta property="og:title" content="Windows编译OpenVPN客户端（保存密码，修改日志字体）"><meta property="og:description" content="OpenVPN客户端一般由两部分组成，OpenVPN和OpenVPN GUI。官方提供的OpenVPN客户端 for Windows为了提高用户账号的安全性，默认不能保存密码。安全性确实提高了，但是遇到网络不好，VPN意外中断时，每次都要手工输入密码，也很烦心。所以我们需要重新编译客户端代码，让其能够保存密码。而OpenVPN GUI的问题在于状态窗口输入的日志字体小得惊人，像我这种戴眼镜后矫正视力才0.6的人，想看清连接状态几乎是不可能的，所以也得改。
+** **
+**"><meta property="og:type" content="article"><meta property="og:url" content="http://localhost:1313/compile-openvpn-gui-n-client/"><meta property="article:section" content="post"><meta property="article:published_time" content="2011-01-29T09:19:49+00:00"><meta property="article:modified_time" content="2011-01-29T09:19:49+00:00"><meta itemprop=name content="Windows编译OpenVPN客户端（保存密码，修改日志字体）"><meta itemprop=description content="OpenVPN客户端一般由两部分组成，OpenVPN和OpenVPN GUI。官方提供的OpenVPN客户端 for Windows为了提高用户账号的安全性，默认不能保存密码。安全性确实提高了，但是遇到网络不好，VPN意外中断时，每次都要手工输入密码，也很烦心。所以我们需要重新编译客户端代码，让其能够保存密码。而OpenVPN GUI的问题在于状态窗口输入的日志字体小得惊人，像我这种戴眼镜后矫正视力才0.6的人，想看清连接状态几乎是不可能的，所以也得改。
+** **
+**"><meta itemprop=datePublished content="2011-01-29T09:19:49+00:00"><meta itemprop=dateModified content="2011-01-29T09:19:49+00:00"><meta itemprop=wordCount content="2027"><meta itemprop=keywords content="openssl,OpenVPN,VPN,字体,密码,"><meta name=twitter:card content="summary"><meta name=twitter:title content="Windows编译OpenVPN客户端（保存密码，修改日志字体）"><meta name=twitter:description content="OpenVPN客户端一般由两部分组成，OpenVPN和OpenVPN GUI。官方提供的OpenVPN客户端 for Windows为了提高用户账号的安全性，默认不能保存密码。安全性确实提高了，但是遇到网络不好，VPN意外中断时，每次都要手工输入密码，也很烦心。所以我们需要重新编译客户端代码，让其能够保存密码。而OpenVPN GUI的问题在于状态窗口输入的日志字体小得惊人，像我这种戴眼镜后矫正视力才0.6的人，想看清连接状态几乎是不可能的，所以也得改。
+** **
+**"><!--[if lte IE 9]><script src=https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js></script><![endif]--><!--[if lt IE 9]><script src=https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js></script><![endif]--></head><body><div id=mobile-navbar class=mobile-navbar><div class=mobile-header-logo><a href=/ class=logo>Palfans's BLOG</a></div><div class=mobile-navbar-icon><span></span>
+<span></span>
+<span></span></div></div><nav id=mobile-menu class="mobile-menu slideout-menu"><ul class=mobile-menu-list><a href=/><li class=mobile-menu-item>Home</li></a><a href=/post/><li class=mobile-menu-item>Archives</li></a><a href=/tags/><li class=mobile-menu-item>Tags</li></a><a href=/categories/><li class=mobile-menu-item>Categories</li></a></ul></nav><div class=container id=mobile-panel><header id=header class=header><div class=logo-wrapper><a href=/ class=logo>Palfans's BLOG</a></div><nav class=site-navbar><ul id=menu class=menu><li class=menu-item><a class=menu-item-link href=/>Home</a></li><li class=menu-item><a class=menu-item-link href=/post/>Archives</a></li><li class=menu-item><a class=menu-item-link href=/tags/>Tags</a></li><li class=menu-item><a class=menu-item-link href=/categories/>Categories</a></li></ul></nav></header><main id=main class=main><div class=content-wrapper><div id=content class=content><article class=post><header class=post-header><h1 class=post-title>Windows编译OpenVPN客户端（保存密码，修改日志字体）</h1><div class=post-meta><span class=post-time>2011-01-29</span><div class=post-category><a href=/categories/%E6%8A%80%E6%9C%AF%E6%A0%88/>技术栈</a></div></div></header><div class=post-toc id=post-toc><h2 class=post-toc-title>文章目录</h2><div class="post-toc-content always-active"><nav id=TableOfContents></nav></div></div><div class=post-content><p>OpenVPN客户端一般由两部分组成，OpenVPN和OpenVPN GUI。官方提供的OpenVPN客户端 for Windows为了提高用户账号的安全性，默认不能保存密码。安全性确实提高了，但是遇到网络不好，VPN意外中断时，每次都要手工输入密码，也很烦心。所以我们需要重新编译客户端代码，让其能够保存密码。而OpenVPN GUI的问题在于状态窗口输入的日志字体小得惊人，像我这种戴眼镜后矫正视力才0.6的人，想看清连接状态几乎是不可能的，所以也得改。</p><p>** **</p><p>**</p><p>搭建编译环境**</p><p>我很久没有碰过C语言了，所以除了官方推荐的环境，我不确定其他环境是否能顺利编译。</p><p>NSIS <a href=http://sourceforge.net/projects/nsis/files/NSIS%202/2.46/nsis-2.46-setup.exe/download>下载链接</a>，建议完全安装。</p><p>MinGW <a href=http://sourceforge.net/projects/mingw/files/Automated%20MinGW%20Installer/>下载链接</a>，现在MinGW只提供在线安装程序，安装时再下载相关文件，耗时较长。也可以Google一下，有<a href=http://data.99pan.com/download/7621_43_7840485476281515222.html>完整版</a>可下，假设安装路径为 C:\MinGW</p><p>MSYS <a href=http://downloads.sourceforge.net/mingw/MSYS-1.0.11.exe>下载链接</a>，假设安装路径为 C:\msys\1.0</p><p>msysDTK <a href=http://downloads.sourceforge.net/mingw/msysDTK-1.0.1.exe>下载链接</a>，安装路径和MSYS相同，C:\msys\1.0</p><p>配置环境变量，如果变量PATH中已有其他路径，则新增“;C:\MinGW\bin;C:\msys\1.0\bin”，如果变量PATH不存在，则新建一个变量，命名为PATH，内容为“C:\MinGW\bin;C:\msys\1.0\bin”。注意，变量内容都不包含引号，新增变量时，变量内容最前面没有分号。</p><p>配置完成后，打开命令提示符，输入bash，如果界面显示“bash-3.1$”，则编译环境搭建完成。</p><p>** **</p><p><strong>获取预编译文件</strong></p><p>OpenVPN编译过程中需要openssl，tap驱动，lzo压缩等文件，我们可以下载已经编译好的文件 <a href=http://openvpn.net/prebuilt/2.1_rc22-prebuilt.tbz>下载链接</a>，这里的预编译文件版本不是2.1.1，但不影响实际编译效果。</p><p>新建一个工作目录 C:\work，将预编译文件解压后置于工作目录下，应包含以下四个目录：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>gen-prebuilt
+</span></span><span class=line><span class=cl>lzo-2.02
+</span></span><span class=line><span class=cl>openssl-0.9.8l
+</span></span><span class=line><span class=cl>pkcs11-helper
+</span></span></code></pre></td></tr></table></div></div><p><strong>编译OpenVPN GUI</strong></p><p>获取OpenVPN GUI的源代码 <a href=http://openvpn.se/files/source/openvpn-gui-1.0.3.zip>下载链接</a>，解压缩到C:\work\openvpn-gui目录下。</p><p>首先修改openvpn.c，找到函数StatusDialogFunc，修改</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>charformat.yHeight = 100;
+</span></span><span class=line><span class=cl>strcpy(charformat.szFaceName, &#34;MS Sans Serif&#34;);
+</span></span></code></pre></td></tr></table></div></div><p>其中100是字体大小，MS Sans Serif是字体名称。</p><p>接下来需要修改Makefile，</p><p>OPENSSL = /c/OpenSSL 改为预编译文件中的openssl下include头文件的位置，这里为</p><p><code>OPENSSL = ../openssl-0.9.8l/include/openssl</code></p><p>LIB_DIRS = -L${OPENSSL}/lib/MinGW 改为预编译文件中openssl的相关lib目录，这里为</p><p><code>LIB_DIRS = –L../gen-prebuilt/lib</code></p><p>运行C:\msys\1.0下的msys.bat，进入类unix环境，切换到C:\work\openvpn-gui目录，执行make，OpenVPN GUI即可编译完成。</p><p><strong>编译OpenVPN客户端</strong></p><p>获取OpenVPN客户端的源代码 <a href=http://openvpn.net/release/openvpn-2.1.1.tar.gz>下载链接</a>，解压缩到C:\work\openvpn-2.1.1目录下。</p><p>修改misc.c文件，在#ifundef ENABLE_PASSWORD_SAVE一行前面加上</p><p>#define ENABLE_PASSWORD_SAVE</p><p>到install-win32目录，修改openvpn.nsi文件，找到以下代码：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>; tap-64bit:
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>DetailPrint “We are running on a 64-bit system.”
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>SetOutPath “$INSTDIR\bin”
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>File “${GEN}\tapinstall\amd64\tapinstall.exe”
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>SetOutPath “$INSTDIR\driver”
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>File “${GEN}\driver\amd64\OemWin2k.inf”
+</span></span><span class=line><span class=cl>File “${GEN}\driver\amd64\${PRODUCT_TAP_ID}.cat”
+</span></span><span class=line><span class=cl>File “${GEN}\driver\amd64\${TAPDRV}”
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>goto tapend
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>tap-32bit:
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>DetailPrint “We are running on a 32-bit system.”
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>SetOutPath “$INSTDIR\bin”
+</span></span><span class=line><span class=cl>File “${GEN}\tapinstall\i386\tapinstall.exe”
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>SetOutPath “$INSTDIR\driver”
+</span></span><span class=line><span class=cl>File “${GEN}\driver\i386\OemWin2k.inf”
+</span></span><span class=line><span class=cl>File “${GEN}\driver\i386\${PRODUCT_TAP_ID}.cat”
+</span></span><span class=line><span class=cl>File “${GEN}\driver\i386\${TAPDRV}”
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>tapend:
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>SectionEnd
+</span></span></code></pre></td></tr></table></div></div><p>在这段代码最前面插入：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>!undef GEN
+</span></span><span class=line><span class=cl>!define GEN “C:\work\gen-prebuilt\”
+</span></span></code></pre></td></tr></table></div></div><p>在这段代码最后面插入：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>undef
+</span></span><span class=line><span class=cl>!define GEN “..”
+</span></span></code></pre></td></tr></table></div></div><p>打开命令提示符，执行如下命令：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>cd C:\work\openvpn-2.1.1
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>bash domake-win
+</span></span></code></pre></td></tr></table></div></div><p>编译结束后，安装文件会生成在C:\work\openvpn-2.1.1\gen目录下。</p><p><strong>修改OpenVPN配置文件</strong></p><p>修改当前使用的ovpn配置文件，将auth-user-pass改为auth-user-pass pass.txt，同时在相同路径下新增一个名为pass.txt的文本文件，内容为两行，第一行为vpn用户名，第二行为密码。</p><p>重新运行OpenVPN，即可不输密码登录vpn，而且此时status窗口的日志输出，也终于能看得清了。</p><p>顺便提一句，如果有需要vpn的同学，可以和我联系，目前有合租计划，人均每月6元，联系方式如下：</p><p>Twitter: @palfans</p><p>OpenVPN客户端编译部分，参考yegle<a href=https://yegle.net/2010/05/19/compile-openvpn-2-1-1-in-windows/>相关文章</a>，致谢。</p></div><div class=post-copyright><p class=copyright-item><span class=item-title>文章作者</span>
+<span class=item-content>Palfans</span></p><p class=copyright-item><span class=item-title>上次更新</span>
+<span class=item-content>2011-01-29</span></p></div><footer class=post-footer><div class=post-tags><a href=/tags/openssl/>openssl</a>
+<a href=/tags/openvpn/>OpenVPN</a>
+<a href=/tags/vpn/>VPN</a>
+<a href=/tags/%E5%AD%97%E4%BD%93/>字体</a>
+<a href=/tags/%E5%AF%86%E7%A0%81/>密码</a></div><nav class=post-nav><a class=prev href=/fckfbx/><i class="iconfont icon-left"></i>
+<span class="prev-text nav-default">方校长日志之去一趟武大居然被鸡蛋砸了</span>
+<span class="prev-text nav-mobile">上一篇</span></a>
+<a class=next href=/aal-izz-well/><span class="next-text nav-default">Aal Izz Well</span>
+<span class="next-text nav-mobile">下一篇</span>
+<i class="iconfont icon-right"></i></a></nav></footer></article></div><script src=https://utteranc.es/client.js repo=palfans/blog-comments issue-term=pathname theme=github-light crossorigin=anonymous async></script><noscript>Please enable JavaScript to view the <a href=https://github.com/utterance>comments powered by utterances.</a></noscript></div></main><footer id=footer class=footer><div class=social-links><a href=mailto:admin@palfans.net class="iconfont icon-email" title=email></a>
+<a href=https://twitter.com/palfans class="iconfont icon-twitter" title=twitter></a>
+<a href=http://localhost:1313/index.xml type=application/rss+xml class="iconfont icon-rss" title=rss></a></div><div class=copyright><span class=power-by>由 <a class=hexo-link href=https://gohugo.io>Hugo</a> 强力驱动</span>
+<span class=division>|</span>
+<span class=theme-info>主题 -
+<a class=theme-link href=https://github.com/olOwOlo/hugo-theme-even>Even</a></span>
+<span class=copyright-year>&copy;
+2005 -
+2022<span class=heart><i class="iconfont icon-heart"></i></span><span>Palfans</span></span></div></footer><div class=back-to-top id=back-to-top><i class="iconfont icon-up"></i></div></div><script src=https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin=anonymous></script>
+<script type=text/javascript src=/js/main.min.64437849d125a2d603b3e71d6de5225d641a32d17168a58106e0b61852079683.js></script>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-287929-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"))</script><script async src=https://www.google-analytics.com/analytics.js></script></body></html>
