@@ -1,4 +1,116 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Palfans's BLOG</title><link>https://www.palfans.net/</link><description>Recent content on Palfans's BLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 20 Apr 2022 11:48:24 -0500</lastBuildDate><atom:link href="https://www.palfans.net/index.xml" rel="self" type="application/rss+xml"/><item><title>第三年了</title><link>https://www.palfans.net/the_third_year/</link><pubDate>Wed, 20 Apr 2022 11:48:24 -0500</pubDate><guid>https://www.palfans.net/the_third_year/</guid><description>&lt;p>已经第三个年头了，什么时候是个头？！&lt;/p></description></item><item><title>通过 VPN 远程办公</title><link>https://www.palfans.net/work_from_home_via_vpn/</link><pubDate>Fri, 19 Mar 2021 10:42:24 -0500</pubDate><guid>https://www.palfans.net/work_from_home_via_vpn/</guid><description>&lt;h2 id="需求">需求&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Palfans's BLOG</title><link>https://www.palfans.net/</link><description>Recent content on Palfans's BLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 21 Apr 2022 16:12:21 -0500</lastBuildDate><atom:link href="https://www.palfans.net/index.xml" rel="self" type="application/rss+xml"/><item><title>利用 GitHub Actions 自动编译发布基于 Hugo 的网站</title><link>https://www.palfans.net/deploy-hugo-with-github-action/</link><pubDate>Thu, 21 Apr 2022 16:12:21 -0500</pubDate><guid>https://www.palfans.net/deploy-hugo-with-github-action/</guid><description>&lt;h2 id="需求">需求&lt;/h2>
+&lt;p>自从把网站从 Wordpress 转成 Hugo 并托管在 GitHub 之后，一直使用 Travis CI 来自动编译部署更新。
+距离上次更新又过了一年多，昨天想发个牢骚，感叹下时事多艰，结果发现 Travis CI 已经删除我之前的代码库配置。&lt;/p>
+&lt;h2 id="解决方案">解决方案&lt;/h2>
+&lt;p>在 Hugo 的官方文档网站看到推荐用 &lt;code>GitHub Actions&lt;/code> 来完成类似的工作 &lt;a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#build-hugo-with-github-action">link&lt;/a>。看起来不麻烦，开干。&lt;/p>
+&lt;h3 id="规划代码库">规划代码库&lt;/h3>
+&lt;p>GitHub 的每一个账号都可以创建单独的 Pages 站点，但是该代码库必须将可见性设为 Public。如果不希望公开自己网站源文件，就需要合理规划代码库。&lt;/p>
+&lt;p>创建两个代码库&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>&amp;lt;anyname&amp;gt;.github.io&lt;/code> &amp;ndash; 这个库用来展示静态页面，&lt;code>anyname&lt;/code> 需要是 GitHub 全站唯一名字，必须以 github.io 结尾并设置为 Public 可见，下文以 &lt;code>web&lt;/code> 代替。&lt;/li>
+&lt;li>&lt;code>any project name&lt;/code> &amp;ndash; 这个库的名字随意，下文以 &lt;code>web-code&lt;/code> 代替，可以设置为 Private 可见。&lt;/li>
+&lt;/ul>
+&lt;h3 id="创建-workflow">创建 Workflow&lt;/h3>
+&lt;p>在 &lt;code>web-code&lt;/code> 代码库的默认 &lt;code>main&lt;/code> 分支下，创建 Workflow 的配置文件 &lt;code>.github/workflows/gh-pages.yml&lt;/code>，配置内容由 Hugo 官方提供，添加了部分注释：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yml" data-lang="yml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">GitHub Pages&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">push&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">branches&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">main&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 网站更新 push 到 web-code 库的 main 分支之后，触发这个 Action&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">pull_request&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">jobs&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">deploy&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">runs-on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ubuntu-20.04&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">concurrency&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">group&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ github.workflow }}-${{ github.ref }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">steps&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">actions/checkout@v3&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">submodules&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># Fetch Hugo themes (true OR recursive)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">fetch-depth&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">0&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># Fetch all history for .GitInfo and .Lastmod&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Setup Hugo&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">peaceiris/actions-hugo@v2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">hugo-version&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;latest&amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 默认为最新版本，有特殊需要，可以指定其他 Hugo 版本&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">extended&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 激活 Hugo Extended 特性，部分主题需要打开 Hugo 的这个选项&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Build&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">hugo --minify&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Deploy&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">peaceiris/actions-gh-pages@v3&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">if&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ github.ref == &amp;#39;refs/heads/main&amp;#39; }}&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 只在 main 分支下被触发&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c">#github_token: ${{ secrets.GITHUB_TOKEN }} # 如果只创建一个代码库，把 web-code 和 web 分别放置在不同分支，则可以直接使用免配置的 GITHUB_TOKEN&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">deploy_key&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ secrets.DEPLOY_TOKEN }}&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 如果创建两个代码库，则需要采用 DEPLOY_TOKEN 或者 PERSIONAL_TOKEN 进行身份认证&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">external_repository&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">&amp;lt;your account&amp;gt;/&amp;lt;webname&amp;gt;.github.io&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># web 代码库&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">publish_dir&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">./public&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">keep_files&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">false&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">publish_branch&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">main&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># web 代码库的默认分支&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">cname&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">www.abc.com&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 开启自定义域名，在 web 代码库根目录生成 CNAME 文件，需要和 &amp;lt;web 代码库&amp;gt;/settings/pages 里设置的自定义域名匹配&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="设置-deploy_token">设置 DEPLOY_TOKEN&lt;/h3>
+&lt;p>在终端（Linux/MacOS: terminal; Windows: CMD）生成公私钥&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">ssh-keygen -t rsa -b &lt;span class="m">4096&lt;/span> -C &lt;span class="s2">&amp;#34;&amp;lt;your github email&amp;gt;&amp;#34;&lt;/span> -f gh-pages
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>命令执行后生成私钥 &lt;code>gh-pages&lt;/code>，和公钥 &lt;code>gh-pages.pub&lt;/code>。
+访问 &lt;code>&amp;lt;web 代码库&amp;gt;/settings/keys/new&lt;/code>，将 &lt;code>gh-pages.pub&lt;/code> 内容复制到 &lt;code>Key&lt;/code> 中，&lt;code>Title&lt;/code> 随意，需要勾选 &lt;code>Allow write access&lt;/code>。
+访问 &lt;code>&amp;lt;web-code 代码库&amp;gt;/settings/secrets/actions/new&lt;/code>, 将 &lt;code>gh-pages&lt;/code> 内容复制到 &lt;code>Value&lt;/code> 中，&lt;code>Name&lt;/code> 为 &lt;code>DEPLOY_TOKEN&lt;/code>。&lt;/p>
+&lt;h3 id="提交代码">提交代码&lt;/h3>
+&lt;p>将更新的日志提交到 &lt;code>web-code&lt;/code> 代码库的 &lt;code>main&lt;/code> 分支，推送到 GitHub，就会自动触发编译发布。新版本的 Action 脚本不再使用 docker 构建编译环境，一般只需要 20 秒钟就能在自定义的域名看到新增的日志。&lt;/p></description></item><item><title>第三年了</title><link>https://www.palfans.net/the_third_year/</link><pubDate>Wed, 20 Apr 2022 11:48:24 -0500</pubDate><guid>https://www.palfans.net/the_third_year/</guid><description>&lt;p>已经第三个年头了，什么时候是个头？！&lt;/p></description></item><item><title>通过 VPN 远程办公</title><link>https://www.palfans.net/work_from_home_via_vpn/</link><pubDate>Fri, 19 Mar 2021 10:42:24 -0500</pubDate><guid>https://www.palfans.net/work_from_home_via_vpn/</guid><description>&lt;h2 id="需求">需求&lt;/h2>
 &lt;p>作为一名实施人员，通常情况下需要通过各种 VPN 连接到公司和客户的工作环境来完成任务。尤其是疫情的影响，完全在家工作，对 VPN 的利用就更重了。&lt;/p>
 &lt;p>但是，VPN 装多了，各种虚拟网卡驱动相互之间不一定能好好兼容，即使是 Windows 10 也很容易蓝屏，要是不幸发生在工作过程中，尤其是更新生产系统，那就有得事情做了。&lt;/p>
 &lt;h2 id="解决方案">解决方案&lt;/h2>
@@ -892,30 +1004,4 @@ Applicants who have a valid, unexpired driver license from another U.S. state, U
 &lt;p>中国电信北美公司搞了个&lt;a href="https://www.chinavirtualnumber.com/home.dhtml">一卡双号&lt;/a>服务，注册一个上海电信的手机号码，绑定到任意美国和加拿大的固话、手机号码。国内拨打这个上海电信号码，直接转接到美国这边的手机、固话，完全没有国际长途部分的费用，而且全程走的都是中美间的国际电话线路，不依赖互联网，不需要智能手机，语音效果和直拨国际长途完全一样，是三家公司的产品中通话质量最高最稳定的解决方案。月租9.99美金，无限时接听，现在还送每个月200分钟拨回中国的国际长途时长，不过主叫采用VOIP电话，需要拨打转接号，而且通话质量和接听国内来电完全不能比。另外，这个上海电信的号码，完全不能接收短信。&lt;/p>
 &lt;/blockquote>
 &lt;p>一开始我用的中国电信的服务，接听还好，但主叫质量很不稳定，拨打转接号后无法调用电话簿的联系人记录，需要手工输入被叫号码，不方便，那200分钟国际长途几乎没用完过。加上每月10美金的固定开销，于是放弃。因为我从来没用过联通的手机，所以也没有尝试沃信。现在使用 Jego，虽然也是VOIP的一种，但是不论主叫还是被叫，通话质量都非常不错，语音清晰，也感觉不到延迟。另外一个好处是，加入了亲情计划或者企业短号的移动号码，短号依然可用。现在国内的亲戚朋友，仍然可以只拨3个数字就拨通电话，而通话也归到亲情计划的分钟数内，免费通话。&lt;/p>
-&lt;p>之前不了解这些电话服务，选手机都只考虑双卡双待，现在完全没有必要了，只要是个智能手机都能正常安装应用，接听国内号码来电。从这点来说，也能看到国内电信三巨头正在谋求改变。虽然受限于国内通信管制，在国内没有什么亮眼的服务，但是一旦跑到自由市场经济的环境中，也在积极探索新鲜事物。只求国内的环境也能早点向正面的、积极的方向发展。&lt;/p></description></item><item><title>为VirtualBox中的CentOS扩展Swap空间</title><link>https://www.palfans.net/extend_swap_space_in_virtualbox/</link><pubDate>Mon, 02 Jun 2014 18:30:56 +0000</pubDate><guid>https://www.palfans.net/extend_swap_space_in_virtualbox/</guid><description>&lt;p>在VirtualBox中安装好CentOS后，会发现默认的Swap空间大小是根据初次配置的可用内存来生成的，正常使用足够。但是，如果需要安装Oracle，它要求最少2GB的交换空间，这时就需要扩展交换空间。&lt;/p>
-&lt;p>首先运行swapon命令查看交换空间大小，如果得到的大小少于&lt;strong>2097152&lt;/strong>，就需要增加交换空间。&lt;/p>
-&lt;pre>&lt;code>swapon -s
-&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://res.palfans.net/img/1.png" alt="">&lt;/p>
-&lt;p>1. 首先，在VirtualBox中新增一块硬盘&lt;/p>
-&lt;p>&lt;img src="https://res.palfans.net/img/2.png" alt="">&lt;/p>
-&lt;p>&lt;img src="https://res.palfans.net/img/3.png" alt="">&lt;/p>
-&lt;p>&lt;img src="https://res.palfans.net/img/4.png" alt="">&lt;/p>
-&lt;p>&lt;img src="https://res.palfans.net/img/5.png" alt="">&lt;/p>
-&lt;p>2. 格式化新增的硬盘&lt;/p>
-&lt;pre>&lt;code>fdisk -l
-fdisk /dev/sdb
-&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://res.palfans.net/img/6.png" alt="">&lt;/p>
-&lt;p>&lt;img src="https://res.palfans.net/img/7.png" alt="">&lt;/p>
-&lt;p>&lt;img src="https://res.palfans.net/img/8.png" alt="">&lt;/p>
-&lt;p>3. 转换为Swap space&lt;/p>
-&lt;pre>&lt;code>mkswap /dev/sdb1
-swapon /dev/sdb1
-swapon -s
-&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://res.palfans.net/img/9.png" alt="">&lt;/p>
-&lt;p>4. 让CentOS开机自动加载新增的交换空间&lt;/p>
-&lt;pre>&lt;code>vi /etc/fstab
-&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://res.palfans.net/img/10.png" alt="">&lt;/p></description></item></channel></rss>
+&lt;p>之前不了解这些电话服务，选手机都只考虑双卡双待，现在完全没有必要了，只要是个智能手机都能正常安装应用，接听国内号码来电。从这点来说，也能看到国内电信三巨头正在谋求改变。虽然受限于国内通信管制，在国内没有什么亮眼的服务，但是一旦跑到自由市场经济的环境中，也在积极探索新鲜事物。只求国内的环境也能早点向正面的、积极的方向发展。&lt;/p></description></item></channel></rss>
