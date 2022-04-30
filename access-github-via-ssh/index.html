@@ -1,0 +1,86 @@
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><title>通过 SSH 访问 GitHub - Palfans's BLOG</title><meta name=renderer content="webkit"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta http-equiv=cache-control content="no-transform"><meta http-equiv=cache-control content="no-siteapp"><meta name=theme-color content="#f8f5ec"><meta name=msapplication-navbutton-color content="#f8f5ec"><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="#f8f5ec"><meta name=author content="Palfans"><meta name=description content="需求 公司有自建的 GitHub 企业版，必须通过 VPN 或者 SSH 跳板机才能访问网页，如何在客户端通过命令行存取远端代码库呢？
+示例 GitHub 企业版地址：github.abc.com 跳板机：jump_host 跳板机用户名：jump
+解决方案 公司的 GitHub 启用了大文件存储模式 Git-LFS， checkout 代码库的时候，客户端需要先通过 SSH 取回库的内容（包括大文件的占位符），再通过 HTTPS 取回对应占位符的大文件。因此在配置跳板机时，需要同时考虑 SSH 和 HTTPS 两种协议的代理转发。
+"><meta name=keywords content="Palfans,blog"><meta name=google-site-verification content="7MLs3wY58s_Jjnto4NZgvoEHnnJc07ojBCBlgI1gTco"><meta name=generator content="Hugo 0.98.0 with theme even"><link rel=canonical href=https://www.palfans.net/access-github-via-ssh/><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/manifest.json><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link href=/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css rel=stylesheet><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin=anonymous><meta property="og:title" content="通过 SSH 访问 GitHub"><meta property="og:description" content="需求
+公司有自建的 GitHub 企业版，必须通过 VPN 或者 SSH 跳板机才能访问网页，如何在客户端通过命令行存取远端代码库呢？
+示例
+GitHub 企业版地址：github.abc.com
+跳板机：jump_host
+跳板机用户名：jump
+解决方案
+公司的 GitHub 启用了大文件存储模式 Git-LFS， checkout 代码库的时候，客户端需要先通过 SSH 取回库的内容（包括大文件的占位符），再通过 HTTPS 取回对应占位符的大文件。因此在配置跳板机时，需要同时考虑 SSH 和 HTTPS 两种协议的代理转发。"><meta property="og:type" content="article"><meta property="og:url" content="https://www.palfans.net/access-github-via-ssh/"><meta property="article:section" content="post"><meta property="article:published_time" content="2022-04-30T14:43:29-05:00"><meta property="article:modified_time" content="2022-04-30T14:43:29-05:00"><meta itemprop=name content="通过 SSH 访问 GitHub"><meta itemprop=description content="需求
+公司有自建的 GitHub 企业版，必须通过 VPN 或者 SSH 跳板机才能访问网页，如何在客户端通过命令行存取远端代码库呢？
+示例
+GitHub 企业版地址：github.abc.com
+跳板机：jump_host
+跳板机用户名：jump
+解决方案
+公司的 GitHub 启用了大文件存储模式 Git-LFS， checkout 代码库的时候，客户端需要先通过 SSH 取回库的内容（包括大文件的占位符），再通过 HTTPS 取回对应占位符的大文件。因此在配置跳板机时，需要同时考虑 SSH 和 HTTPS 两种协议的代理转发。"><meta itemprop=datePublished content="2022-04-30T14:43:29-05:00"><meta itemprop=dateModified content="2022-04-30T14:43:29-05:00"><meta itemprop=wordCount content="705"><meta itemprop=keywords content="SSH,GitHub,Proxy,"><meta name=twitter:card content="summary"><meta name=twitter:title content="通过 SSH 访问 GitHub"><meta name=twitter:description content="需求
+公司有自建的 GitHub 企业版，必须通过 VPN 或者 SSH 跳板机才能访问网页，如何在客户端通过命令行存取远端代码库呢？
+示例
+GitHub 企业版地址：github.abc.com
+跳板机：jump_host
+跳板机用户名：jump
+解决方案
+公司的 GitHub 启用了大文件存储模式 Git-LFS， checkout 代码库的时候，客户端需要先通过 SSH 取回库的内容（包括大文件的占位符），再通过 HTTPS 取回对应占位符的大文件。因此在配置跳板机时，需要同时考虑 SSH 和 HTTPS 两种协议的代理转发。"><!--[if lte IE 9]><script src=https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js></script><![endif]--><!--[if lt IE 9]><script src=https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js></script><![endif]--></head><body><div id=mobile-navbar class=mobile-navbar><div class=mobile-header-logo><a href=/ class=logo>Palfans's BLOG</a></div><div class=mobile-navbar-icon><span></span>
+<span></span>
+<span></span></div></div><nav id=mobile-menu class="mobile-menu slideout-menu"><ul class=mobile-menu-list><a href=/><li class=mobile-menu-item>Home</li></a><a href=/post/><li class=mobile-menu-item>Archives</li></a><a href=/tags/><li class=mobile-menu-item>Tags</li></a><a href=/categories/><li class=mobile-menu-item>Categories</li></a></ul></nav><div class=container id=mobile-panel><header id=header class=header><div class=logo-wrapper><a href=/ class=logo>Palfans's BLOG</a></div><nav class=site-navbar><ul id=menu class=menu><li class=menu-item><a class=menu-item-link href=/>Home</a></li><li class=menu-item><a class=menu-item-link href=/post/>Archives</a></li><li class=menu-item><a class=menu-item-link href=/tags/>Tags</a></li><li class=menu-item><a class=menu-item-link href=/categories/>Categories</a></li></ul></nav></header><main id=main class=main><div class=content-wrapper><div id=content class=content><article class=post><header class=post-header><h1 class=post-title>通过 SSH 访问 GitHub</h1><div class=post-meta><span class=post-time>2022-04-30</span><div class=post-category><a href=/categories/%E6%8A%80%E6%9C%AF%E6%A0%88/>技术栈</a></div></div></header><div class=post-toc id=post-toc><h2 class=post-toc-title>文章目录</h2><div class="post-toc-content always-active"><nav id=TableOfContents><ul><li><ul><li><a href=#需求>需求</a><ul><li><a href=#示例>示例</a></li></ul></li><li><a href=#解决方案>解决方案</a><ul><li><a href=#ssh-转发>SSH 转发</a></li><li><a href=#httphttps-转发>HTTP/HTTPS 转发</a></li></ul></li></ul></li></ul></nav></div></div><div class=post-content><h2 id=需求>需求</h2><p>公司有自建的 GitHub 企业版，必须通过 VPN 或者 SSH 跳板机才能访问网页，如何在客户端通过命令行存取远端代码库呢？</p><h3 id=示例>示例</h3><p>GitHub 企业版地址：<code>github.abc.com</code>
+跳板机：<code>jump_host</code>
+跳板机用户名：<code>jump</code></p><h2 id=解决方案>解决方案</h2><p>公司的 GitHub 启用了大文件存储模式 <code>Git-LFS</code>， checkout 代码库的时候，客户端需要先通过 SSH 取回库的内容（包括大文件的占位符），再通过 HTTPS 取回对应占位符的大文件。因此在配置跳板机时，需要同时考虑 SSH 和 HTTPS 两种协议的代理转发。</p><h3 id=ssh-转发>SSH 转发</h3><p>SSH 转发配置非常直接，通过跳板机转发所有发送到目标地址的 SSH 流量。</p><p><em>编辑 <code>~/.ssh/config</code></em></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>Host github.abc.com
+</span></span><span class=line><span class=cl>    Hostname github.abc.com
+</span></span><span class=line><span class=cl>    User git
+</span></span><span class=line><span class=cl>    ProxyCommand ssh jump@jump_host -W %h:%p
+</span></span></code></pre></td></tr></table></div></div><p>这里的 <code>ProxyCommand</code> 会利用 <code>ssh -W</code> 来连接跳板机然后转发请求。<code>-W</code> 参数在较新的 OpenSSH 中获得支持，至少需要 <code>5.4</code> <a href=http://www.openssh.com/txt/release-5.4>link</a>。在较老的版本中，则可以使用 <code>nc (netcat)</code> 代替。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>ProxyCommand ssh jump@jum_host nc -q0 %h %p
+</span></span></code></pre></td></tr></table></div></div><p>在配置文件中不能存储 SSH 账号的密码，如果已经配置了服务器和跳板机的公钥访问，则可以直接免密码连接，否则会在连接过程中要求输入密码。</p><h3 id=httphttps-转发>HTTP/HTTPS 转发</h3><p>建立了 SSH 隧道，我们还需要一个 HTTP/HTTPS 代理才能访问 GitHub LFS。通常情况下，我们不能在跳板机新安装一个代理软件，这里我们就在客户端本地安装一个基于 SSH 的 HTTP/HTTPS 代理 <code>mallory</code> <a href=https://github.com/justmao945/mallory>link</a>。这个代理对于跳板机的唯一要求就是 SSH 可用，不用任何其他配置。</p><p>这是一个使用 GoLang 编写的开源代理软件，直接用下面的命令即可安装完成，装好的程序位于 <code>~/go/bin/mallory</code></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>go install github.com/justmao945/mallory/cmd/mallory@latest
+</span></span></code></pre></td></tr></table></div></div><p><em>编辑 <code>~/.config/mallory.json</code></em></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;id_rsa&#34;</span><span class=p>:</span> <span class=s2>&#34;$HOME/.ssh/id_rsa&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;local_smart&#34;</span><span class=p>:</span> <span class=s2>&#34;:1315&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;local_normal&#34;</span><span class=p>:</span> <span class=s2>&#34;:1316&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;remote&#34;</span><span class=p>:</span> <span class=s2>&#34;ssh://jump@jump_host&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;blocked&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;github.abc.com&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>代理会启动两个端口，<code>local_normal</code> 会转发所有 HTTP/HTTPS 请求到跳板机，<code>local_smart</code> 只会转发目标地址为 blocked 中配置域名的请求到跳板机。</p><p><em>启动代理软件</em></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>nohup ~/go/bin/mallory <span class=p>&amp;</span>
+</span></span></code></pre></td></tr></table></div></div><p><em>编辑 <code>~/.gitconfig</code></em></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>[http &#34;https://github.abc.com&#34;]
+</span></span><span class=line><span class=cl>        proxy = http://localhost:1315
+</span></span><span class=line><span class=cl>        sslVerify = false
+</span></span></code></pre></td></tr></table></div></div><p>现在所有的 Git 操作（SSH，HTTP/HTTPS）都会通过跳板机访问到 GitHub 服务器。</p></div><div class=post-copyright><p class=copyright-item><span class=item-title>文章作者</span>
+<span class=item-content>Palfans</span></p><p class=copyright-item><span class=item-title>上次更新</span>
+<span class=item-content>2022-04-30</span></p></div><footer class=post-footer><div class=post-tags><a href=/tags/ssh/>SSH</a>
+<a href=/tags/github/>GitHub</a>
+<a href=/tags/proxy/>Proxy</a></div><nav class=post-nav><a class=next href=/deploy-hugo-with-github-action/><span class="next-text nav-default">利用 GitHub Actions 自动编译发布基于 Hugo 的网站</span>
+<span class="next-text nav-mobile">下一篇</span>
+<i class="iconfont icon-right"></i></a></nav></footer></article></div><script src=https://utteranc.es/client.js repo=palfans/blog-comments issue-term=pathname theme=github-light crossorigin=anonymous async></script><noscript>Please enable JavaScript to view the <a href=https://github.com/utterance>comments powered by utterances.</a></noscript></div></main><footer id=footer class=footer><div class=social-links><a href=mailto:admin@palfans.net class="iconfont icon-email" title=email></a>
+<a href=https://twitter.com/palfans class="iconfont icon-twitter" title=twitter></a>
+<a href=https://www.palfans.net/index.xml type=application/rss+xml class="iconfont icon-rss" title=rss></a></div><div class=copyright><span class=power-by>由 <a class=hexo-link href=https://gohugo.io>Hugo</a> 强力驱动</span>
+<span class=division>|</span>
+<span class=theme-info>主题 -
+<a class=theme-link href=https://github.com/olOwOlo/hugo-theme-even>Even</a></span>
+<span class=copyright-year>&copy;
+2005 -
+2022<span class=heart><i class="iconfont icon-heart"></i></span><span>Palfans</span></span></div></footer><div class=back-to-top id=back-to-top><i class="iconfont icon-up"></i></div></div><script src=https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin=anonymous></script>
+<script type=text/javascript src=/js/main.min.64437849d125a2d603b3e71d6de5225d641a32d17168a58106e0b61852079683.js></script>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-287929-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"))</script><script async src=https://www.google-analytics.com/analytics.js></script></body></html>

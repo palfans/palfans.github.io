@@ -1,4 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Palfans's BLOG</title><link>https://www.palfans.net/post/</link><description>Recent content in Posts on Palfans's BLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 21 Apr 2022 16:12:21 -0500</lastBuildDate><atom:link href="https://www.palfans.net/post/index.xml" rel="self" type="application/rss+xml"/><item><title>利用 GitHub Actions 自动编译发布基于 Hugo 的网站</title><link>https://www.palfans.net/deploy-hugo-with-github-action/</link><pubDate>Thu, 21 Apr 2022 16:12:21 -0500</pubDate><guid>https://www.palfans.net/deploy-hugo-with-github-action/</guid><description>&lt;h2 id="需求">需求&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Palfans's BLOG</title><link>https://www.palfans.net/post/</link><description>Recent content in Posts on Palfans's BLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 30 Apr 2022 14:43:29 -0500</lastBuildDate><atom:link href="https://www.palfans.net/post/index.xml" rel="self" type="application/rss+xml"/><item><title>通过 SSH 访问 GitHub</title><link>https://www.palfans.net/access-github-via-ssh/</link><pubDate>Sat, 30 Apr 2022 14:43:29 -0500</pubDate><guid>https://www.palfans.net/access-github-via-ssh/</guid><description>&lt;h2 id="需求">需求&lt;/h2>
+&lt;p>公司有自建的 GitHub 企业版，必须通过 VPN 或者 SSH 跳板机才能访问网页，如何在客户端通过命令行存取远端代码库呢？&lt;/p>
+&lt;h3 id="示例">示例&lt;/h3>
+&lt;p>GitHub 企业版地址：&lt;code>github.abc.com&lt;/code>
+跳板机：&lt;code>jump_host&lt;/code>
+跳板机用户名：&lt;code>jump&lt;/code>&lt;/p>
+&lt;h2 id="解决方案">解决方案&lt;/h2>
+&lt;p>公司的 GitHub 启用了大文件存储模式 &lt;code>Git-LFS&lt;/code>， checkout 代码库的时候，客户端需要先通过 SSH 取回库的内容（包括大文件的占位符），再通过 HTTPS 取回对应占位符的大文件。因此在配置跳板机时，需要同时考虑 SSH 和 HTTPS 两种协议的代理转发。&lt;/p></description></item><item><title>利用 GitHub Actions 自动编译发布基于 Hugo 的网站</title><link>https://www.palfans.net/deploy-hugo-with-github-action/</link><pubDate>Thu, 21 Apr 2022 16:12:21 -0500</pubDate><guid>https://www.palfans.net/deploy-hugo-with-github-action/</guid><description>&lt;h2 id="需求">需求&lt;/h2>
 &lt;p>自从把网站从 Wordpress 转成 Hugo 并托管在 GitHub 之后，一直使用 Travis CI 来自动编译部署更新。
 距离上次更新又过了一年多，昨天想发个牢骚，感叹下时事多艰，结果发现 Travis CI 已经删除我之前的代码库配置。&lt;/p>
 &lt;h2 id="解决方案">解决方案&lt;/h2>
@@ -95,7 +102,4 @@
 &lt;p>呜呼哀哉，尚飨！&lt;/p>
 &lt;/blockquote></description></item><item><title>十周年庆</title><link>https://www.palfans.net/decennial/</link><pubDate>Fri, 14 Aug 2015 06:01:35 +0000</pubDate><guid>https://www.palfans.net/decennial/</guid><description>&lt;p>下个星期就是这个BLOG的十周年纪念，突然间，白马过隙，忽然而已。&lt;/p>
 &lt;p>现在BLOG没落了，大家都喜欢短平快的社交平台，这里荒得长了草。直到Google告诉我，网站被人黑了，挂了木马。哑然失笑，曾经花费多少时间改模板，加功能的一亩三分地，竟然已经很久没有更新过，以至于成为害人工具，不过料想应该也害不了多少人，访问量极低。这『黑客』估计是跑了个脚本，在我的网站目录里生成了不下500个静态网页文件，个个带毒。一个一个手工清理不现实，只好全部铲掉重装。好在数据库一直有脚本在后台默默的备份，重建倒不费事，主题直接用默认模板，挺符合现在的审美。同时为了迎接新一个十年的开始，终于申请了证书，强制SSL。&lt;/p>
-&lt;p>谢谢有BLOG相陪的十年。。。&lt;/p></description></item><item><title>漫游在美国 - 如何打电话</title><link>https://www.palfans.net/roaming_in_us_call/</link><pubDate>Fri, 18 Jul 2014 18:38:03 +0000</pubDate><guid>https://www.palfans.net/roaming_in_us_call/</guid><description>&lt;p>来到美国5个月了，往国内打电话肯定是日常生活的一个重要组成部分，今天总结下这几个月的经验。&lt;/p>
-&lt;p>出国前，我为我的中国移动号码办理了国际漫游。因为是全球通用户，整个办理流程比较简单，直接用手机拨打10086申请即可，每次申请的时效是一年，不需要预存保证金。漫游期限快到时，直接在国外拨打中国移动的境外漫游免费客服号码+8613800100186，请客服人员帮你转接到号码归属省的移动客服办理漫游延期。只有用中国移动号码拨打这个号码才享受免费优惠。现在中国移动针对美国、韩国、新加坡等180个国家和地区推出了漫游123的资费政策，即根据不同的漫游国家和地区，漫游主被叫资费分别为每分钟0.99元，1.99元和2.99元。客观的说，这个资费已经很便宜了，尤其是美国被归在1元区。还记得去阿曼出差时，这个资费政策还没执行，给国内打电话18元一分钟，每次打电话都要做充分的思想准备，现在也划在3元区里，降幅惊人。&lt;/p>
-&lt;p>但是，如果完全用中国移动的号码接打所有电话，即使已经1元区了，费用还是不便宜，而且很多线上线下服务需要登记美国国内号码，所以还是得弄个本地号码。现在美国各个运营商的资费基本都是无限国内通话，无限国内短信，限量LTE流量，无限GPRS流量，每个月40-60美金，以美国的国民收入来算，比较便宜。&lt;/p>
-&lt;p>美国国内通话搞定了，接下来是中国的国际长途部分。&lt;/p></description></item></channel></rss>
+&lt;p>谢谢有BLOG相陪的十年。。。&lt;/p></description></item></channel></rss>

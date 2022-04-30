@@ -1,4 +1,98 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Palfans's BLOG</title><link>https://www.palfans.net/</link><description>Recent content on Palfans's BLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 21 Apr 2022 16:12:21 -0500</lastBuildDate><atom:link href="https://www.palfans.net/index.xml" rel="self" type="application/rss+xml"/><item><title>利用 GitHub Actions 自动编译发布基于 Hugo 的网站</title><link>https://www.palfans.net/deploy-hugo-with-github-action/</link><pubDate>Thu, 21 Apr 2022 16:12:21 -0500</pubDate><guid>https://www.palfans.net/deploy-hugo-with-github-action/</guid><description>&lt;h2 id="需求">需求&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Palfans's BLOG</title><link>https://www.palfans.net/</link><description>Recent content on Palfans's BLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 30 Apr 2022 14:43:29 -0500</lastBuildDate><atom:link href="https://www.palfans.net/index.xml" rel="self" type="application/rss+xml"/><item><title>通过 SSH 访问 GitHub</title><link>https://www.palfans.net/access-github-via-ssh/</link><pubDate>Sat, 30 Apr 2022 14:43:29 -0500</pubDate><guid>https://www.palfans.net/access-github-via-ssh/</guid><description>&lt;h2 id="需求">需求&lt;/h2>
+&lt;p>公司有自建的 GitHub 企业版，必须通过 VPN 或者 SSH 跳板机才能访问网页，如何在客户端通过命令行存取远端代码库呢？&lt;/p>
+&lt;h3 id="示例">示例&lt;/h3>
+&lt;p>GitHub 企业版地址：&lt;code>github.abc.com&lt;/code>
+跳板机：&lt;code>jump_host&lt;/code>
+跳板机用户名：&lt;code>jump&lt;/code>&lt;/p>
+&lt;h2 id="解决方案">解决方案&lt;/h2>
+&lt;p>公司的 GitHub 启用了大文件存储模式 &lt;code>Git-LFS&lt;/code>， checkout 代码库的时候，客户端需要先通过 SSH 取回库的内容（包括大文件的占位符），再通过 HTTPS 取回对应占位符的大文件。因此在配置跳板机时，需要同时考虑 SSH 和 HTTPS 两种协议的代理转发。&lt;/p>
+&lt;h3 id="ssh-转发">SSH 转发&lt;/h3>
+&lt;p>SSH 转发配置非常直接，通过跳板机转发所有发送到目标地址的 SSH 流量。&lt;/p>
+&lt;p>&lt;em>编辑 &lt;code>~/.ssh/config&lt;/code>&lt;/em>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Host github.abc.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Hostname github.abc.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> User git
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ProxyCommand ssh jump@jump_host -W %h:%p
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这里的 &lt;code>ProxyCommand&lt;/code> 会利用 &lt;code>ssh -W&lt;/code> 来连接跳板机然后转发请求。&lt;code>-W&lt;/code> 参数在较新的 OpenSSH 中获得支持，至少需要 &lt;code>5.4&lt;/code> &lt;a href="http://www.openssh.com/txt/release-5.4">link&lt;/a>。在较老的版本中，则可以使用 &lt;code>nc (netcat)&lt;/code> 代替。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">ProxyCommand ssh jump@jum_host nc -q0 %h %p
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在配置文件中不能存储 SSH 账号的密码，如果已经配置了服务器和跳板机的公钥访问，则可以直接免密码连接，否则会在连接过程中要求输入密码。&lt;/p>
+&lt;h3 id="httphttps-转发">HTTP/HTTPS 转发&lt;/h3>
+&lt;p>建立了 SSH 隧道，我们还需要一个 HTTP/HTTPS 代理才能访问 GitHub LFS。通常情况下，我们不能在跳板机新安装一个代理软件，这里我们就在客户端本地安装一个基于 SSH 的 HTTP/HTTPS 代理 &lt;code>mallory&lt;/code> &lt;a href="https://github.com/justmao945/mallory">link&lt;/a>。这个代理对于跳板机的唯一要求就是 SSH 可用，不用任何其他配置。&lt;/p>
+&lt;p>这是一个使用 GoLang 编写的开源代理软件，直接用下面的命令即可安装完成，装好的程序位于 &lt;code>~/go/bin/mallory&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">go install github.com/justmao945/mallory/cmd/mallory@latest
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;em>编辑 &lt;code>~/.config/mallory.json&lt;/code>&lt;/em>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;id_rsa&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;$HOME/.ssh/id_rsa&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;local_smart&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;:1315&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;local_normal&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;:1316&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;remote&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;ssh://jump@jump_host&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;blocked&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;github.abc.com&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>代理会启动两个端口，&lt;code>local_normal&lt;/code> 会转发所有 HTTP/HTTPS 请求到跳板机，&lt;code>local_smart&lt;/code> 只会转发目标地址为 blocked 中配置域名的请求到跳板机。&lt;/p>
+&lt;p>&lt;em>启动代理软件&lt;/em>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">nohup ~/go/bin/mallory &lt;span class="p">&amp;amp;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;em>编辑 &lt;code>~/.gitconfig&lt;/code>&lt;/em>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">[http &amp;#34;https://github.abc.com&amp;#34;]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> proxy = http://localhost:1315
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sslVerify = false
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>现在所有的 Git 操作（SSH，HTTP/HTTPS）都会通过跳板机访问到 GitHub 服务器。&lt;/p></description></item><item><title>利用 GitHub Actions 自动编译发布基于 Hugo 的网站</title><link>https://www.palfans.net/deploy-hugo-with-github-action/</link><pubDate>Thu, 21 Apr 2022 16:12:21 -0500</pubDate><guid>https://www.palfans.net/deploy-hugo-with-github-action/</guid><description>&lt;h2 id="需求">需求&lt;/h2>
 &lt;p>自从把网站从 Wordpress 转成 Hugo 并托管在 GitHub 之后，一直使用 Travis CI 来自动编译部署更新。
 距离上次更新又过了一年多，昨天想发个牢骚，感叹下时事多艰，结果发现 Travis CI 已经删除我之前的代码库配置。&lt;/p>
 &lt;h2 id="解决方案">解决方案&lt;/h2>
@@ -977,31 +1071,4 @@ Applicants who have a valid, unexpired driver license from another U.S. state, U
 &lt;p>党国欠他们一个诚恳的道歉。&lt;/p>
 &lt;p>不过，如果我也是其中一员，我想，我永远不会原谅。&lt;/p></description></item><item><title>十周年庆</title><link>https://www.palfans.net/decennial/</link><pubDate>Fri, 14 Aug 2015 06:01:35 +0000</pubDate><guid>https://www.palfans.net/decennial/</guid><description>&lt;p>下个星期就是这个BLOG的十周年纪念，突然间，白马过隙，忽然而已。&lt;/p>
 &lt;p>现在BLOG没落了，大家都喜欢短平快的社交平台，这里荒得长了草。直到Google告诉我，网站被人黑了，挂了木马。哑然失笑，曾经花费多少时间改模板，加功能的一亩三分地，竟然已经很久没有更新过，以至于成为害人工具，不过料想应该也害不了多少人，访问量极低。这『黑客』估计是跑了个脚本，在我的网站目录里生成了不下500个静态网页文件，个个带毒。一个一个手工清理不现实，只好全部铲掉重装。好在数据库一直有脚本在后台默默的备份，重建倒不费事，主题直接用默认模板，挺符合现在的审美。同时为了迎接新一个十年的开始，终于申请了证书，强制SSL。&lt;/p>
-&lt;p>谢谢有BLOG相陪的十年。。。&lt;/p></description></item><item><title>漫游在美国 - 如何打电话</title><link>https://www.palfans.net/roaming_in_us_call/</link><pubDate>Fri, 18 Jul 2014 18:38:03 +0000</pubDate><guid>https://www.palfans.net/roaming_in_us_call/</guid><description>&lt;p>来到美国5个月了，往国内打电话肯定是日常生活的一个重要组成部分，今天总结下这几个月的经验。&lt;/p>
-&lt;p>出国前，我为我的中国移动号码办理了国际漫游。因为是全球通用户，整个办理流程比较简单，直接用手机拨打10086申请即可，每次申请的时效是一年，不需要预存保证金。漫游期限快到时，直接在国外拨打中国移动的境外漫游免费客服号码+8613800100186，请客服人员帮你转接到号码归属省的移动客服办理漫游延期。只有用中国移动号码拨打这个号码才享受免费优惠。现在中国移动针对美国、韩国、新加坡等180个国家和地区推出了漫游123的资费政策，即根据不同的漫游国家和地区，漫游主被叫资费分别为每分钟0.99元，1.99元和2.99元。客观的说，这个资费已经很便宜了，尤其是美国被归在1元区。还记得去阿曼出差时，这个资费政策还没执行，给国内打电话18元一分钟，每次打电话都要做充分的思想准备，现在也划在3元区里，降幅惊人。&lt;/p>
-&lt;p>但是，如果完全用中国移动的号码接打所有电话，即使已经1元区了，费用还是不便宜，而且很多线上线下服务需要登记美国国内号码，所以还是得弄个本地号码。现在美国各个运营商的资费基本都是无限国内通话，无限国内短信，限量LTE流量，无限GPRS流量，每个月40-60美金，以美国的国民收入来算，比较便宜。&lt;/p>
-&lt;p>美国国内通话搞定了，接下来是中国的国际长途部分。&lt;/p>
-&lt;p>&lt;strong>打电话回国&lt;/strong>&lt;/p>
-&lt;p>美国的电信市场充分开放，各类电话服务蓬勃发展，电话卡、回拨、转接号层出不穷。我选择了 &lt;a href="http://www.skype.com/zh_CN/">Skype&lt;/a> 和 &lt;a href="http://www.localphone.com/?rb=s63mql8XCPsTT7p1LYTtRczRXG6bpzkXVvpejFFFXvA">Localphone&lt;/a> （之后简称 LP）。这俩都是老牌的网络电话供应商，其中 Skype 的名气更大一些，现在已经是微软的资产。我在折腾 &lt;a href="http://www.palfans.net/?s=voice">Google Voice&lt;/a> 的时候开始接触 LP，算下来5年了，这个公司的服务一直非常稳定，值得信赖。这两个产品比较一下，拨回中国的费率都差不多，Skype 是1.1美分，LP 是1.2美分，都不到一毛钱人民币每分钟。如果使用它们的包月套餐，费率就更低。它们都是基于VOIP的产品，通话效果依赖于拨打时的网络环境， Skype 采用了P2P的传输技术，理论上在窄带宽和渣网络时能最大限度保持通话质量。但凡事没有绝对，经常会出现在同一个场景，Skype 通话质量不行，但 LP 清晰无延迟的情况，反之亦然。所以这俩可以都备上，互为补充。Skype 和 LP 都提供直拨号码转接服务，即为对方的中国号码分配一个当地号码，直接用美国手机拨打此当地号码，即可拨回中国，国际通话部分的费率不变，即使没有移动网络也能拨打，非常方便。但是 Skype 的这个服务每次拨打时会加收一笔4.9美分接通费，而 LP 没有，所以短暂通话 LP 划算，通话时间长，Skype就更划算。&lt;/p>
-&lt;p>&lt;strong>接国内电话&lt;/strong>
-沟通不能单方面，如何让国内的亲朋能方便的联系我呢？现在中国移动、中国联通和中国电信三家都分别推出了各自的服务来满足这个需求。&lt;/p>
-&lt;ul>
-&lt;li>中国移动：&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>中国移动推出了 &lt;a href="https://www.jegotrip.com.cn/">无忧行&lt;/a> 服务，需要智能手机（Android/iPhone）安装应用，通过移动网络或WiFi连接服务器。最大的卖点是可以租一个中国移动的号码（大陆和香港都可以，月租不同），也可以直接绑定国内现有的中国移动手机号，每月月租1美金。在应用在线的情况下，所有拨打到该移动号码的电话，都会通过网络转到 Jego 应用来免费接听。从2014年7月16日开始，Jego 也支持接收该移动号码收到的所有短信，相当于完全没有国际漫游费用。也可以从应用内直接拨打电话回国，能在接听方的手机上正确显示自己绑定的移动手机号码。这一点是 Skype 和 LP 想做但一直无法实现的功能。用它俩打回国，来电号码显示永远都稀奇古怪甚至『受限号码』，很像诈骗号码，很多时候对方都不愿意接听这种电话。据 Skype 解释，来电号码 （Caller ID）在中国大陆的显示问题，主要由国内电信运营商垄断造成，在其他大部分国家和地区都能正常使用。对于这点，我只能呵呵了。Jego接听免费，拨打费率是2.2美分，比 Skype 和 LP 贵，缺点是必须依赖互联网和智能手机应用，能收短信不能发短信。另外交费系统和现有移动系统完全分开，需要美金，好在可以Paypal。&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>中国联通：&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>中国联通推出了&lt;a href="http://www.wo-call.com/">沃信&lt;/a>服务，英文很奇葩，『我靠』，也不知道是谁想出来的。功能点基本上和 Jego 类似，甚至连应用程序的界面都雷同，丑到没朋友。不过沃信只能注册一个新的河北联通的手机号码，而不能绑定其他省的已有联通号码。这点不如 Jego 灵活。但沃信使用联通交费系统，用人民币交费，月租10元，打电话0.15元，发短信0.1元，这比 Jego 稍稍方便些。缺点和 Jego 一样，依赖互联网和智能手机应用。&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>中国电信：&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>中国电信北美公司搞了个&lt;a href="https://www.chinavirtualnumber.com/home.dhtml">一卡双号&lt;/a>服务，注册一个上海电信的手机号码，绑定到任意美国和加拿大的固话、手机号码。国内拨打这个上海电信号码，直接转接到美国这边的手机、固话，完全没有国际长途部分的费用，而且全程走的都是中美间的国际电话线路，不依赖互联网，不需要智能手机，语音效果和直拨国际长途完全一样，是三家公司的产品中通话质量最高最稳定的解决方案。月租9.99美金，无限时接听，现在还送每个月200分钟拨回中国的国际长途时长，不过主叫采用VOIP电话，需要拨打转接号，而且通话质量和接听国内来电完全不能比。另外，这个上海电信的号码，完全不能接收短信。&lt;/p>
-&lt;/blockquote>
-&lt;p>一开始我用的中国电信的服务，接听还好，但主叫质量很不稳定，拨打转接号后无法调用电话簿的联系人记录，需要手工输入被叫号码，不方便，那200分钟国际长途几乎没用完过。加上每月10美金的固定开销，于是放弃。因为我从来没用过联通的手机，所以也没有尝试沃信。现在使用 Jego，虽然也是VOIP的一种，但是不论主叫还是被叫，通话质量都非常不错，语音清晰，也感觉不到延迟。另外一个好处是，加入了亲情计划或者企业短号的移动号码，短号依然可用。现在国内的亲戚朋友，仍然可以只拨3个数字就拨通电话，而通话也归到亲情计划的分钟数内，免费通话。&lt;/p>
-&lt;p>之前不了解这些电话服务，选手机都只考虑双卡双待，现在完全没有必要了，只要是个智能手机都能正常安装应用，接听国内号码来电。从这点来说，也能看到国内电信三巨头正在谋求改变。虽然受限于国内通信管制，在国内没有什么亮眼的服务，但是一旦跑到自由市场经济的环境中，也在积极探索新鲜事物。只求国内的环境也能早点向正面的、积极的方向发展。&lt;/p></description></item></channel></rss>
+&lt;p>谢谢有BLOG相陪的十年。。。&lt;/p></description></item></channel></rss>
