@@ -1,11 +1,4 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>手机 on Palfans's BLOG</title><link>https://www.palfans.net/tags/%E6%89%8B%E6%9C%BA/</link><description>Recent content in 手机 on Palfans's BLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 14 Nov 2015 06:24:00 +0000</lastBuildDate><atom:link href="https://www.palfans.net/tags/%E6%89%8B%E6%9C%BA/index.xml" rel="self" type="application/rss+xml"/><item><title>Oneplus One （一加手机）加密后如何升级系统</title><link>https://www.palfans.net/how-to-upgrade-encrypted-oneplus-one/</link><pubDate>Sat, 14 Nov 2015 06:24:00 +0000</pubDate><guid>https://www.palfans.net/how-to-upgrade-encrypted-oneplus-one/</guid><description>&lt;p>一年多以前从红米换成一加Oneplus One 64G版本，高通骁龙801的CPU，2G的运存，使用很顺手，终于体验了一把旗舰机的感觉。一加公司比较厚道，机器可以很轻松的通过&lt;a href="http://www.wugfresh.com/brt/">Bacon Root Toolkit&lt;/a>工具一键解锁和Root。&lt;/p>
 &lt;p>因为公司邮件系统的强制安全策略，所有接入系统的移动终端都会要求加密，但是一加国内版用的是ColorOS系统，加密功能貌似被取消了，而国际版的CyanogenMod系统却能正常加密，毫不犹豫刷成CM并成功加密。&lt;/p>
 &lt;p>但是问题来了，CM系统更新非常频繁，经常收到OTA升级通知，每次点击更新会在下载完升级包之后重启到Recovery的机器人界面，然后升级失败，怎么回事？&lt;/p>
-&lt;p>&lt;img src="https://res.palfans.net/img/OnePlusOneAndroid5.1.1LollipopCyanogen.jpg" alt="">&lt;/p></description></item><item><title>QQ开全套服务</title><link>https://www.palfans.net/full-service-of-qq/</link><pubDate>Sun, 07 Jan 2007 10:07:13 +0000</pubDate><guid>https://www.palfans.net/full-service-of-qq/</guid><description>&lt;p>花1毛钱在淘宝上购的qq全套服务秘笈。没试，贴上来。&lt;/p>
-&lt;blockquote>
-&lt;p>准备一张余额不多的手机卡最好是移动动感地带的。以下服务请一次性开完qq全套
-红钻 发送qqf到170035，然后发送qq号码#qq密码到170035617，绑定红钻到指定qq号上
-蓝钻 发送qqy到1700341，然后发送qq号码#qq密码到17003417，绑定蓝钻到指定qq号上
-黄钻 发送qqh到170035，然后发送qqh#qq号码到170035813，绑定黄钻会员发送55到1700，然后发送55#qq号码#qq密码到1700501000
-&lt;a href="http://love.qq.com/regist_1.shtml">&lt;del>http://love.qq.com/regist_1.shtml&lt;/del>&lt;/a>，到这个网站，登陆上要开得qq，选择成为高级用户，然后选择手机支付，填入你手机号码按照系统提示做既可。这个是高级交友的&lt;/p>
-&lt;/blockquote></description></item></channel></rss>
+&lt;p>&lt;img src="https://res.palfans.net/img/OnePlusOneAndroid5.1.1LollipopCyanogen.jpg" alt="">&lt;/p></description></item></channel></rss>

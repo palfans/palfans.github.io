@@ -204,7 +204,7 @@
 访问 &lt;code>&amp;lt;web 代码库&amp;gt;/settings/keys/new&lt;/code>，将 &lt;code>gh-pages.pub&lt;/code> 内容复制到 &lt;code>Key&lt;/code> 中，&lt;code>Title&lt;/code> 随意，需要勾选 &lt;code>Allow write access&lt;/code>。
 访问 &lt;code>&amp;lt;web-code 代码库&amp;gt;/settings/secrets/actions/new&lt;/code>, 将 &lt;code>gh-pages&lt;/code> 内容复制到 &lt;code>Value&lt;/code> 中，&lt;code>Name&lt;/code> 为 &lt;code>DEPLOY_TOKEN&lt;/code>。&lt;/p>
 &lt;h3 id="提交代码">提交代码&lt;/h3>
-&lt;p>将更新的日志提交到 &lt;code>web-code&lt;/code> 代码库的 &lt;code>main&lt;/code> 分支，推送到 GitHub，就会自动触发编译发布。新版本的 Action 脚本不再使用 docker 构建编译环境，一般只需要 20 秒钟就能在自定义的域名看到新增的日志。&lt;/p></description></item><item><title>第三年了</title><link>https://www.palfans.net/the_third_year/</link><pubDate>Wed, 20 Apr 2022 11:48:24 -0500</pubDate><guid>https://www.palfans.net/the_third_year/</guid><description>&lt;p>已经第三个年头了，什么时候是个头？！&lt;/p></description></item><item><title>通过 VPN 远程办公</title><link>https://www.palfans.net/work_from_home_via_vpn/</link><pubDate>Fri, 19 Mar 2021 10:42:24 -0500</pubDate><guid>https://www.palfans.net/work_from_home_via_vpn/</guid><description>&lt;h2 id="需求">需求&lt;/h2>
+&lt;p>将更新的日志提交到 &lt;code>web-code&lt;/code> 代码库的 &lt;code>main&lt;/code> 分支，推送到 GitHub，就会自动触发编译发布。新版本的 Action 脚本不再使用 docker 构建编译环境，一般只需要 20 秒钟就能在自定义的域名看到新增的日志。&lt;/p></description></item><item><title>通过 VPN 远程办公</title><link>https://www.palfans.net/work_from_home_via_vpn/</link><pubDate>Fri, 19 Mar 2021 10:42:24 -0500</pubDate><guid>https://www.palfans.net/work_from_home_via_vpn/</guid><description>&lt;h2 id="需求">需求&lt;/h2>
 &lt;p>作为一名实施人员，通常情况下需要通过各种 VPN 连接到公司和客户的工作环境来完成任务。尤其是疫情的影响，完全在家工作，对 VPN 的利用就更重了。&lt;/p>
 &lt;p>但是，VPN 装多了，各种虚拟网卡驱动相互之间不一定能好好兼容，即使是 Windows 10 也很容易蓝屏，要是不幸发生在工作过程中，尤其是更新生产系统，那就有得事情做了。&lt;/p>
 &lt;h2 id="解决方案">解决方案&lt;/h2>
@@ -834,18 +834,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">--&amp;gt; Finished Dependency Resolution
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>终于又看到黑色的终端。&lt;/p></description></item><item><title>不能不同意的知乎隐私政策</title><link>https://www.palfans.net/zhihu_privacypolicy/</link><pubDate>Sun, 29 Apr 2018 03:05:45 +0000</pubDate><guid>https://www.palfans.net/zhihu_privacypolicy/</guid><description>&lt;p>最近知乎上线了一个新功能，打开任何问答页面，都会弹出一个隐私政策对话框，你有同意或者不同意两个选择，但是，如果你想继续阅读内容，不同意是不行的。&lt;/p>
-&lt;p>&lt;img src="https://res.palfans.net/img/zhihu_privacypolicy.gif" alt="">&lt;/p>
-&lt;p>那知乎都想拿些什么东西呢？大致看了下，各种社交信息，身份证号以及手机设备号等等只要能弄到的隐私信息，知乎都想要。而且，它不会“主动”公开披露和转让隐私，但没说它不会公开披露和转让隐私。这个就比较尴尬了。&lt;/p>
-&lt;p>不是很理解知乎想干什么，打算做个隐私贩子？&lt;/p>
-&lt;p>不过目前有可用的方法在不点击同意按钮的前提下，强制跳过这个窗口，已测试，好使。&lt;/p>
-&lt;blockquote>
-&lt;h3 id="zhihu_blockprivacypolicyhttpsgithubcomqinggozhihu_blockprivacypolicy">&lt;a href="https://github.com/QingGo/zhihu_blockPrivacyPolicy">zhihu_blockPrivacyPolicy&lt;/a>&lt;/h3>
-&lt;p>破解知乎网页端不同意隐私协议就没法用的油猴脚本。&lt;/p>
-&lt;p>The Tampermonkey script to block privacy policy of the web site Zhihu.&lt;/p>
-&lt;p>用法：安装油猴插件，然后新建油猴脚本。把“zhihu_blockPrivacyPolicy.js”里的内容复制进去保存即可。&lt;/p>
-&lt;p>Usage: Install Tampermonkey Browser plug-in, then create a new Tampermonkey script. Copy the contents of &amp;ldquo;zhihu_blockPrivacyPolicy.js&amp;rdquo; into the script and save it.&lt;/p>
-&lt;/blockquote></description></item><item><title>禁用 screen 的动态标题功能</title><link>https://www.palfans.net/disable_screen_dynamic_title_feature/</link><pubDate>Thu, 22 Mar 2018 21:10:38 +0000</pubDate><guid>https://www.palfans.net/disable_screen_dynamic_title_feature/</guid><description>&lt;p>GNU screen 是 Linux 上面一个非常有用的程序。它默认启用了窗口动态标题的功能，每次切换目录时，会自动用当前目录的全路径作为窗口的标题。一般情况下，这个功能很贴心，但有时候路径很长，窗口名的 tab 会显示不全而陷入混乱，我们只需要一个简明扼要的自定义标题来区分不同的窗口。&lt;/p>
+&lt;/div>&lt;p>终于又看到黑色的终端。&lt;/p></description></item><item><title>禁用 screen 的动态标题功能</title><link>https://www.palfans.net/disable_screen_dynamic_title_feature/</link><pubDate>Thu, 22 Mar 2018 21:10:38 +0000</pubDate><guid>https://www.palfans.net/disable_screen_dynamic_title_feature/</guid><description>&lt;p>GNU screen 是 Linux 上面一个非常有用的程序。它默认启用了窗口动态标题的功能，每次切换目录时，会自动用当前目录的全路径作为窗口的标题。一般情况下，这个功能很贴心，但有时候路径很长，窗口名的 tab 会显示不全而陷入混乱，我们只需要一个简明扼要的自定义标题来区分不同的窗口。&lt;/p>
 &lt;p>一个临时的解决方案是在当前窗口中运行 “unset PROMPT_COMMAND”。因为 bash 通过变量 PROMPT_COMMAND 将定制的路径内容传递给 screen，把这个变量 unset 窗口名就不会再变化。如果想默认禁用这个功能，可以把这条命令加入当前用户的 ~/.bashrc，这样所有新开窗口都会生效。&lt;/p>
 &lt;p>禁用动态标题后，只需要 ctrl + a + A 就能自定义窗口名。&lt;/p></description></item><item><title>Kodi 通过 SMB 连接远程 Win 10 失败</title><link>https://www.palfans.net/kodi_cannot_access_win10_via_smb/</link><pubDate>Thu, 15 Mar 2018 21:03:12 +0000</pubDate><guid>https://www.palfans.net/kodi_cannot_access_win10_via_smb/</guid><description>&lt;p>我同时在 Win 10 和 Android 平板安装了 Kodi，通过 SMB 连接到家里的 Win10 NAS 视频媒体库。之前工作正常，这两天突然发现 Android 平板连不上，每次设置好用户名密码就报连接超时（Connection Timed Out），但 Win 10 平板依然正常。&lt;/p>
 &lt;p>上网搜索一圈，在 Kodi 的&lt;a href="https://kodi.wiki/view/SMB/Windows">官方维基&lt;/a>找到了答案。貌似 Win10 在某次自动升级以后，默认关闭了 SMB 1.0/CIFS File Sharing Support 的功能，需要重新手动打开。&lt;/p>
@@ -854,52 +843,7 @@
 &lt;p>在 Windows 功能中找到 SMB 1.0/CIFS File Sharing Support 并激活，Windows 会安装相应的文件。重启 Win10 之后，就能重新支持 Kodi 采用的旧版 SMB 协议。&lt;/p>
 &lt;p>&lt;img src="https://res.palfans.net/img/OptionalFeatures_2017-11-14_08-24-53.png" alt="">&lt;/p>
 &lt;p>再次打开 Android 平板的 Kodi，通过 SMB 连接就能打开远端的媒体库了。这个问题并没有出现在 Win10 平板的 Kodi 中，估计因为 Android 版本还没有支持 SMB 2.0。&lt;/p>
-&lt;p>伴随 Win10 自动升级还有另外一个坑在等着 Kodi。SMB 协议问题解决后，输入正确的 Outlook 账号也不能成功连接到远端 NAS的共享文件夹。解决方法是，升级后的 Win10 文件共享不能使用邮箱作为用户名了，需要登录到 Win10，打开 CMD 窗口，输入 whoami，会列出当前的机器名和用户名。使用这个用户名和对应的 Outlook 账号密码就能成功打开共享文件夹。&lt;/p></description></item><item><title>学什么都救不了中国人</title><link>https://www.palfans.net/nothing-can-rescue-chinese/</link><pubDate>Fri, 28 Jul 2017 15:45:01 +0000</pubDate><guid>https://www.palfans.net/nothing-can-rescue-chinese/</guid><description>&lt;p>Github的科学上网界出了件恶心的事情，有人号称“为了正义”，泄漏作者信息，最后该作者认怂，删除所有代码。我从头到尾围观了整件事情，一股深深的无力感挥之不去。鲁迅当年说，学医救不了中国人。其实，学什么都救不了中国人。
-想起当年看过的一篇由PSP破解引申开的文章，本质挺契合的。我感觉，可能中国心态最好的一群人，都聚集在草榴社区了。&lt;/p>
-&lt;p>由psp破解谈到中国伸手党式网民的心理
-出处：不详&lt;/p>
-&lt;p>如果仔细说起PSP为什么会在中国流行，大概可以列出不下一千种理由。可千言万语说到归齐，没有破解的PSP肯定无法成为影音游戏通吃的装X利器，也不会在街头巷尾地铁公交里成为装机量第一的掌上设备。稍微对PSP熟悉一点的人可能都知道，PSP在2000型之前的时代有着各种美好，所有的自制软件和破解都畅通无阻。后来SONY的CEO来了一趟中国，看到比日本专卖店规模还大的水货电玩批发之后就回去痛下决心，彻底整改PSP的主板构架，愣是把这机器的破解漏洞给堵上了。导致PSP3000型苦等半年多才等到一个软件漏洞破解。随后就是硬件厂商和破解黑客们之间的战斗，你升级固件，我升级自制软件，你来我往不亦乐乎。&lt;/p>
-&lt;p>让时间回拨到一年前，2010年1月最后两天，SQUARE ENIX的PSP大作《王国之心 梦中诞生》发售，这个使用了新升级文件的游戏让所有拿着PSP等破解的玩家傻了眼。游戏的特殊构造让目前的自制系统无法运行ISO文件。此时最早开发破解 固件M33的大神Dark Alex早已退隐，百分之九十九的玩家都在使用GEN小组的自制系统。&lt;/p>
-&lt;p>所有人都希望能有人出现破解掉这个游戏，让自己能玩到最新最快的PSP新作。&lt;/p>
-&lt;p>实现这个愿望的并不是国外黑客，而是一名国内的自制软件制作者。在这之前我们用盗版的时候虽然总不忘自夸一句我国人民勤劳勇敢什么的，但其实心里都明白，大部分破解高手集中在德国和俄罗斯，历代游戏主机的破解都跟国人没有半毛钱关系。只是我们宁愿相信群众的力量无穷大，相信茫茫人海中总会有人站出来解决这个问题——反正肯定不是摇旗呐喊的自己就行。&lt;/p>
-&lt;p>这个人的ID已经不用复述，在高调开贴声称自己要破解《王国之心 梦中诞生》后，他的帖子点击率和回复都达到了一个前所未有的高度。有的人认为他是哗众取宠，有的人从PSP游戏文件构成分析这件事儿的难度，也有人更直接 地冷嘲热讽……然后在大约一周后，他放出了在游戏中开启金手指软件的截图，游戏破解成功。&lt;/p>
-&lt;p>十天后，他放出了破解傻瓜包。&lt;/p>
-&lt;p>几周后，他放出了可以直接玩更高版本系统下游戏的自制固件。&lt;/p>
-&lt;p>于是所有的质疑和讽刺都化作此起彼伏的赞扬，他的帖子被标红，他的破解让外国玩家也不远万里过来注册，他的名声传遍了世界，他的ID被尊称为大神，就像曾经带给PSP破解最佳思路的Dadk Alex一样。&lt;/p>
-&lt;p>只是很少有人能记得，DA在没有开发M33后续固件后，论坛上那些质疑和嘲讽的声音，甚至有人跑到DA的国外官方论坛上叫骂。那些帖子和言论随着时间沉入系统深处，却没能沉淀出伸手党们平静的心态。&lt;/p>
-&lt;p>历史总是惊人地相似，这位曾经被称为国人骄傲的“大神”，在成功开发出两代自制固件，破解掉许多新游戏之后，也遭遇了相似的一幕。&lt;/p>
-&lt;p>是个玩PSP的都知道《怪物猎人3P》要在2010年的12月1日发售，既是为了纪念《怪物猎人》系列周年庆，也是为了让软件商的年度财报好看一些。对于这款在中国和日本都有着极高人气的游戏，每个粉丝都热切期盼着。&lt;/p>
-&lt;p>在《怪物猎人3P》发售前一周，“大神”发帖表示破解毫无压力。目前自制固件无法运行该游戏，但他可以通过一些改进搞定一切。&lt;/p>
-&lt;p>接下来的精彩，超过的最初所有人的想象。&lt;/p>
-&lt;p>“大神”有一个习惯，必须等到游戏发售一周后公布销量才发布破解。《怪物猎人3P》偷跑数日，各大论坛上憋着等下载的人数概超过了六位，帖子里各种惨嚎和胡言乱语不计其数。不负众望的“大神”用数小时即完成了《怪物猎人P3》的破解，随后宣布可以先给各大汉化组，以便汉化组能够尽快让大家玩到汉化游戏。&lt;/p>
-&lt;p>事实证明，这个世界上最美好的只有愿望。当时得知“大神”已经破解了《怪物猎人3P》的伸手党们本已躁动不安，有人说这搞破解的在装X，有人说他是为了赚取眼球和点击率，当然还有更难听的，总之人性的各种精彩就在这一刻被表现得淋漓尽致。在变了味的网络喧嚣中，这个故事忽然急转直下。&lt;/p>
-&lt;p>“大神”私下给出的破解补丁被自己熟悉的一位论坛版主泄露出去了，于是大部分支持的声音瞬间变成了声讨——凭什么你能给他却不给我们玩？更有甚者，人肉出了“大神”的个人信息要发布出去。威胁到了现实生活的“大神”惟有选择退出PSP破解界，从此消失在众人的视线中。&lt;/p>
-&lt;p>在离开网络之前，他发布了还在完善中的新自制固件，并留下了无奈的留言——“看在我让你们玩了这么多新游戏的份上，让我安静的离开吧。”&lt;/p>
-&lt;p>当国外PSP破解黑客得知这位东方同行退出之后，几乎在第一时间发表了遗憾的声明，甚至他们也承认这同道中人才是“有史以来最好的PSP破解黑客”。但这一切已无法挽回，《怪物猎人3P》破解了，而付出这样代价是任何人都始料未及的。&lt;/p>
-&lt;p>广告商人继续卖UMD，该玩盗版的继续玩盗版，BBS上的管理员在打扫过论坛之后，关于这件事前前后后的就算是结束了，一切都如未曾发生。可谁也不知道下一个破解PSP新游戏的人在哪里，谁也不知道下一次又有谁要遭受网络冷暴力。一个一个汉化组成立又解散，一次又一次的攻讦和辱骂。有时候那些继续坚持互联网共享精神的人们也忍不住要问一句。&lt;/p>
-&lt;p>大爷们，你们到底想怎样？&lt;/p>
-&lt;p>从来就没温暖过&lt;/p>
-&lt;p>我国玩家的尴尬早已不是一天两天的事了，这样一个不允许电子游戏机成为进口商品的国家里想要玩游戏需要付出很多曲折的代价。面对没有官方中文版和游戏首发必然不会到货的环境，网络共享发布和汉化一直是游戏圈最受关注的两个群体。而我们通常会把那些下载免费游戏的人称为伸手党——这没什么侮辱的意思，就和字面上的意思一样，大多数玩家付出的无非就是下载的时间和点几下鼠标而已，他们可能未曾想过别人付出什么样的艰辛。
-最容易受到诟病的当然还是汉化组，游戏的汉化组和影视作品字幕组还不太一样。一般来说一个游戏的汉化过程都漫长又痛苦，除非特别有爱也没什么人会去做这件事。遗憾的是就算这么单纯的工作，一样有人不断表现出各种大爷丰采。&lt;/p>
-&lt;p>“《XXX》的汉化怎么还没开始？汉化组的人都.去了吗？”
-“你们说要汉化《XXXX》都已经快四个月了，怎么还没有截图放出！”
-“垃圾，这汉化也太垃圾了！”
-“为什么没有人汉化《XX》，赶快来人开坑啊！”
-…………&lt;/p>
-&lt;p>这也是为什么许多汉化组面对外人询问工作进度时态度不怎么好的主要原因——大家只是在网络上做白工而已，忽然凭空多出这么多视察工作的.，谁的心情也不会太好。而且大多数不顾别人感受胡言乱语的人反倒不会认真去体验别人的汉化作品，他们这么做通常只是因为网络上问句话没有成本而已，就像他们下载那些别人放出的游戏和汉化补丁那样。在这间或里即使有许多真挚的感谢，也被淹没在各种责问之中了。很多人可能一辈子都没怎么被人尊重过，因此也不懂得怎样尊重别人。&lt;/p>
-&lt;p>这样的无理取闹导致大多数汉化组行事低调，哪怕发布新版本汉化补丁也战战兢兢，生怕惹恼了大爷们招来不知道多少叫骂和喷贴。不管是错字、延期还是有了死机BUG，总免不了要被人喷上一番。以至于后来许多搞汉化的都是做一票就走，搞完项目就宣布解散，免得被人整个团队一起喷。&lt;/p>
-&lt;p>有的人说反正汉化组那么多，喷跑几个心理素质差的，还会有人继续干这个活儿。可这帮人不知道破解领域就那么几个能人，有人跑去DA的论坛喷他，有人在GEN小组的留言板上刷屏，也有人各种喷国内破解的大神……这些人绝大多数是因为被他们喷的人才玩到的新游戏，他们很容易就忘记了这一点，正如他们希望别人善待自己，但自己完全不懂如何善待别人。&lt;/p>
-&lt;p>我们的社会怎么了&lt;/p>
-&lt;p>常听人说起说一个道理：那就是你对某个人好，就得一直好下去，只要有一次不够好，以前所做的各种努力可能都会付之东流。说这话的人肯定对人性有相当程度的了解，他也一定经历过什么惨痛的教训。&lt;/p>
-&lt;p>在很多时候，做破解也好，做软件共享也好，或者搞汉化也好，都面临这样一种窘境。你做得好就是几声赞扬，你做不好了马上质疑谩骂狼烟四起。这就好比许多软件常年免费，忽然有一天收钱了，我们愤怒又失望地骂了一万句，这才记起来，按照这个世界的规矩其实本来就该收钱。只是我们享受了太多优待，把这优待当成了常态。&lt;/p>
-&lt;p>其实没有什么事是真正应该的。比如几年前有个台湾人宣布独立汉化《皇家骑士团2》的SFC版，但不外流。唯一要求就是申请汉化补丁的人答应不要外泄，同时附上自己手中正版《皇家骑士团2》卡带的照片三张。这要求其实不算过分，也比较符合台湾玩家尊重正版的习惯。遗憾的是国内大部分玩家并没有SFC的卡带，移植版的PS和SS的正版光盘更不用说了。&lt;/p>
-&lt;p>于是觉得无望拿到补丁的玩家纷纷登陆那个人所在的论坛，各种破口大骂，极尽诋毁之能事。当然骂完人家照例是不给补丁的，只是那些留言让彼岸的玩家又低看了内地玩家一次。&lt;/p>
-&lt;p>大概所有人都能记得那些汉化、字幕还和共享软件上都会标明是以研究和学习为目的，并不是用于商业用途，请于24小时内删除等等。这些字眼本身就已经是阐述互联网共享的基本态度，一切都应该以发布者的决定为主，因为我们只是些伸手党。可偏偏有人就是想当发布者的主人，冀望于骂几句之后改变别人的意见。没错他们是改变了，他们让更多的人学会了珍惜生命，远离破解和汉化。&lt;/p>
-&lt;p>其实这种事远远不止发生在游戏圈，笔者一个朋友家境不错，为人又古道热心，开了一家桌游店。经常有人电脑坏了打电话问他该怎么办，他说如果是小问题你就直接拿来修吧。那边的人就问要多少钱，他说一般情况下不会收钱。然后电话那边的人往往沉吟片刻，说好吧我再想想就挂了电话。这位朋友就不太明白，免费修电脑什么的为什么会让人那么犹豫。后来经旁人之口才知道，原来很多人已经不相信有素不相识的人可以免费帮别人忙这种事发生了，在他们看来这个社会上的每一次举手之劳都要明码标价，否则就有更深的阴谋。&lt;/p>
-&lt;p>我想这也是很多人面对破解、汉化和游戏共享发布等情况时的内心真实写照。对于社会大环境的怀疑，对于他人目的的揣测和出于自身的不成熟造就了众多的网络喷子，在一个不必担心责任问题的地方指责别人的确是一件爽快的事。更重要的是网络冷暴力所造成的后果往往难以追查，毕竟法不责众，犯错的是一批人而不是一个人。这个责任无法落实到谁头上去。&lt;/p>
-&lt;p>我们所向往的自由&lt;/p>
-&lt;p>自由宣言里对自由的定义是“在不伤害别人的前提下，你所做的一切都是正确的”。遗憾的是很少有人在发表自己看法时能够想起这句定义。在网络这个目前最开放的平台上，许多人努力寻求自由，却借着自由之名做着无尽伤害他人的事。这就像往往我们渴望公平，又希望自己拥有并利用那些不公平的力量；我们渴望尊重，却总在话里话外表现出对他人的不尊重；我们渴望得到而很少付出，却总在抱怨别人付出的太少……我们所做的一切，并不是自由，只是在扼杀自由所带来的种种可能而已。&lt;/p>
-&lt;p>我们对互联网最大的贡献，不过是我们每个人都是一个普通用户而已。而我们如果还想让这个世界更繁荣快乐一些，对别人的肯定和宽容是不是更重要呢？文章开头提到的那位在国内被称为“大神”的网友在《寄生前夜 第三次生日》破解遇到瓶颈后又一次出现，玩家们又一次玩到了最新的免费游戏。经过失去再度拥有，让很多人的改变了自己的言论。这不禁让我想起当Dark Alex宣布自己退出破解界不再研发自制系统的时候，在中文论坛里看到那许多叫嚣着“DA大神已经不行了”，“快滚吧，那么久都不更新系统”的声音。在这些Dark Alex看不懂的中文帖子里，我小心翼翼地写上“感谢你这么多年来的辛勤工作，让我们玩到了那么多好游戏”这样一句话。今天我在这里又一次说出来，觉得这样的话每一个字都没有错，并认为这才是对互联网共享精神最大的尊重。&lt;/p></description></item><item><title>租租车的国际驾照认证件能用吗？</title><link>https://www.palfans.net/does-zuzuche-idp-work/</link><pubDate>Fri, 30 Jun 2017 19:24:04 +0000</pubDate><guid>https://www.palfans.net/does-zuzuche-idp-work/</guid><description>&lt;p>&lt;img src="https://res.palfans.net/img/zuzuche_idl.jpg" alt="">&lt;/p>
+&lt;p>伴随 Win10 自动升级还有另外一个坑在等着 Kodi。SMB 协议问题解决后，输入正确的 Outlook 账号也不能成功连接到远端 NAS的共享文件夹。解决方法是，升级后的 Win10 文件共享不能使用邮箱作为用户名了，需要登录到 Win10，打开 CMD 窗口，输入 whoami，会列出当前的机器名和用户名。使用这个用户名和对应的 Outlook 账号密码就能成功打开共享文件夹。&lt;/p></description></item><item><title>租租车的国际驾照认证件能用吗？</title><link>https://www.palfans.net/does-zuzuche-idp-work/</link><pubDate>Fri, 30 Jun 2017 19:24:04 +0000</pubDate><guid>https://www.palfans.net/does-zuzuche-idp-work/</guid><description>&lt;p>&lt;img src="https://res.palfans.net/img/zuzuche_idl.jpg" alt="">&lt;/p>
 &lt;p>这两天看到微信朋友圈里在宣传租租车可以免费办理国际驾照认证件（&lt;a href="http://w.zuzuche.com/tidl/">链接&lt;/a>），号称香港公证行和NAATI联合翻译认证，9国语言，权威认证，畅行全球200个国家，包括美国、加拿大、澳大利亚、以及英德意等欧洲国家。脑中升起一个问号，真是这样的吗？&lt;/p>
 &lt;p>上网搜了一下，这本认证件全名叫Translation of International Driver License，由租租车和International Driving Club联合推出。它自己的说明页明确指出，该认证件根据《联合国道路交通公约》，严格按照国际标准将中国驾照翻译成9国语言，支持超过200个国家和地区租车、取车。&lt;/p>
 &lt;p>看起来好像很正规。但是，这里我发现一个问题。它声称自己的法律依据是《联合国道路交通公约》，那就看看这个公约到底是什么。&lt;/p>
@@ -955,16 +899,7 @@ Applicants who have a valid, unexpired driver license from another U.S. state, U
 &lt;li>现金都比支票安全，上面不会印着你的账户信息、姓名、住址和电话。&lt;/li>
 &lt;li>定期对账很有必要，如果这次不是常规对账，我根本不可能发现对方采用的每次几十美金小额支付的细水长流的盗窃手法。&lt;/li>
 &lt;li>银行的挂起账户功能一定是华人产品经理设计的，才会如此的偏好“8”。&lt;/li>
-&lt;/ol></description></item><item><title>遭遇妊娠糖尿病</title><link>https://www.palfans.net/encounter-gestational-diabetes/</link><pubDate>Tue, 06 Jun 2017 04:19:43 +0000</pubDate><guid>https://www.palfans.net/encounter-gestational-diabetes/</guid><description>&lt;p>家里领导怀二宝，结果很不幸运被诊断为妊娠糖尿病。于是领导花了一些时间研究下到底什么是妊娠糖尿病。马上due date就要到了，我把这段生活摘录下来，以作纪念。&lt;/p>
-&lt;p>自从我被诊断妊娠糖尿病后，发现很多朋友都不清楚这个病的具体含义，以为就是普通的孕妇血糖偏高，所以说说我自身的体验，没机会得的该庆幸，还有机会得的我只能说祝好运。&lt;/p>
-&lt;p>首先，从我目前查到的各种资料显示，妊娠糖尿病不能完全被预防，跟你孕前及孕中的饮食结构没有绝对的关系，虽然体重、饮食、运动都有可能影响（家族史就不说了，那没法抱怨），但具体到我，显然都不是，就算是运气不好吧。&lt;/p>
-&lt;p>其次，国内（至少重庆）一般要求在孕24周时做两小时血糖测试，得到空腹、喝糖水后一小时和两小时共三个结果，如果只有一个值高，就是通常意义上的血糖偏高，医生大多要求自行回家控制，之后复查，如果通过，就不算是妊娠糖尿病。如果是两个或以上值高，才会诊断为妊娠糖尿病。所以其实大家一般提到的血糖不过，大部分是这种情况，很轻松。但美国，是在26-28周时才做这个检查，因为他们认为，越临近28周才是结果最准确的时间点，之前有可能发现不了或误判。我是27周零2天做的一小时检测，不用空腹，直接测量喝糖水后一小时的值。我当然是高了，但还不足以高到直接判定妊娠糖尿病，于是拿到结果第二天（27周6天），我被安排做三小时检测，就是比国内检查多一个喝糖水后三小时的值。检测前晚，我在网上查到很多人想办法作弊通过，例如要求医生在26周之前查血糖，或者在检查前一周就开始控制饮食，又或在检查当天喝完糖水后快步走二三十分钟帮助代谢，前两种办法我已没法适用，又自以为是的想了解真实的身体状况，所以喝糖水后基本是一动不动的坐在那里等着抽血，事实证明，我为这个真实可算是付出了代价。最后，我就被华丽丽的通知除了空腹值正常，糖水后的三个值全超了，正式确诊为妊娠糖尿病，一般人即便被确诊也只超两个，这可能就是我之后控制也更困难的原因。&lt;/p>
-&lt;p>被确诊后，再见我的医生时，他问我，知道这个病的危害吗，如果只是会生一个体重高于9磅（约等于4kg）的孩子有什么关系呢，特别我又不是顺产，而且中国人不是都偏爱胖宝宝吗？但其实危险的问题是，对于孕妈妈而言，虽然很多人在生产后恢复，但也比正常人增加30-40%的几率在老年后得慢性糖尿病，而且大概50%的糖妈妈在生产后五年之内就会得糖尿病，对我这种爱甜品面食的人来说将是多么生无可恋！对于未出生的孩子来说，有可能因为长期处于高血糖环境而造成胎死腹中、产后低血糖以及先天性糖尿病，虽然都是极端情况下最坏的结果，但落在自己身上不就是100%吗。即便什么都没发生，我和这个孩子的病史上从此都会增加一条，曾经得过妊娠糖尿病，以后也许就是其他疾病的依据。这让我想起初高中班主任经常威胁我们的话，某个坏事是坏到足以记入档案跟随你一辈子的哦，想想就心塞……&lt;/p>
-&lt;p>如前所述，绝大部分血糖不过的情况是只超一个指数，并不会被诊断为该病，通常在妇产科医生那里就能处理了，而且因为症状轻微，稍加控制一般复查时也就通过了。但像我这种被正式诊断的就必须交给营养师来处理，国内好像就是医院的营养科。而美国因为都是私立机构，相互独立，所以我被推介去的是一个专门的糖尿病康复中心。那里的工作人员最高级别也只是注册的护士，不具备医师资格，没有处方权。确诊后，妇产科医生就把我的资料传给这个中心，由他们直接来联系我辅导上课和复诊的时间。这通常是一次三小时的辅导以及一次复诊，但我又因为情况特殊，追加了一次复诊。前两个小时主要是讲解这个病的原理等背景知识，制定我每天查血糖的具体程序，如何使用血糖仪，以及出现低血糖的处理。图五就是我日常方便携带出门的设备，包括免洗消毒液、血糖仪、试纸、扎指头的注射器以及替换针头。很多人觉得每天四次扎指头是最痛苦的，但其实跟医院里直接拿针头靠自己下手区别很大。那个黑色的注射器有一个弹簧把针头推入，深度可以自己调节，反正能挤出血就行，所以痛感不算强烈，相比饮食、运动和每次的指数正常来说，这是最可以忽略和忍受的部分。我每天空腹和三餐之后两小时分别监控血糖，空腹要求起床后立即查，最好不要活动身体，我有一次洗脸漱口之后再查，指数都比往常高；餐后两小时是指从开始吃饭起算，而不是吃完之后，为了留有足够的时间饭后休息、运动以及冷静情绪（气喘吁吁的查血糖一般也会偏高），但又要细嚼慢咽，我一般吃饭时间都控制在20分钟左右。&lt;/p>
-&lt;p>最后一小时才是真正的重头戏，教我怎么吃，吃多少。首先把食物大致分为碳水化合物（包括所有奶制品及豆浆，水果，主食，含淀粉的蔬菜）、蛋白质（各种肉类、鸡蛋、坚果和芝士）、脂肪、不含淀粉的蔬菜。虽然一般饼干、面包、蜂蜜、糖果等零食以及果汁和含糖饮料肯定是完全杜绝，但我必须严格控制的其实主要是碳水化合物的摄入量，不能多不能少，所以在给我的饮食手册上以15克为单位标注了每种常见食物的碳水化合物含量，如果漏掉的就读包装上的标签来计算。其实这个营养标签国内外食品包装都有，但我从未留意过，现在成了我买和吃任何食品的先决条件，没有标签的如水果就参照重量用称来称。具体到我的饮食计划就是图五，每天三餐三点，从早上七点到晚上十点，每三小时一次，不管饱或饿，一顿都不能漏。原始计划上规定我早餐和宵夜各吃30克糖水化合物，早点和午点各吃15克，中餐和晚餐是45克，全天一共180克，每餐都必须同时包括蛋白质，这有利于增加饱腹感以及平衡血糖水平。除此以外，蛋白质、脂肪和不含淀粉蔬菜是不限量的，随便吃。另外要求我每天必须有三十分钟的快步走。刚开始听完，我觉得好宽松，其实大部分食物都可以吃，好多还可以随便吃，运动量也不大，我一下觉得如释重负，但事实证明，这个对大部分人有用的计划在我身上没用，这就是造成我二次复诊的原因。&lt;/p>
-&lt;p>妊娠糖尿病的原理是因为怀孕过程中的激素分泌阻止了人体正常的胰岛素分泌，标准的自己跟自己对抗，而且孕程不同，阻止作用也有大有小。所以即便我如此严格饮食，轻易不敢尝试新的种类，但指数还是经常飘忽不定，于是运动成了我唯一还能努力的方向。虽然营养师只要求我每天总共快走三十分钟，而且不分时间，不分次数，但我在被确诊妊娠糖尿病之前就基本保持了每天六十分钟的运动量，可见这对我也明显不够。于是我先是把时间延长到九十分钟，分别在午饭和晚饭前完成，因为早上和中午要接送Larry 上下学，晚饭后又要收拾厨房，没有其他更合适的空档。这确实成功了一段时间，但很快空腹血糖就开始飙高了，于是我又调整，晚饭前变成晚饭后，回来再收拾厨房。可每当我气喘吁吁走回来，看到家里一大一小明明已经错过了小朋友的洗澡睡觉时间，不是还凑在一起玩游戏，就是为了洗澡吵架时，内心真是崩溃的。又调整，六顿餐点每餐之后在家里快走十到三十分钟，视大小餐而定，既兼顾家里的杂事，又不用一次走得太累。&lt;/p>
-&lt;p>于是我每天的作息是这样的：早上六点四十准时起床，先测血糖，之后准备自己的早饭，保证在七点准时吃到第一口。十五到二十分钟吃完，休息片刻开始走路十到十五分钟。通常这时候Larry 同学也起床了，我在自己吃饭和走路的空档里准备好他的早饭，督促他自己乖乖吃。八点左右完成走路，开始准备朱先生和Larry 的中饭，过程中催促他们赶紧洗脸漱口换衣服，保证在八点三十至三十五之间出门，这样我才能九点之前把车停到学校停车场，坐在车上等着九点能准时查血糖，之后再送Larry 进教室。送完他回到家通常是九点四十左右，坐下稍微休息片刻，开始准备早点，数饼干，称重量，十点准时来吃。吃完又到走路时间。一切停当，十点四十左右。接下来视当天的具体情况而定，先收拾早餐遗留的厨房事务，是否需要见医生，是否需要洗衣服做清洁，是否需要开始炖汤准备晚餐，是否要去超市买菜购物，是否有其他临时安排（例如上周为了给Larry 找夏天过暑假的学校，我花了接近一周时间每天这个时候打电话联系学校，各方面合适的就下午再带上他一起去现场考察）……如果什么事都没有，这算是我的午休时间。十二点四十，开始准备中饭，拌沙拉称肉加热等，争取十二点五十五准时吃饭，这样我午饭后才能有十五分钟的走路时间，之后立刻出门接Larry 放学。再回到家里大概两点四十左右，安顿小朋友看上电视，我收拾中饭的遗留和洗好他从学校带回来的午餐盒，三点测血糖。三点五十，准备午点，同时准备Larry 的下午加餐，吃完走路。四点四十左右，通常小朋友电视看完了，自己也玩够了，开始缠着我或者去图书馆，或者在家讲故事，或者去小区公园玩。这期间朱先生一般六点到家，会打电话问我晚饭吃什么，把安排告诉他后，他负责晚饭操作，我带着孩子大概七点前到家吃饭。吃完赶紧收拾厨房，走路，边走边催促小朋友喝奶准备洗澡睡觉，各种威逼利诱，还尽量不要生气情绪稳定，保证八点半之前能坐下休息，否则气喘吁吁的到九点测血糖肯定超。测完血糖趁晚点之前自己洗澡收拾，十点又开吃，吃完又走，保证十一点之前上床睡觉。顺利的时候都好，一旦遇上小朋友发脾气不讲道理那天，全套打乱，有天早上他不知道怎么了坚决不去洗脸漱口换衣服，每次这种时候朱先生只能两手一摊望着我，我忙着教训他最后还是错过了出门时间，干脆不去上学了，可我气得不行，血糖又超高。从此尽量让自己不要生气。&lt;/p>
-&lt;p>一个多月的各种纠结，血糖终于大致稳定下来，超的次数越来越少。因为妊娠糖尿病，我从31周开始就必须每周去见妇产科医生，拿血糖结果给他检查，并且每周监控胎心或做B超来评估宝宝的生长情况。上周，医生终于发现我从27周到33周体重一直没长，于是劝我稍微放松血糖，不用很低，达到临界值即可，争取长点体重。我心里恨不得骂人，那指数又不是靠自己写，想让它多少就多少，每天又是控制饮食又是折腾运动，我倒是想长点呢，从哪来啊……看来，又一段各种试验的旅程要开始了，真心累人！&lt;/p></description></item><item><title>Blog 更换服务器</title><link>https://www.palfans.net/blog-changed-server/</link><pubDate>Mon, 05 Jun 2017 20:49:13 +0000</pubDate><guid>https://www.palfans.net/blog-changed-server/</guid><description>&lt;p>算起来，从2005年开始写这个Blog，累计换了好几次服务器。从Windows主机到Linux主机，从朋友托管机器到专业空间服务商，从相当业余的myrice到老牌空间hostgator，在不断折腾中慢慢熟悉了域名，DNS，虚拟空间等各种概念和网站知识。2010年搬到&lt;a href="http://www.laoxuehost.com/">老薛主机&lt;/a>，因为不想折腾了。一晃七年，不能说没有遇到问题，比如网站经常会在中国的半夜出现MySQL服务器挂死的问题，为此我提交了好多问题单。不过一旦提交问题单，解决都非常快。马上新一年的账单又要来了，不过鉴于现在打理网站的时间少之又少，Blog基本处于停止更新的状态，一年估计能写一篇，所以即使年费才几十块钱，也不想再续费了。考虑到家里常年开着一台惠普的小服务器，反正闲着也是浪费电，索性在周末把全站从虚拟空间转移到自家的机器上。再见了，老薛。&lt;/p>
+&lt;/ol></description></item><item><title>Blog 更换服务器</title><link>https://www.palfans.net/blog-changed-server/</link><pubDate>Mon, 05 Jun 2017 20:49:13 +0000</pubDate><guid>https://www.palfans.net/blog-changed-server/</guid><description>&lt;p>算起来，从2005年开始写这个Blog，累计换了好几次服务器。从Windows主机到Linux主机，从朋友托管机器到专业空间服务商，从相当业余的myrice到老牌空间hostgator，在不断折腾中慢慢熟悉了域名，DNS，虚拟空间等各种概念和网站知识。2010年搬到&lt;a href="http://www.laoxuehost.com/">老薛主机&lt;/a>，因为不想折腾了。一晃七年，不能说没有遇到问题，比如网站经常会在中国的半夜出现MySQL服务器挂死的问题，为此我提交了好多问题单。不过一旦提交问题单，解决都非常快。马上新一年的账单又要来了，不过鉴于现在打理网站的时间少之又少，Blog基本处于停止更新的状态，一年估计能写一篇，所以即使年费才几十块钱，也不想再续费了。考虑到家里常年开着一台惠普的小服务器，反正闲着也是浪费电，索性在周末把全站从虚拟空间转移到自家的机器上。再见了，老薛。&lt;/p>
 &lt;p>&lt;img src="https://res.palfans.net/img/blog_change_server.jpg" alt="">&lt;/p>
 &lt;p>picture from &lt;a href="https://www.vpnranks.com">vpnranks&lt;/a>&lt;/p>
 &lt;p>搬家过程没什么挑战，Docker的出现让部署变得异常容易。开了4个容器，分别放数据库，Nginx，PHP-FPM和FTP，直接导入从原站拿到的备份，总耗时不超过2小时。唯一的坑在部署Let&amp;rsquo;s Encrypt的SSL证书。因为web服务器放在容器里，没有公网IP地址，所以不能采用certbot全自动模式来获取证书。看了下文档，certbot支持通过带manual参数来更新DNS TXT记录的方式来验证域名从而获取证书，命令很简单&lt;/p>
@@ -998,21 +933,7 @@ Applicants who have a valid, unexpired driver license from another U.S. state, U
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">DOMAIN=$(dig soa &amp;#34;&amp;lt;span style=&amp;#34;color: #8b0000;&amp;#34;&amp;gt;$CERTBOT_DOMAIN&amp;lt;/span&amp;gt;&amp;#34; | grep -v ^\; | grep SOA | awk &amp;#39;{&amp;lt;span style=&amp;#34;color: #0000ff;&amp;#34;&amp;gt;print&amp;lt;/span&amp;gt; $1}&amp;#39;;)
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>我为什么选择留在美国</title><link>https://www.palfans.net/why-stay-in-us/</link><pubDate>Sun, 22 May 2016 05:33:36 +0000</pubDate><guid>https://www.palfans.net/why-stay-in-us/</guid><description>&lt;p>在没来美国之前，我从没设想过，如果有一天，自己也生活在地球的另外一边，会是什么样子？以致于最终决定携全家动身之时，我仍没有做好相应的心理准备。&lt;/p>
-&lt;p>首先，要感谢我的公司，给我提供了不错的条件和机会。入职十年，出过两次为期半年的长差。一次是入职没多久，就被安排独自一人去加拿大的客户现场做实施。真正的人生地不熟，英文也不好，可以说，生活都不能自理。这次出差锻炼的回报，第一是见了世面，处事不惊；第二是被逼快速上手公司产品；第三是学会用很烂的英文与人沟通。另外一次是去阿曼客户现场做支持，充分领略了阿拉伯风土人情，以及结识了公司来自欧洲、印度和中国的同事们。现在这个团队，一大半的成员定居在美国和澳大利亚，也算是我来美国的一个契机。&lt;/p>
-&lt;p>在美国生活了两年多，离融入社会还早，但也对当地的环境也慢慢开始熟悉。美国并不像我在中国时想象的那样完美。&lt;/p>
-&lt;ol>
-&lt;li>这里的职场仍然有歧视，华裔担任高级职务的机会很少。&lt;/li>
-&lt;li>人工费高，万事靠自己。即使年薪十万看起来比美国中位数高出不少，也仍然不能支撑我动辄请工人帮忙的开销。所以我要经常在后院锄草，修整步道，上房顶检修空调，查看被风吹跑的防水瓦，顺便处理被小孩玩具堵住的马桶，还要关注家里不断出现的蚂蚁等等。这些简直是我在国内没想象过的生活方式。&lt;/li>
-&lt;li>医疗昂贵。在有公司医疗保险支持的前提下，看病依然是一项费时费力费钱的经济活动。相比之下，我再也不抱怨国内的医保体系。&lt;/li>
-&lt;li>远离父母，完全不能照应他们的生活日常。&lt;/li>
-&lt;/ol>
-&lt;p>我和老婆讨论过，在这里带孩子、购物、做饭、家务等等的一切生活，都得靠自己，没有别人可以依靠。我们为了什么而坚持？如果说为了自我享受，在美国真不如在中国。我俩在中国的收入水平，去除汇率差异，和在美国的收入水平基本持平，但是我可以请阿姨做饭，请保洁公司打扫房间，请物业帮忙换灯泡、修窗帘等一切琐事。我们可以请父母帮忙看下孩子，然后去看电影、听音乐会、逛商场。&lt;/p>
-&lt;p>我内心动摇过很多次。但很快就会重新坚定意志。&lt;/p>
-&lt;p>在国内的时候，作为一名工科生，我对互联网比较熟悉，知道很多科学上网的方式。入职现在的公司后，网络更是没有墙的问题。所以我有很多的机会接触外面真真假假的新闻消息，每次看完都义愤填膺，难以自抑。来美国后，反而对这些消息失去了兴趣，仅仅通过微博微信了解下国内的情况。只是中国的社会新闻太惊悚，太超出想象，每天都有层出不穷的社会热点让我目瞪口呆。&lt;/p>
-&lt;p>于是，我给自己的理由是，为了孩子，再苦再难，也要坚持下去。我希望他生活的环境，是公平的、正义的、自由的，不需要担心雾霾致癌，不需要害怕牛奶添加，不需要恐惧因言获罪，不需要焦虑碰瓷撒泼。&lt;/p>
-&lt;p>这个理由够了吗？&lt;/p>
-&lt;p>我想现阶段，足够我自我鼓励，一步一步往前走了。&lt;/p></description></item><item><title>Oneplus One （一加手机）加密后如何升级系统</title><link>https://www.palfans.net/how-to-upgrade-encrypted-oneplus-one/</link><pubDate>Sat, 14 Nov 2015 06:24:00 +0000</pubDate><guid>https://www.palfans.net/how-to-upgrade-encrypted-oneplus-one/</guid><description>&lt;p>一年多以前从红米换成一加Oneplus One 64G版本，高通骁龙801的CPU，2G的运存，使用很顺手，终于体验了一把旗舰机的感觉。一加公司比较厚道，机器可以很轻松的通过&lt;a href="http://www.wugfresh.com/brt/">Bacon Root Toolkit&lt;/a>工具一键解锁和Root。&lt;/p>
+&lt;/div></description></item><item><title>Oneplus One （一加手机）加密后如何升级系统</title><link>https://www.palfans.net/how-to-upgrade-encrypted-oneplus-one/</link><pubDate>Sat, 14 Nov 2015 06:24:00 +0000</pubDate><guid>https://www.palfans.net/how-to-upgrade-encrypted-oneplus-one/</guid><description>&lt;p>一年多以前从红米换成一加Oneplus One 64G版本，高通骁龙801的CPU，2G的运存，使用很顺手，终于体验了一把旗舰机的感觉。一加公司比较厚道，机器可以很轻松的通过&lt;a href="http://www.wugfresh.com/brt/">Bacon Root Toolkit&lt;/a>工具一键解锁和Root。&lt;/p>
 &lt;p>因为公司邮件系统的强制安全策略，所有接入系统的移动终端都会要求加密，但是一加国内版用的是ColorOS系统，加密功能貌似被取消了，而国际版的CyanogenMod系统却能正常加密，毫不犹豫刷成CM并成功加密。&lt;/p>
 &lt;p>但是问题来了，CM系统更新非常频繁，经常收到OTA升级通知，每次点击更新会在下载完升级包之后重启到Recovery的机器人界面，然后升级失败，怎么回事？&lt;/p>
 &lt;p>&lt;img src="https://res.palfans.net/img/OnePlusOneAndroid5.1.1LollipopCyanogen.jpg" alt="">&lt;/p>
@@ -1034,41 +955,590 @@ Applicants who have a valid, unexpired driver license from another U.S. state, U
 &lt;/li>
 &lt;/ol>
 &lt;p>似乎很完美？其实并不全是。如果是rooted手机，升级会失败……&lt;/p>
-&lt;p>按常理root并不会影响OTA升级，但rooted的一加手机/system分区的校验码发生变化，升级包的脚本校验后，造成无法升级。所以如果手机root了，就没有办法使用增量包升级。很多人推荐的方法是等新版本的全量包发布，不过CM的全量包要比增量包晚很久才出，每天看着状态栏的升级提示却不能升级会很烦心。这里有个小技巧，下载前一版本的全量包和新版本的增量升级包，用前面的三种方法先刷全量包恢复成官方版本，再刷增量升级包，然后再一键root，就能提前升级到最新系统。&lt;/p></description></item><item><title>走正步</title><link>https://www.palfans.net/goose_step/</link><pubDate>Thu, 03 Sep 2015 19:52:10 +0000</pubDate><guid>https://www.palfans.net/goose_step/</guid><description>&lt;p>昨天微信朋友圈被五星红旗和齐刷刷的正步GIF图片刷屏。因为要等儿子睡着了才能打开电视，我只看到了最后飞机过场的部分，没有看到前面正步分列式。从大家分享的动图看，确实很有气势。我当年高考语文成绩全区第一，现如今却仍然只能喊道：『我靠，好齐！我靠，牛逼！』后来找了重放视频，心里却远不如别人激动，估计这是我政治不正确的又一体现。我心里就一直有个问题：『走正步有意义吗？』&lt;/p>
+&lt;p>按常理root并不会影响OTA升级，但rooted的一加手机/system分区的校验码发生变化，升级包的脚本校验后，造成无法升级。所以如果手机root了，就没有办法使用增量包升级。很多人推荐的方法是等新版本的全量包发布，不过CM的全量包要比增量包晚很久才出，每天看着状态栏的升级提示却不能升级会很烦心。这里有个小技巧，下载前一版本的全量包和新版本的增量升级包，用前面的三种方法先刷全量包恢复成官方版本，再刷增量升级包，然后再一键root，就能提前升级到最新系统。&lt;/p></description></item><item><title>漫游在美国 - 如何打电话</title><link>https://www.palfans.net/roaming_in_us_call/</link><pubDate>Fri, 18 Jul 2014 18:38:03 +0000</pubDate><guid>https://www.palfans.net/roaming_in_us_call/</guid><description>&lt;p>来到美国5个月了，往国内打电话肯定是日常生活的一个重要组成部分，今天总结下这几个月的经验。&lt;/p>
+&lt;p>出国前，我为我的中国移动号码办理了国际漫游。因为是全球通用户，整个办理流程比较简单，直接用手机拨打10086申请即可，每次申请的时效是一年，不需要预存保证金。漫游期限快到时，直接在国外拨打中国移动的境外漫游免费客服号码+8613800100186，请客服人员帮你转接到号码归属省的移动客服办理漫游延期。只有用中国移动号码拨打这个号码才享受免费优惠。现在中国移动针对美国、韩国、新加坡等180个国家和地区推出了漫游123的资费政策，即根据不同的漫游国家和地区，漫游主被叫资费分别为每分钟0.99元，1.99元和2.99元。客观的说，这个资费已经很便宜了，尤其是美国被归在1元区。还记得去阿曼出差时，这个资费政策还没执行，给国内打电话18元一分钟，每次打电话都要做充分的思想准备，现在也划在3元区里，降幅惊人。&lt;/p>
+&lt;p>但是，如果完全用中国移动的号码接打所有电话，即使已经1元区了，费用还是不便宜，而且很多线上线下服务需要登记美国国内号码，所以还是得弄个本地号码。现在美国各个运营商的资费基本都是无限国内通话，无限国内短信，限量LTE流量，无限GPRS流量，每个月40-60美金，以美国的国民收入来算，比较便宜。&lt;/p>
+&lt;p>美国国内通话搞定了，接下来是中国的国际长途部分。&lt;/p>
+&lt;p>&lt;strong>打电话回国&lt;/strong>&lt;/p>
+&lt;p>美国的电信市场充分开放，各类电话服务蓬勃发展，电话卡、回拨、转接号层出不穷。我选择了 &lt;a href="http://www.skype.com/zh_CN/">Skype&lt;/a> 和 &lt;a href="http://www.localphone.com/?rb=s63mql8XCPsTT7p1LYTtRczRXG6bpzkXVvpejFFFXvA">Localphone&lt;/a> （之后简称 LP）。这俩都是老牌的网络电话供应商，其中 Skype 的名气更大一些，现在已经是微软的资产。我在折腾 &lt;a href="http://www.palfans.net/?s=voice">Google Voice&lt;/a> 的时候开始接触 LP，算下来5年了，这个公司的服务一直非常稳定，值得信赖。这两个产品比较一下，拨回中国的费率都差不多，Skype 是1.1美分，LP 是1.2美分，都不到一毛钱人民币每分钟。如果使用它们的包月套餐，费率就更低。它们都是基于VOIP的产品，通话效果依赖于拨打时的网络环境， Skype 采用了P2P的传输技术，理论上在窄带宽和渣网络时能最大限度保持通话质量。但凡事没有绝对，经常会出现在同一个场景，Skype 通话质量不行，但 LP 清晰无延迟的情况，反之亦然。所以这俩可以都备上，互为补充。Skype 和 LP 都提供直拨号码转接服务，即为对方的中国号码分配一个当地号码，直接用美国手机拨打此当地号码，即可拨回中国，国际通话部分的费率不变，即使没有移动网络也能拨打，非常方便。但是 Skype 的这个服务每次拨打时会加收一笔4.9美分接通费，而 LP 没有，所以短暂通话 LP 划算，通话时间长，Skype就更划算。&lt;/p>
+&lt;p>&lt;strong>接国内电话&lt;/strong>
+沟通不能单方面，如何让国内的亲朋能方便的联系我呢？现在中国移动、中国联通和中国电信三家都分别推出了各自的服务来满足这个需求。&lt;/p>
+&lt;ul>
+&lt;li>中国移动：&lt;/li>
+&lt;/ul>
 &lt;blockquote>
-&lt;p>维基百科的&lt;a href="https://zh.wikipedia.org/wiki/%E6%AD%A3%E6%AD%A5">正步&lt;/a>条目说，正步起源于中世纪欧洲的一种民间舞蹈，这种舞蹈的特征是腿高抬至与地面平行。17世纪时，普鲁士十分流行这种舞蹈。18世纪，腓特烈大帝下的普鲁士军队，在阅兵中吸取了这种民间舞蹈的步法，称其为“Stechschritt”，字面意思为“刺步”。英语使用者则称这种姿势为“鹅步”（Goose-step）。诺尔曼·戴维斯在他的《欧洲历史》一书中提到：在那个军国主义时期，正步的意义，对普鲁士军队自身来讲，表明他们的纪律性及身体素质足以应付一切命令；对普鲁士的平民来讲，表明不遵守纪律将被无情地粉碎；对普鲁士的敌人来讲，表明普鲁士军队不是穿着制服的农村小伙子，而是超人；对于整个世界来说，正步走象征着普鲁士不仅仅是个强国，而且是个高傲的强国。但是这种行军模式达到了普鲁士所预期的效果。&lt;/p>
+&lt;p>中国移动推出了 &lt;a href="https://www.jegotrip.com.cn/">无忧行&lt;/a> 服务，需要智能手机（Android/iPhone）安装应用，通过移动网络或WiFi连接服务器。最大的卖点是可以租一个中国移动的号码（大陆和香港都可以，月租不同），也可以直接绑定国内现有的中国移动手机号，每月月租1美金。在应用在线的情况下，所有拨打到该移动号码的电话，都会通过网络转到 Jego 应用来免费接听。从2014年7月16日开始，Jego 也支持接收该移动号码收到的所有短信，相当于完全没有国际漫游费用。也可以从应用内直接拨打电话回国，能在接听方的手机上正确显示自己绑定的移动手机号码。这一点是 Skype 和 LP 想做但一直无法实现的功能。用它俩打回国，来电号码显示永远都稀奇古怪甚至『受限号码』，很像诈骗号码，很多时候对方都不愿意接听这种电话。据 Skype 解释，来电号码 （Caller ID）在中国大陆的显示问题，主要由国内电信运营商垄断造成，在其他大部分国家和地区都能正常使用。对于这点，我只能呵呵了。Jego接听免费，拨打费率是2.2美分，比 Skype 和 LP 贵，缺点是必须依赖互联网和智能手机应用，能收短信不能发短信。另外交费系统和现有移动系统完全分开，需要美金，好在可以Paypal。&lt;/p>
 &lt;/blockquote>
-&lt;p>现在看来，正步尤其受法西斯主义或者国家集体主义的青睐，比如大部分受德国或前苏联军事影响的国家，至今依然喜欢在重要场合走正步。&lt;/p>
-&lt;p>走正步的第一重意义就是，霸气外露！央视解说也提到，受阅部队正步通过主席台的时候，横看一条线，竖看一条线，斜看还是一条线，体现了我军高昂的士气和威武的军威。&lt;/p>
-&lt;p>第二重意义就是集体意识。通过摆臂踢腿的机械重复，追求五线平行，来达到强化参与者的集体意识，排除个人意识的目的。而这对于需要集权的统治阶级来说尤为重要。统治阶级总是会力图从各个方面入手减轻甚至消除个人意识萌发对政权的影响。&lt;/p>
-&lt;p>因此，作为事实上的集权国家，我国把集体主义，民族主义看得非常重要。不光军队，现在几乎所有的中学和大学，甚至少数小学，在入学的时候，都要搞2-3周的军训，而队列训练是其中重中之重。&lt;/p>
-&lt;p>有人说，正步训练能够加强纪律性，提高凝聚力，类似的活动还包括叠豆腐块被子，站军姿等。诚然，纪律对一支部队来说很重要，但是如果把大量的时间都花在走正步、叠被子上，即使纪律高度统一，但单兵作战能力、协同作战能力、突发处置能力没有提高，这支部队同样是不值得信任的。&lt;/p>
-&lt;p>美军从不走正步，但是没人敢轻视这支看似纪律涣散的部队。从他们每年多次的实战中能看出，即使是普通军种，单兵和协同战斗能力都极强。&lt;/p>
-&lt;p>中国军人已经远离战场几十年，实战经验完全不为外人所知，连演习都是一切按计划进行。我不认为走正步完全没有意义，我倒真希望他们是留了一手。要不然，过于钟情于表演性质的训练，到了实战发生的时候，就不敢想象了。&lt;/p>
-&lt;p>当然，最好永远没有检验实战能力的一天。&lt;/p></description></item><item><title>记抗战中的一名国军少校</title><link>https://www.palfans.net/there_was_a_major/</link><pubDate>Sat, 22 Aug 2015 08:24:06 +0000</pubDate><guid>https://www.palfans.net/there_was_a_major/</guid><description>&lt;p>今天家里领导突然收到长辈的一条长微信，阅读后感慨不少，全文摘录如下：&lt;/p>
+&lt;ul>
+&lt;li>中国联通：&lt;/li>
+&lt;/ul>
 &lt;blockquote>
-&lt;p>记抗战中的一名国军少校&lt;/p>
-&lt;p>过几天就是抗战胜利纪念日，好像要放假一天，也邀请了国外政要，举办盛大仪式。届时，自然会有整齐的方队。也就有有关领导的慷慨激昂。说实在，我对这些没有什么兴趣。&lt;/p>
-&lt;p>关于抗战，心中总萦怀一个人，多少年来，如鲠在喉。&lt;/p>
-&lt;p>六十多年前，有一个重庆青年，跟随做布匹生意的父亲到了上海。他的父亲粗通文墨，有了点散碎银子，就想孩子受到较好的教育，有点诗书传家的味道。加之，这个青年是家中长子，他的父亲就不吝钱财，送他到教会中学去读书。教会学校自然重视西方文化，除国文、中国历史之外，其余均是国外教材，讲课的教师也大都是英国人。因此，他受到了很好的英语教育。之后，他顺利的考入复旦大学外国语文学系。我曾经看过他发表的文章，是关于对莎士比亚的哈姆雷特的研讨。生活就这样平平静静在这个青年面前徐徐展开。他无论如何都没有想到，他受到的教育已经种下了祸根，一口流利的英语会酿成一杯苦酒。&lt;/p>
-&lt;p>“813，日本在上海打了战。”他父亲的布匹生意受到重大影响，他平静的生活也被打乱。随后，复旦大学迁往重庆北碚夏坝。为追随学校，他决定上海前去重庆。当时水路交通已经阻断，回重庆只能绕道步行。走了一个多月，其间颠簸流离，自不待言。我想，他对日寇入侵，自然是仇恨的。&lt;/p>
-&lt;p>回到重庆，继续读书。抗战仍旧在进行。突然，国军到复旦大学招人，说是美军为国军训练士兵，急需翻译。他愿意投笔从戎为抗战出力，于是前去报名。因为他口语极好，立即就被录取。在之后，跟随部队坐着嘎斯汽车，前往云南腾冲。他在部队的工作，我看过一些老照片，印象深的就是美军在训练国军士兵学习使用喷火器，他在旁边翻译。给国军教学的都是美军军官，对这些无军衔的翻译有些瞧不起。众翻译于是向上反映，战争之中，一切均可打破常规，每个翻译竟然均被任命为了“少校”。&lt;/p>
-&lt;p>到部队仅三月，日本投降了。美军教官要撤走，翻译当然就无事可干。这时有两条路可走，留在部队或退役。他牵挂自己的毕业证，于是返渝回到学校继续读书至毕业。然后在求精中学教英语。49年后，他转到西南贸易部工作，他的工作与军队再无任何交集。&lt;/p>
-&lt;p>三个月的时间很短，但他必须在每次填写履历时表明此事。于是，尽管他工作非常尽心，入党、提拔与他没有任何关联。文革前，他就是一个文化商店的经理，据说还是破格处理的。&lt;/p>
-&lt;p>文革开始了，他的厄运继续放大。他的形象不知怎么就与“小兵张嘎”、地道战“中的日军翻译重叠了。于是，他的经理被撤。有很长时间，白天在建筑工地上抬砖，晚上被关押在单位。他写了厚厚的交待，时间远超过了三个月。他当时必定陷入了巨大逻辑困惑：说到国军是为抗战，明明“蒋介石躲在峨眉山，只是下山摘桃子”。伟人定论，谁敢说三道四！说为与人民为敌，助纣为虐，又心有不甘。于是，他百口莫辩。当然，灾难也会传递，他的孩子，也因为这个少校翻译官受到迫害。所有的悲愤，他用了一个奇特的方式来表达。做了一个小铁炉，将家中的书用来烧火做饭。他教导他的孩子，不要读书，应当去学木匠、当砖工。那时，他的言行与诗书传家的上辈期望相差何止千里！&lt;/p>
-&lt;p>纵观我国历史，在民族危亡之际，有挺身而出的壮士，如岳飞、如文天祥，如张自忠，他们的英雄事迹彪炳千古，值得后人缅怀。但“一将成名万骨枯”，民族战争的胜利，更有普通民众或大或小的奉献，他们至少应当受到公平对待。&lt;/p>
-&lt;p>最近，我国政府屡屡提到要求日本政府对那场战争道歉。我想，责人需己正，攘外需安内，有关机构、有关人士是不是应当为自己的不实说法、为自己的不当言行，真诚道歉，还历史本来面目，才是对抗战真正的纪念。&lt;/p>
-&lt;p>这位少校翻译官，就是我的父亲。他带着有历史问题的帽子，郁郁最终。&lt;/p>
-&lt;p>呜呼哀哉，尚飨！&lt;/p>
+&lt;p>中国联通推出了&lt;a href="http://www.wo-call.com/">沃信&lt;/a>服务，英文很奇葩，『我靠』，也不知道是谁想出来的。功能点基本上和 Jego 类似，甚至连应用程序的界面都雷同，丑到没朋友。不过沃信只能注册一个新的河北联通的手机号码，而不能绑定其他省的已有联通号码。这点不如 Jego 灵活。但沃信使用联通交费系统，用人民币交费，月租10元，打电话0.15元，发短信0.1元，这比 Jego 稍稍方便些。缺点和 Jego 一样，依赖互联网和智能手机应用。&lt;/p>
 &lt;/blockquote>
-&lt;p>文中提到的少校军官，就是领导的爷爷。一篇短文，勾起她童年无数美好的回忆，不禁潸然泪下，同时也了解了那些从未有人提及的陈年往事。&lt;/p>
-&lt;p>自从搬到国外生活，我们在公共场合的言论愈发谨慎，稍不注意就会被扣上卖国求荣的帽子。但如老先生文章所述，心事不吐，如鲠在喉。&lt;/p>
-&lt;p>今年是抗战胜利70周年，有个话题特别火，谁才是中流砥柱。经过国内几十年的历史普及教育，结论清楚明白。不过等到我们接触的信息源越来越多，给这个结论打个问号似乎都稍显不够，还得加个惊叹号。国内教材中罕有关于正面战场的记述，倒是横店影视城越来越热闹。争名夺利很正常，成王败寇也是常态，这不是我想在这里表达的。我只是想问下，我们什么时候才能以科学客观的态度来真实记录这段悲壮的历史？或许等不到那天了，因为真相实在羞于启齿。&lt;/p>
-&lt;p>爷爷的一生是个悲剧，但不仅是他个人，也是一个时代的悲剧。很多人连郁郁而终都是个奢望，生不如死，最后惨淡收场。&lt;/p>
-&lt;p>我所在的城市军人非常多，晚饭时我们讨论美军的福利。现役和退役的军人，在生活各个方面都有优待。还听说过很多次美军针对执行任务被困士兵的援救行动，有时候仅仅是为了抢回遗体。不得不联想到解放后留在大陆的国军士兵。他们中的很多人都曾经浴血抗日主战场，但身份尴尬，晚年凄惨。更不用提滇缅战场上的英勇老兵，完全被社会遗忘，终生流落异国他乡。原因很简单，穿了国军的军装，领了国军的口粮。&lt;/p>
-&lt;p>还有从朝鲜战场战俘营坚持回国的俘虏兵，想必这几十年过得异常艰辛。&lt;/p>
-&lt;p>这些人都没做错什么，甚至是英雄，命运却把他们推向了黑暗。&lt;/p>
-&lt;p>党国欠他们一个诚恳的道歉。&lt;/p>
-&lt;p>不过，如果我也是其中一员，我想，我永远不会原谅。&lt;/p></description></item><item><title>十周年庆</title><link>https://www.palfans.net/decennial/</link><pubDate>Fri, 14 Aug 2015 06:01:35 +0000</pubDate><guid>https://www.palfans.net/decennial/</guid><description>&lt;p>下个星期就是这个BLOG的十周年纪念，突然间，白马过隙，忽然而已。&lt;/p>
-&lt;p>现在BLOG没落了，大家都喜欢短平快的社交平台，这里荒得长了草。直到Google告诉我，网站被人黑了，挂了木马。哑然失笑，曾经花费多少时间改模板，加功能的一亩三分地，竟然已经很久没有更新过，以至于成为害人工具，不过料想应该也害不了多少人，访问量极低。这『黑客』估计是跑了个脚本，在我的网站目录里生成了不下500个静态网页文件，个个带毒。一个一个手工清理不现实，只好全部铲掉重装。好在数据库一直有脚本在后台默默的备份，重建倒不费事，主题直接用默认模板，挺符合现在的审美。同时为了迎接新一个十年的开始，终于申请了证书，强制SSL。&lt;/p>
-&lt;p>谢谢有BLOG相陪的十年。。。&lt;/p></description></item></channel></rss>
+&lt;ul>
+&lt;li>中国电信：&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>中国电信北美公司搞了个&lt;a href="https://www.chinavirtualnumber.com/home.dhtml">一卡双号&lt;/a>服务，注册一个上海电信的手机号码，绑定到任意美国和加拿大的固话、手机号码。国内拨打这个上海电信号码，直接转接到美国这边的手机、固话，完全没有国际长途部分的费用，而且全程走的都是中美间的国际电话线路，不依赖互联网，不需要智能手机，语音效果和直拨国际长途完全一样，是三家公司的产品中通话质量最高最稳定的解决方案。月租9.99美金，无限时接听，现在还送每个月200分钟拨回中国的国际长途时长，不过主叫采用VOIP电话，需要拨打转接号，而且通话质量和接听国内来电完全不能比。另外，这个上海电信的号码，完全不能接收短信。&lt;/p>
+&lt;/blockquote>
+&lt;p>一开始我用的中国电信的服务，接听还好，但主叫质量很不稳定，拨打转接号后无法调用电话簿的联系人记录，需要手工输入被叫号码，不方便，那200分钟国际长途几乎没用完过。加上每月10美金的固定开销，于是放弃。因为我从来没用过联通的手机，所以也没有尝试沃信。现在使用 Jego，虽然也是VOIP的一种，但是不论主叫还是被叫，通话质量都非常不错，语音清晰，也感觉不到延迟。另外一个好处是，加入了亲情计划或者企业短号的移动号码，短号依然可用。现在国内的亲戚朋友，仍然可以只拨3个数字就拨通电话，而通话也归到亲情计划的分钟数内，免费通话。&lt;/p>
+&lt;p>之前不了解这些电话服务，选手机都只考虑双卡双待，现在完全没有必要了，只要是个智能手机都能正常安装应用，接听国内号码来电。从这点来说，也能看到国内电信三巨头正在谋求改变。虽然受限于国内通信管制，在国内没有什么亮眼的服务，但是一旦跑到自由市场经济的环境中，也在积极探索新鲜事物。只求国内的环境也能早点向正面的、积极的方向发展。&lt;/p></description></item><item><title>为VirtualBox中的CentOS扩展Swap空间</title><link>https://www.palfans.net/extend_swap_space_in_virtualbox/</link><pubDate>Mon, 02 Jun 2014 18:30:56 +0000</pubDate><guid>https://www.palfans.net/extend_swap_space_in_virtualbox/</guid><description>&lt;p>在VirtualBox中安装好CentOS后，会发现默认的Swap空间大小是根据初次配置的可用内存来生成的，正常使用足够。但是，如果需要安装Oracle，它要求最少2GB的交换空间，这时就需要扩展交换空间。&lt;/p>
+&lt;p>首先运行swapon命令查看交换空间大小，如果得到的大小少于&lt;strong>2097152&lt;/strong>，就需要增加交换空间。&lt;/p>
+&lt;pre>&lt;code>swapon -s
+&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="https://res.palfans.net/img/1.png" alt="">&lt;/p>
+&lt;p>1. 首先，在VirtualBox中新增一块硬盘&lt;/p>
+&lt;p>&lt;img src="https://res.palfans.net/img/2.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://res.palfans.net/img/3.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://res.palfans.net/img/4.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://res.palfans.net/img/5.png" alt="">&lt;/p>
+&lt;p>2. 格式化新增的硬盘&lt;/p>
+&lt;pre>&lt;code>fdisk -l
+fdisk /dev/sdb
+&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="https://res.palfans.net/img/6.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://res.palfans.net/img/7.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://res.palfans.net/img/8.png" alt="">&lt;/p>
+&lt;p>3. 转换为Swap space&lt;/p>
+&lt;pre>&lt;code>mkswap /dev/sdb1
+swapon /dev/sdb1
+swapon -s
+&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="https://res.palfans.net/img/9.png" alt="">&lt;/p>
+&lt;p>4. 让CentOS开机自动加载新增的交换空间&lt;/p>
+&lt;pre>&lt;code>vi /etc/fstab
+&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="https://res.palfans.net/img/10.png" alt="">&lt;/p></description></item><item><title>垃圾来袭</title><link>https://www.palfans.net/fu_kspam/</link><pubDate>Fri, 29 Nov 2013 07:50:03 +0000</pubDate><guid>https://www.palfans.net/fu_kspam/</guid><description>&lt;p>&lt;img src="https://res.palfans.net/img/stopspam.jpg" alt="stopspam">&lt;/p>
+&lt;p>最近发现网站所在的主机资源占用很严重，长期超过80%，经常触发资源达到限制的508错误。一开始没注意，结果月底主机带宽用光。这么多年，这个主机的带宽从未用完过一半，这个月居然用完了！于是开始仔细看访问日志，发现一大堆来自福建莆田的IP，频繁刷新各种页面，目的不明。主机商协助增加了3次，每次1G的流量，都很快被搞完。&lt;/p>
+&lt;p>主机商建议使用CDN来分摊流量和主机负载。于是先把网站弄到&lt;a href="http://www.cloudflare.com/">CloudFlare&lt;/a>，一开始很给力，网站访问速度大幅上升。没多久，发现访问网站失败，翻墙再试，正常得很。看来CloudFlare被盯得很紧，我有幸分配到了一个被加持过的IP。然后看到&lt;a href="http://www.anquanbao.com/">安全宝&lt;/a>也有类似的CDN服务，仍然是免费的。注册完发现，需要备案，否则只能分配一个境外IP。备你妈的案啊！&lt;/p>
+&lt;p>不过再看看安全宝提供的境外节点，貌似是个日本IP，国内访问速度还不错。我又开始动脑筋了，把两个CDN都用上！&lt;a href="http://www.dnspod.cn">DNSPOD&lt;/a>就是干这个的。对比了一下两个CDN针对国内国外的访问速度，最后把国外线路和移动线路的分到CloudFlare，把国内其他线路都分到安全宝。&lt;/p>
+&lt;p>速度上去了，缺点是大访问量仍然存在，尤其是刚刚转CDN，它们的各个节点都要来缓存网页。这个节骨眼上，主机商赠送的流量根本不够折腾，只好先想办法把那些垃圾都找出来，全部屏蔽掉，熬到下个月再说。&lt;/p>
+&lt;p>cPanel本身支持添加IP黑名单，但是一个一个加，工作量太大。另外一个方法就是自己改.htaccess文件，把垃圾来源IP都放里边，我把目前整理好的IP段都列出来，99%来自福建，其中又有90%来自莆田。于是我直接屏蔽掉整个IP段。这里只能对莆田可能的访问者说抱歉了。当然，这个抱歉也没法成功看到，hoho&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt"> 10
+&lt;/span>&lt;span class="lnt"> 11
+&lt;/span>&lt;span class="lnt"> 12
+&lt;/span>&lt;span class="lnt"> 13
+&lt;/span>&lt;span class="lnt"> 14
+&lt;/span>&lt;span class="lnt"> 15
+&lt;/span>&lt;span class="lnt"> 16
+&lt;/span>&lt;span class="lnt"> 17
+&lt;/span>&lt;span class="lnt"> 18
+&lt;/span>&lt;span class="lnt"> 19
+&lt;/span>&lt;span class="lnt"> 20
+&lt;/span>&lt;span class="lnt"> 21
+&lt;/span>&lt;span class="lnt"> 22
+&lt;/span>&lt;span class="lnt"> 23
+&lt;/span>&lt;span class="lnt"> 24
+&lt;/span>&lt;span class="lnt"> 25
+&lt;/span>&lt;span class="lnt"> 26
+&lt;/span>&lt;span class="lnt"> 27
+&lt;/span>&lt;span class="lnt"> 28
+&lt;/span>&lt;span class="lnt"> 29
+&lt;/span>&lt;span class="lnt"> 30
+&lt;/span>&lt;span class="lnt"> 31
+&lt;/span>&lt;span class="lnt"> 32
+&lt;/span>&lt;span class="lnt"> 33
+&lt;/span>&lt;span class="lnt"> 34
+&lt;/span>&lt;span class="lnt"> 35
+&lt;/span>&lt;span class="lnt"> 36
+&lt;/span>&lt;span class="lnt"> 37
+&lt;/span>&lt;span class="lnt"> 38
+&lt;/span>&lt;span class="lnt"> 39
+&lt;/span>&lt;span class="lnt"> 40
+&lt;/span>&lt;span class="lnt"> 41
+&lt;/span>&lt;span class="lnt"> 42
+&lt;/span>&lt;span class="lnt"> 43
+&lt;/span>&lt;span class="lnt"> 44
+&lt;/span>&lt;span class="lnt"> 45
+&lt;/span>&lt;span class="lnt"> 46
+&lt;/span>&lt;span class="lnt"> 47
+&lt;/span>&lt;span class="lnt"> 48
+&lt;/span>&lt;span class="lnt"> 49
+&lt;/span>&lt;span class="lnt"> 50
+&lt;/span>&lt;span class="lnt"> 51
+&lt;/span>&lt;span class="lnt"> 52
+&lt;/span>&lt;span class="lnt"> 53
+&lt;/span>&lt;span class="lnt"> 54
+&lt;/span>&lt;span class="lnt"> 55
+&lt;/span>&lt;span class="lnt"> 56
+&lt;/span>&lt;span class="lnt"> 57
+&lt;/span>&lt;span class="lnt"> 58
+&lt;/span>&lt;span class="lnt"> 59
+&lt;/span>&lt;span class="lnt"> 60
+&lt;/span>&lt;span class="lnt"> 61
+&lt;/span>&lt;span class="lnt"> 62
+&lt;/span>&lt;span class="lnt"> 63
+&lt;/span>&lt;span class="lnt"> 64
+&lt;/span>&lt;span class="lnt"> 65
+&lt;/span>&lt;span class="lnt"> 66
+&lt;/span>&lt;span class="lnt"> 67
+&lt;/span>&lt;span class="lnt"> 68
+&lt;/span>&lt;span class="lnt"> 69
+&lt;/span>&lt;span class="lnt"> 70
+&lt;/span>&lt;span class="lnt"> 71
+&lt;/span>&lt;span class="lnt"> 72
+&lt;/span>&lt;span class="lnt"> 73
+&lt;/span>&lt;span class="lnt"> 74
+&lt;/span>&lt;span class="lnt"> 75
+&lt;/span>&lt;span class="lnt"> 76
+&lt;/span>&lt;span class="lnt"> 77
+&lt;/span>&lt;span class="lnt"> 78
+&lt;/span>&lt;span class="lnt"> 79
+&lt;/span>&lt;span class="lnt"> 80
+&lt;/span>&lt;span class="lnt"> 81
+&lt;/span>&lt;span class="lnt"> 82
+&lt;/span>&lt;span class="lnt"> 83
+&lt;/span>&lt;span class="lnt"> 84
+&lt;/span>&lt;span class="lnt"> 85
+&lt;/span>&lt;span class="lnt"> 86
+&lt;/span>&lt;span class="lnt"> 87
+&lt;/span>&lt;span class="lnt"> 88
+&lt;/span>&lt;span class="lnt"> 89
+&lt;/span>&lt;span class="lnt"> 90
+&lt;/span>&lt;span class="lnt"> 91
+&lt;/span>&lt;span class="lnt"> 92
+&lt;/span>&lt;span class="lnt"> 93
+&lt;/span>&lt;span class="lnt"> 94
+&lt;/span>&lt;span class="lnt"> 95
+&lt;/span>&lt;span class="lnt"> 96
+&lt;/span>&lt;span class="lnt"> 97
+&lt;/span>&lt;span class="lnt"> 98
+&lt;/span>&lt;span class="lnt"> 99
+&lt;/span>&lt;span class="lnt">100
+&lt;/span>&lt;span class="lnt">101
+&lt;/span>&lt;span class="lnt">102
+&lt;/span>&lt;span class="lnt">103
+&lt;/span>&lt;span class="lnt">104
+&lt;/span>&lt;span class="lnt">105
+&lt;/span>&lt;span class="lnt">106
+&lt;/span>&lt;span class="lnt">107
+&lt;/span>&lt;span class="lnt">108
+&lt;/span>&lt;span class="lnt">109
+&lt;/span>&lt;span class="lnt">110
+&lt;/span>&lt;span class="lnt">111
+&lt;/span>&lt;span class="lnt">112
+&lt;/span>&lt;span class="lnt">113
+&lt;/span>&lt;span class="lnt">114
+&lt;/span>&lt;span class="lnt">115
+&lt;/span>&lt;span class="lnt">116
+&lt;/span>&lt;span class="lnt">117
+&lt;/span>&lt;span class="lnt">118
+&lt;/span>&lt;span class="lnt">119
+&lt;/span>&lt;span class="lnt">120
+&lt;/span>&lt;span class="lnt">121
+&lt;/span>&lt;span class="lnt">122
+&lt;/span>&lt;span class="lnt">123
+&lt;/span>&lt;span class="lnt">124
+&lt;/span>&lt;span class="lnt">125
+&lt;/span>&lt;span class="lnt">126
+&lt;/span>&lt;span class="lnt">127
+&lt;/span>&lt;span class="lnt">128
+&lt;/span>&lt;span class="lnt">129
+&lt;/span>&lt;span class="lnt">130
+&lt;/span>&lt;span class="lnt">131
+&lt;/span>&lt;span class="lnt">132
+&lt;/span>&lt;span class="lnt">133
+&lt;/span>&lt;span class="lnt">134
+&lt;/span>&lt;span class="lnt">135
+&lt;/span>&lt;span class="lnt">136
+&lt;/span>&lt;span class="lnt">137
+&lt;/span>&lt;span class="lnt">138
+&lt;/span>&lt;span class="lnt">139
+&lt;/span>&lt;span class="lnt">140
+&lt;/span>&lt;span class="lnt">141
+&lt;/span>&lt;span class="lnt">142
+&lt;/span>&lt;span class="lnt">143
+&lt;/span>&lt;span class="lnt">144
+&lt;/span>&lt;span class="lnt">145
+&lt;/span>&lt;span class="lnt">146
+&lt;/span>&lt;span class="lnt">147
+&lt;/span>&lt;span class="lnt">148
+&lt;/span>&lt;span class="lnt">149
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt;Files 403.shtml&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">order allow,deny
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">allow from all
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;/Files&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 108.162.216.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 110.85.102.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 110.85.106.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 110.85.107.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 110.85.113.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 110.85.114.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 110.85.115.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 110.85.68.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 110.85.69.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 110.85.70.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 110.85.72.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 110.85.104.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 110.86.165.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 110.86.167.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 110.86.185.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 110.89.13.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 110.89.34.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 110.89.35.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 110.89.46.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 110.89.52.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 110.89.53.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 110.89.60.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 110.89.61.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 110.89.9.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 112.111.160.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 112.111.188.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 112.111.189.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 112.111.190.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 117.26.117.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 117.26.118.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 117.26.119.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 117.26.192.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 117.26.193.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 117.26.195.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 117.26.200.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 117.26.201.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 117.26.202.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 117.26.203.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 117.26.248.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 117.26.252.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 117.26.254.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 117.26.76.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 117.26.77.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 117.26.78.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 117.26.79.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 117.26.85.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 117.26.86.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 120.33.240.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 120.33.241.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 120.33.242.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 120.33.243.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 120.37.208.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 120.37.210.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 120.37.211.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 120.37.216.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 120.37.226.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 120.37.228.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 120.37.234.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 120.37.238.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 120.37.243.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 120.40.148.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 120.40.149.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 120.40.150.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 120.43.10.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 120.43.26.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 120.43.30.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 120.43.4.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 120.43.6.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 120.43.8.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 121.205.196.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 121.205.198.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 121.205.199.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 121.205.215.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 121.205.239.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 121.205.242.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 121.205.243.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 121.205.247.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 121.205.248.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 121.207.140.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 123.116.37.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 139.227.62.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 14.18.171.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 175.42.92.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 175.44.59.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 182.118.20.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 182.118.21.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 182.118.22.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 182.118.25.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 218.85.146.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 218.86.50.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 218.86.51.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 220.161.96.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 220.161.127.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 222.77.205.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 222.77.206.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 222.77.207.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 222.77.212.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 222.77.214.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 222.77.225.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 222.77.228.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 222.77.229.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 222.77.238.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 222.77.246.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 222.77.247.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 27.150.223.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 27.150.229.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 27.153.128.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 27.153.160.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 27.153.161.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 27.153.162.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 27.153.163.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 27.153.184.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 27.153.185.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 27.153.186.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 27.153.187.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 27.153.209.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 27.153.218.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 27.153.219.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 27.153.228.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 27.153.233.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 27.153.249.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 27.153.250.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 27.153.251.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 27.154.206.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 27.159.195.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 27.159.197.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 27.159.205.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 27.159.209.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 27.159.211.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 27.159.229.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 27.159.231.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 27.159.238.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 27.159.254.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 36.248.168.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 36.248.171.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 36.250.182.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 58.23.237.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 59.58.113.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 59.58.136.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 59.58.137.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 59.58.138.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 59.58.139.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 59.58.158.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 60.168.18.
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>WLW发布Wordpress时xmlrpc.php 404问题</title><link>https://www.palfans.net/wlw_wordpress_xmlrpc_404/</link><pubDate>Sun, 09 Sep 2012 07:03:45 +0000</pubDate><guid>https://www.palfans.net/wlw_wordpress_xmlrpc_404/</guid><description>&lt;p>用WLW连接Wordpress发布文章时，总是遇到找不到xmlrpc.php的问题，直接在浏览器中输入完整地址，也是得到404错误。但是通过FTP能看到这个文件就放在那里。怎么回事？&lt;/p>
+&lt;p>很自然开始怀疑主机有策略，阻止了对xmlrpc的访问。于是把xmlrpc.php随便改个稀奇古怪的名字，再次测试，成功了。&lt;/p></description></item><item><title>MP3 Tag 整理小记</title><link>https://www.palfans.net/how-to-clear-mp3-tag/</link><pubDate>Tue, 21 Aug 2012 13:37:06 +0000</pubDate><guid>https://www.palfans.net/how-to-clear-mp3-tag/</guid><description>&lt;p>很长一段时间，我都是用QQ音乐随便听听，不过现在的版本界面内容越来越多，启动越来越慢，资源越耗越多。于是开始转向foobar2000，似乎是接触得晚了一点，有点儿out。不过随着对foobar2000越来越熟悉，就不自觉的开始有Tag洁癖，尤其是换了几个比较紧凑的CUI之后。再看看自己硬盘上的MP3，Tag乱得一塌糊涂，简直不堪入目，尤其是很多网站还把自己的域名网址在Tag里填得到处都是，一定要想办法清理一下。&lt;/p>
+&lt;p>几百首歌，手工处理？我只有疯了才会有这个打算的。人和猴子的区别就是会使用工具。&lt;/p>
+&lt;p>首要问题是能自动识别歌曲，并批量修改。TagRename，MP3Tag等都能批量修改，而且带了freedb这个开源数据库进行Tag查询。不过，freedb主要是基于歌曲文件名来识别，而且以专辑为单位识别准确率高，遇到单曲，甚至是从无名网站下载的无名歌曲，基本就无能为力了。于是，我改用Quintessential Media Player(QMP)，它附带了Gracenote这个比较牛逼的数据库的接口。说它牛逼，是因为它可以通过歌曲本身而不是文件名来识别歌曲。把不认识或者Tag不对的歌曲拖到QMP里边，就会自动去Gracenote匹配声音指纹，然后完善Tag。数据库很齐，反正目前为止，我硬盘上所有的歌曲都匹配出来了。本来新版Winamp也带了Gracenote，我也试用了一下，体积太庞大，听个歌，启动一堆面板，还是选QMP，小巧得多。&lt;/p>
+&lt;p>不过QMP匹配后的Tag有个问题，就是港台歌手的歌曲，Tag基本上全是繁体中文，而几乎所有的歌词下载工具都不能正确处理繁体中文的歌名或歌手名，导致如果想要自动下载歌词，只能手工把Tag从繁体中文改成简体中文。&lt;/p>
+&lt;p>怎么办？我在SB的手工改了几十个文件后，突然想出一个变通的方法，步骤稍多，但省事无数倍。首先，通过TagRename或者MP3Tag读取MP3的Tag信息，把需要处理的MP3的文件名按照歌手-专辑-歌曲名改名。这时文件名都是繁体中文了。然后用ConvertZ这个工具，把这些文件名由繁体中文批量改为简体中文。再通过TagRename或者MP3Tag读取文件名来更新Tag。这样曲线救个国，所有的繁体中文Tag就批量的变为了简体中文。如果你有1000首歌需要处理，我相信，仅需要5分钟，你就能收获极大的快感。&lt;/p>
+&lt;p>总结下，整个流程就是 &lt;code>QMP&lt;/code>→&lt;code>TagRename/MP3Tag&lt;/code>→&lt;code>ConvertZ&lt;/code>→&lt;code>TagRename/MP3Tag&lt;/code>，就这么简单。&lt;/p></description></item><item><title>Windows编译OpenVPN客户端（保存密码，修改日志字体）</title><link>https://www.palfans.net/compile-openvpn-gui-n-client/</link><pubDate>Sat, 29 Jan 2011 09:19:49 +0000</pubDate><guid>https://www.palfans.net/compile-openvpn-gui-n-client/</guid><description>&lt;p>OpenVPN客户端一般由两部分组成，OpenVPN和OpenVPN GUI。官方提供的OpenVPN客户端 for Windows为了提高用户账号的安全性，默认不能保存密码。安全性确实提高了，但是遇到网络不好，VPN意外中断时，每次都要手工输入密码，也很烦心。所以我们需要重新编译客户端代码，让其能够保存密码。而OpenVPN GUI的问题在于状态窗口输入的日志字体小得惊人，像我这种戴眼镜后矫正视力才0.6的人，想看清连接状态几乎是不可能的，所以也得改。&lt;/p>
+&lt;p>** **&lt;/p>
+&lt;p>**&lt;/p>
+&lt;p>搭建编译环境**&lt;/p>
+&lt;p>我很久没有碰过C语言了，所以除了官方推荐的环境，我不确定其他环境是否能顺利编译。&lt;/p>
+&lt;p>NSIS &lt;a href="http://sourceforge.net/projects/nsis/files/NSIS%202/2.46/nsis-2.46-setup.exe/download">下载链接&lt;/a>，建议完全安装。&lt;/p>
+&lt;p>MinGW &lt;a href="http://sourceforge.net/projects/mingw/files/Automated%20MinGW%20Installer/">下载链接&lt;/a>，现在MinGW只提供在线安装程序，安装时再下载相关文件，耗时较长。也可以Google一下，有&lt;a href="http://data.99pan.com/download/7621_43_7840485476281515222.html">完整版&lt;/a>可下，假设安装路径为 C:\MinGW&lt;/p>
+&lt;p>MSYS &lt;a href="http://downloads.sourceforge.net/mingw/MSYS-1.0.11.exe">下载链接&lt;/a>，假设安装路径为 C:\msys\1.0&lt;/p>
+&lt;p>msysDTK &lt;a href="http://downloads.sourceforge.net/mingw/msysDTK-1.0.1.exe">下载链接&lt;/a>，安装路径和MSYS相同，C:\msys\1.0&lt;/p>
+&lt;p>配置环境变量，如果变量PATH中已有其他路径，则新增“;C:\MinGW\bin;C:\msys\1.0\bin”，如果变量PATH不存在，则新建一个变量，命名为PATH，内容为“C:\MinGW\bin;C:\msys\1.0\bin”。注意，变量内容都不包含引号，新增变量时，变量内容最前面没有分号。&lt;/p>
+&lt;p>配置完成后，打开命令提示符，输入bash，如果界面显示“bash-3.1$”，则编译环境搭建完成。&lt;/p>
+&lt;p>** **&lt;/p>
+&lt;p>&lt;strong>获取预编译文件&lt;/strong>&lt;/p>
+&lt;p>OpenVPN编译过程中需要openssl，tap驱动，lzo压缩等文件，我们可以下载已经编译好的文件 &lt;a href="http://openvpn.net/prebuilt/2.1_rc22-prebuilt.tbz">下载链接&lt;/a>，这里的预编译文件版本不是2.1.1，但不影响实际编译效果。&lt;/p>
+&lt;p>新建一个工作目录 C:\work，将预编译文件解压后置于工作目录下，应包含以下四个目录：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">gen-prebuilt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lzo-2.02
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">openssl-0.9.8l
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pkcs11-helper
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>编译OpenVPN GUI&lt;/strong>&lt;/p>
+&lt;p>获取OpenVPN GUI的源代码 &lt;a href="http://openvpn.se/files/source/openvpn-gui-1.0.3.zip">下载链接&lt;/a>，解压缩到C:\work\openvpn-gui目录下。&lt;/p>
+&lt;p>首先修改openvpn.c，找到函数StatusDialogFunc，修改&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">charformat.yHeight = 100;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">strcpy(charformat.szFaceName, &amp;#34;MS Sans Serif&amp;#34;);
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>其中100是字体大小，MS Sans Serif是字体名称。&lt;/p>
+&lt;p>接下来需要修改Makefile，&lt;/p>
+&lt;p>OPENSSL = /c/OpenSSL 改为预编译文件中的openssl下include头文件的位置，这里为&lt;/p>
+&lt;p>&lt;code>OPENSSL = ../openssl-0.9.8l/include/openssl&lt;/code>&lt;/p>
+&lt;p>LIB_DIRS = -L${OPENSSL}/lib/MinGW 改为预编译文件中openssl的相关lib目录，这里为&lt;/p>
+&lt;p>&lt;code>LIB_DIRS = –L../gen-prebuilt/lib&lt;/code>&lt;/p>
+&lt;p>运行C:\msys\1.0下的msys.bat，进入类unix环境，切换到C:\work\openvpn-gui目录，执行make，OpenVPN GUI即可编译完成。&lt;/p>
+&lt;p>&lt;strong>编译OpenVPN客户端&lt;/strong>&lt;/p>
+&lt;p>获取OpenVPN客户端的源代码 &lt;a href="http://openvpn.net/release/openvpn-2.1.1.tar.gz">下载链接&lt;/a>，解压缩到C:\work\openvpn-2.1.1目录下。&lt;/p>
+&lt;p>修改misc.c文件，在#ifundef ENABLE_PASSWORD_SAVE一行前面加上&lt;/p>
+&lt;p>#define ENABLE_PASSWORD_SAVE&lt;/p>
+&lt;p>到install-win32目录，修改openvpn.nsi文件，找到以下代码：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">; tap-64bit:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">DetailPrint “We are running on a 64-bit system.”
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SetOutPath “$INSTDIR\bin”
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">File “${GEN}\tapinstall\amd64\tapinstall.exe”
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SetOutPath “$INSTDIR\driver”
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">File “${GEN}\driver\amd64\OemWin2k.inf”
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">File “${GEN}\driver\amd64\${PRODUCT_TAP_ID}.cat”
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">File “${GEN}\driver\amd64\${TAPDRV}”
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">goto tapend
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">tap-32bit:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">DetailPrint “We are running on a 32-bit system.”
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SetOutPath “$INSTDIR\bin”
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">File “${GEN}\tapinstall\i386\tapinstall.exe”
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SetOutPath “$INSTDIR\driver”
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">File “${GEN}\driver\i386\OemWin2k.inf”
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">File “${GEN}\driver\i386\${PRODUCT_TAP_ID}.cat”
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">File “${GEN}\driver\i386\${TAPDRV}”
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">tapend:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SectionEnd
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在这段代码最前面插入：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">!undef GEN
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">!define GEN “C:\work\gen-prebuilt\”
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在这段代码最后面插入：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">undef
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">!define GEN “..”
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>打开命令提示符，执行如下命令：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">cd C:\work\openvpn-2.1.1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">bash domake-win
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>编译结束后，安装文件会生成在C:\work\openvpn-2.1.1\gen目录下。&lt;/p>
+&lt;p>&lt;strong>修改OpenVPN配置文件&lt;/strong>&lt;/p>
+&lt;p>修改当前使用的ovpn配置文件，将auth-user-pass改为auth-user-pass pass.txt，同时在相同路径下新增一个名为pass.txt的文本文件，内容为两行，第一行为vpn用户名，第二行为密码。&lt;/p>
+&lt;p>重新运行OpenVPN，即可不输密码登录vpn，而且此时status窗口的日志输出，也终于能看得清了。&lt;/p>
+&lt;p>顺便提一句，如果有需要vpn的同学，可以和我联系，目前有合租计划，人均每月6元，联系方式如下：&lt;/p>
+&lt;p>Twitter: @palfans&lt;/p>
+&lt;p>OpenVPN客户端编译部分，参考yegle&lt;a href="https://yegle.net/2010/05/19/compile-openvpn-2-1-1-in-windows/">相关文章&lt;/a>，致谢。&lt;/p></description></item><item><title>vpn三合一安装包</title><link>https://www.palfans.net/3-in-1-vpn-package/</link><pubDate>Fri, 22 Oct 2010 20:10:22 +0000</pubDate><guid>https://www.palfans.net/3-in-1-vpn-package/</guid><description>&lt;p>这个安装包其实就是一个shell脚本，帮助大家尽量节约些时间。已经写好有一段时间了，一直没时间写blog，今天做了个review，修修补补就放出来吧。大概写下这个安装包的一些特点。&lt;/p>
+&lt;pre>&lt;code> 1. 三合一，指的是pptp / openvpn / l2tp，另外还安装了nginx / php / mysql / phpMyAdmin / Freeradius&amp;lt;del&amp;gt; / daloradius&amp;lt;/del&amp;gt;，基本上把一个vpn系统需要的基本程序安装完了。
+2. 安装包默认是完全安装，当然也可以只安装其中的某一种vpn，脚本提供定制选项
+3. 脚本自动获取服务器ip、相关文件路径等，也可定制，说是一键安装有点儿夸张，不过按几下回车就能装完还是可以实现的。
+4. 现在有CentOS&amp;lt;del&amp;gt;和Ubuntu两个&amp;lt;/del&amp;gt;版本，分别在CentOS 5.5 &amp;lt;del&amp;gt;和 Ubuntu 10.04 LTS&amp;lt;/del&amp;gt;上测试通过。Linux的发行版太多了，搞得我头都大了好几圈，对其他版本有爱的同学请自行修改。
+&lt;/code>&lt;/pre>
+&lt;p>安装方法：&lt;/p>
+&lt;p>在命令行界面根据不同的版本，输入&lt;del>wget &lt;a href="http://20ne.com/vpn/ubuntu.sh">http://20ne.com/vpn/ubuntu.sh&lt;/a> 或 wget &lt;a href="http://20ne.com/vpn/centos.sh">http://20ne.com/vpn/centos.sh&lt;/a>&lt;/del>，取得文件后直接运行脚本，中间有少许参数需手工确认，无需修改的话，直接回车即可。【update】20ne.com这个域名被我卖了，主机被人攻击，备份代码全丢。这里郑重推荐&lt;a href="http://www.yishanhome.com/archives/307">逸山的改进版&lt;/a>，添加很多功能，安装更加人性化，自动化。&lt;/p>
+&lt;p>IT民工业余制作，测试环境恶劣，所以问题肯定很多，不能保证在所有平台都一帆风顺。大家用的时候可以自己斟酌修改，也可以和我交流。&lt;/p>
+&lt;p>【update 2010-10-28】
+使用方法：&lt;/p>
+&lt;p>安装完成后，脚本会自动在数据库中添加一个测试账号test，密码为1234。大家可以通过自动安装的phpMyadmin访问mysql数据库进行修改和新增，对应的表为radius库里的radcheck，&lt;del>也可以通过自动安装的daloradius来管理vpn账号，初始用户名为administrator，密码为radius，可以在radius库的operators中修改和新增管理用户&lt;/del>。
+默认链接：
+phpMyAdmin: http://你的VPS域名或IP/phpmyadmin/
+&lt;del>daloradius: http://&lt;your vps ipaddress>/dr/&lt;/del>
+对于openvpn，在安装目录下会生成一个名为openvpn的新目录，里边的client目录包含对应该服务端的客户端配置文件和证书，需要分发给客户端，并使用用户名和密码进行登录。
+对于pptp，直接新建一个基于pptp的网络连接就行，具体请google “&lt;a href="https://encrypted.google.com/search?q=%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AEpptp+vpn&amp;amp;hl=zh-CN">如何设置pptp vpn&lt;/a>”
+对于l2tp，和pptp类似，不过需要改为l2tp方式，并填写IpSec密钥，此密钥默认为palfans，可在执行脚本前，修改secret_key的值。具体如何新建连接请google “&lt;a href="https://encrypted.google.com/search?hl=zh-CN&amp;amp;newwindow=1&amp;amp;q=%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE+l2tp+vpn&amp;amp;aq=f&amp;amp;aqi=&amp;amp;aql=&amp;amp;oq=&amp;amp;gs_rfai=">如何设置l2tp vpn&lt;/a>”&lt;/p>
+&lt;p>【update 2012-06-01】
+欢庆六一儿童节，针对各位在留言中碰到的问题，统一做了更新，希望能提升安装成功率。本次更新取消了Ubuntu版本，因为我找不到测试环境，时间也不够，sigh~~~~~&lt;/p>
+&lt;ol>
+&lt;li>使用军哥的LNMP安装脚本来安装Nginx，PHP和MySQL，内存控制好，系统稳定性高。感谢军哥，有关LNMP的问题，请点&lt;a href="http://www.lnmp.org/">这里&lt;/a>。&lt;/li>
+&lt;li>OpenSwan改用自行编译方式，兼容性更高。&lt;/li>
+&lt;li>取消Daloradius，账号管理用PhpMyAdmin已经比较方便，如没有复杂要求，没必要搞这个。有兴趣的同学可以自行安装。&lt;/li>
+&lt;li> 修正一堆弱智问题。&lt;/li>
+&lt;/ol>
+&lt;p>如有其他问题，欢迎留言或直接给我发邮件。&lt;/p></description></item><item><title>利用SipSorcery、Google Voice和PBXes实现由PSTN电话发起的回拨</title><link>https://www.palfans.net/pstn-gv-callback/</link><pubDate>Fri, 17 Sep 2010 20:30:06 +0000</pubDate><guid>https://www.palfans.net/pstn-gv-callback/</guid><description>&lt;p>Google Voice（简称GV）是Google公司的又一个伟大产品，它其实是一个回拨系统。用户使用时，在GV的网页上选择自己用来接听的电话号码，并输入对端号码，系统就会分别接通双方，开始通话。现在，Google更进一步，Gmail界面中的Google Talk能够直接输入对端号码发起通话。Google已经承诺，至少到2010年底，GV拨打美国、加拿大全免费。如果我们要拨打美加的电话，这是很不错的选择。我们可以利用Gmail直接发起通话，也能通过手机访问Voice Mobile页面或拨号软件发起通话。但是，家里常用的PSTN电话既不能访问网页，也不能运行拨号软件，应该怎么办呢？&lt;/p>
+&lt;p>这里就该SipSorcery（简称SS）出场了。SS和PBXes（本文也要用到）、Voxalot等类似，都是提供SIP交换的服务网站，不过SS支持使用Ruby语言自定义拨号计划，这样，就能通过编程实现各种要求。另外，SS的作者Aaron一直在维护和改进这套系统，他新增了一个接口，可以直接拨打GV，而不需要等待回拨，相当方便。再加上PBXes，就能方便的搭建一个PSTN回拨平台，顺利使用GV的免费大餐。&lt;/p>
+&lt;p>这篇post主要用来总结一下我的设计思路，而不是一篇手把手的教程。&lt;/p>
+&lt;p>&lt;img src="https://res.palfans.net/img/tech_pstn_callback.png" alt="">&lt;/p>
+&lt;p>在这个设计中，除了GV，还引入了Localphone（简称LP）。这是一家老牌的voip运营商，它提供相当丰富的voip相关服务。通过LP拨打中国、印度等非美国号码的资费比GV更廉价，拨到中国的每分钟费率折合人民币仅仅8分钱。将来如果有更廉价的运营商出现，只要它支持SIP拨叫，就可以轻松的在SS中进行替换。在这里，LP的作用就是拨出电话，并落地到PSTN网络中。&lt;/p>
+&lt;p>通过PSTN电话拨打到SS触发回拨时，不能附加参数，比如身份验证码和需要拨打的对端号码。这时就引入了PBXes，这套交换系统提供了CallThru功能，能在回拨接通后进行身份校验和接收对端号码。最后将数据送回SS进行处理，发起回拨的第二个链路。&lt;/p>
+&lt;p>主要工作都是由SS来完成，涉及到的代码主要是&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>判断回拨的电话归属地，并采用最经济的方式进行拨叫&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>sys.Callback(call_leg_1, call_leg_2)命令，用以发起回拨&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>回拨过程中，再次调用GV回拨接口来拨打美国电话时，需要单独编写一段拨号计划，用来将GV回拨转化为一个SIP代理进行拨叫&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>PSTN电话如果不支持呼叫等待，在触发回拨后，可能来不及挂断电话，这样就不能接收到系统回拨回来的来电信号，导致回拨失败。这时可以考虑让回拨延时30秒，保证触发电话顺利挂机。&lt;a href="mailto:early_music@iptel.org">early_music@iptel.org&lt;/a> 这个early media资源在这里就很有帮助了&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>PSTN电话只需要触发回拨，不需要接通，因此在触发完成后，SS系统要及时回复一个拨叫失败的信号，避免产生费用&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>至于用来拨打的电话号码，只要是能够转接到SIP服务器的号码都能使用，比如IPKALL，SipGate等等。而且，整个触发过程，这个号码都没有接通，所以不管是哪个国家的号码都没问题，不会产生任何费用。我使用了一个美国号码，一个德国号码和一个英国号码来作为触发号码，用来保证回拨系统随时都能正常工作。&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>本文涉及到的网站分别是：&lt;/p>
+&lt;p>&lt;a href="http://voice.google.com">Google Voice&lt;/a>   &lt;a href="http://www.sipsorcery.com/mainsite/Home/Portal">SipSorcery&lt;/a>   &lt;a href="http://www.localphone.com/">Localphone&lt;/a>   &lt;a href="http://www.pbxes.com">PBXes&lt;/a>   &lt;a href="http://www.ipkall.com">IPKALL&lt;/a>   &lt;a href="http://www.sipgate.com">SipGate&lt;/a>&lt;/p></description></item></channel></rss>
