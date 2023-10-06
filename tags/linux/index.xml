@@ -23,9 +23,9 @@
 &lt;p>首先运行swapon命令查看交换空间大小，如果得到的大小少于&lt;strong>2097152&lt;/strong>，就需要增加交换空间。&lt;/p>
 &lt;pre>&lt;code>swapon -s
 &lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://res.palfans.net/img/1.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://www.palfans.net/img/extend_swap_space_in_virtualbox/1.png" alt="">&lt;/p>
 &lt;p>1. 首先，在VirtualBox中新增一块硬盘&lt;/p>
-&lt;p>&lt;img src="https://res.palfans.net/img/2.png" alt="">&lt;/p></description></item><item><title>用nohup命令让程序在后台执行（Unix/Linux）</title><link>https://www.palfans.net/unix-linux-nohup/</link><pubDate>Thu, 08 Mar 2007 10:54:23 +0000</pubDate><guid>https://www.palfans.net/unix-linux-nohup/</guid><description>&lt;p>　　在主机上跑程序，挂后台以后发现有时程序会退出，有时又不会。很奇怪，查了一下资料，整理如下。&lt;/p>
+&lt;p>&lt;img src="https://www.palfans.net/img/extend_swap_space_in_virtualbox/2.png" alt="">&lt;/p></description></item><item><title>用nohup命令让程序在后台执行（Unix/Linux）</title><link>https://www.palfans.net/unix-linux-nohup/</link><pubDate>Thu, 08 Mar 2007 10:54:23 +0000</pubDate><guid>https://www.palfans.net/unix-linux-nohup/</guid><description>&lt;p>　　在主机上跑程序，挂后台以后发现有时程序会退出，有时又不会。很奇怪，查了一下资料，整理如下。&lt;/p>
 &lt;p>　　&amp;amp; 只是放在后台运行，但是没有脱离控制终端，当终端断开的时候，进程将收到SIGHUP信号，这个信号默认动作是结束进程。用nohup将使进程脱离控制终端，进程无法进行终端操作，所有输出到终端的会被重定向。而 &amp;amp; 可以进行终端操作，如果发生读写终端，进程被挂起，用fg命令可以使进程获得终端控制权并继续运行。&lt;/p>
 &lt;p>　　Unix/Linux下一般想让某个程序在后台运行，很多都是使用 &amp;amp; 在程序结尾来让程序自动运行。比如我们要运行mysql在后台： /usr/local/mysql/bin/mysqld_safe &amp;ndash;user=mysql &amp;amp;&lt;/p></description></item><item><title>Linux/Unix下如何删除具有特殊字符的文件</title><link>https://www.palfans.net/linux-unix-how-to-delete-files-with-special-characters/</link><pubDate>Thu, 28 Dec 2006 10:30:27 +0000</pubDate><guid>https://www.palfans.net/linux-unix-how-to-delete-files-with-special-characters/</guid><description>&lt;p>假设Linux/Unix系统中有一个文件名叫“-target”，如果我们想对它进行操作，例如要删除它按照一般的删除方法在命令行中输入rm -target命令，界面会提示我们是“无效选项”(invalid option)，原来由于文件名的第一个字符为“-”，Linux/Unix把文件名当作选项了。&lt;/p>
 &lt;p>我们可以使用“&amp;ndash;”符号来解决这个问题，通过man rm可以知道&lt;/p></description></item></channel></rss>

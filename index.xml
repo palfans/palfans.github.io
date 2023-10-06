@@ -643,7 +643,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Experimental: false
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>从 WordPress 迁到 Hugo</title><link>https://www.palfans.net/moving_wordpress_hugo/</link><pubDate>Fri, 25 Jan 2019 21:46:00 -0600</pubDate><guid>https://www.palfans.net/moving_wordpress_hugo/</guid><description>&lt;p>&lt;img src="https://res.palfans.net/img/migration.png" alt="">&lt;/p>
+&lt;/div></description></item><item><title>从 WordPress 迁到 Hugo</title><link>https://www.palfans.net/moving_wordpress_hugo/</link><pubDate>Fri, 25 Jan 2019 21:46:00 -0600</pubDate><guid>https://www.palfans.net/moving_wordpress_hugo/</guid><description>&lt;p>&lt;img src="https://www.palfans.net/img/migrate_to_hugo/migration.png" alt="">&lt;/p>
 &lt;h2 id="起因">起因&lt;/h2>
 &lt;p>说起来，都不记得这是第几次折腾 Blog 的服务器了。当初为了提高从国内访问的速度，我把搭梯子的 VPS 放在了香港的数据中心，顺便把 Blog 也放在同一台服务器以求节约成本。转眼自己肉翻这么多年，再也没有机会用那把梯子。但从美国家里访问 Blog 就慢得不能忍受，而且因为 VPS 性能不好，时不时就会出现 503 错误。思考再三，决定把站点搬回美国，反正流量可以忽略，至少要满足自己的。&lt;/p>
 &lt;h2 id="选型">选型&lt;/h2>
@@ -839,11 +839,11 @@
 &lt;p>禁用动态标题后，只需要 ctrl + a + A 就能自定义窗口名。&lt;/p></description></item><item><title>Kodi 通过 SMB 连接远程 Win 10 失败</title><link>https://www.palfans.net/kodi_cannot_access_win10_via_smb/</link><pubDate>Thu, 15 Mar 2018 21:03:12 +0000</pubDate><guid>https://www.palfans.net/kodi_cannot_access_win10_via_smb/</guid><description>&lt;p>我同时在 Win 10 和 Android 平板安装了 Kodi，通过 SMB 连接到家里的 Win10 NAS 视频媒体库。之前工作正常，这两天突然发现 Android 平板连不上，每次设置好用户名密码就报连接超时（Connection Timed Out），但 Win 10 平板依然正常。&lt;/p>
 &lt;p>上网搜索一圈，在 Kodi 的&lt;a href="https://kodi.wiki/view/SMB/Windows">官方维基&lt;/a>找到了答案。貌似 Win10 在某次自动升级以后，默认关闭了 SMB 1.0/CIFS File Sharing Support 的功能，需要重新手动打开。&lt;/p>
 &lt;p>打开控制面板中的“添加删除程序功能”模块，或者在 Windows 开始旁边的搜索框中输入“Turn Windows feature on or off”并找到控制面板的最佳匹配项。&lt;/p>
-&lt;p>&lt;img src="https://res.palfans.net/img/300px-2017-11-14_08-23-47.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://www.palfans.net/img/kodi_cannot_access_win10_via_smb/300px-2017-11-14_08-23-47.png" alt="">&lt;/p>
 &lt;p>在 Windows 功能中找到 SMB 1.0/CIFS File Sharing Support 并激活，Windows 会安装相应的文件。重启 Win10 之后，就能重新支持 Kodi 采用的旧版 SMB 协议。&lt;/p>
-&lt;p>&lt;img src="https://res.palfans.net/img/OptionalFeatures_2017-11-14_08-24-53.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://www.palfans.net/img/kodi_cannot_access_win10_via_smb/OptionalFeatures_2017-11-14_08-24-53.png" alt="">&lt;/p>
 &lt;p>再次打开 Android 平板的 Kodi，通过 SMB 连接就能打开远端的媒体库了。这个问题并没有出现在 Win10 平板的 Kodi 中，估计因为 Android 版本还没有支持 SMB 2.0。&lt;/p>
-&lt;p>伴随 Win10 自动升级还有另外一个坑在等着 Kodi。SMB 协议问题解决后，输入正确的 Outlook 账号也不能成功连接到远端 NAS的共享文件夹。解决方法是，升级后的 Win10 文件共享不能使用邮箱作为用户名了，需要登录到 Win10，打开 CMD 窗口，输入 whoami，会列出当前的机器名和用户名。使用这个用户名和对应的 Outlook 账号密码就能成功打开共享文件夹。&lt;/p></description></item><item><title>租租车的国际驾照认证件能用吗？</title><link>https://www.palfans.net/does-zuzuche-idp-work/</link><pubDate>Fri, 30 Jun 2017 19:24:04 +0000</pubDate><guid>https://www.palfans.net/does-zuzuche-idp-work/</guid><description>&lt;p>&lt;img src="https://res.palfans.net/img/zuzuche_idl.jpg" alt="">&lt;/p>
+&lt;p>伴随 Win10 自动升级还有另外一个坑在等着 Kodi。SMB 协议问题解决后，输入正确的 Outlook 账号也不能成功连接到远端 NAS的共享文件夹。解决方法是，升级后的 Win10 文件共享不能使用邮箱作为用户名了，需要登录到 Win10，打开 CMD 窗口，输入 whoami，会列出当前的机器名和用户名。使用这个用户名和对应的 Outlook 账号密码就能成功打开共享文件夹。&lt;/p></description></item><item><title>租租车的国际驾照认证件能用吗？</title><link>https://www.palfans.net/does-zuzuche-idp-work/</link><pubDate>Fri, 30 Jun 2017 19:24:04 +0000</pubDate><guid>https://www.palfans.net/does-zuzuche-idp-work/</guid><description>&lt;p>&lt;img src="https://www.palfans.net/img/does-zuzuche-idp-work/zuzuche_idl.jpg" alt="">&lt;/p>
 &lt;p>这两天看到微信朋友圈里在宣传租租车可以免费办理国际驾照认证件（&lt;a href="http://w.zuzuche.com/tidl/">链接&lt;/a>），号称香港公证行和NAATI联合翻译认证，9国语言，权威认证，畅行全球200个国家，包括美国、加拿大、澳大利亚、以及英德意等欧洲国家。脑中升起一个问号，真是这样的吗？&lt;/p>
 &lt;p>上网搜了一下，这本认证件全名叫Translation of International Driver License，由租租车和International Driving Club联合推出。它自己的说明页明确指出，该认证件根据《联合国道路交通公约》，严格按照国际标准将中国驾照翻译成9国语言，支持超过200个国家和地区租车、取车。&lt;/p>
 &lt;p>看起来好像很正规。但是，这里我发现一个问题。它声称自己的法律依据是《联合国道路交通公约》，那就看看这个公约到底是什么。&lt;/p>
@@ -851,7 +851,7 @@
 &lt;p>联合国1949年在日内瓦制定了《道路交通公约》，参加公约的国家在道路规范、标志、信号、交通规则以及跨国运输车辆的规格等方面采取相似的标准，同时为成员国公民在其他国家驾驶车辆提供方便，由缔约国政府或其授权机构根据公民的需要，依据其有效的国内驾照以多种文字颁发一份许可证，证明该公民的国内驾照为合法文件。对官方语言与颁发驾照地不同的国家，该许可证的好处更加突出：驾车人同时出示本国驾照和IDP，就可以迅速准确地核实驾车人的身份和驾驶资格，给执法机关、交通运输相关行业例如租车公司和保险公司带来很大方便。尽管联合国的公约文字上把IDP称为“国际（驾驶）执照”，但是它必须与持有人的国内驾照一同使用，仅仅有IDP既不能在外国也不能在本国合法开车。&lt;/p>
 &lt;p>该公约在1968年修订，文本从原来只有英法两种文字变为当时联合国法定的五种文字，篇幅也从118页增加到466页。迄今在新公约上签字的有82个国家和地区，其中70个已经递交了批准书。但是因为1949年公约成员国还有一半以上没有签署和批准新的公约，而且公约的很多基本规定，包括国际驾照的章节并没有大的变化，所以国际驾照的规定在这两个公约的成员国都适用。——美国国务院Blog《雾谷飞鸿》&lt;a href="https://blogs.america.gov/mgck/2012/04/24/permit/">链接&lt;/a>&lt;/p>
 &lt;/blockquote>
-&lt;p>&lt;img src="https://res.palfans.net/img/Countries_that_Recognize_International_Driving_Permit.png" alt="Countries_that_Recognize_International_Driving_Permit">&lt;/p>
+&lt;p>&lt;img src="https://www.palfans.net/img/does-zuzuche-idp-work/Countries_that_Recognize_International_Driving_Permit.png" alt="Countries_that_Recognize_International_Driving_Permit">&lt;/p>
 &lt;p>深蓝：国际道路交通公约签约国和地区 浅蓝：非签约国但承认国际驾驶执照&lt;br>
 图片来源：&lt;a href="https://zh.wikipedia.org/wiki/%E5%9C%8B%E9%9A%9B%E9%A7%95%E9%A7%9B%E5%9F%B7%E7%85%A7">维基百科-国际驾照词条&lt;/a>&lt;/p>
 &lt;p>我们能很轻松的发现，中国既不是深蓝，也不是浅蓝。这说明中国根本不承认国际驾照。在广东生活的朋友，对香港过境车挂中港双牌照应该已经司空见惯，这也是因为中国不是《道路交通公约》签约国，不认可该公约，致使所有外国和地区登记车辆，必须悬挂单独的中国牌照。&lt;/p>
@@ -860,7 +860,7 @@
 &lt;p>最后提醒大家一点，就是有人向非日内瓦《道路交通公约》缔约国公民兜售“国际驾照”，有的还打出与美国“权威机构”合作、甚至作为这种机构代理的旗号，而且说要把公民的驾照资料送到美国核实，然后在美国制作国际驾照，再快递回国交给当事人，所以收费高昂（美国办理国际驾照现在收费15美元）。知道了公约附件七的规定，就应该清楚这些都是不对的，这样得到的所谓“国际驾照”，与把该国驾照翻译成英文、然后加以公证的作用没有什么区别。这种骗人的机构有的还宣称可以办理有效期5年的“国际驾照”，那更是荒唐，因为联合国的公约明白无误地规定，国际驾照有效期只有一年。。——美国国务院Blog《雾谷飞鸿》&lt;a href="https://blogs.america.gov/mgck/2012/04/24/permit/">链接&lt;/a>&lt;/p>
 &lt;/blockquote>
 &lt;p>所以凭租租车这本国际驾照，只可能在那些承认翻译公证后的中国驾照有效的国家和地区使用，但这不一定适合所有《道路交通公约》的签约国，需要对每一个国家的专门法律条文进行研究。&lt;/p>
-&lt;p>&lt;img src="https://res.palfans.net/img/image.png" alt="">&lt;br>
+&lt;p>&lt;img src="https://www.palfans.net/img/does-zuzuche-idp-work/image.png" alt="">&lt;br>
 图片来源：穷游问答 &lt;a href="http://ask.qyer.com/question/962637.html">链接&lt;/a>&lt;/p>
 &lt;p>从租租车的回答来看，这是相当不负责任的。他们只和车行供应商多次确认，而不是自己去研究相关的法律条文或者咨询专业律师，如果真的出了什么意外，车行供应商是不会帮你向执法部门做任何解释的。&lt;/p>
 &lt;p>具体到中国驾照能否在美国合法开车，这个问题太复杂，因为美国50个州都有自己不同的规定，而且一直在不断调整。因为常年生活在德州，2013年我给Texas DPS（得克萨斯州公共安全部门）发过一封邮件，询问我持有中国驾照能否在德州境内合法驾驶，回复如下：&lt;/p>
@@ -880,7 +880,7 @@ Applicants who have a valid, unexpired driver license from another U.S. state, U
 &lt;p>在德州合法的外国驾照&lt;strong>只针对&lt;/strong>德州的互惠国，即**加拿大、法国、德国、韩国和台湾，**甚至连其他的《道路交通公约》签约国和地区都不行，更别提中国驾照。&lt;/p>
 &lt;p>不过以我的经验，因为台湾在官方文件里通常写作 China(Taiwan)，很多美国人包括执勤的交通警察都分不清 China(PRC)和China(Taiwan)的区别，统一了一个中国的认识，所以在车行租车、路上警察查询时都能顺利过关。但是，这有非常大的隐患。一旦出了一个稍大的事故，需要出庭的时候，法官通常能发现你无证驾驶这个事实，即使事故本身责任判定对你有利，也会面临很大的政策风险，至少保险公司可以主张不赔付任何损失，还有可能罚款和监禁。&lt;/p>
 &lt;p>最后我们不禁想问，为什么中国现在汽车拥有量和出国旅游人数年年攀升的前提下，还是不想加入《道路交通公约》来为自己公民争取一些出行便利呢？我臆测的一个原因是，通过外交努力也没办法替换掉大陆建国前就已经加入公约的台湾（中华民国），索性就完全不吊它了。&lt;/p></description></item><item><title>银行账户被盗</title><link>https://www.palfans.net/bank_account_compromised/</link><pubDate>Thu, 22 Jun 2017 16:57:37 +0000</pubDate><guid>https://www.palfans.net/bank_account_compromised/</guid><description>&lt;p>过去的一整天，我都在忙于更改各种账户的银行资料。因为它们关联的银行账户被盗，产生了好几笔支付交易。在银行的要求下，我只能关掉这个问题账户，重新开一个新账户，并手动更新到所有关联账户。&lt;/p>
-&lt;p>&lt;img src="https://res.palfans.net/img/0929072242721.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://www.palfans.net/img/bank_account_compromised/0929072242721.jpg" alt="">&lt;/p>
 &lt;p>8年来，每个月我会抽一小时的时间对所有账户交易流水进行核对。这个月，我看到有两笔来自Paypal的扣款很陌生，因为我小儿子刚好在那天出生，我一整天都待在医院，根本没有时间接触电脑和手机进行任何消费活动。我立刻打开Paypal，发现在那天确实没有产生任何交易记录。我第一反应就是账户被黑了。&lt;/p>
 &lt;p>Paypal这边完全无信息可查，我又返回银行的交易记录查询明细，看到这两笔交易都来自同一个人：PAYPAL DES:TRANSFER ID:xxxxxxxxx INDN:TRINA VONHAGEN CO ID:PAYPALSD22 WEB，姓名是TRINA VONHAGEN，Paypal账号是PAYPALSD22。这个时候我突然反应过来，刚才登录网上银行时，提示“账户密码错误次数过多，账户被锁”，说明对方也在尝试直接登录我的银行账户。不幸中的万幸是，我一直使用LastPass来为所有网络服务随机生成含特殊字符、数字、大小写字母的18位密码，每个账号密码都不同，完全杜绝撞库。在LastPass主密码安全的前提下，通过暴力破解的方式几乎是不可能的。&lt;/p>
 &lt;p>接下来需要联系Paypal。当时已经是美国中部时间晚上11点，Paypal的客服人员理论上应该下班了。很幸运，鬼使神差下，我平板电脑上绑定的居然是中国Paypal的账户。我在不知不觉中拨通了Paypal上海的客服电话。客服小姐非常耐心听完整个过程，然后说好像没查到你这个账户关联了美国的银行。我一下想起来，登错账号。这时客服没有直接拒绝我，而是说按照规定我的问题应该交由美国部门来处理，但这个问题涉及账户被盗，她可以破例帮我尝试跨部门查询。查了我的美国Paypal的账户名，发现我的银行支票账户被之前提到这个Paypal账户关联了，除了已经清账的两笔，还有6笔其他的交易正在等待处理，不过这些交易还没有同步到银行系统。客服小姐立刻对问题账户做了警告标识，冻结了未生效的6笔交易，告知我已生效的2笔交易，他们会在走完查询流程后全额返还。不过因为她不了解美国银行的处理方式，建议我在第二天再次联系美国Paypal和银行。&lt;/p>
@@ -900,7 +900,7 @@ Applicants who have a valid, unexpired driver license from another U.S. state, U
 &lt;li>定期对账很有必要，如果这次不是常规对账，我根本不可能发现对方采用的每次几十美金小额支付的细水长流的盗窃手法。&lt;/li>
 &lt;li>银行的挂起账户功能一定是华人产品经理设计的，才会如此的偏好“8”。&lt;/li>
 &lt;/ol></description></item><item><title>Blog 更换服务器</title><link>https://www.palfans.net/blog-changed-server/</link><pubDate>Mon, 05 Jun 2017 20:49:13 +0000</pubDate><guid>https://www.palfans.net/blog-changed-server/</guid><description>&lt;p>算起来，从2005年开始写这个Blog，累计换了好几次服务器。从Windows主机到Linux主机，从朋友托管机器到专业空间服务商，从相当业余的myrice到老牌空间hostgator，在不断折腾中慢慢熟悉了域名，DNS，虚拟空间等各种概念和网站知识。2010年搬到&lt;a href="http://www.laoxuehost.com/">老薛主机&lt;/a>，因为不想折腾了。一晃七年，不能说没有遇到问题，比如网站经常会在中国的半夜出现MySQL服务器挂死的问题，为此我提交了好多问题单。不过一旦提交问题单，解决都非常快。马上新一年的账单又要来了，不过鉴于现在打理网站的时间少之又少，Blog基本处于停止更新的状态，一年估计能写一篇，所以即使年费才几十块钱，也不想再续费了。考虑到家里常年开着一台惠普的小服务器，反正闲着也是浪费电，索性在周末把全站从虚拟空间转移到自家的机器上。再见了，老薛。&lt;/p>
-&lt;p>&lt;img src="https://res.palfans.net/img/blog_change_server.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://www.palfans.net/img/blog-changed-server/server.jpg" alt="">&lt;/p>
 &lt;p>picture from &lt;a href="https://www.vpnranks.com">vpnranks&lt;/a>&lt;/p>
 &lt;p>搬家过程没什么挑战，Docker的出现让部署变得异常容易。开了4个容器，分别放数据库，Nginx，PHP-FPM和FTP，直接导入从原站拿到的备份，总耗时不超过2小时。唯一的坑在部署Let&amp;rsquo;s Encrypt的SSL证书。因为web服务器放在容器里，没有公网IP地址，所以不能采用certbot全自动模式来获取证书。看了下文档，certbot支持通过带manual参数来更新DNS TXT记录的方式来验证域名从而获取证书，命令很简单&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -936,14 +936,14 @@ Applicants who have a valid, unexpired driver license from another U.S. state, U
 &lt;/div></description></item><item><title>Oneplus One （一加手机）加密后如何升级系统</title><link>https://www.palfans.net/how-to-upgrade-encrypted-oneplus-one/</link><pubDate>Sat, 14 Nov 2015 06:24:00 +0000</pubDate><guid>https://www.palfans.net/how-to-upgrade-encrypted-oneplus-one/</guid><description>&lt;p>一年多以前从红米换成一加Oneplus One 64G版本，高通骁龙801的CPU，2G的运存，使用很顺手，终于体验了一把旗舰机的感觉。一加公司比较厚道，机器可以很轻松的通过&lt;a href="http://www.wugfresh.com/brt/">Bacon Root Toolkit&lt;/a>工具一键解锁和Root。&lt;/p>
 &lt;p>因为公司邮件系统的强制安全策略，所有接入系统的移动终端都会要求加密，但是一加国内版用的是ColorOS系统，加密功能貌似被取消了，而国际版的CyanogenMod系统却能正常加密，毫不犹豫刷成CM并成功加密。&lt;/p>
 &lt;p>但是问题来了，CM系统更新非常频繁，经常收到OTA升级通知，每次点击更新会在下载完升级包之后重启到Recovery的机器人界面，然后升级失败，怎么回事？&lt;/p>
-&lt;p>&lt;img src="https://res.palfans.net/img/OnePlusOneAndroid5.1.1LollipopCyanogen.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://www.palfans.net/img/how-to-upgrade-encrypted-oneplus-one/OnePlusOneAndroid5.1.1LollipopCyanogen.jpg" alt="">&lt;/p>
 &lt;p>仔细看了下错误日志，问题应该出在加密上。安卓系统加密时把/data分区进行加密，而其他的分区都没有加密。手机在正常开机状态下，升级包文件都下载到/data分区保存，但不知道什么原因，进入Recovery后并不能正确的解密该分区，CM11S和CM12S都是这个问题，于是/data加载失败，升级肯定也就不能继续。&lt;/p>
 &lt;p>通过反复尝试，我发现有三种方法可以成功升级。&lt;/p>
 &lt;ol>
 &lt;li>
 &lt;p>adb sideload update&lt;br>
 把升级包下载到电脑上，把手机和电脑用数据线连接起来，adb sideload就能从电脑读取升级文件后直接写入手机的/system分区，完全不访问/data，就不再有加密分区的限制。Bacon Root Toolkit提供了一键adb sideload的功能，点击下图按钮后，按照软件提示进行操作即可写入数据。&lt;br>
-&lt;img src="https://res.palfans.net/img/sideload.jpg" alt="">&lt;/p>
+&lt;img src="https://www.palfans.net/img/how-to-upgrade-encrypted-oneplus-one/sideload.jpg" alt="">&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>usb otg update&lt;br>
@@ -986,29 +986,29 @@ Applicants who have a valid, unexpired driver license from another U.S. state, U
 &lt;p>首先运行swapon命令查看交换空间大小，如果得到的大小少于&lt;strong>2097152&lt;/strong>，就需要增加交换空间。&lt;/p>
 &lt;pre>&lt;code>swapon -s
 &lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://res.palfans.net/img/1.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://www.palfans.net/img/extend_swap_space_in_virtualbox/1.png" alt="">&lt;/p>
 &lt;p>1. 首先，在VirtualBox中新增一块硬盘&lt;/p>
-&lt;p>&lt;img src="https://res.palfans.net/img/2.png" alt="">&lt;/p>
-&lt;p>&lt;img src="https://res.palfans.net/img/3.png" alt="">&lt;/p>
-&lt;p>&lt;img src="https://res.palfans.net/img/4.png" alt="">&lt;/p>
-&lt;p>&lt;img src="https://res.palfans.net/img/5.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://www.palfans.net/img/extend_swap_space_in_virtualbox/2.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://www.palfans.net/img/extend_swap_space_in_virtualbox/3.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://www.palfans.net/img/extend_swap_space_in_virtualbox/4.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://www.palfans.net/img/extend_swap_space_in_virtualbox/5.png" alt="">&lt;/p>
 &lt;p>2. 格式化新增的硬盘&lt;/p>
 &lt;pre>&lt;code>fdisk -l
 fdisk /dev/sdb
 &lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://res.palfans.net/img/6.png" alt="">&lt;/p>
-&lt;p>&lt;img src="https://res.palfans.net/img/7.png" alt="">&lt;/p>
-&lt;p>&lt;img src="https://res.palfans.net/img/8.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://www.palfans.net/img/extend_swap_space_in_virtualbox/6.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://www.palfans.net/img/extend_swap_space_in_virtualbox/7.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://www.palfans.net/img/extend_swap_space_in_virtualbox/8.png" alt="">&lt;/p>
 &lt;p>3. 转换为Swap space&lt;/p>
 &lt;pre>&lt;code>mkswap /dev/sdb1
 swapon /dev/sdb1
 swapon -s
 &lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://res.palfans.net/img/9.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://www.palfans.net/img/extend_swap_space_in_virtualbox/9.png" alt="">&lt;/p>
 &lt;p>4. 让CentOS开机自动加载新增的交换空间&lt;/p>
 &lt;pre>&lt;code>vi /etc/fstab
 &lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://res.palfans.net/img/10.png" alt="">&lt;/p></description></item><item><title>垃圾来袭</title><link>https://www.palfans.net/fu_kspam/</link><pubDate>Fri, 29 Nov 2013 07:50:03 +0000</pubDate><guid>https://www.palfans.net/fu_kspam/</guid><description>&lt;p>&lt;img src="https://res.palfans.net/img/stopspam.jpg" alt="stopspam">&lt;/p>
+&lt;p>&lt;img src="https://www.palfans.net/img/extend_swap_space_in_virtualbox/10.png" alt="">&lt;/p></description></item><item><title>垃圾来袭</title><link>https://www.palfans.net/fu_kspam/</link><pubDate>Fri, 29 Nov 2013 07:50:03 +0000</pubDate><guid>https://www.palfans.net/fu_kspam/</guid><description>&lt;p>&lt;img src="https://www.palfans.net/img/fu_kspam/stopspam.jpg" alt="stopspam">&lt;/p>
 &lt;p>最近发现网站所在的主机资源占用很严重，长期超过80%，经常触发资源达到限制的508错误。一开始没注意，结果月底主机带宽用光。这么多年，这个主机的带宽从未用完过一半，这个月居然用完了！于是开始仔细看访问日志，发现一大堆来自福建莆田的IP，频繁刷新各种页面，目的不明。主机商协助增加了3次，每次1G的流量，都很快被搞完。&lt;/p>
 &lt;p>主机商建议使用CDN来分摊流量和主机负载。于是先把网站弄到&lt;a href="http://www.cloudflare.com/">CloudFlare&lt;/a>，一开始很给力，网站访问速度大幅上升。没多久，发现访问网站失败，翻墙再试，正常得很。看来CloudFlare被盯得很紧，我有幸分配到了一个被加持过的IP。然后看到&lt;a href="http://www.anquanbao.com/">安全宝&lt;/a>也有类似的CDN服务，仍然是免费的。注册完发现，需要备案，否则只能分配一个境外IP。备你妈的案啊！&lt;/p>
 &lt;p>不过再看看安全宝提供的境外节点，貌似是个日本IP，国内访问速度还不错。我又开始动脑筋了，把两个CDN都用上！&lt;a href="http://www.dnspod.cn">DNSPOD&lt;/a>就是干这个的。对比了一下两个CDN针对国内国外的访问速度，最后把国外线路和移动线路的分到CloudFlare，把国内其他线路都分到安全宝。&lt;/p>
@@ -1516,7 +1516,7 @@ phpMyAdmin: http://你的VPS域名或IP/phpmyadmin/
 &lt;p>如有其他问题，欢迎留言或直接给我发邮件。&lt;/p></description></item><item><title>利用SipSorcery、Google Voice和PBXes实现由PSTN电话发起的回拨</title><link>https://www.palfans.net/pstn-gv-callback/</link><pubDate>Fri, 17 Sep 2010 20:30:06 +0000</pubDate><guid>https://www.palfans.net/pstn-gv-callback/</guid><description>&lt;p>Google Voice（简称GV）是Google公司的又一个伟大产品，它其实是一个回拨系统。用户使用时，在GV的网页上选择自己用来接听的电话号码，并输入对端号码，系统就会分别接通双方，开始通话。现在，Google更进一步，Gmail界面中的Google Talk能够直接输入对端号码发起通话。Google已经承诺，至少到2010年底，GV拨打美国、加拿大全免费。如果我们要拨打美加的电话，这是很不错的选择。我们可以利用Gmail直接发起通话，也能通过手机访问Voice Mobile页面或拨号软件发起通话。但是，家里常用的PSTN电话既不能访问网页，也不能运行拨号软件，应该怎么办呢？&lt;/p>
 &lt;p>这里就该SipSorcery（简称SS）出场了。SS和PBXes（本文也要用到）、Voxalot等类似，都是提供SIP交换的服务网站，不过SS支持使用Ruby语言自定义拨号计划，这样，就能通过编程实现各种要求。另外，SS的作者Aaron一直在维护和改进这套系统，他新增了一个接口，可以直接拨打GV，而不需要等待回拨，相当方便。再加上PBXes，就能方便的搭建一个PSTN回拨平台，顺利使用GV的免费大餐。&lt;/p>
 &lt;p>这篇post主要用来总结一下我的设计思路，而不是一篇手把手的教程。&lt;/p>
-&lt;p>&lt;img src="https://res.palfans.net/img/tech_pstn_callback.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://www.palfans.net/img/pstn-gv-callback/tech_pstn_callback.png" alt="">&lt;/p>
 &lt;p>在这个设计中，除了GV，还引入了Localphone（简称LP）。这是一家老牌的voip运营商，它提供相当丰富的voip相关服务。通过LP拨打中国、印度等非美国号码的资费比GV更廉价，拨到中国的每分钟费率折合人民币仅仅8分钱。将来如果有更廉价的运营商出现，只要它支持SIP拨叫，就可以轻松的在SS中进行替换。在这里，LP的作用就是拨出电话，并落地到PSTN网络中。&lt;/p>
 &lt;p>通过PSTN电话拨打到SS触发回拨时，不能附加参数，比如身份验证码和需要拨打的对端号码。这时就引入了PBXes，这套交换系统提供了CallThru功能，能在回拨接通后进行身份校验和接收对端号码。最后将数据送回SS进行处理，发起回拨的第二个链路。&lt;/p>
 &lt;p>主要工作都是由SS来完成，涉及到的代码主要是&lt;/p>

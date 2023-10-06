@@ -23,14 +23,14 @@ swapon -s
 <script src=https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js></script><![endif]--></head><body><div id=mobile-navbar class=mobile-navbar><div class=mobile-header-logo><a href=/ class=logo>Palfans's BLOG</a></div><div class=mobile-navbar-icon><span></span>
 <span></span>
 <span></span></div></div><nav id=mobile-menu class="mobile-menu slideout-menu"><ul class=mobile-menu-list><a href=/><li class=mobile-menu-item>Home</li></a><a href=/post/><li class=mobile-menu-item>Archives</li></a><a href=/tags/><li class=mobile-menu-item>Tags</li></a><a href=/categories/><li class=mobile-menu-item>Categories</li></a></ul></nav><div class=container id=mobile-panel><header id=header class=header><div class=logo-wrapper><a href=/ class=logo>Palfans's BLOG</a></div><nav class=site-navbar><ul id=menu class=menu><li class=menu-item><a class=menu-item-link href=/>Home</a></li><li class=menu-item><a class=menu-item-link href=/post/>Archives</a></li><li class=menu-item><a class=menu-item-link href=/tags/>Tags</a></li><li class=menu-item><a class=menu-item-link href=/categories/>Categories</a></li></ul></nav></header><main id=main class=main><div class=content-wrapper><div id=content class=content><article class=post><header class=post-header><h1 class=post-title>为VirtualBox中的CentOS扩展Swap空间</h1><div class=post-meta><span class=post-time>2014-06-02</span><div class=post-category><a href=/categories/%E6%8A%80%E6%9C%AF%E6%A0%88/>技术栈</a></div></div></header><div class=post-toc id=post-toc><h2 class=post-toc-title>文章目录</h2><div class="post-toc-content always-active"><nav id=TableOfContents></nav></div></div><div class=post-content><p>在VirtualBox中安装好CentOS后，会发现默认的Swap空间大小是根据初次配置的可用内存来生成的，正常使用足够。但是，如果需要安装Oracle，它要求最少2GB的交换空间，这时就需要扩展交换空间。</p><p>首先运行swapon命令查看交换空间大小，如果得到的大小少于<strong>2097152</strong>，就需要增加交换空间。</p><pre><code>swapon -s
-</code></pre><p><img src=https://res.palfans.net/img/1.png alt></p><p>1. 首先，在VirtualBox中新增一块硬盘</p><p><img src=https://res.palfans.net/img/2.png alt></p><p><img src=https://res.palfans.net/img/3.png alt></p><p><img src=https://res.palfans.net/img/4.png alt></p><p><img src=https://res.palfans.net/img/5.png alt></p><p>2. 格式化新增的硬盘</p><pre><code>fdisk -l
+</code></pre><p><img src=/img/extend_swap_space_in_virtualbox/1.png alt></p><p>1. 首先，在VirtualBox中新增一块硬盘</p><p><img src=/img/extend_swap_space_in_virtualbox/2.png alt></p><p><img src=/img/extend_swap_space_in_virtualbox/3.png alt></p><p><img src=/img/extend_swap_space_in_virtualbox/4.png alt></p><p><img src=/img/extend_swap_space_in_virtualbox/5.png alt></p><p>2. 格式化新增的硬盘</p><pre><code>fdisk -l
 
 
 
 
 
 fdisk /dev/sdb
-</code></pre><p><img src=https://res.palfans.net/img/6.png alt></p><p><img src=https://res.palfans.net/img/7.png alt></p><p><img src=https://res.palfans.net/img/8.png alt></p><p>3. 转换为Swap space</p><pre><code>mkswap /dev/sdb1
+</code></pre><p><img src=/img/extend_swap_space_in_virtualbox/6.png alt></p><p><img src=/img/extend_swap_space_in_virtualbox/7.png alt></p><p><img src=/img/extend_swap_space_in_virtualbox/8.png alt></p><p>3. 转换为Swap space</p><pre><code>mkswap /dev/sdb1
 
 
 
@@ -43,8 +43,8 @@ swapon /dev/sdb1
 
 
 swapon -s
-</code></pre><p><img src=https://res.palfans.net/img/9.png alt></p><p>4. 让CentOS开机自动加载新增的交换空间</p><pre><code>vi /etc/fstab
-</code></pre><p><img src=https://res.palfans.net/img/10.png alt></p></div><div class=post-copyright><p class=copyright-item><span class=item-title>文章作者</span>
+</code></pre><p><img src=/img/extend_swap_space_in_virtualbox/9.png alt></p><p>4. 让CentOS开机自动加载新增的交换空间</p><pre><code>vi /etc/fstab
+</code></pre><p><img src=/img/extend_swap_space_in_virtualbox/10.png alt></p></div><div class=post-copyright><p class=copyright-item><span class=item-title>文章作者</span>
 <span class=item-content>Palfans</span></p><p class=copyright-item><span class=item-title>上次更新</span>
 <span class=item-content>2014-06-02</span></p></div><footer class=post-footer><div class=post-tags><a href=/tags/centos/>centos</a>
 <a href=/tags/linux/>linux</a>

@@ -13,6 +13,6 @@
 &lt;p>以下为原帖：
 小土豆在一个小技巧中，我描述了一个关于ping的技巧。接下来有了一个关于ping的问题，感谢m3rcury提供给我这样一个好的问题。在通常思路看来，ping 218.24.178.155与ping 218.024.178.155会有什么样的区别？我认为是一样的。然而实际却大相径庭。ping 218.24.178.155会如人所愿的ping 218.24.178.155，而ping 218.024.178.155却会到218.20.178.155上去&lt;/p>
 &lt;/blockquote>
-&lt;p>&lt;img src="https://res.palfans.net/img/tech_ping1.jpg" alt="">
-&lt;img src="https://res.palfans.net/img/tech_ping2.jpg" alt="">&lt;/p></description></item><item><title>开机自动启用Num Lock</title><link>https://www.palfans.net/automatically-enable-num-lock/</link><pubDate>Mon, 22 Aug 2005 10:14:26 +0000</pubDate><guid>https://www.palfans.net/automatically-enable-num-lock/</guid><description>&lt;p>前两天接到朋友的一个求助电话，说新装的winxp，每次启动完成需要输密码的时候小键盘的Num Lock灯都是灭的，很不方便，问我有没有什么比较好的方法可以一劳永逸。&lt;/p>
+&lt;p>&lt;img src="https://www.palfans.net/img/about-ping/tech_ping1.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://www.palfans.net/img/about-ping/tech_ping2.jpg" alt="">&lt;/p></description></item><item><title>开机自动启用Num Lock</title><link>https://www.palfans.net/automatically-enable-num-lock/</link><pubDate>Mon, 22 Aug 2005 10:14:26 +0000</pubDate><guid>https://www.palfans.net/automatically-enable-num-lock/</guid><description>&lt;p>前两天接到朋友的一个求助电话，说新装的winxp，每次启动完成需要输密码的时候小键盘的Num Lock灯都是灭的，很不方便，问我有没有什么比较好的方法可以一劳永逸。&lt;/p>
 &lt;p>这种问题我记得以前在网上见过，打开Google，发现可以将注册表中的[HKEY_USERS.DefaultControl PanelKeyboard]中 InitialKeyboardIndicators 的值从 0 更改为 2就能解决问题。&lt;/p></description></item></channel></rss>
