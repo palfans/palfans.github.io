@@ -1,4 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Palfans's BLOG</title><link>https://www.palfans.net/post/</link><description>Recent content in Posts on Palfans's BLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 30 Apr 2022 14:43:29 -0500</lastBuildDate><atom:link href="https://www.palfans.net/post/index.xml" rel="self" type="application/rss+xml"/><item><title>通过 SSH 访问 GitHub</title><link>https://www.palfans.net/access-github-via-ssh/</link><pubDate>Sat, 30 Apr 2022 14:43:29 -0500</pubDate><guid>https://www.palfans.net/access-github-via-ssh/</guid><description>&lt;h2 id="需求">需求&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Palfans's BLOG</title><link>https://www.palfans.net/post/</link><description>Recent content in Posts on Palfans's BLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 16 Oct 2023 15:39:48 +0000</lastBuildDate><atom:link href="https://www.palfans.net/post/index.xml" rel="self" type="application/rss+xml"/><item><title>IPTV PHP 爬虫片段</title><link>https://www.palfans.net/iptv-php-scraping-snippet/</link><pubDate>Mon, 16 Oct 2023 15:39:48 +0000</pubDate><guid>https://www.palfans.net/iptv-php-scraping-snippet/</guid><description>&lt;p>现在有很多线上 IPTV 服务，限制只能在浏览器的播放器观看，可以通过 PHP 爬取对应的流媒体源，来实现在其他应用或电视上观看。&lt;/p>
+&lt;h2 id="iptv-源分类">IPTV 源分类&lt;/h2>
+&lt;h3 id="不限制-referer">不限制 Referer&lt;/h3>
+&lt;p>这类源最简单，直接 PHP 发送请求获取到流媒体的链接。&lt;/p>
+&lt;p>&lt;code>iptv-sample-a.php&lt;/code> 代码片段&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="nx">php&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">function&lt;/span> &lt;span class="nf">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$url&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$ch&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">curl_init&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_URL&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$url&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_RETURNTRANSFER&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_SSL_VERIFYPEER&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">FALSE&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_SSL_VERIFYHOST&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">FALSE&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_FOLLOWLOCATION&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">TRUE&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">curl_exec&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_close&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nv">$result&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>通过 SSH 访问 GitHub</title><link>https://www.palfans.net/access-github-via-ssh/</link><pubDate>Sat, 30 Apr 2022 14:43:29 -0500</pubDate><guid>https://www.palfans.net/access-github-via-ssh/</guid><description>&lt;h2 id="需求">需求&lt;/h2>
 &lt;p>公司有自建的 GitHub 企业版，必须通过 VPN 或者 SSH 跳板机才能访问网页，如何在客户端通过命令行存取远端代码库呢？&lt;/p>
 &lt;h3 id="示例">示例&lt;/h3>
 &lt;p>GitHub 企业版地址：&lt;code>github.abc.com&lt;/code>
@@ -96,4 +131,4 @@
 2. 安装包默认是完全安装，当然也可以只安装其中的某一种vpn，脚本提供定制选项
 3. 脚本自动获取服务器ip、相关文件路径等，也可定制，说是一键安装有点儿夸张，不过按几下回车就能装完还是可以实现的。
 4. 现在有CentOS&amp;lt;del&amp;gt;和Ubuntu两个&amp;lt;/del&amp;gt;版本，分别在CentOS 5.5 &amp;lt;del&amp;gt;和 Ubuntu 10.04 LTS&amp;lt;/del&amp;gt;上测试通过。Linux的发行版太多了，搞得我头都大了好几圈，对其他版本有爱的同学请自行修改。
-&lt;/code>&lt;/pre></description></item><item><title>利用SipSorcery、Google Voice和PBXes实现由PSTN电话发起的回拨</title><link>https://www.palfans.net/pstn-gv-callback/</link><pubDate>Fri, 17 Sep 2010 20:30:06 +0000</pubDate><guid>https://www.palfans.net/pstn-gv-callback/</guid><description>&lt;p>Google Voice（简称GV）是Google公司的又一个伟大产品，它其实是一个回拨系统。用户使用时，在GV的网页上选择自己用来接听的电话号码，并输入对端号码，系统就会分别接通双方，开始通话。现在，Google更进一步，Gmail界面中的Google Talk能够直接输入对端号码发起通话。Google已经承诺，至少到2010年底，GV拨打美国、加拿大全免费。如果我们要拨打美加的电话，这是很不错的选择。我们可以利用Gmail直接发起通话，也能通过手机访问Voice Mobile页面或拨号软件发起通话。但是，家里常用的PSTN电话既不能访问网页，也不能运行拨号软件，应该怎么办呢？&lt;/p></description></item></channel></rss>
+&lt;/code>&lt;/pre></description></item></channel></rss>

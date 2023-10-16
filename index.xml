@@ -1,4 +1,343 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Palfans's BLOG</title><link>https://www.palfans.net/</link><description>Recent content on Palfans's BLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 30 Apr 2022 14:43:29 -0500</lastBuildDate><atom:link href="https://www.palfans.net/index.xml" rel="self" type="application/rss+xml"/><item><title>通过 SSH 访问 GitHub</title><link>https://www.palfans.net/access-github-via-ssh/</link><pubDate>Sat, 30 Apr 2022 14:43:29 -0500</pubDate><guid>https://www.palfans.net/access-github-via-ssh/</guid><description>&lt;h2 id="需求">需求&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Palfans's BLOG</title><link>https://www.palfans.net/</link><description>Recent content on Palfans's BLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 16 Oct 2023 15:39:48 +0000</lastBuildDate><atom:link href="https://www.palfans.net/index.xml" rel="self" type="application/rss+xml"/><item><title>IPTV PHP 爬虫片段</title><link>https://www.palfans.net/iptv-php-scraping-snippet/</link><pubDate>Mon, 16 Oct 2023 15:39:48 +0000</pubDate><guid>https://www.palfans.net/iptv-php-scraping-snippet/</guid><description>&lt;p>现在有很多线上 IPTV 服务，限制只能在浏览器的播放器观看，可以通过 PHP 爬取对应的流媒体源，来实现在其他应用或电视上观看。&lt;/p>
+&lt;h2 id="iptv-源分类">IPTV 源分类&lt;/h2>
+&lt;h3 id="不限制-referer">不限制 Referer&lt;/h3>
+&lt;p>这类源最简单，直接 PHP 发送请求获取到流媒体的链接。&lt;/p>
+&lt;p>&lt;code>iptv-sample-a.php&lt;/code> 代码片段&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="nx">php&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">function&lt;/span> &lt;span class="nf">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$url&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$ch&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">curl_init&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_URL&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$url&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_RETURNTRANSFER&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_SSL_VERIFYPEER&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">FALSE&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_SSL_VERIFYHOST&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">FALSE&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_FOLLOWLOCATION&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">TRUE&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">curl_exec&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_close&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nv">$result&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="严格限制-referer">严格限制 Referer&lt;/h3>
+&lt;p>这类源的服务器会检查所有访问请求的 HTTP Header，如果 Referer 不匹配当前提供服务的网站域名，就拒绝返回正确的流媒体数据。现在大部分的源服务器都会检查 Header。&lt;/p>
+&lt;p>一般的解决方法是用浏览器正常打开源服务器的页面，通过 Chrome/Edge 的开发者工具获取到正确的 HTTP Header，再使用 PHP 发送相同的 Header 来模拟浏览器访问。&lt;/p>
+&lt;p>&lt;code>iptv-sample-b.php&lt;/code> 代码片段&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="nx">php&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$id&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">isset&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$_GET&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;id&amp;#39;&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="nv">$_GET&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;id&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;-1&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$id&lt;/span> &lt;span class="o">!==&lt;/span> &lt;span class="s1">&amp;#39;-1&amp;#39;&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$baseurl&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;https://iptv.stream/&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$header&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">array&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;Referer: https://iptv.stream/&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 获取 ts
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// 流媒体的链接为 https://iptv.stream/100/index.php
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nv">$url&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nv">$baseurl&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="nv">$id&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="s1">&amp;#39;/index.php&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$res&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$url&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$header&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$reg&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;/(.*?.ts)/&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">preg_match&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$reg&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$res&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$arr&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$ts&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nv">$arr&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 如果 ts 为相对路径，则在前面加上 $baseurl 后返回；如果为绝对路径，直接返回。
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="o">......&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 构建m3u8内容
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nv">$m3u8_content&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;#EXTM3U&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$m3u8_content&lt;/span> &lt;span class="o">.=&lt;/span> &lt;span class="s2">&amp;#34;#EXT-X-STREAM-INF:PROGRAM-ID=1, BANDWIDTH=2000000&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$m3u8_content&lt;/span> &lt;span class="o">.=&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="si">$ts\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 输出m3u8内容
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="k">echo&lt;/span> &lt;span class="nv">$m3u8_content&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">function&lt;/span> &lt;span class="nf">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$url&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$header&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$ch&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">curl_init&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_URL&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$url&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_RETURNTRANSFER&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_SSL_VERIFYPEER&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">FALSE&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_SSL_VERIFYHOST&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">FALSE&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_FOLLOWLOCATION&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">TRUE&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_HTTPHEADER&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$header&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">curl_exec&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_close&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nv">$result&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="ts-文件也被检查">ts 文件也被检查&lt;/h3>
+&lt;p>如果源服务器连 ts 文件的请求也要检查 Header，需要将 m3u8 内的 ts 链接修改为 php 所在的服务器，并在收到 ts 请求后，附加正确的 header，发往源服务器，最后将获取到的二进制数据返回给客户端。缺点是 php 所在的服务器需要消耗所有的上下行流媒体流量。&lt;/p>
+&lt;p>&lt;code>iptv-sample-c.php&lt;/code> 代码片段&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;span class="lnt">57
+&lt;/span>&lt;span class="lnt">58
+&lt;/span>&lt;span class="lnt">59
+&lt;/span>&lt;span class="lnt">60
+&lt;/span>&lt;span class="lnt">61
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="nx">php&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$id&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">isset&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$_GET&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;id&amp;#39;&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="nv">$_GET&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;id&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;-1&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$ts&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">isset&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$_GET&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;ts&amp;#39;&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="nv">$_GET&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;ts&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;-1&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$id&lt;/span> &lt;span class="o">!==&lt;/span> &lt;span class="s1">&amp;#39;-1&amp;#39;&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$baseurl&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;https://iptv.stream/&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$header&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">array&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;Referer: https://iptv.stream/&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 获取 m3u8
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// 流媒体的链接为 https://iptv.stream/100/index.php
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nv">$url&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nv">$baseurl&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="nv">$id&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="s1">&amp;#39;/index.php&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$res&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$url&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$header&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$e_url&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$reg&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;/(.*?.m3u8)/&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">preg_match&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$reg&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$res&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$arr&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nv">$arr&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 获取 ts
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nv">$baseurl&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">dirname&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$e_url&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nv">$baseurl&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="s1">&amp;#39;/&amp;#39;&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="nv">$str&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$res&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$header&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$e_url&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$reg&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;/(.*\.ts)/i&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">preg_match_all&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$reg&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$res&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$arr&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">foreach&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">$arr&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nv">$key&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="nv">$value&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$res&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">str_replace&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$value&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;iptv-sample-c.php?ts=&amp;#39;&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="nx">strtr&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">base64_encode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="si">$baseurl&lt;/span>&lt;span class="s2">/&lt;/span>&lt;span class="si">$value&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="s1">&amp;#39;+/&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;-_&amp;#39;&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="nv">$res&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">echo&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$res&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>&lt;span class="k">else&lt;/span> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ts&lt;/span> &lt;span class="o">!==&lt;/span> &lt;span class="s1">&amp;#39;-1&amp;#39;&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$header&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">array&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;Referer: https://iptv.stream/&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$decoded_ts&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">base64_decode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">strtr&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ts&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;-_&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;+/&amp;#39;&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$res&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">ts&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$decoded_ts&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$header&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">function&lt;/span> &lt;span class="nf">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$url&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$header&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nv">$e_url&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$ch&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">curl_init&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_URL&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$url&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_RETURNTRANSFER&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_SSL_VERIFYPEER&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">FALSE&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_SSL_VERIFYHOST&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">FALSE&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_FOLLOWLOCATION&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">TRUE&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_HTTPHEADER&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$header&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">curl_exec&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$e_url&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">curl_getinfo&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLINFO_EFFECTIVE_URL&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_close&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nv">$result&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">function&lt;/span> &lt;span class="nf">ts&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$url&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$header&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$ch&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">curl_init&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_URL&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$url&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_SSL_VERIFYPEER&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">FALSE&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_SSL_VERIFYHOST&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">FALSE&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_FOLLOWLOCATION&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">TRUE&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_HTTPHEADER&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$header&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">curl_exec&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_close&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="源服务器使用-flv">源服务器使用 flv&lt;/h3>
+&lt;p>如果源服务器返回的是 flv 文件，可以直接将请求重定向到这个链接。&lt;/p>
+&lt;p>&lt;code>iptv-sample-d.php&lt;/code> 代码片段&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="nx">php&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$id&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">isset&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$_GET&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;id&amp;#39;&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="nv">$_GET&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;id&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;-1&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$id&lt;/span> &lt;span class="o">!==&lt;/span> &lt;span class="s1">&amp;#39;-1&amp;#39;&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$baseurl&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;https://iptv.stream/&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$header&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">array&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;Referer: https://iptv.stream/&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 获取 m3u8
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// 流媒体的链接为 https://iptv.stream/100/index.php
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nv">$url&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nv">$baseurl&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="nv">$id&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="s1">&amp;#39;/index.php&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$res&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$url&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$header&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$e_url&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$reg&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;/(.*?.flv)/&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">preg_match&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$reg&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$res&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$arr&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$flv&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nv">$arr&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 重定向链接到 flv 文件
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nx">header&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;location:&amp;#39;&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="nv">$flv&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">function&lt;/span> &lt;span class="nf">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$url&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$header&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nv">$e_url&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$ch&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">curl_init&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_URL&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$url&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_RETURNTRANSFER&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_SSL_VERIFYPEER&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">FALSE&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_SSL_VERIFYHOST&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">FALSE&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_FOLLOWLOCATION&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">TRUE&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_HTTPHEADER&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$header&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">curl_exec&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$e_url&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">curl_getinfo&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLINFO_EFFECTIVE_URL&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">curl_close&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nv">$result&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>通过 SSH 访问 GitHub</title><link>https://www.palfans.net/access-github-via-ssh/</link><pubDate>Sat, 30 Apr 2022 14:43:29 -0500</pubDate><guid>https://www.palfans.net/access-github-via-ssh/</guid><description>&lt;h2 id="需求">需求&lt;/h2>
 &lt;p>公司有自建的 GitHub 企业版，必须通过 VPN 或者 SSH 跳板机才能访问网页，如何在客户端通过命令行存取远端代码库呢？&lt;/p>
 &lt;h3 id="示例">示例&lt;/h3>
 &lt;p>GitHub 企业版地址：&lt;code>github.abc.com&lt;/code>
@@ -1513,32 +1852,4 @@ phpMyAdmin: http://你的VPS域名或IP/phpmyadmin/
 &lt;li>取消Daloradius，账号管理用PhpMyAdmin已经比较方便，如没有复杂要求，没必要搞这个。有兴趣的同学可以自行安装。&lt;/li>
 &lt;li> 修正一堆弱智问题。&lt;/li>
 &lt;/ol>
-&lt;p>如有其他问题，欢迎留言或直接给我发邮件。&lt;/p></description></item><item><title>利用SipSorcery、Google Voice和PBXes实现由PSTN电话发起的回拨</title><link>https://www.palfans.net/pstn-gv-callback/</link><pubDate>Fri, 17 Sep 2010 20:30:06 +0000</pubDate><guid>https://www.palfans.net/pstn-gv-callback/</guid><description>&lt;p>Google Voice（简称GV）是Google公司的又一个伟大产品，它其实是一个回拨系统。用户使用时，在GV的网页上选择自己用来接听的电话号码，并输入对端号码，系统就会分别接通双方，开始通话。现在，Google更进一步，Gmail界面中的Google Talk能够直接输入对端号码发起通话。Google已经承诺，至少到2010年底，GV拨打美国、加拿大全免费。如果我们要拨打美加的电话，这是很不错的选择。我们可以利用Gmail直接发起通话，也能通过手机访问Voice Mobile页面或拨号软件发起通话。但是，家里常用的PSTN电话既不能访问网页，也不能运行拨号软件，应该怎么办呢？&lt;/p>
-&lt;p>这里就该SipSorcery（简称SS）出场了。SS和PBXes（本文也要用到）、Voxalot等类似，都是提供SIP交换的服务网站，不过SS支持使用Ruby语言自定义拨号计划，这样，就能通过编程实现各种要求。另外，SS的作者Aaron一直在维护和改进这套系统，他新增了一个接口，可以直接拨打GV，而不需要等待回拨，相当方便。再加上PBXes，就能方便的搭建一个PSTN回拨平台，顺利使用GV的免费大餐。&lt;/p>
-&lt;p>这篇post主要用来总结一下我的设计思路，而不是一篇手把手的教程。&lt;/p>
-&lt;p>&lt;img src="https://www.palfans.net/img/pstn-gv-callback/tech_pstn_callback.png" alt="">&lt;/p>
-&lt;p>在这个设计中，除了GV，还引入了Localphone（简称LP）。这是一家老牌的voip运营商，它提供相当丰富的voip相关服务。通过LP拨打中国、印度等非美国号码的资费比GV更廉价，拨到中国的每分钟费率折合人民币仅仅8分钱。将来如果有更廉价的运营商出现，只要它支持SIP拨叫，就可以轻松的在SS中进行替换。在这里，LP的作用就是拨出电话，并落地到PSTN网络中。&lt;/p>
-&lt;p>通过PSTN电话拨打到SS触发回拨时，不能附加参数，比如身份验证码和需要拨打的对端号码。这时就引入了PBXes，这套交换系统提供了CallThru功能，能在回拨接通后进行身份校验和接收对端号码。最后将数据送回SS进行处理，发起回拨的第二个链路。&lt;/p>
-&lt;p>主要工作都是由SS来完成，涉及到的代码主要是&lt;/p>
-&lt;ol>
-&lt;li>
-&lt;p>判断回拨的电话归属地，并采用最经济的方式进行拨叫&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>sys.Callback(call_leg_1, call_leg_2)命令，用以发起回拨&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>回拨过程中，再次调用GV回拨接口来拨打美国电话时，需要单独编写一段拨号计划，用来将GV回拨转化为一个SIP代理进行拨叫&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>PSTN电话如果不支持呼叫等待，在触发回拨后，可能来不及挂断电话，这样就不能接收到系统回拨回来的来电信号，导致回拨失败。这时可以考虑让回拨延时30秒，保证触发电话顺利挂机。&lt;a href="mailto:early_music@iptel.org">early_music@iptel.org&lt;/a> 这个early media资源在这里就很有帮助了&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>PSTN电话只需要触发回拨，不需要接通，因此在触发完成后，SS系统要及时回复一个拨叫失败的信号，避免产生费用&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>至于用来拨打的电话号码，只要是能够转接到SIP服务器的号码都能使用，比如IPKALL，SipGate等等。而且，整个触发过程，这个号码都没有接通，所以不管是哪个国家的号码都没问题，不会产生任何费用。我使用了一个美国号码，一个德国号码和一个英国号码来作为触发号码，用来保证回拨系统随时都能正常工作。&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;p>本文涉及到的网站分别是：&lt;/p>
-&lt;p>&lt;a href="http://voice.google.com">Google Voice&lt;/a>   &lt;a href="http://www.sipsorcery.com/mainsite/Home/Portal">SipSorcery&lt;/a>   &lt;a href="http://www.localphone.com/">Localphone&lt;/a>   &lt;a href="http://www.pbxes.com">PBXes&lt;/a>   &lt;a href="http://www.ipkall.com">IPKALL&lt;/a>   &lt;a href="http://www.sipgate.com">SipGate&lt;/a>&lt;/p></description></item></channel></rss>
+&lt;p>如有其他问题，欢迎留言或直接给我发邮件。&lt;/p></description></item></channel></rss>
