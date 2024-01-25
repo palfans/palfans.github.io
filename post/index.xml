@@ -1,4 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Palfans's BLOG</title><link>https://www.palfans.net/post/</link><description>Recent content in Posts on Palfans's BLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 16 Oct 2023 15:39:48 +0000</lastBuildDate><atom:link href="https://www.palfans.net/post/index.xml" rel="self" type="application/rss+xml"/><item><title>IPTV PHP 爬虫片段</title><link>https://www.palfans.net/iptv-php-scraping-snippet/</link><pubDate>Mon, 16 Oct 2023 15:39:48 +0000</pubDate><guid>https://www.palfans.net/iptv-php-scraping-snippet/</guid><description>&lt;p>现在有很多线上 IPTV 服务，限制只能在浏览器的播放器观看，可以通过 PHP 爬取对应的流媒体源，来实现在其他应用或电视上观看。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Palfans's BLOG</title><link>https://www.palfans.net/post/</link><description>Recent content in Posts on Palfans's BLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 25 Jan 2024 03:04:41 +0000</lastBuildDate><atom:link href="https://www.palfans.net/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Mobaxterm 通过 Session Manager 访问 AWS EC2 实例</title><link>https://www.palfans.net/mobaxterm-access-ec2-via-session-manager/</link><pubDate>Thu, 25 Jan 2024 03:04:41 +0000</pubDate><guid>https://www.palfans.net/mobaxterm-access-ec2-via-session-manager/</guid><description>&lt;h2 id="需求">需求&lt;/h2>
+&lt;p>在 AWS 上部署了一个项目，包含四个 EC2 实例。其中一个为堡垒机实例，另外三个为业务实例。在子网的安全组中，关闭了 22 端口，只能通过 AWS 网页上的 Session Manager 访问堡垒机，再跳到其它业务机上。但 AWS 网页版的终端使用起来有很多限制，比如不能“选择即复制”，不能“右键快速粘贴”，会话无法保活等。
+因此，希望可以使用桌面终端，比如 Mobaxterm，通过 Session Manager 来访问 EC2 实例。&lt;/p>
+&lt;h2 id="解决方案">解决方案&lt;/h2>
+&lt;p>通过 &lt;code>AWS Command Line Interface(AWS CLI)&lt;/code> 连接 Session Manager，经由 &lt;code>System Manager Agent(SSM Agent)&lt;/code> 将所有操作转发给 EC2。&lt;/p>
+&lt;h3 id="使用-session-manager-的前提">使用 Session Manager 的前提&lt;/h3>
+&lt;ul>
+&lt;li>EC2 实例安装了 &lt;code>SSM Agent&lt;/code>&lt;/li>
+&lt;li>EC2 实例绑定了 IAM Role &lt;code>AmazonSSMManagedInstanceCore&lt;/code>&lt;/li>
+&lt;li>EC2 可以直接或者通过 Session Manager 的 VPC Endpoint 连接 Session Mananger 服务
+具体参照 AWS &lt;a href="https://docs.aws.amazon.com/zh_cn/systems-manager/latest/userguide/systems-manager-setting-up.html">官方文档&lt;/a>进行设置。&lt;/li>
+&lt;/ul></description></item><item><title>IPTV PHP 爬虫片段</title><link>https://www.palfans.net/iptv-php-scraping-snippet/</link><pubDate>Mon, 16 Oct 2023 15:39:48 +0000</pubDate><guid>https://www.palfans.net/iptv-php-scraping-snippet/</guid><description>&lt;p>现在有很多线上 IPTV 服务，限制只能在浏览器的播放器观看，可以通过 PHP 爬取对应的流媒体源，来实现在其他应用或电视上观看。&lt;/p>
 &lt;h2 id="iptv-源分类">IPTV 源分类&lt;/h2>
 &lt;h3 id="不限制-referer">不限制 Referer&lt;/h3>
 &lt;p>这类源最简单，直接 PHP 发送请求获取到流媒体的链接。&lt;/p>
@@ -126,9 +137,4 @@
 &lt;p>主机商建议使用CDN来分摊流量和主机负载。于是先把网站弄到&lt;a href="http://www.cloudflare.com/">CloudFlare&lt;/a>，一开始很给力，网站访问速度大幅上升。没多久，发现访问网站失败，翻墙再试，正常得很。看来CloudFlare被盯得很紧，我有幸分配到了一个被加持过的IP。然后看到&lt;a href="http://www.anquanbao.com/">安全宝&lt;/a>也有类似的CDN服务，仍然是免费的。注册完发现，需要备案，否则只能分配一个境外IP。备你妈的案啊！&lt;/p></description></item><item><title>WLW发布Wordpress时xmlrpc.php 404问题</title><link>https://www.palfans.net/wlw_wordpress_xmlrpc_404/</link><pubDate>Sun, 09 Sep 2012 07:03:45 +0000</pubDate><guid>https://www.palfans.net/wlw_wordpress_xmlrpc_404/</guid><description>用WLW连接Wordpress发布文章时，总是遇到找不到xmlrpc.php的问题，直接在浏览器中输入完整地址，也是得到404错误。但是通过</description></item><item><title>MP3 Tag 整理小记</title><link>https://www.palfans.net/how-to-clear-mp3-tag/</link><pubDate>Tue, 21 Aug 2012 13:37:06 +0000</pubDate><guid>https://www.palfans.net/how-to-clear-mp3-tag/</guid><description>&lt;p>很长一段时间，我都是用QQ音乐随便听听，不过现在的版本界面内容越来越多，启动越来越慢，资源越耗越多。于是开始转向foobar2000，似乎是接触得晚了一点，有点儿out。不过随着对foobar2000越来越熟悉，就不自觉的开始有Tag洁癖，尤其是换了几个比较紧凑的CUI之后。再看看自己硬盘上的MP3，Tag乱得一塌糊涂，简直不堪入目，尤其是很多网站还把自己的域名网址在Tag里填得到处都是，一定要想办法清理一下。&lt;/p>
 &lt;p>几百首歌，手工处理？我只有疯了才会有这个打算的。人和猴子的区别就是会使用工具。&lt;/p></description></item><item><title>Windows编译OpenVPN客户端（保存密码，修改日志字体）</title><link>https://www.palfans.net/compile-openvpn-gui-n-client/</link><pubDate>Sat, 29 Jan 2011 09:19:49 +0000</pubDate><guid>https://www.palfans.net/compile-openvpn-gui-n-client/</guid><description>&lt;p>OpenVPN客户端一般由两部分组成，OpenVPN和OpenVPN GUI。官方提供的OpenVPN客户端 for Windows为了提高用户账号的安全性，默认不能保存密码。安全性确实提高了，但是遇到网络不好，VPN意外中断时，每次都要手工输入密码，也很烦心。所以我们需要重新编译客户端代码，让其能够保存密码。而OpenVPN GUI的问题在于状态窗口输入的日志字体小得惊人，像我这种戴眼镜后矫正视力才0.6的人，想看清连接状态几乎是不可能的，所以也得改。&lt;/p>
 &lt;p>** **&lt;/p>
-&lt;p>**&lt;/p></description></item><item><title>vpn三合一安装包</title><link>https://www.palfans.net/3-in-1-vpn-package/</link><pubDate>Fri, 22 Oct 2010 20:10:22 +0000</pubDate><guid>https://www.palfans.net/3-in-1-vpn-package/</guid><description>&lt;p>这个安装包其实就是一个shell脚本，帮助大家尽量节约些时间。已经写好有一段时间了，一直没时间写blog，今天做了个review，修修补补就放出来吧。大概写下这个安装包的一些特点。&lt;/p>
-&lt;pre>&lt;code> 1. 三合一，指的是pptp / openvpn / l2tp，另外还安装了nginx / php / mysql / phpMyAdmin / Freeradius&amp;lt;del&amp;gt; / daloradius&amp;lt;/del&amp;gt;，基本上把一个vpn系统需要的基本程序安装完了。
-2. 安装包默认是完全安装，当然也可以只安装其中的某一种vpn，脚本提供定制选项
-3. 脚本自动获取服务器ip、相关文件路径等，也可定制，说是一键安装有点儿夸张，不过按几下回车就能装完还是可以实现的。
-4. 现在有CentOS&amp;lt;del&amp;gt;和Ubuntu两个&amp;lt;/del&amp;gt;版本，分别在CentOS 5.5 &amp;lt;del&amp;gt;和 Ubuntu 10.04 LTS&amp;lt;/del&amp;gt;上测试通过。Linux的发行版太多了，搞得我头都大了好几圈，对其他版本有爱的同学请自行修改。
-&lt;/code>&lt;/pre></description></item></channel></rss>
+&lt;p>**&lt;/p></description></item></channel></rss>

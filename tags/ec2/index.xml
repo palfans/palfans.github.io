@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ec2 on Palfans's BLOG</title><link>https://www.palfans.net/tags/ec2/</link><description>Recent content in ec2 on Palfans's BLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 25 Jan 2024 03:04:41 +0000</lastBuildDate><atom:link href="https://www.palfans.net/tags/ec2/index.xml" rel="self" type="application/rss+xml"/><item><title>Mobaxterm 通过 Session Manager 访问 AWS EC2 实例</title><link>https://www.palfans.net/mobaxterm-access-ec2-via-session-manager/</link><pubDate>Thu, 25 Jan 2024 03:04:41 +0000</pubDate><guid>https://www.palfans.net/mobaxterm-access-ec2-via-session-manager/</guid><description>&lt;h2 id="需求">需求&lt;/h2>
+&lt;p>在 AWS 上部署了一个项目，包含四个 EC2 实例。其中一个为堡垒机实例，另外三个为业务实例。在子网的安全组中，关闭了 22 端口，只能通过 AWS 网页上的 Session Manager 访问堡垒机，再跳到其它业务机上。但 AWS 网页版的终端使用起来有很多限制，比如不能“选择即复制”，不能“右键快速粘贴”，会话无法保活等。
+因此，希望可以使用桌面终端，比如 Mobaxterm，通过 Session Manager 来访问 EC2 实例。&lt;/p>
+&lt;h2 id="解决方案">解决方案&lt;/h2>
+&lt;p>通过 &lt;code>AWS Command Line Interface(AWS CLI)&lt;/code> 连接 Session Manager，经由 &lt;code>System Manager Agent(SSM Agent)&lt;/code> 将所有操作转发给 EC2。&lt;/p>
+&lt;h3 id="使用-session-manager-的前提">使用 Session Manager 的前提&lt;/h3>
+&lt;ul>
+&lt;li>EC2 实例安装了 &lt;code>SSM Agent&lt;/code>&lt;/li>
+&lt;li>EC2 实例绑定了 IAM Role &lt;code>AmazonSSMManagedInstanceCore&lt;/code>&lt;/li>
+&lt;li>EC2 可以直接或者通过 Session Manager 的 VPC Endpoint 连接 Session Mananger 服务
+具体参照 AWS &lt;a href="https://docs.aws.amazon.com/zh_cn/systems-manager/latest/userguide/systems-manager-setting-up.html">官方文档&lt;/a>进行设置。&lt;/li>
+&lt;/ul></description></item></channel></rss>

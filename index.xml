@@ -1,4 +1,65 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Palfans's BLOG</title><link>https://www.palfans.net/</link><description>Recent content on Palfans's BLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 16 Oct 2023 15:39:48 +0000</lastBuildDate><atom:link href="https://www.palfans.net/index.xml" rel="self" type="application/rss+xml"/><item><title>IPTV PHP 爬虫片段</title><link>https://www.palfans.net/iptv-php-scraping-snippet/</link><pubDate>Mon, 16 Oct 2023 15:39:48 +0000</pubDate><guid>https://www.palfans.net/iptv-php-scraping-snippet/</guid><description>&lt;p>现在有很多线上 IPTV 服务，限制只能在浏览器的播放器观看，可以通过 PHP 爬取对应的流媒体源，来实现在其他应用或电视上观看。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Palfans's BLOG</title><link>https://www.palfans.net/</link><description>Recent content on Palfans's BLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 25 Jan 2024 03:04:41 +0000</lastBuildDate><atom:link href="https://www.palfans.net/index.xml" rel="self" type="application/rss+xml"/><item><title>Mobaxterm 通过 Session Manager 访问 AWS EC2 实例</title><link>https://www.palfans.net/mobaxterm-access-ec2-via-session-manager/</link><pubDate>Thu, 25 Jan 2024 03:04:41 +0000</pubDate><guid>https://www.palfans.net/mobaxterm-access-ec2-via-session-manager/</guid><description>&lt;h2 id="需求">需求&lt;/h2>
+&lt;p>在 AWS 上部署了一个项目，包含四个 EC2 实例。其中一个为堡垒机实例，另外三个为业务实例。在子网的安全组中，关闭了 22 端口，只能通过 AWS 网页上的 Session Manager 访问堡垒机，再跳到其它业务机上。但 AWS 网页版的终端使用起来有很多限制，比如不能“选择即复制”，不能“右键快速粘贴”，会话无法保活等。
+因此，希望可以使用桌面终端，比如 Mobaxterm，通过 Session Manager 来访问 EC2 实例。&lt;/p>
+&lt;h2 id="解决方案">解决方案&lt;/h2>
+&lt;p>通过 &lt;code>AWS Command Line Interface(AWS CLI)&lt;/code> 连接 Session Manager，经由 &lt;code>System Manager Agent(SSM Agent)&lt;/code> 将所有操作转发给 EC2。&lt;/p>
+&lt;h3 id="使用-session-manager-的前提">使用 Session Manager 的前提&lt;/h3>
+&lt;ul>
+&lt;li>EC2 实例安装了 &lt;code>SSM Agent&lt;/code>&lt;/li>
+&lt;li>EC2 实例绑定了 IAM Role &lt;code>AmazonSSMManagedInstanceCore&lt;/code>&lt;/li>
+&lt;li>EC2 可以直接或者通过 Session Manager 的 VPC Endpoint 连接 Session Mananger 服务
+具体参照 AWS &lt;a href="https://docs.aws.amazon.com/zh_cn/systems-manager/latest/userguide/systems-manager-setting-up.html">官方文档&lt;/a>进行设置。&lt;/li>
+&lt;/ul>
+&lt;h3 id="安装配置-aws-cli">安装配置 AWS CLI&lt;/h3>
+&lt;p>首先参照 AWS &lt;a href="https://docs.aws.amazon.com/zh_cn/cli/latest/userguide/getting-started-install.html">官方文档&lt;/a> 安装或者更新 AWS CLI 的最新版本。&lt;/p>
+&lt;p>要通过 AWS CLI 启动 Session Manager 会话，还必须安装 Session Manager 插件，参照 AWS &lt;a href="https://docs.aws.amazon.com/zh_cn/systems-manager/latest/userguide/session-manager-working-with-install-plugin.html">官方文档&lt;/a>&lt;/p>
+&lt;p>在 &lt;a href="https://us-east-1.console.aws.amazon.com/iam/home#/security_credentials?section=IAM_credentials">IAM&lt;/a> 中创建 Access Key，记下 Key ID 和 Secret。&lt;/p>
+&lt;p>在本地终端中执行 &lt;code>aws configure&lt;/code>，填入刚刚创建的 Access Key，Secret，和 EC2 实例所在的区域，比如&lt;code>us-east-1&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">palfans@lab:~/.aws$ aws configure
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">AWS Access Key ID []:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">AWS Secret Access Key []:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Default region name []:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Default output format [None]:
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在本地终端中执行&lt;code>aws ec2 describe-instances | grep InstanceId&lt;/code>，获取到 EC2 实例ID，然后用&lt;code>aws ssm start-session --target &amp;lt;InstanceId&amp;gt;&lt;/code>连接到 EC2。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">palfans@lab:~/.aws$ aws ec2 describe-instances | grep InstanceId
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;InstanceId&amp;#34;: &amp;#34;i-09721fab06a6d0000&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">palfans@lab:~/.aws$
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">palfans@lab:~/.aws$ aws ssm start-session --target i-09721fab06a6d0000
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Starting session with SessionId: palfans-094975208f6800000
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sh-5.2$
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="配置-mobaxterm">配置 Mobaxterm&lt;/h3>
+&lt;p>现在已经可以通过 AWS CLI 访问 EC2，还需要支持 SSH，以便拥有更多功能的 Mobaxterm 等终端软件可以连接。&lt;/p>
+&lt;p>首先在堡垒机的&lt;code>~/.ssh/authorized_keys&lt;/code>中添加公钥，之后就可以用私钥进行校验。&lt;/p>
+&lt;p>然后在 Mobaxterm 中新建一个 SSH 连接，Remote host 为 EC2 的 &lt;code>InstanceId&lt;/code>，比如 i-09721fab06a6d0000。用户名为 &lt;code>ec2-user&lt;/code>。&lt;/p>
+&lt;p>在&lt;code>Advanced SSH settings&lt;/code>-&amp;gt;&lt;code>Use private key&lt;/code>中，选择对应的私钥文件。&lt;/p>
+&lt;p>在&lt;code>Network settings&lt;/code>-&amp;gt;&lt;code>Proxy settings&lt;/code>中，Proxy type为&lt;code>Local&lt;/code>，Local proxy command为&lt;code>aws ssm start-session --target %host --document-name AWS-StartSSHSession --parameters 'portNumber=%port'&lt;/code>。&lt;/p>
+&lt;p>如果 AWS CLI 是安装在 Windows 附带的 WSL2 中，则 Local proxy command为&lt;code>wsl aws ssm start-session --target %host --document-name AWS-StartSSHSession --parameters 'portNumber=%port'&lt;/code>。&lt;/p>
+&lt;p>保存后即可在 Mobaxterm 中连接 EC2。&lt;/p></description></item><item><title>IPTV PHP 爬虫片段</title><link>https://www.palfans.net/iptv-php-scraping-snippet/</link><pubDate>Mon, 16 Oct 2023 15:39:48 +0000</pubDate><guid>https://www.palfans.net/iptv-php-scraping-snippet/</guid><description>&lt;p>现在有很多线上 IPTV 服务，限制只能在浏览器的播放器观看，可以通过 PHP 爬取对应的流媒体源，来实现在其他应用或电视上观看。&lt;/p>
 &lt;h2 id="iptv-源分类">IPTV 源分类&lt;/h2>
 &lt;h3 id="不限制-referer">不限制 Referer&lt;/h3>
 &lt;p>这类源最简单，直接 PHP 发送请求获取到流媒体的链接。&lt;/p>
@@ -929,11 +990,11 @@
 &lt;/span>&lt;span class="lnt">5
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">sudo yum install -y yum-utils
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo yum makecache fast
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo yum install -y http://mirror.centos.org/centos/7/extras/x86_64/Packages/container-selinux-2.74-1.el7.noarch.rpm
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo yum install -y docker-ce
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="n">sudo&lt;/span> &lt;span class="n">yum&lt;/span> &lt;span class="n">install&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">y&lt;/span> &lt;span class="n">yum&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">utils&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">sudo&lt;/span> &lt;span class="n">yum&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">config&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">manager&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">add&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">repo&lt;/span> &lt;span class="n">https&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="o">//&lt;/span>&lt;span class="n">download&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">docker&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">com&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">linux&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">centos&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">docker&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">ce&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">repo&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">sudo&lt;/span> &lt;span class="n">yum&lt;/span> &lt;span class="n">makecache&lt;/span> &lt;span class="n">fast&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">sudo&lt;/span> &lt;span class="n">yum&lt;/span> &lt;span class="n">install&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">y&lt;/span> &lt;span class="n">http&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="o">//&lt;/span>&lt;span class="n">mirror&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">centos&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">org&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">centos&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="mi">7&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">extras&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">x86_64&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">Packages&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">container&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">selinux&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mf">2.74&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mf">1.&lt;/span>&lt;span class="n">el7&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">noarch&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">rpm&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">sudo&lt;/span> &lt;span class="n">yum&lt;/span> &lt;span class="n">install&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">y&lt;/span> &lt;span class="n">docker&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">ce&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>比官方流程多了一步，单独安装&lt;code>container-selinux&lt;/code>。这个安装包更新挺频繁的，如果链接失效，需要前往&lt;a href="http://mirror.centos.org/centos/7/extras/x86_64/Packages/">http://mirror.centos.org/centos/7/extras/x86_64/Packages/&lt;/a>查找最近打包的安装包。&lt;/p>
@@ -1826,30 +1887,4 @@ swapon -s
 &lt;p>重新运行OpenVPN，即可不输密码登录vpn，而且此时status窗口的日志输出，也终于能看得清了。&lt;/p>
 &lt;p>顺便提一句，如果有需要vpn的同学，可以和我联系，目前有合租计划，人均每月6元，联系方式如下：&lt;/p>
 &lt;p>Twitter: @palfans&lt;/p>
-&lt;p>OpenVPN客户端编译部分，参考yegle&lt;a href="https://yegle.net/2010/05/19/compile-openvpn-2-1-1-in-windows/">相关文章&lt;/a>，致谢。&lt;/p></description></item><item><title>vpn三合一安装包</title><link>https://www.palfans.net/3-in-1-vpn-package/</link><pubDate>Fri, 22 Oct 2010 20:10:22 +0000</pubDate><guid>https://www.palfans.net/3-in-1-vpn-package/</guid><description>&lt;p>这个安装包其实就是一个shell脚本，帮助大家尽量节约些时间。已经写好有一段时间了，一直没时间写blog，今天做了个review，修修补补就放出来吧。大概写下这个安装包的一些特点。&lt;/p>
-&lt;pre>&lt;code> 1. 三合一，指的是pptp / openvpn / l2tp，另外还安装了nginx / php / mysql / phpMyAdmin / Freeradius&amp;lt;del&amp;gt; / daloradius&amp;lt;/del&amp;gt;，基本上把一个vpn系统需要的基本程序安装完了。
-2. 安装包默认是完全安装，当然也可以只安装其中的某一种vpn，脚本提供定制选项
-3. 脚本自动获取服务器ip、相关文件路径等，也可定制，说是一键安装有点儿夸张，不过按几下回车就能装完还是可以实现的。
-4. 现在有CentOS&amp;lt;del&amp;gt;和Ubuntu两个&amp;lt;/del&amp;gt;版本，分别在CentOS 5.5 &amp;lt;del&amp;gt;和 Ubuntu 10.04 LTS&amp;lt;/del&amp;gt;上测试通过。Linux的发行版太多了，搞得我头都大了好几圈，对其他版本有爱的同学请自行修改。
-&lt;/code>&lt;/pre>
-&lt;p>安装方法：&lt;/p>
-&lt;p>在命令行界面根据不同的版本，输入&lt;del>wget &lt;a href="http://20ne.com/vpn/ubuntu.sh">http://20ne.com/vpn/ubuntu.sh&lt;/a> 或 wget &lt;a href="http://20ne.com/vpn/centos.sh">http://20ne.com/vpn/centos.sh&lt;/a>&lt;/del>，取得文件后直接运行脚本，中间有少许参数需手工确认，无需修改的话，直接回车即可。【update】20ne.com这个域名被我卖了，主机被人攻击，备份代码全丢。这里郑重推荐&lt;a href="http://www.yishanhome.com/archives/307">逸山的改进版&lt;/a>，添加很多功能，安装更加人性化，自动化。&lt;/p>
-&lt;p>IT民工业余制作，测试环境恶劣，所以问题肯定很多，不能保证在所有平台都一帆风顺。大家用的时候可以自己斟酌修改，也可以和我交流。&lt;/p>
-&lt;p>【update 2010-10-28】
-使用方法：&lt;/p>
-&lt;p>安装完成后，脚本会自动在数据库中添加一个测试账号test，密码为1234。大家可以通过自动安装的phpMyadmin访问mysql数据库进行修改和新增，对应的表为radius库里的radcheck，&lt;del>也可以通过自动安装的daloradius来管理vpn账号，初始用户名为administrator，密码为radius，可以在radius库的operators中修改和新增管理用户&lt;/del>。
-默认链接：
-phpMyAdmin: http://你的VPS域名或IP/phpmyadmin/
-&lt;del>daloradius: http://&lt;your vps ipaddress>/dr/&lt;/del>
-对于openvpn，在安装目录下会生成一个名为openvpn的新目录，里边的client目录包含对应该服务端的客户端配置文件和证书，需要分发给客户端，并使用用户名和密码进行登录。
-对于pptp，直接新建一个基于pptp的网络连接就行，具体请google “&lt;a href="https://encrypted.google.com/search?q=%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AEpptp+vpn&amp;amp;hl=zh-CN">如何设置pptp vpn&lt;/a>”
-对于l2tp，和pptp类似，不过需要改为l2tp方式，并填写IpSec密钥，此密钥默认为palfans，可在执行脚本前，修改secret_key的值。具体如何新建连接请google “&lt;a href="https://encrypted.google.com/search?hl=zh-CN&amp;amp;newwindow=1&amp;amp;q=%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE+l2tp+vpn&amp;amp;aq=f&amp;amp;aqi=&amp;amp;aql=&amp;amp;oq=&amp;amp;gs_rfai=">如何设置l2tp vpn&lt;/a>”&lt;/p>
-&lt;p>【update 2012-06-01】
-欢庆六一儿童节，针对各位在留言中碰到的问题，统一做了更新，希望能提升安装成功率。本次更新取消了Ubuntu版本，因为我找不到测试环境，时间也不够，sigh~~~~~&lt;/p>
-&lt;ol>
-&lt;li>使用军哥的LNMP安装脚本来安装Nginx，PHP和MySQL，内存控制好，系统稳定性高。感谢军哥，有关LNMP的问题，请点&lt;a href="http://www.lnmp.org/">这里&lt;/a>。&lt;/li>
-&lt;li>OpenSwan改用自行编译方式，兼容性更高。&lt;/li>
-&lt;li>取消Daloradius，账号管理用PhpMyAdmin已经比较方便，如没有复杂要求，没必要搞这个。有兴趣的同学可以自行安装。&lt;/li>
-&lt;li> 修正一堆弱智问题。&lt;/li>
-&lt;/ol>
-&lt;p>如有其他问题，欢迎留言或直接给我发邮件。&lt;/p></description></item></channel></rss>
+&lt;p>OpenVPN客户端编译部分，参考yegle&lt;a href="https://yegle.net/2010/05/19/compile-openvpn-2-1-1-in-windows/">相关文章&lt;/a>，致谢。&lt;/p></description></item></channel></rss>

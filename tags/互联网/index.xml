@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>互联网 on Palfans's BLOG</title><link>https://www.palfans.net/tags/%E4%BA%92%E8%81%94%E7%BD%91/</link><description>Recent content in 互联网 on Palfans's BLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 22 Oct 2010 20:10:22 +0000</lastBuildDate><atom:link href="https://www.palfans.net/tags/%E4%BA%92%E8%81%94%E7%BD%91/index.xml" rel="self" type="application/rss+xml"/><item><title>vpn三合一安装包</title><link>https://www.palfans.net/3-in-1-vpn-package/</link><pubDate>Fri, 22 Oct 2010 20:10:22 +0000</pubDate><guid>https://www.palfans.net/3-in-1-vpn-package/</guid><description>&lt;p>这个安装包其实就是一个shell脚本，帮助大家尽量节约些时间。已经写好有一段时间了，一直没时间写blog，今天做了个review，修修补补就放出来吧。大概写下这个安装包的一些特点。&lt;/p>
 &lt;pre>&lt;code> 1. 三合一，指的是pptp / openvpn / l2tp，另外还安装了nginx / php / mysql / phpMyAdmin / Freeradius&amp;lt;del&amp;gt; / daloradius&amp;lt;/del&amp;gt;，基本上把一个vpn系统需要的基本程序安装完了。
-2. 安装包默认是完全安装，当然也可以只安装其中的某一种vpn，脚本提供定制选项
-3. 脚本自动获取服务器ip、相关文件路径等，也可定制，说是一键安装有点儿夸张，不过按几下回车就能装完还是可以实现的。
-4. 现在有CentOS&amp;lt;del&amp;gt;和Ubuntu两个&amp;lt;/del&amp;gt;版本，分别在CentOS 5.5 &amp;lt;del&amp;gt;和 Ubuntu 10.04 LTS&amp;lt;/del&amp;gt;上测试通过。Linux的发行版太多了，搞得我头都大了好几圈，对其他版本有爱的同学请自行修改。
+ 2. 安装包默认是完全安装，当然也可以只安装其中的某一种vpn，脚本提供定制选项
+ 3. 脚本自动获取服务器ip、相关文件路径等，也可定制，说是一键安装有点儿夸张，不过按几下回车就能装完还是可以实现的。
+ 4. 现在有CentOS&amp;lt;del&amp;gt;和Ubuntu两个&amp;lt;/del&amp;gt;版本，分别在CentOS 5.5 &amp;lt;del&amp;gt;和 Ubuntu 10.04 LTS&amp;lt;/del&amp;gt;上测试通过。Linux的发行版太多了，搞得我头都大了好几圈，对其他版本有爱的同学请自行修改。
 &lt;/code>&lt;/pre></description></item></channel></rss>
