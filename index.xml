@@ -1,4 +1,67 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Palfans's BLOG</title><link>https://www.palfans.net/</link><description>Recent content on Palfans's BLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 13 Aug 2024 20:26:30 +0000</lastBuildDate><atom:link href="https://www.palfans.net/index.xml" rel="self" type="application/rss+xml"/><item><title>了解 Git 子模块</title><link>https://www.palfans.net/git-submodule/</link><pubDate>Tue, 13 Aug 2024 20:26:30 +0000</pubDate><guid>https://www.palfans.net/git-submodule/</guid><description>&lt;p>这个 Blog 用的是 Hugo 来生成静态文件，主题采用 even。在使用 Git 管理源文件时，主题目录通过 Git 子模块（Submodule）关联到另外一个代码仓库。Git 子模块是一个非常有用的功能，特别适用于需要将多个独立的代码库整合在一起的大型项目。这里记录下 Git 子模块的添加、更新和删除备忘。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Palfans's BLOG</title><link>https://www.palfans.net/</link><description>Recent content on Palfans's BLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 18 Aug 2024 15:53:49 +0000</lastBuildDate><atom:link href="https://www.palfans.net/index.xml" rel="self" type="application/rss+xml"/><item><title>使用 NxNandManager 调整 Switch 虚拟 eMMC (emuMMC) 大小</title><link>https://www.palfans.net/resize-nintendo-switch-emummc/</link><pubDate>Sun, 18 Aug 2024 15:53:49 +0000</pubDate><guid>https://www.palfans.net/resize-nintendo-switch-emummc/</guid><description>&lt;h2 id="引言">引言&lt;/h2>
+&lt;p>在 Nintendo Switch 上，&lt;a href="https://github.com/Atmosphere-NX/Atmosphere">Atmosphère&lt;/a> 提供了两种创建虚拟系统的方法：隐藏分区和文件形式，但在实际使用中一般使用文件形式。&lt;/p>
+&lt;h2 id="为什么选择文件形式">为什么选择文件形式？&lt;/h2>
+&lt;p>文件形式的虚拟系统有几个显著的优势：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>方便备份和恢复&lt;/strong>：只需备份内存卡上的 eMMC 目录即可。&lt;/li>
+&lt;li>&lt;strong>更换内存卡简单&lt;/strong>：无需复杂操作，只需复制文件。&lt;/li>
+&lt;/ul>
+&lt;p>然而，文件形式的虚拟系统在读写速度上不如隐藏分区，导致游戏安装和加载时间较长。因此，建议将游戏安装到内存卡中，机身内存仅用于系统文件和游戏存档。&lt;/p>
+&lt;h2 id="优化虚拟系统分区">优化虚拟系统分区&lt;/h2>
+&lt;p>虚拟系统是实体 eMMC 的完全镜像，占用大小为 29GB。如果仅用于游戏存档，会浪费大量空间。通过 NxNandManager，我们可以调整用户分区的大小，节省更多空间用于安装游戏。&lt;/p>
+&lt;h3 id="nxnandmanager-简介">NxNandManager 简介&lt;/h3>
+&lt;p>&lt;a href="https://github.com/eliboa/NxNandManager">NxNandManager&lt;/a> 是一个开源工具，允许在电脑上对 Switch 的 NAND 进行各种操作，包括：&lt;/p>
+&lt;ol>
+&lt;li>备份和恢复系统和虚拟的 NAND&lt;/li>
+&lt;li>解密备份的加密分区&lt;/li>
+&lt;li>调整 NAND 的用户分区&lt;/li>
+&lt;li>查看 NAND 的详细信息&lt;/li>
+&lt;li>高级复制功能&lt;/li>
+&lt;li>挂载虚拟磁盘&lt;/li>
+&lt;li>内置资源管理器，浏览和导出 NAND 各分区的文件内容&lt;/li>
+&lt;/ol>
+&lt;p>注意：NxNandManager 只能调整用户分区的大小。&lt;/p>
+&lt;h3 id="缩减用户分区大小">缩减用户分区大小&lt;/h3>
+&lt;ol>
+&lt;li>将内存卡中的 &amp;ldquo;eMMC&amp;rdquo; 目录复制到电脑上（可选，但推荐，NxNandManager 在电脑上处理文件的速度比在内存卡上快得多）。&lt;/li>
+&lt;li>将内存卡上的 &amp;ldquo;eMMC&amp;rdquo; 文件夹重命名为 &amp;ldquo;eMMC_old&amp;rdquo;。&lt;/li>
+&lt;li>使用 NxNandManager 打开电脑或内存卡上的 eMMC\00 文件。&lt;/li>
+&lt;li>加载对应的 prod.keys（通过 &lt;a href="https://github.com/Decscots/Lockpick_RCM">Lockpick_RCM&lt;/a> 获取）来解密文件系统。&lt;/li>
+&lt;li>确认 NxNandManager 正确识别了设备 ID，固件版本识别可能不对，可忽略。&lt;/li>
+&lt;li>进入 &amp;ldquo;Tools&amp;rdquo; -&amp;gt; &amp;ldquo;Resize NAND&amp;rdquo;。&lt;/li>
+&lt;li>输入需要的用户分区大小（单位为 MB）。1GB=1024MB，如果需要设置 2GB，输入 2048。&lt;/li>
+&lt;li>缩减的文件被命名为 RAWNAND.resized。如果文件大小不大于4GB，可以直接重命名为 00 并替换内存卡上的原文件，删除多余的 00-07 文件。&lt;/li>
+&lt;li>开机验证调整是否成功。&lt;/li>
+&lt;/ol>
+&lt;h3 id="扩充用户分区大小">扩充用户分区大小&lt;/h3>
+&lt;p>随着新游戏不断安装，游戏存档对用户分区的占用会持续增加，会导致无法新建游戏存档和启动游戏，需要扩充用户分区。但 NxNandManager 直接在 Resize NAND 选项中调大分区大小，会在生成 RAWNAND.resized 文件时出错，具体出现在复制数据进行到原始用户分区大小后，无法继续复制空数据到扩大后用户分区。&lt;/p>
+&lt;p>经过摸索，可以通过以下方式实现扩充。&lt;/p>
+&lt;ol>
+&lt;li>备份所有游戏存档，例如使用 JKSV。&lt;/li>
+&lt;li>将内存卡中的 &amp;ldquo;eMMC&amp;rdquo; 目录复制到电脑上。&lt;/li>
+&lt;li>将内存卡上的 &amp;ldquo;eMMC&amp;rdquo; 文件夹重命名为 &amp;ldquo;eMMC_old&amp;rdquo;。&lt;/li>
+&lt;li>使用 NxNandManager 打开电脑或内存卡上的 eMMC\00 文件。&lt;/li>
+&lt;li>加载对应的 prod.keys（通过 &lt;a href="https://github.com/Decscots/Lockpick_RCM">Lockpick_RCM&lt;/a> 获取）来解密文件系统。&lt;/li>
+&lt;li>确认 NxNandManager 正确识别了设备 ID。&lt;/li>
+&lt;li>选择用户分区并在右侧选择 &amp;ldquo;Mount&amp;rdquo;（可能需要安装 dokan 驱动程序）。&lt;/li>
+&lt;li>将所有用户数据从新挂载的磁盘复制到电脑上。&lt;/li>
+&lt;li>卸载用户分区。&lt;/li>
+&lt;li>进入 &amp;ldquo;Tools&amp;rdquo; -&amp;gt; &amp;ldquo;Resize NAND&amp;rdquo;。&lt;/li>
+&lt;li>勾选 &amp;ldquo;format user&amp;rdquo; 选项（必需，否则在复制到原始大小时出错）。&lt;/li>
+&lt;li>将用户分区调整到所需的新大小。&lt;/li>
+&lt;li>完成调整大小后，使用 NxNandManager 打开新生成的 RAWNAND.resized 文件。&lt;/li>
+&lt;li>选择用户分区并在右侧选择 &amp;ldquo;Mount&amp;rdquo;（取消勾选只读选项）。&lt;/li>
+&lt;li>将之前备份的所有用户数据复制到新挂载的磁盘上。&lt;/li>
+&lt;li>卸载用户分区。&lt;/li>
+&lt;li>使用 NxNandManager 重新打开修改后的 RAWNAND.resized 文件。&lt;/li>
+&lt;li>确认所有游戏存档已成功迁移。&lt;/li>
+&lt;li>进入 &amp;ldquo;Tools&amp;rdquo; -&amp;gt; &amp;ldquo;emuNAND Creation Tool&amp;rdquo;。&lt;/li>
+&lt;li>选择 SD File (AMS) 作为 emuNAND 类型。&lt;/li>
+&lt;li>选择内存卡作为目标磁盘并点击 &amp;ldquo;Create emuNAND&amp;rdquo;。&lt;/li>
+&lt;li>等待写入过程完成，然后将内存卡插回 Switch，检查所有游戏存档是否正常工作。&lt;/li>
+&lt;li>如果没有问题，删除 &amp;ldquo;eMMC_old&amp;rdquo;；如果有问题，使用 &amp;ldquo;eMMC_old&amp;rdquo; 恢复之前的状态。&lt;/li>
+&lt;/ol>
+&lt;p>使用 emuNAND Creation Tool 的原因是调整大小后的 &amp;ldquo;00&amp;rdquo; 文件肯定会大于 4GB，无法复制到格式化为 FAT32 的内存卡上。emuNAND Creation Tool 会将文件分割成 4GB 的单位。&lt;/p></description></item><item><title>了解 Git 子模块</title><link>https://www.palfans.net/git-submodule/</link><pubDate>Tue, 13 Aug 2024 20:26:30 +0000</pubDate><guid>https://www.palfans.net/git-submodule/</guid><description>&lt;p>这个 Blog 用的是 Hugo 来生成静态文件，主题采用 even。在使用 Git 管理源文件时，主题目录通过 Git 子模块（Submodule）关联到另外一个代码仓库。Git 子模块是一个非常有用的功能，特别适用于需要将多个独立的代码库整合在一起的大型项目。这里记录下 Git 子模块的添加、更新和删除备忘。&lt;/p>
 &lt;h2 id="什么是-git-子模块">什么是 Git 子模块？&lt;/h2>
 &lt;p>Git 子模块是一种将一个 Git 仓库作为另一个 Git 仓库的子目录来管理的方法。通过子模块，你可以将外部项目或库嵌入到你的主项目中，并且每个子模块都可以独立地进行版本控制。这对于需要复用代码或依赖第三方库的项目来说非常有用。&lt;/p>
 &lt;h2 id="为什么使用-git-子模块">为什么使用 Git 子模块？&lt;/h2>
@@ -1904,5 +1967,4 @@ swapon -s
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">deny from 60.168.18.
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>WLW发布Wordpress时xmlrpc.php 404问题</title><link>https://www.palfans.net/wlw_wordpress_xmlrpc_404/</link><pubDate>Sun, 09 Sep 2012 07:03:45 +0000</pubDate><guid>https://www.palfans.net/wlw_wordpress_xmlrpc_404/</guid><description>&lt;p>用WLW连接Wordpress发布文章时，总是遇到找不到xmlrpc.php的问题，直接在浏览器中输入完整地址，也是得到404错误。但是通过FTP能看到这个文件就放在那里。怎么回事？&lt;/p>
-&lt;p>很自然开始怀疑主机有策略，阻止了对xmlrpc的访问。于是把xmlrpc.php随便改个稀奇古怪的名字，再次测试，成功了。&lt;/p></description></item></channel></rss>
+&lt;/div></description></item></channel></rss>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>NxNandManager on Palfans's BLOG</title><link>https://www.palfans.net/tags/nxnandmanager/</link><description>Recent content in NxNandManager on Palfans's BLOG</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sun, 18 Aug 2024 15:53:49 +0000</lastBuildDate><atom:link href="https://www.palfans.net/tags/nxnandmanager/index.xml" rel="self" type="application/rss+xml"/><item><title>使用 NxNandManager 调整 Switch 虚拟 eMMC (emuMMC) 大小</title><link>https://www.palfans.net/resize-nintendo-switch-emummc/</link><pubDate>Sun, 18 Aug 2024 15:53:49 +0000</pubDate><guid>https://www.palfans.net/resize-nintendo-switch-emummc/</guid><description>&lt;h2 id="引言">引言&lt;/h2>
+&lt;p>在 Nintendo Switch 上，&lt;a href="https://github.com/Atmosphere-NX/Atmosphere">Atmosphère&lt;/a> 提供了两种创建虚拟系统的方法：隐藏分区和文件形式，但在实际使用中一般使用文件形式。&lt;/p>
+&lt;h2 id="为什么选择文件形式">为什么选择文件形式？&lt;/h2>
+&lt;p>文件形式的虚拟系统有几个显著的优势：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>方便备份和恢复&lt;/strong>：只需备份内存卡上的 eMMC 目录即可。&lt;/li>
+&lt;li>&lt;strong>更换内存卡简单&lt;/strong>：无需复杂操作，只需复制文件。&lt;/li>
+&lt;/ul>
+&lt;p>然而，文件形式的虚拟系统在读写速度上不如隐藏分区，导致游戏安装和加载时间较长。因此，建议将游戏安装到内存卡中，机身内存仅用于系统文件和游戏存档。&lt;/p></description></item></channel></rss>
